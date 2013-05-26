@@ -1,0 +1,25 @@
+<h1>Listing funcionalidads</h1>
+
+<table>
+  <tr>
+    <th>Nombre</th>
+    <th>Descripcion</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @funcionalidads.each do |funcionalidad| %>
+  <tr>
+    <td><%= funcionalidad.nombre %></td>
+    <td><%= funcionalidad.descripcion %></td>
+    <td><%= link_to 'Show', funcionalidad %></td>
+    <td><%= link_to 'Edit', edit_funcionalidad_path(funcionalidad) %></td>
+    <td><%= link_to 'Destroy', funcionalidad, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Funcionalidad', new_funcionalidad_path %>

@@ -1,0 +1,539 @@
+@font-face {
+    font-family: 'AngryBirds';
+    src:url('../font/angrybirds-regular-webfont.woff');
+}
+* {
+margin: 0;
+padding: 0;
+}
+*:focus  {  outline: none;  }
+html, body {
+	height: 100%;
+
+}
+body{
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+#imagen{
+	text-align: center;
+}
+#form{
+	display: none;
+}
+#imagen2{
+	padding: 40px;
+	text-align: center;
+}
+#imagenLogin{
+		cursor: pointer;
+}
+#fondo{
+	border-radius:20px;
+	overflow: hidden;
+	position: relative;
+	height: 300px;
+	width: 600px;
+	
+	margin: 0 auto;
+}
+#contenido{
+	position: absolute;
+	z-index: 0;
+	height: 300px;
+	width: 600px;	
+	border-radius: 20px;
+	display: none;
+	
+}
+#contenido:hover{
+	display: block;
+}
+#fondo:hover #contenido{
+	background-color:#6dd4bc;
+	border-color: yellow;
+	border-style: solid;
+	border-width: 4px;
+	height: 292px;
+	width: 592px;	
+	box-shadow:inset 0px 0px 20px rgba(50,50,50,0.8);
+}
+#header{
+	overflow: hidden;
+	position: relative;
+	margin-top: -20px;
+	left: 0;
+	width: 100%;
+	height: 150px;
+	--background-color: rgba(179,250,255,1);
+	z-index: 2;
+}
+#body{
+	overflow: hidden;
+	position: relative;
+	margin-top: 0px;
+	left: 0;
+	text-align: center;
+	min-height: 100%;
+	width: 100%;
+	background: rgba(179,250,255,1);
+	background: -moz-linear-gradient(top, rgba(179,250,255,1) 0%, rgba(219,245,255,0.08) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(179,250,255,1)), color-stop(100%, rgba(219,245,255,0.08)));
+	background: -webkit-linear-gradient(top, rgba(179,250,255,1) 0%, rgba(219,245,255,0.08) 100%);
+	background: -o-linear-gradient(top, rgba(179,250,255,1) 0%, rgba(219,245,255,0.08) 100%);
+	background: -ms-linear-gradient(top, rgba(179,250,255,1) 0%, rgba(219,245,255,0.08) 100%);
+	background: linear-gradient(to bottom, rgba(179,250,255,1) 0%, rgba(219,245,255,0.08) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3faff', endColorstr='#dbf5ff', GradientType=0 );
+}
+#main{
+	
+	position: absolute;
+	width: 100%;
+	top: -100px;
+ 	bottom: 0;
+ 	left: 0;
+ 	right: 0;
+ 	height: 30%;
+	margin: auto;
+}
+#footer{
+	position: relative;
+	margin-top: -150px;
+	clear: both;
+	z-index: 3;
+ 	width:100%;
+ 	height:150px; 
+	background-image:url("/picture/footer.png");
+	background-repeat:repeat-x;
+	z-index: 4;
+}
+#nube1{
+  left: -100%;
+  top: 0px;	
+  width: 100px;
+  animation:myfirst 30s linear 10s infinite alternate;
+  -webkit-animation:myfirst 30s linear 10s infinite;
+  -moz-animation:myfirst 30s linear 10s infinite;
+}
+#nube2{
+  left: -100%;
+  top: 200px;
+  width: 100px;
+  animation:myfirst 30s linear 0s infinite alternate;
+  -webkit-animation:myfirst 30s linear 0s infinite;
+  -moz-animation:myfirst 30s linear 0s infinite;
+}
+#nube3{
+  left: -100%;
+  top: 50px;
+  width: 150px;
+  animation:myfirst 30s linear 22s infinite alternate;
+  -webkit-animation:myfirst 30s linear 22s infinite;
+  -moz-animation:myfirst 30s linear 22s infiite;
+}
+#nube4{
+  left: -100%;
+  top: 150px;
+  height:  100px;
+  animation:myfirst 30s linear 20s infinite alternate;
+  -webkit-animation:myfirst 30s linear 20s infinite;
+  -moz-animation:myfirst 30s linear 20s infinite;
+}
+.nube{
+position:relative;
+}
+@keyframes myfirst{
+	from { }
+	to { 
+       left: 100%;
+       --right: 0%;
+	}
+}
+
+@-webkit-keyframes myfirst{
+	from { }
+	to { 
+       left: 100%;
+       --right: 0%;
+	}
+}
+
+#contenedor{
+    position: absolute;
+    left: 20px;
+    bottom: 10px;
+    width: 100px;
+    border-radius: 120px;
+    background: rgba(0,0,0,0.5);
+    overflow: hidden;
+    text-align: center;
+    padding: 0;
+
+}
+#contenedor:hover #btn_footer1{
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+#contenedor:hover #list_opc{
+    height: 200px;
+    transition-property: height;
+    transition-duration: 1s;
+}
+#list_opc{
+    position: relative;
+    z-index: 5;
+    bottom: 100px;
+    width: 70px;
+    height: 0px;
+    border-radius: 10px;
+    left: 13px;
+    transition-property: height;
+    transition-duration: 1s;
+    text-align: center;
+}
+#btn_footer1{
+    position: relative;
+    bottom: -3px;
+    -webkit-transition: -webkit-transform 1s ease-out;
+    -moz-transition: -moz-transform 1s ease-out;
+    transition: transform 1s ease-out;
+    z-index: 7;
+}
+#btn_footer2{
+    position: absolute;
+    right: 13px;
+    bottom: 10px;
+    z-index: 7;
+}
+
+.txtInput{
+    margin-top: 20px;
+    width: 540px;
+    height: 30px;
+    padding:10px;
+		 	 
+    border:solid 1px #DEDEDE;
+    border-radius:5px;
+    color: black;
+    font-family: "AngryBirds"; 
+    text-align:center;
+    font-size:30px;	
+    line-height: 42px;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+    box-shadow:inset 0px 0px 20px rgba(50,50,50,0.8);
+}
+#link_img1{
+ 	cursor: pointer;
+    position: relative;
+    left: 3px;
+    top: 130px;
+    border-radius: 10px;
+    transition-property: width;
+    transition-duration: 1s;
+	z-index: 6;
+}
+#link_img2{
+    position: relative;
+    cursor: pointer;
+    left: 3px;
+    top:  160px;
+    transition-property: width;
+    transition-duration: 1s;
+}
+#link_img2:hover, #link_img1:hover{
+    width: 70px;
+    transition-property: width;
+    transition-duration: 1s;
+}
+#link_img1:hover #contenedor{
+	overflow: visible;
+}
+#link_img1:hover #tooltip1{
+	width: 100px;
+}
+
+#tooltip1{
+	position: absolute;
+	display: none;
+	bottom: 230px;
+	left: 120px;
+	padding-top: 10px;
+	padding-bottom: 0px;
+	height: 30px;
+	width: 250px;
+	border-radius: 0px 10px 10px 0px;
+	color: white;
+	background: rgba(0,0,0,0.5);
+	z-index: 4;
+	text-align: center;
+	font-family: "AngryBirds";
+ 	font-size:40px;	
+	line-height: 25px;	
+	
+}
+#tooltip2{
+	position: absolute;
+	display: none;
+	bottom: 148px;
+	left: 120px;
+	padding-top: 10px;
+	padding-bottom: 0px;
+	height: 30px;
+	width: 360px;
+	border-radius: 0px 10px 10px 0px;
+	color: white;
+	background: rgba(0,0,0,0.5);
+	z-index: 4;
+	text-align: center;
+	font-family: "AngryBirds";
+  font-size:40px;	
+  line-height: 25px;
+}
+.boton{
+			position: relative;
+			width: 100%;
+			background: none;
+			border-style: none;
+			font-family: "AngryBirds"; 
+     text-align:center;
+     font-size:40px;	
+     line-height: 42px;
+     cursor: pointer;
+     color: white;
+	}
+.botonera1{
+	cursor: pointer;
+	background-color: white;
+	position: relative;
+	width: 400px;
+	left: 100px;
+	height: 70px;
+	border-width: 2px;
+	border-radius: 10px;
+	border-color: #693600;	
+	border-style: solid;
+	padding: 1px;
+}
+.botonera2{
+	height: 64px;
+	background-color: white;
+	padding: 1px;
+	border-radius: 10px;
+}
+.botonera3{
+	height: 100%;
+	background: #ffe191;
+	border-radius: 10px;
+	border-width: 2px;
+	border-style: solid;
+	border-color: #d7a95d;
+}
+.btn-inf{
+	position: relative;
+	background: #ffbb33;
+	border-radius: 5px 5px 10px 10px ;
+	bottom: -10px;
+	height: 54px;
+}
+#fondoMensaje{
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 100;
+	background: rgba(0,0,0,0.8);
+	display: none;
+}
+#mensaje{
+	position: absolute;
+	margin: 0 auto;
+	top: 50%;
+	left: 50%;
+	height: 30%;
+ 	width: 50%;
+	margin: -15% 0 0 -25%;
+	border-radius: 20px;
+	background-color:#6dd4bc;
+	border-color: yellow;
+	border-style: solid;
+	border-width: 4px;
+	height: 292px;
+	width: 592px;	
+	box-shadow:inset 0px 0px 20px rgba(50,50,50,0.8);
+	text-align: center;
+}
+
+.btn-mail{
+    cursor: pointer;
+    margin: 0 auto;
+}
+.btn-mail:first-child{
+    margin-left: 60px;
+    margin-right: 70px;
+}
+.btn-mail:last-child{
+    margin-left: 70px;
+    margin-right: 60px;
+}
+#labelRecPass{
+		 margin-top: 50px;
+		 color: white;
+    font-family: "AngryBirds"; 
+    text-align:center;
+    font-size:60px;	
+    line-height: 100px;
+    text-shadow: 1px 1px 10px rgba(0,0,0,0.7);
+}
+h1{
+		 margin-top: 50px;
+		 color: white;
+    font-family: "AngryBirds"; 
+    text-align:center;
+    font-size:40px;	
+    line-height: 60px;
+    text-shadow: 1px 1px 10px rgba(0,0,0,0.7);
+}
+a:link{
+text-decoration: none;
+}
+a:hover {
+	background-color: transparent;
+}
+.boton1{
+	background-image: url("/picture/mini_ok.png");
+	background-repeat: no-repeat;
+	position: relative;
+	width: 83px;
+	height: 83px;
+	top: 11px;
+	left: 30px;
+	background-color: transparent;
+	border-style: none;
+ 	text-align:center;
+	cursor: pointer;
+}
+.boton2{
+	background-image: url("/picture/mini_ok.png");
+	background-repeat: no-repeat;
+	position: relative;
+	width: 83px;
+	height: 83px;
+	background-color: transparent;
+	border-style: none;
+	text-align:center;
+	cursor: pointer;
+}
+#btn_email2{
+	position: relative;
+	top: 10px;
+	left: 20px;
+}
+
+.field_with_errors {
+  display: inline;
+}
+
+.field_with_errors .message {
+  color: #D00;
+  padding-left: 5px;
+  font-size: 12px;
+}
+
+#noticia{
+	color: red;
+	font-weight: bold;
+	font-size: 21px;
+	vertical-align: middle;
+	display: inline-block;
+}
+#cont_noticia{
+	border-radius: 5px;
+	border-width: 1px;
+	position: relative;
+	top: -108px;
+	margin: 0 auto;
+	z-index: 20;
+	padding-top: 3px;
+	padding-right: 5px;
+	padding-left: 5px;
+	width: 500px;
+	height: 25px; 
+	border-color: red;
+	border-style: solid;
+	box-shadow: 0 0 10px rgba(0,0,0,0.8);
+	background-color: rgba(255,0,0,0.5);
+}
+
+
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+.hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.input-block-level {
+  display: block;
+  width: 100%;
+  min-height: 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.close {
+	 position: relative;
+	 right: 20px;
+  float: right;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 21px;
+  color: #000000;
+  text-shadow: 0 1px 0 #ffffff;
+  opacity: 0.2;
+  filter: alpha(opacity=20);
+}
+.close:hover,
+.close:focus {
+  color: #000000;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+}
+button.close {
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  -webkit-appearance: none;
+}
+
+#noscript{
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.7);
+	z-index: 99;
+	 color: white;
+    font-family: "AngryBirds"; 
+    text-align:center;
+    font-size:60px;	
+    line-height: 100px;
+    text-shadow: 1px 1px 20px rgba(255,214,77,0.7);
+}

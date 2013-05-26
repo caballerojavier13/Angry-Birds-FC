@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Valor:</b>
+  <%= @calificacion.valor %>
+</p>
+
+<p>
+  <b>Persona:</b>
+  <%= @calificacion.persona_id %>
+</p>
+
+<p>
+  <b>Noticia:</b>
+  <%= @calificacion.noticia_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_calificacion_path(@calificacion) %> |
+<%= link_to 'Back', calificacions_path %>

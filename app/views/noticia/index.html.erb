@@ -1,0 +1,76 @@
+<head>
+		<title>Angry Birds Fan Club</title>
+		<link rel="stylesheet" href="/css/stylesheet2.css">
+		<link rel="stylesheet" href="/css/stylesheet3.css">
+</head>
+<body>
+		<div id="body">
+		
+				<div id="header">
+						<div id="imagen">
+  							<img src="/picture/logo2.png"  height="75" >
+  					</div>
+				</div>
+				<div id="navegador" class="borde">
+						<nav >
+								<ul>
+		    						<li><a href="/start" >Inicio</a></li>
+		    						<li><a href="/noticia" >Noticias</a></li>
+		    						<li><a href="404" >Imágenes</a></li>
+		    						<li><a href="404" >Videos</a></li>
+								</ul>
+								
+	    			</nav>
+	    			<img src=<%= @persona.genero ? ("/picture/hombre.png") : ("/picture/mujer.png") %> src="" id="fotoPerfil" >
+				</div>
+				<div id="titulo" class="borde">
+					Noticias
+				</div>
+				<div id="accesoDirecto" class="borde">
+					<a href="/noticia/new" >
+						<div id="accesoDirecto1">
+							Agregar Noticia
+						</div>
+					</a>
+					<a href="" >
+						<div id="accesoDirecto2">
+							Mis Noticias
+						</div>
+					</a>
+				</div>
+						
+		</div>
+		<div id="lista_conteiner">
+    		<div class="list_noticia borde">
+    		    <h1>Titulo</h1>
+    		    <p>Contenido de la noticia.</p>
+    		    <img src="images/1.png" >
+    		</div>
+    		<div class="list_noticia borde">
+                <h1></h1>
+                <p></p>
+                <img>
+            </div>
+            <div class="list_noticia borde">
+                <h1></h1>
+                <p></p>
+                <img>
+            </div>
+            <div class="list_noticia borde">
+                <h1></h1>
+                <p></p>
+                <img>
+            </div>
+            <div class="list_noticia borde">
+                <h1></h1>
+                <p></p>
+                <img>
+            </div>
+        </div>
+		<div id="footer" style="position: relative; top: 1300px;">
+			<a href="/logout"  >
+                <img src="/picture/exit1.png" style=" margin-top: 30px; margin-left: 20px;">
+            </a>
+		</div>
+		
+</body>

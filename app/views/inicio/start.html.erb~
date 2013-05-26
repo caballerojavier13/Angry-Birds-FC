@@ -1,0 +1,125 @@
+<head>
+		<title>Angry Birds Fan Club</title>
+		<link rel="stylesheet" href="/css/stylesheet2.css">
+		<meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+        <link rel="shortcut icon" href="../favicon.ico"> 
+        <link rel="stylesheet" type="text/css" href="/css/style.css" />
+        <link rel="stylesheet" type="text/css" href="/css/style2.css" />
+		<script type="text/javascript" src="/js/modernizr.custom.67524.js"></script>
+		<noscript>
+			<link rel="stylesheet" type="text/css" href="/css/nojs.css" />
+		</noscript>
+</head>
+<body>
+		<div id="body">
+		
+				<div id="header">
+						<div id="imagen">
+  							<img src="/picture/logo2.png"  height="75" >
+  					</div>
+				</div>
+				<div id="navegador" class="borde">
+						<nav >
+								<ul>
+		    						<li><a href="/start" >Inicio</a></li>
+		    						<li><a href="/noticia" >Noticias</a></li>
+		    						<li><a href="" >Imágenes</a></li>
+		    						<li><a href="" >Videos</a></li>
+								</ul>
+								
+	    			</nav>
+	    			<img src="/picture/red-bird.png" id="fotoPerfil" >
+				</div>
+				<div id="bienvenida" class="borde">
+					<img src="/picture/bienvenida2.png"  height="250" width="1022px">
+					<h1>Bienvenido <%= @persona.nombre %> <%= @persona.apellido %></h1>
+
+				</div>
+				<div id="visorNoticia" class="borde">
+						<div id="da-slider" class="da-slider">
+								<div class="da-slide">
+										<h2>012345678901234567890123L</h2>
+										<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+										
+										<div class="da-img"><img src="images/2.png" alt="image01" width="256px" height="256px" /></div>
+								</div>
+								<div class="da-slide">
+										<h2>Revolution</h2>
+										<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+										
+										<div class="da-img"><img src="images/3.png" alt="image01"width="256px" height="256px" /></div>
+								</div>
+								<div class="da-slide">
+										<h2>Warm welcome</h2>
+										<p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane.</p>
+										
+										<div class="da-img"><img src="images/1.png" alt="image01" width="256px" height="256px" /></div>
+								</div>
+								<div class="da-slide">
+										<h2>Quality Control</h2>
+										<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+										
+										<div class="da-img"><img src="images/4.png" alt="image01" width="256px" height="256px" /></div>
+								</div>
+						</div>
+				</div>
+				<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+   		<script type="text/javascript" src="js/jquery.cslider.js"></script>
+		  	<script type="text/javascript" src="js/jquery.gallery.js"></script>
+				<script type="text/javascript">
+						$(function() {
+			
+								$('#da-slider').cslider({
+									autoplay	: true,
+									bgincrement	: 1000
+								});
+								$('#dg-container').gallery({
+									autoplay	:	true, 
+									interval	: 2000
+  							});
+			
+						});
+					</script>	
+				<div id="visorImagen" class="borde">
+				 <div class="container" >
+			
+							<section id="dg-container" class="dg-container">
+									<div class="dg-wrapper">
+												<a href="#"><img src="images/1.jpg" ></a>
+												<a href="#"><img src="images/2.jpg" ></a>
+												<a href="#"><img src="images/3.jpg" ></a>
+												<a href="#"><img src="images/4.jpg" ></a>
+												<a href="#"><img src="images/5.jpg" ></a>
+												<a href="#"><img src="images/6.jpg" ></a>
+												<a href="#"><img src="images/7.jpg" ></a>
+												<a href="#"><img src="images/8.jpg" ></a>
+												<a href="#"><img src="images/9.jpg" ></a>
+												<a href="#"><img src="images/10.jpg" ></a>
+												<a href="#"><img src="images/11.jpg" ></a>
+												<a href="#"><img src="images/12.jpg" ></a>
+									</div>
+							</section>
+        </div>
+				</div>
+	
+	
+	
+												
+		</div>
+		<div id="footer">
+				<a href="/logout"  >
+         <img src="/picture/exit1.png" style=" margin-top: 30px; margin-left: 20px;">
+      </a>
+		</div>
+		
+</body>
+
+
+
+
+
+
+
+
+

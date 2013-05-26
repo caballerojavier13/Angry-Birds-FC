@@ -1,0 +1,83 @@
+<head>
+			<title>Angry Birds Fan Club</title>
+			<link rel="stylesheet" href="/css/stylesheet1.css">
+			<link rel="stylesheet" href="/css/stylesheet4.css">
+</head>
+<body>
+	<div id="body">
+	
+
+
+		<%= form_for(@persona) do |f| %>
+  		
+  	<div class="field">
+			  <h1>
+			   Nuevo Usuario 
+			  </h1>
+		</div>
+		
+		<% if @persona.errors.any? %>
+    <div id="error">
+    		<div id="error_title">
+      		<h2>Error en la registración, se <%= @persona.errors.count > 1 ? "han" : "ha" %> encontrado <%= @persona.errors.count%> <%= @persona.errors.count > 1 ? "errores" : "error" %>:</h2>
+				</div>S
+      <ul>
+      <% @persona.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  	<div class="field">
+   		<%= f.label "Nombre:"%><br />
+   		<%= f.text_field :nombre , :size => 100, :class => 'txtInput' %>
+   		
+  	</div>
+  	<div class="field">
+   		<%= f.label "Apellido:" %><br />
+      <%= f.text_field :apellido, :size => 100 ,:class => 'txtInput'%>
+   </div>
+   <div class="field">
+      <%= f.label "Usuario:" , :class=>"control-label" %>
+      <br />
+      <%= f.text_field :username, :size => 40 ,:class => 'txtInput'%>
+   </div>
+   <div class="field">
+      <%= f.label "E-Mail:" %><br />
+      <%= f.text_field :email ,:class => 'txtInput'%>
+   </div>
+   <div class="field">
+     <%= f.label "Género:" %><br />
+	<div id="genero">
+		<span class="cool_checkbox"><%= f.check_box :genero %><label for="persona_genero"><span>Hombre</span><span><span>/</span></span><span>Mujer</span></label></span>  
+	</div>
+   </div>
+   <div class="field">
+     <%= f.label "Fecha de Nacimiento:" %><br />
+
+     <%= f.date_select :fechaNacimiento,:order => [:day, :month, :year], start_year: @year_inicio, end_year: @year_fin, :id => 'fecha' %>
+   </div>
+   <div class="field">
+     <%= f.label "Contraseña:" , :class=>"control-label" %>
+     <%= f.password_field :password, :size => 40 ,:class => 'txtInput'%>
+   </div>
+ 
+   <div class="field">
+     <%= f.label "Confirmar Contraseña:" , :class=>"control-label"%>
+     <br />
+     <%= f.password_field :password_confirmation, :size => 40 ,:class => 'txtInput'%>
+   </div>
+
+   <div class="field" style="height: 110px;">     
+     <a href="/login">
+     		<div id="cancel"></div>
+     </a>
+     <%= f.submit '', :class=> 'guardar' %>  
+   </div>
+ <% end %>
+
+
+ 
+ </div>
+</body>

@@ -1,0 +1,37 @@
+<html>
+  <head>
+			<title>Angry Birds Fan Club</title>
+			<link rel="stylesheet" href="/css/stylesheet1.css">
+  </head>
+  <body>
+		
+   <div id="body">
+	<div id="header" style="margin-top: 0px;">
+		<div id="imagen">
+			<img  src="/picture/logo2.png"  height="150" >
+		</div>
+	</div>
+   	<div id="mensaje" style="margin-top: -150px;">
+            <%= form_for %>
+		<div>
+		    <br/>
+		    <%= password_field_tag :password, params[:password] , :placeholder=> 'Contraseña',:class => 'txtInput'%>
+		</div>
+		<br/>
+		<div>
+		    <%= password_field_tag :repassword, params[:rePassword] , :placeholder=> 'Verificacion de Contraseña',:class => 'txtInput'%>
+		</div>
+		<div>
+			<%= submit_tag "", :class => 'boton1' %>
+			<a>
+				<img src="/picture/btn_cancel1.png" width="80" class="btn-mail" id="btn_email2">
+			</a>
+		</div>
+            <% end %>
+	</div>
+   </div>
+   <div id="footer">
+   
+   </div>
+  </body>
+</html>

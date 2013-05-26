@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  tipoUsuario_id: 1
+  funcionalidad: 1
+
+two:
+  tipoUsuario_id: 1
+  funcionalidad: 1

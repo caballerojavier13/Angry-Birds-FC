@@ -1,0 +1,27 @@
+<h1>Listing calificacions</h1>
+
+<table>
+  <tr>
+    <th>Valor</th>
+    <th>Persona</th>
+    <th>Noticia</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @calificacions.each do |calificacion| %>
+  <tr>
+    <td><%= calificacion.valor %></td>
+    <td><%= calificacion.persona_id %></td>
+    <td><%= calificacion.noticia_id %></td>
+    <td><%= link_to 'Show', calificacion %></td>
+    <td><%= link_to 'Edit', edit_calificacion_path(calificacion) %></td>
+    <td><%= link_to 'Destroy', calificacion, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Calificacion', new_calificacion_path %>

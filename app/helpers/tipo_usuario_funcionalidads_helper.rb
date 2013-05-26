@@ -1,0 +1,2 @@
+module TipoUsuarioFuncionalidadsHelper
+end

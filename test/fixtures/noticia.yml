@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  titulo: MyString
+  cuerpo: MyText
+  updated_at: 2013-05-12 08:53:27
+  persona_id: 1
+  imagen_id: 1
+
+two:
+  titulo: MyString
+  cuerpo: MyText
+  updated_at: 2013-05-12 08:53:27
+  persona_id: 1
+  imagen_id: 1

@@ -1,0 +1,25 @@
+<%= form_for(@tipo_usuario_funcionalidad) do |f| %>
+  <% if @tipo_usuario_funcionalidad.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tipo_usuario_funcionalidad.errors.count, "error") %> prohibited this tipo_usuario_funcionalidad from being saved:</h2>
+
+      <ul>
+      <% @tipo_usuario_funcionalidad.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :tipoUsuario_id %><br />
+    <%= f.number_field :tipoUsuario_id %>
+  </div>
+  <div class="field">
+    <%= f.label :funcionalidad %><br />
+    <%= f.number_field :funcionalidad %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

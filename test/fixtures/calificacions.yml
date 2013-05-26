@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  valor: 1
+  persona_id: 1
+  noticia_id: 1
+
+two:
+  valor: 1
+  persona_id: 1
+  noticia_id: 1

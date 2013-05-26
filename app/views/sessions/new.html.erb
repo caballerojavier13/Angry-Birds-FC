@@ -1,0 +1,98 @@
+  <head>
+			<title>Angry Birds Fan Club</title>
+			<link rel="stylesheet" href="/css/stylesheet1.css">
+			
+  </head>
+  <body>
+		
+  	<div id="body">
+
+	  	<embed src="/music/tema.mp3" loop="1" width="0" height="0">
+		</embed>
+  		<div id="header">
+  			<div id="imagen">
+  				<img  src="/picture/logo2.png"  height="150" >
+  			</div>
+  		</div>
+
+  			<img class="nube" id="nube1" src="/picture/nube1.png" >
+			<img class="nube" id="nube2" src="/picture/nube2.png" >
+			<img class="nube" id="nube3" src="/picture/nube3.png" >
+			<img class="nube" id="nube4" src="/picture/nube4.png" >
+		<% if flash[:alert] %>
+             		<div id="cont_noticia"> <p id="noticia"><%= flash[:alert] %></p><button type="button" class="close" data-dismiss="alert" onclick="hide('cont_noticia')">&times;</button></div>
+	        <% end %>
+  		<div id="main">
+  			
+  			<div id="fondo" onmouseout="hideLogin()">
+   
+					<div id="contenido" onmouseover="showLogin()">
+						<div id="form">
+              
+						    <%= form_tag do %>
+							<div>
+							    <br/>
+							    <%= text_field_tag :username, params[:username] , :placeholder=> 'Usuario',:class => 'txtInput'%>
+							</div>
+							<br/>
+							<div>
+							    <%= password_field_tag :password, params[:password] , :placeholder=> 'Contraseña',:class => 'txtInput'%>
+							</div>
+							<br/>
+							<div class="botonera1">
+							 		
+								<div class="botonera2">
+									<div class="botonera3">
+											
+											<div class="btn-inf">
+												<%= submit_tag "Iniciar Sesion", :class => 'boton' %>
+											</div>
+										</div>
+									</div>
+							</div>
+
+							<% end %>
+						</div>
+					</div>
+					<div id="imagen2" onclick="showLogin()">
+  					<img id="imagenLogin" src="/picture/play.png"  >
+ 		 			</div>			   
+   		</div>
+   	</div>
+   	
+   </div>
+   <div id="footer">
+        <div id="contenedor">
+            <div id="list_opc">
+                <a href="/registro"  >
+                        <img src="/picture/new user.png" width="50"  id="link_img1" onmouseover="tooltip('tooltip1')" onmouseout="hide('tooltip1')">
+                </a>
+                
+                <img src="/picture/key.png" width="50" id="link_img2" onmouseover="show('tooltip2')" onmouseout="hide('tooltip2')"  onclick="show('fondoMensaje')">
+                
+            </div>
+            <img src="/picture/menu.png" width="100" id="btn_footer1">
+        </div>
+					 <img src="/picture/help.png" width="100" id="btn_footer2">
+   </div>
+	 	<div id="tooltip1">Nuevo Usuario</div>
+		<div id="tooltip2">Olvidé mi Contraseña</div>
+		<div id="fondoMensaje" >
+			<div id="mensaje" >
+				<%= form_tag do %>
+		                        <label id="labelRecPass">Recuperar Contraseña</label>
+		                        <div style="margin-top: 0px; margin-bottom: 10px;">
+				                <%= text_field_tag :mail, session[:mail] , :placeholder=> 'E-mail',:class => 'txtInput', :id => 'inputMail'%>
+                        		</div>
+		                        <div style="display: inline;">
+						<%= submit_tag "", :class => 'boton1' %>
+                    			        <img src="/picture/btn_cancel1.png" width="80" class="btn-mail" id="btn_email2" onclick="hide('fondoMensaje')">
+		                        </div>
+				<% end %>
+			</div>
+		</div>
+	<script src= '/js/script1.js' > </script>
+	<noscript><div id="noscript"><br/>Javascript deshabilitado: para poder apreciar la pagina web por favor activa javascript en tu navegador</div></noscript>
+  </body>
+
+<html>
