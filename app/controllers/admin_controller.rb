@@ -10,11 +10,11 @@ class AdminController < SecurityController
   end
   def create
     session[:usuario_id] = nil
-    redirect_to "/personas/new"
+    redirect_to "/start"
   end
 
   def logout
     session[:usuario_id] = nil
-    redirect_to "/sessions/new", :notice => "Logged out"
+    redirect_to "/login", :notice => "Logged out"
   end
 end
