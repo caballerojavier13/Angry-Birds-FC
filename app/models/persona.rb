@@ -90,12 +90,10 @@ class Persona < ActiveRecord::Base
 #Funciones adicionales
   def cambiar_pass(atributos)
       self.update_attributes(atributos)
-      
-	    return self.update_attribute(:hashed_password, Persona.encrypt_password(self.password, self.salt))
+      return self.update_attribute(:hashed_password, Persona.encrypt_password(self.password, self.salt))
   end
   def activate!
-    self.activo = true
-    self.save
+    self.update_attribute(:activo, true)
   end
 
   def Persona.generate_activation_code
