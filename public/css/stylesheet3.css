@@ -2,8 +2,10 @@
     font-family: 'AngryBirds';
     src:url('../font/angrybirds-regular-webfont.woff');
 }
-#titulo{	
+#titulo{
+    position: relative;	
 	height: 100px;
+	
 	margin-top: 30px; 
 	
  background-color:#6dd4bc;	
@@ -74,11 +76,11 @@ a{
 	left: 508px;
 	border-radius: 0 0px 20px 0px;
 	
- color: black;
- font-family: "AngryBirds"; 
- text-align:center;
- font-size:20px;	
- line-height: 30px;
+     color: black;
+     font-family: "AngryBirds"; 
+     text-align:center;
+     font-size:20px;	
+     line-height: 30px;
  
  box-shadow:inset 0px 0px 20px rgba(50,50,50,0.8);
 }
@@ -107,7 +109,7 @@ a{
 }
 #lista_conteiner{
     position: relative;
-    top: -350px;
+    top: 0px;
     height: 100%;
 }
 .list_noticia{
@@ -116,6 +118,7 @@ a{
     margin-top: 50px;
     height: 400px;
     background-color:#6dd4bc;
+    text-align: left;
     
 }
 .list_noticia h1{
@@ -135,7 +138,7 @@ a{
     text-shadow: 3px 3px 4px rgba(0,0,0,0.6);
 }
 .list_noticia p{
-    width: 60%;
+    width: 690px;
     position: relative;
     top: 20px;
     left: 10px;
@@ -151,17 +154,18 @@ a{
 }
 .list_noticia img{
     position: relative;
-    left: 62%;
+    left: 710px;
     top: -286px;
-    max-width: 37%;
-    max-height: 300px;
-    
+    width: 300px;
+    height: 300px;
 }
 #form_new{
-    position: absolute;
+    position: relative
     width: 100%;
-    top: 330px;
+    top: 0px;
     left: 0;
+    margin-top: 30px;
+    background: transparent;
 }
 .field{ 
     position: relative;
@@ -218,10 +222,6 @@ a{
      line-height: 22px;
 }
 
-#footer{
-    position: absolute;
-    bottom: -710px;
-}
 #boton_guardar{
     color: white;
     box-shadow:0px 0px 20px rgba(50,50,50,0.8);
@@ -233,4 +233,157 @@ a{
     background-color:#55D4BC;
     box-shadow:0px 0px 5px rgba(50,50,50,0.8);
     text-shadow: 3px 3px 5px rgba(0,0,0,0.4);    
+}
+#contenido{
+    position: relative;
+    text-align:center;
+    margin-top: 50px;
+    
+}
+.video-borde{
+    position:relative;
+    margin-top: 20px;
+    width: 400px;
+    height:400px;
+    background-image:  url("../picture/piedra1.png");
+    border-radius: 10px;
+
+}
+.video-borde:hover .contenedor{
+	transform: rotatey(180deg) translatex(-100%);
+  -webkit-transform: rotatey(180deg) translatex(-100%);
+  -moz-transform: rotatey(180deg) translatex(-100%);
+  -ms-transform: rotatey(180deg) translatex(-100%);
+  -o-transform: rotatey(180deg) translatex(-100%);
+}
+.titulo{
+    position:relative;
+    top:0px;
+    left:0px;
+    width: 350px;
+    height: 350px;
+    z-index: 1;
+backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+	background-color:#6dd4bc;
+	border-style: solid;
+	border-width: 2px;
+	border-color:yellow;
+	box-shadow:inset 0px 0px 20px rgba(50,50,50,0.8);
+   
+}
+.video-covertor{
+    position: relative;
+    top: -350px;
+    height: 100%;
+    width: 100%;
+    
+    background: transparent;
+    --background: blue;
+    z-index: 2;
+}
+.contenedor{
+    position:relative;
+    top:25px;
+    left:25px;
+    width: 350px;
+    height: 350px
+   -webkit-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+  transform: perspective(200px);
+  -webkit-transform: perspective(200px);
+  -moz-transform: perspective(200px);
+  -ms-transform: perspective(200px);
+  -o-transform: perspective(200px);
+  transform-style: preserve-3d;
+  transform-origin: 0px 50% 0px;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transform-origin: 0px 50% 0px;
+  -moz-transform-style: preserve-3d;
+  -moz-transform-origin: 0px 50% 0px;
+  -ms-transform-style: preserve-3d;
+  -ms-transform-origin: 0px 50% 0px;
+  -o-transform-style: preserve-3d;
+  -o-transform-origin: 0px 50% 0px;
+	backface-visibility: hidden;
+}
+.video_conteiner{
+    position: relative;
+    top:-350px;
+    left:0px;
+    width: 346px;
+    height: 346px;	
+  -webkit-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+  transform: rotatey(180deg);
+  -webkit-transform: rotatey(180deg);
+  -moz-transform: rotatey(180deg);
+  -ms-transform: rotatey(180deg);
+  -o-transform: rotatey(180deg);
+  overflow: hidden;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+
+}
+.titulo p{
+	color: yellow;
+	font-family: "AngryBirds"; 
+	text-align:center;
+	 font-size:40px;	
+	 line-height: 50px;
+	text-shadow: 3px 3px 4px rgba(0,0,0,0.6);
+}
+#listado_videos{
+    text-decoration: none;
+    text-align:center;
+    width: 1022px;
+    margin: 0 auto;
+}
+#listado_videos li{
+    display:inline-block;
+    
+    margin: 0 auto;
+    padding-left:54px;
+    padding-bottom: 40px;
+}
+.pagination{
+     color: gray;
+     margin: 0 auto;
+     font-family: "AngryBirds";
+     font-size:30px;    
+     line-height: 50px;
+}
+.pagination span:hover{
+}
+.pagination a{
+    color: black;
+}
+.pagination a:hover{
+    color: yellow;
+    text-shadow: 0px 0px 5px rgba(0,0,0,0.8);
+}
+.current{
+    color: white;
+    text-shadow: 0px 0px 5px rgba(0,0,0,0.8); 
+}
+.disabled{
+    color: gray;
+}
+.disabled:hover{
+    color: gray;
+}
+.gap{
+    --display: none;
 }

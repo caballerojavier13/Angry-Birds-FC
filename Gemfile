@@ -6,11 +6,17 @@ gem "mail"
 
 gem 'friendly_id'
 
+gem 'rollbar'
+
 group :development do
   gem 'better_errors'
 end
 
 gem 'client_side_validations'
+
+gem "will_paginate"
+
+gem 'will_paginate-bootstrap'
 
 gem "simple_form"
 
@@ -20,6 +26,8 @@ gem "simple_form"
 gem 'pg'
 
 gem 'json'
+
+gem 'dropbox'
 
 # Gems used only for assets and not required
 # in production environments by default.

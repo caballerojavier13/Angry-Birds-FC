@@ -2,8 +2,8 @@ class VideosController < SecurityController
   # GET /videos
   # GET /videos.json
   def index
-    @videos = Video.all
-
+    @persona = Persona.find(session[:usuario_id])
+    @videos = Video.order('id DESC').paginate(:page => params[:page], :per_page => 4)
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @videos }
@@ -41,7 +41,7 @@ class VideosController < SecurityController
   # POST /videos.json
   def create
     @video = Video.new(params[:video])
-
+    @video.persona= Persona.find(session[:usuario_id])
     respond_to do |format|
       if @video.save
         format.html { redirect_to @video, notice: 'Video was successfully created.' }
