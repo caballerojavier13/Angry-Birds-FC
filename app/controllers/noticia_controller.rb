@@ -2,9 +2,8 @@ class NoticiaController < SecurityController
   # GET /noticia
   # GET /noticia.json
   def index
-    @cantidad = 5
     @persona = Persona.find(session[:usuario_id])
-    @noticia = Noticium.all
+    @noticia = Noticium.order('id DESC').paginate(:page => params[:page], :per_page => 1)
 
       respond_to do |format|
       format.html # index.html.erb

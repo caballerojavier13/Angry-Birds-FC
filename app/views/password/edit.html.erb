@@ -2,6 +2,8 @@
   <head>
 			<title>Angry Birds Fan Club</title>
 			<link rel="stylesheet" href="/css/stylesheet1.css">
+			<link rel="stylesheet" href="/css/stylesheetNoScript.css">
+			<link rel="stylesheet" type="text/css" href="/css/stylesheetLoad.css" />
   </head>
   <body>
 		
@@ -11,18 +13,24 @@
 			<img  src="/picture/logo2.png"  height="150" >
 		</div>
 	</div>
+	<div style="margin-top: 450px;">
+	<% if flash[:alert] %>
+           	<div id="cont_noticia"> <p id="noticia"><%= flash[:alert] %></p><button type="button" class="close" data-dismiss="alert" onclick="hide('cont_noticia')">&times;</button></div>
+  	<% end %>
+	</div>
    	<div id="mensaje" style="margin-top: -150px;">
-            <%=form_for(@persona)  do |f|%> 
+	
+            <%=form_tag  do%> 
 		<div>
 		    <br/>
-		    <%= f.password_field :password, :placeholder=> 'Contraseña',:class => 'txtInput'%>
+		    <%= password_field_tag :password, params[:password], :placeholder=> 'Contraseña',:class => 'txtInput'%>
 		</div>
 		<br/>
 		<div>
-		    <%= f.password_field :password_confirmation, :placeholder=> 'Verificacion de Contraseña',:class => 'txtInput'%>
+		    <%= password_field_tag :password_confirmation, params[:repassword], :placeholder=> 'Verificacion de Contraseña',:class => 'txtInput'%>
 		</div>
 		<div>
-			<%= f.submit "", :class => 'boton1' %>
+			<%= submit_tag "", :class => 'boton1' %>
 			<a>
 				<img src="/picture/btn_cancel1.png" width="80" class="btn-mail" id="btn_email2">
 			</a> 
@@ -33,5 +41,11 @@
    <div id="footer">
    
    </div>
+   <script src= '/js/script1.js' > </script>
+        <script src= '/js/scriptLoad.js' > </script>
+        <script language="javascript">
+                window.onload = inicio;
+            </script>
+        <noscript><div id="noscript"><br/>Javascript deshabilitado: para poder apreciar la pagina web por favor activa javascript en tu navegador</div></noscript>
   </body>
 </html>

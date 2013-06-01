@@ -40,35 +40,23 @@
 					</a>
 				</div>
 				<div id="lista_conteiner">
-            <div class="list_noticia borde">
-                <h1>Titulo</h1>
-                <p>Contenido de la noticia.</p>
-                <img src="images/1.png" >
-            </div>
-            <div class="list_noticia borde">
-                <h1></h1>
-                <p></p>
-                <img>
-            </div>
-            <div class="list_noticia borde">
-                <h1></h1>
-                <p></p>
-                <img>
-            </div>
-            <div class="list_noticia borde">
-                <h1></h1>
-                <p></p>
-                <img>
-            </div>
-            <div class="list_noticia borde">
-                <h1></h1>
-                <p></p>
-                <img>
-            </div>
-        </div>		
+				<% @noticia.each do |app| %>
+                    <div class="list_noticia borde">
+                        <h1><%= app.titulo%></h1>
+                        <p><%= app.cuerpo%></p>
+                        <img src="images/1.png" >
+                        <div class="mask mask-1"></div>
+                        <div class="mask mask-2"></div>
+                        <div class="content">
+                        </div>
+                    </div>
+                    
+                <% end %>
+                <%= will_paginate @noticia, :previous_label => t("< anterior"), :next_label => t("siguiente >"), :page_gap => "...", :outer_window   => '1', :inner_window => '1', :link_separator => ' - ' %>
+            </div>		
 		</div>
 		
-		<div id="footer" >
+		<div id="footer" style="top: 150px;">
 			<a href="/logout"  >
                 <img src="/picture/exit1.png" style=" margin-top: 30px; margin-left: 20px;">
             </a>

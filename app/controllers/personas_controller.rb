@@ -1,3 +1,4 @@
+#coding: utf-8
 class PersonasController < ApplicationController
   # GET /personas
   # GET /personas.json
@@ -42,19 +43,9 @@ class PersonasController < ApplicationController
       end
     end
   end
-  def update
-    @persona = Persona.find(params[:id])
 
-    respond_to do |format|
-      if @persona.cambiar_pass(params[:persona])
-        format.html { redirect_to '/login' }
-        format.json { head :no_content }
-      else
-        format.html { redirect_to 'password#edit' }
-        format.json { render json: @persona.errors, status: :unprocessable_entity }
-      end
-    end
-  end
+
+
   def activate
       	@persona = Persona.unscoped.find(params[:id])
 	if @persona != nil

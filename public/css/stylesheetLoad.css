@@ -1,0 +1,203 @@
+@font-face {
+    font-family: 'AngryBirds';
+    src:url('../font/angrybirds-regular-webfont.woff');
+}
+#loading{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #330080;
+    box-shadow:inset 0px 0px 20px rgba(255,255,255,0.8);
+    z-index: 99;
+    color: white;
+    font-family: "AngryBirds"; 
+    text-align:center;
+    font-size:60px; 
+    line-height: 100px;
+    text-shadow: 5px 5px 10px rgba(0,0,0,0.7);
+    overflow: hidden;
+}
+#page{
+    width: 100%;
+	display:none;
+}
+.bokeh {
+    font-size: 100px;
+    width: 400px;
+    height: 400px;
+    position: relative;
+    margin: 100px auto;
+    list-style: none;
+    z-index: 110;  
+	border-radius: 50%;
+    -webkit-animation: rota 10s linear infinite;
+    -moz-animation: rota 10s linear infinite;
+    -ms-animation: rota 10s linear infinite;
+    -o-animation: rota 10s linear infinite;
+    animation: rota 10s linear infinite;
+}
+#bokeh1{
+	position: absolute;
+	top: 0;
+	left: 0;
+    -webkit-animation: rota 10s linear infinite;
+    -moz-animation: rota 10s linear infinite;
+    -ms-animation: rota 10s linear infinite;
+    -o-animation: rota 10s linear infinite;
+    animation: rota 10s linear infinite;
+}
+#bokeh2{
+	position: absolute;
+	top: 75%;
+	left: 0;
+    -webkit-animation: rota 10s linear infinite;
+    -moz-animation: rota 10s linear infinite;
+    -ms-animation: rota 10s linear infinite;
+    -o-animation: rota 10s linear infinite;
+    animation: rota 10s linear infinite;
+}
+#bokeh3{
+	position: absolute;
+	top: 0px;
+	left: 75%;
+    -webkit-animation: rota 10s linear infinite;
+    -moz-animation: rota 10s linear infinite;
+    -ms-animation: rota 10s linear infinite;
+    -o-animation: rota 10s linear infinite;
+    animation: rota 10s linear infinite;
+}
+#bokeh4{
+	position: absolute;
+	top: 75%;
+	left: 75%;
+    -webkit-animation: rota 10s linear infinite;
+    -moz-animation: rota 10s linear infinite;
+    -ms-animation: rota 10s linear infinite;
+    -o-animation: rota 10s linear infinite;
+    animation: rota 10s linear infinite;
+}
+#bokehText{
+	position: relative;
+	top: -350px;
+	margin: 100px auto;
+	left: 12.5%;
+	width: 50%;
+	height: 100px;
+    	
+	z-index:111;
+	text-align: left;
+	font-family: "AngryBirds"; 
+	font-size:100px;	
+	line-height: 400px;
+	color:white;
+    	text-shadow: 5px 5px 10px rgba(0,0,0,0.7);
+}
+#bokehText p{
+	position: absolute;
+	top:-150px;
+	left: -60px;
+	height: 100px;
+	width: 100px;
+	font-family: "AngryBirds"; 
+	font-size:100px;	
+	line-height: 400px;
+	color:white;
+    	text-shadow: 5px 5px 10px rgba(0,0,0,0.7);
+}
+#circulo{
+	height: 400px;
+	width: 400px;
+	position: absolute;
+	top: auto;
+	left: auto;
+	margin:0 auto;
+	box-shadow:inset 0px 0px 100px rgba(255,255,255,1),0px 0px 100px rgba(255,255,255,1);	
+	border-radius: 50%;
+	-webkit-animation: tama 5s linear infinite;
+	-moz-animation: tama 5s linear infinite;
+	-ms-animation: tama 5s linear infinite;
+	-o-animation: tama 5s linear infinite;
+	animation: tama 5s linear infinite;
+	z-index: 108;
+}
+@-webkit-keyframes rota {
+    to { -webkit-transform: rotate(360deg); }
+}
+
+@-moz-keyframes rota {
+    to { -moz-transform: rotate(360deg); }
+}
+
+@-ms-keyframes rota {
+    to { -ms-transform: rotate(360deg); }
+}
+
+@-o-keyframes rota {
+    to { -o-transform: rotate(360deg); }
+}
+
+@keyframes rota {
+    to { transform: rotate(360deg); }
+}
+
+@-webkit-keyframes tama {
+  to {
+	-webkit-transform:scale(0.2,0.2); 
+  }
+}
+@-moz-keyframes tama {
+  to {
+	-moz-transform:scale(0.2,0.2); 
+  }
+}
+@-ms-keyframes tama {
+  to {
+	-ms-transform:scale(0.2,0.2); 
+  }
+}
+@-o-keyframes tama {
+  to {
+	-o-transform:scale(0.2,0.2); 
+  }
+}
+
+
+@-webkit-keyframes opa{
+	to{
+		opacity: 1;
+	}
+}
+@keyframes opa{
+	to{
+		opacity: 1;
+	}
+}
+
+.capa1{
+	opacity: 0;
+	-webkit-animation: opa 2s linear infinite;
+	-moz-animation: opa 5s linear  0 infinite;
+	-ms-animation: tama 5s linear  0 infinite;
+	-o-animation: tama 5s linear  0 infinite;
+	animation: opa 2s linear infinite;
+}
+.capa2{
+	opacity: 0;
+	-webkit-animation: opa 2s linear infinite;
+	-moz-animation: opa 5s linear  5s infinite;
+	-ms-animation: tama 5s linear  0 infinite;
+	-o-animation: tama 5s linear  0 infinite;
+	animation: opa 2s linear infinite;
+
+}
+.capa3{
+	opacity: 0;
+	-webkit-animation: opa 2s linear infinite;
+	-moz-animation: opa 5s linear  0 infinite;
+	-ms-animation: tama 5s linear  0 infinite;
+	-o-animation: tama 5s linear  0 infinite;
+	animation: opa 2s linear infinite;
+}
+

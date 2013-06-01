@@ -84,13 +84,12 @@ class Persona < ActiveRecord::Base
   end
   def password_confirmation_equal
 	if self.password.present?
-	     errors.add(" ", "Las contraseñas ingresadas no coinciden") unless self.password == self.password_confirmation
+	     errors.add(" ", "Las contraseñas ingresadas no coinciden.") unless self.password == self.password_confirmation
 	end
   end
 #Funciones adicionales
-  def cambiar_pass(atributos)
-      self.update_attributes(atributos)
-      return self.update_attribute(:hashed_password, Persona.encrypt_password(self.password, self.salt))
+  def cambiar_pass pass
+     self.update_attribute(:hashed_password, Persona.encrypt_password(pass, self.salt))
   end
   def activate!
     self.update_attribute(:activo, true)

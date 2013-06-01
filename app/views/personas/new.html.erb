@@ -17,7 +17,7 @@
 		</div>
 		
 		<% if @persona.errors.any? %>
-    <div id="error">
+    <div id="error">no coinciden
     		<div id="error_title">
       		<h2>Error en la registración, se <%= @persona.errors.count > 1 ? "han" : "ha" %> encontrado <%= @persona.errors.count%> <%= @persona.errors.count > 1 ? "errores" : "error" %>:</h2>
 				</div>
@@ -78,7 +78,7 @@
      <%= f.password_field :password_confirmation, :size => 40 ,:class => 'txtInput'%>
    </div>
 
-   <div class="field" style="height: 110px;">     
+   <div class="field2" style="height: 110px;">     
      <a href="/login">
      		<div id="cancel"></div>
      </a>

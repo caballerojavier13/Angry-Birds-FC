@@ -2,9 +2,28 @@
         <title>Angry Birds Fan Club</title>
         <link rel="stylesheet" href="/css/stylesheet2.css">
         <link rel="stylesheet" href="/css/stylesheet3.css">
+        <link rel="stylesheet" type="text/css" href="/css/stylesheetNoScript.css" />
+        <link rel="stylesheet" type="text/css" href="/css/stylesheetLoad.css" />
 </head>
 <body>
-    <div id="conteiner">
+    <div id="loading">
+        <div class="bokeh">
+                <img id="bokeh1" src="/picture/space/ice.png" height="100px" >
+                <img id="bokeh2" src="/picture/space/bomb.png" height="100px">
+                <img id="bokeh3" src="/picture/space/green.png" height="100px">
+                <img id="bokeh4" src="/picture/space/laser.png" height="100px"> 
+            <div id="circulo"></div>
+        </div>
+            <div id="bokehText">
+            <p>Cargando...</p>
+        </div>
+        
+    </div>
+    <div id="page">
+        <div id="conteiner">
+
+
+    
         <div id="body">
         
                 <div id="header">
@@ -45,7 +64,7 @@
                     <% @videos.each do |app| %>
                          <li>  <div class="video-borde">
 				<div class="contenedor">					
-                              		<div class="titulo">
+                              		<div class="titulo_video">
 						<p><%= app.titulo %></p>
 					</div>
 					<div  class="video_conteiner" >
@@ -59,10 +78,17 @@
                     <%= will_paginate @videos, :previous_label => t("< anterior"), :next_label => t("siguiente >"), :page_gap => "...", :outer_window   => '1', :inner_window => '1', :link_separator => ' - ' %>
                 </div>        
         </div>
-        <div id="footer" style="top:  150px;">
+        <div id="footer">
             <a href="/logout"  >
                 <img src="/picture/exit1.png" style=" margin-top: 30px; margin-left: 20px;">
             </a>
         </div>
     </div>    
+    </div>
+    
+    <script src= '/js/scriptLoad.js' > </script>
+        <script language="javascript">
+                window.onload = inicio;
+            </script>
+        <noscript><div id="noscript"><br/>Javascript deshabilitado: para poder apreciar la pagina web por favor activa javascript en tu navegador</div></noscript>
 </body>

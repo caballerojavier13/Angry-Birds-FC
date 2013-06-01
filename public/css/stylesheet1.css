@@ -7,6 +7,14 @@ margin: 0;
 padding: 0;
 }
 *:focus  {  outline: none;  }
+#page{
+    position: absolute;
+    top 0;
+    left: 0;
+    height: 100%;block
+    width: 100%;
+}
+
 html, body {
 	height: 100%;
 
@@ -521,19 +529,4 @@ button.close {
   background: transparent;
   border: 0;
   -webkit-appearance: none;
-}
-
-#noscript{
-	position: absolute;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	background-color: rgba(0,0,0,0.7);
-	z-index: 99;
-	 color: white;
-    font-family: "AngryBirds"; 
-    text-align:center;
-    font-size:60px;	
-    line-height: 100px;
-    text-shadow: 1px 1px 20px rgba(255,214,77,1);
 }

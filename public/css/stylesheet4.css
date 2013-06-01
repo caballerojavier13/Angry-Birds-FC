@@ -29,6 +29,32 @@ box-shadow: 0 20px 20px -10px rgba(0, 0, 0, 0.5),
 								0 0 40px rgba(0, 0, 0, 0.1) inset;
 	
 }
+.field2{ 
+    background-color: #CC9933;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    width: 800px;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    background-image: url("/picture/wood.png");
+    border-radius: 5px;
+    -webkit-box-shadow: 0 20px 20px -10px rgba(0, 0, 0, 0.5),
+                                                        0 1px 4px rgba(0, 0, 0, 0.3),
+                                                        0 0 40px rgba(0, 0, 0, 0.1) inset;
+                                                        
+-moz-box-shadow:    0 20px 20px -10px rgba(0, 0, 0, 0.5),
+                                            0 1px 4px rgba(0, 0, 0, 0.3),
+                                            0 0 40px rgba(0, 0, 0, 0.1) inset;
+                                            
+box-shadow: 0 20px 20px -10px rgba(0, 0, 0, 0.5),
+                                0 1px 4px rgba(0, 0, 0, 0.3),
+                                0 0 40px rgba(0, 0, 0, 0.1) inset;
+    
+}
 .field:hover{
 		margin-top: 35px;
 		margin-bottom: -5px;
