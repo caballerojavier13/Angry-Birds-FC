@@ -104,7 +104,13 @@
 	font-size:100px;	
 	line-height: 400px;
 	color:white;
+	opacity: 1;
     	text-shadow: 5px 5px 10px rgba(0,0,0,0.7);
+	-webkit-animation: opa 7s linear infinite;
+	-moz-animation: opa 7s linear infinite;
+	-ms-animation: opa 7s linear infinite;
+	-o-animation: opa 7s linear infinite;
+	animation: opa 7s linear infinite;
 }
 #circulo{
 	height: 400px;
@@ -166,38 +172,57 @@
 
 @-webkit-keyframes opa{
 	to{
-		opacity: 1;
+		opacity: 0;
+	}
+}
+@-moz-keyframes opa{
+	to{
+		opacity: 0;
+	}
+}
+@-ms-keyframes opa{
+	to{
+		opacity: 0;
+	}
+}
+@-o-keyframes opa{
+	to{
+		opacity: 0;
 	}
 }
 @keyframes opa{
+
 	to{
-		opacity: 1;
+		opacity: 0;
 	}
 }
 
-.capa1{
-	opacity: 0;
-	-webkit-animation: opa 2s linear infinite;
-	-moz-animation: opa 5s linear  0 infinite;
-	-ms-animation: tama 5s linear  0 infinite;
-	-o-animation: tama 5s linear  0 infinite;
-	animation: opa 2s linear infinite;
-}
-.capa2{
-	opacity: 0;
-	-webkit-animation: opa 2s linear infinite;
-	-moz-animation: opa 5s linear  5s infinite;
-	-ms-animation: tama 5s linear  0 infinite;
-	-o-animation: tama 5s linear  0 infinite;
-	animation: opa 2s linear infinite;
-
-}
-.capa3{
-	opacity: 0;
-	-webkit-animation: opa 2s linear infinite;
-	-moz-animation: opa 5s linear  0 infinite;
-	-ms-animation: tama 5s linear  0 infinite;
-	-o-animation: tama 5s linear  0 infinite;
-	animation: opa 2s linear infinite;
+#background {
+	background: url(../images/background.png) repeat 5% 5%;
+	position: absolute;
+	top: 0; left: 0; right: 0; bottom: 0;
+	z-index: 1;
 }
 
+#midground {
+	background: url(../images/midground.png) repeat 20% 20%;
+	position: absolute;
+	top: 0; left: 0; right: 0; bottom: 0;
+	z-index: 1;
+}
+
+#foreground {
+	background: url(../images/foreground.png) repeat 90% 110%;
+	position: absolute;
+	top: 0; left: 0; right: 0; bottom: 0;
+	z-index: 2;
+}
+#tapa{
+	position: absolute;
+	z-index: 3;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(39,0,39,0.6);
+}
