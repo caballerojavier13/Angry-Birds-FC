@@ -34,24 +34,36 @@ class Persona < ActiveRecord::Base
 
 #funciones de comprobacion de errores
   def nombre_must_be_present
+    palabra = ""
+    self.nombre.scan(/\w+/) do |a|
+        palabra = palabra + " " + a.capitalize 
+    end
+    self.nombre = palabra 
 	self.nombre.gsub! /\s+/, ' '
 	self.nombre.split(' ').join(' ')
 	errors.add(" ", "El Nombre no puede estar en blanco.") unless nombre.present?
   end
 
   def apellido_must_be_present
+    palabra = ""
+    self.apellido.scan(/\w+/) do |a|
+        palabra = palabra + " " + a.capitalize 
+    end
+    self.apellido = palabra 
 	self.apellido.gsub! /\s+/, ' '
 	self.apellido.split(' ').join(' ')
-        errors.add(" ", "El Apellido no puede estar en blanco.") unless apellido.present?
+  errors.add(" ", "El Apellido no puede estar en blanco.") unless apellido.present?
   end
 
   def usuario_must_be_present
+    self.username = self.username.downcase
 	self.username.gsub! /\s+/, ''
 	self.username.split(' ').join('')
         errors.add(" ", "El Usuario no puede estar en blanco.") unless username.present?
   end
 
   def email_must_be_present
+    self.email = self.email.downcase
 	self.email = email.delete(' ')
         errors.add(" ", "El Email no puede estar en blanco.") unless email.present?
   end
@@ -75,7 +87,7 @@ class Persona < ActiveRecord::Base
   end
   def password_must_be_present
     unless hashed_password.present?
-    	errors.add(" ", "Debe ingresar una contraseña") 
+    	errors.add(" ", "Debe ingresar una contraseña.") 
     else
 	unless self.password.size > 3 
 		errors.add(" ", "La contraseña debe tener más de 3 caracteres.") 

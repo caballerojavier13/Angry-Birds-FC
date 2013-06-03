@@ -7,6 +7,10 @@
 </head>
 <body>
     <div id="loading">
+        <div id="background"></div>
+        <div id="midground"></div>
+        <div id="foreground"></div>
+        <div id="tapa"></div>
         <div class="bokeh">
                 <img id="bokeh1" src="/picture/space/ice.png" height="100px" >
                 <img id="bokeh2" src="/picture/space/bomb.png" height="100px">
@@ -58,21 +62,22 @@
                         </div>
                     </a>
                 </div>
-                <div id="contenido" width="1020px" >
+                <div id="contenido" width="1022px" >
                     
                     <ul id="listado_videos"> 
                     <% @videos.each do |app| %>
-                         <li>  <div class="video-borde">
-				<div class="contenedor">					
+                         <li>  
+                             <div class="video-borde">
+				                <div class="contenedor">					
                               		<div class="titulo_video">
-						<p><%= app.titulo %></p>
-					</div>
-					<div  class="video_conteiner" >
-                                    		<iframe type="text/html" width="100%" height="100%" frameborder="0"src="<%= app.url%>"></iframe>
-                               		</div>
-				</div>
+						                  <p><%= app.titulo %></p>
+					                </div>
+    				                <div  class="video_conteiner" >
+                                 		<iframe type="text/html" width="100%" height="100%" frameborder="0"src="<%= app.url%>"></iframe>
+                             		</div>
+			                     </div>
                             </div>
-                        <li>
+                        </li>
                     <% end %>
                     </ul>
                     <%= will_paginate @videos, :previous_label => t("< anterior"), :next_label => t("siguiente >"), :page_gap => "...", :outer_window   => '1', :inner_window => '1', :link_separator => ' - ' %>
@@ -91,4 +96,27 @@
                 window.onload = inicio;
             </script>
         <noscript><div id="noscript"><br/>Javascript deshabilitado: para poder apreciar la pagina web por favor activa javascript en tu navegador</div></noscript>
+        <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+    <script src="js/jquery.backgroundPosition.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function(){
+        
+          $('#midground').css({backgroundPosition: '0px 0px'});
+          $('#foreground').css({backgroundPosition: '0px 0px'});
+          $('#background').css({backgroundPosition: '0px 0px'});
+        
+            $('#midground').animate({
+                backgroundPosition:"(-10000px -2000px)"
+            }, 240000, 'linear');
+            
+            $('#foreground').animate({
+                backgroundPosition:"(-10000px -2000px)"
+            }, 120000, 'linear');
+            
+            $('#background').animate({
+                backgroundPosition:"(-10000px -2000px)"
+            }, 480000, 'linear');
+            
+        });
+    </script>
 </body>

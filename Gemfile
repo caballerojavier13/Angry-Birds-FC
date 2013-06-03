@@ -20,6 +20,8 @@ gem 'will_paginate-bootstrap'
 
 gem "simple_form"
 
+gem 'video_info'
+ 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 

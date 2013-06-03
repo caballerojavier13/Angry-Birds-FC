@@ -97,13 +97,13 @@ html, body{
     line-height: 42px;
     
 }
-nav ul li a{
-		 text-decoration: none;
+#navegador nav ul li a{
+	 text-decoration: none;
 }
-nav ul li :hover{
- background-color: transparent;
- border-radius:2px;
- text-shadow: 3px 3px 4px rgba(0,0,0,0.6); 
+#navegador nav ul li :hover{
+     background-color: transparent;
+     border-radius:2px;
+     text-shadow: 3px 3px 4px rgba(0,0,0,0.6); 
 }
 #fotoPerfil{
 	position: relative;

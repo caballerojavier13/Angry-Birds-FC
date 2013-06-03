@@ -28,6 +28,7 @@ GEM
     activesupport (3.2.13)
       i18n (= 0.6.1)
       multi_json (~> 1.0)
+    addressable (2.3.4)
     arel (3.0.2)
     better_errors (0.9.0)
       coderay (>= 1.0.0)
@@ -122,6 +123,9 @@ GEM
     uglifier (2.0.1)
       execjs (>= 0.3.0)
       multi_json (~> 1.0, >= 1.0.2)
+    video_info (1.4.0)
+      addressable
+      multi_json
     will_paginate (3.0.4)
     will_paginate-bootstrap (0.2.2)
       will_paginate (>= 3.0.3)
@@ -146,5 +150,6 @@ DEPENDENCIES
   simple_form
   therubyracer
   uglifier (>= 1.0.3)
+  video_info
   will_paginate
   will_paginate-bootstrap

@@ -3,7 +3,7 @@ class VideosController < SecurityController
   # GET /videos.json
   def index
     @persona = Persona.find(session[:usuario_id])
-    @videos = Video.order('id DESC').paginate(:page => params[:page], :per_page => 4)
+    @videos = Video.order('id DESC').paginate(:page => params[:page], :per_page => 8)
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @videos }
@@ -24,8 +24,9 @@ class VideosController < SecurityController
   # GET /videos/new
   # GET /videos/new.json
   def new
+    @persona = Persona.find(session[:usuario_id])
     @video = Video.new
-  
+    @video.persona = @persona
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @video }
@@ -40,6 +41,7 @@ class VideosController < SecurityController
   # POST /videos
   # POST /videos.json
   def create
+    
     @video = Video.new(params[:video])
     @video.persona= Persona.find(session[:usuario_id])
     respond_to do |format|

@@ -16,18 +16,18 @@
 			  </h1>
 		</div>
 		
-		<% if @persona.errors.any? %>
-    <div id="error">no coinciden
-    		<div id="error_title">
-      		<h2>Error en la registración, se <%= @persona.errors.count > 1 ? "han" : "ha" %> encontrado <%= @persona.errors.count%> <%= @persona.errors.count > 1 ? "errores" : "error" %>:</h2>
-				</div>
-      <ul>
-      <% @persona.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+	<% if @persona.errors.any? %>
+        <div id="error">
+        	<div id="error_title">
+          		<h2>Error en la registración, se <%= @persona.errors.count > 1 ? "han" : "ha" %> encontrado <%= @persona.errors.count%> <%= @persona.errors.count > 1 ? "errores" : "error" %>:</h2>
+    	   </div>
+           <ul>
+           <% @persona.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+           <% end %>
+           </ul>
+        </div>
+   <% end %>
   
   	<div class="field">
    		<%= f.label "Nombre:"%><br />

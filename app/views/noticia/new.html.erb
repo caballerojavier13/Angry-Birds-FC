@@ -18,7 +18,7 @@
                                     <li><a href="/start" >Inicio</a></li>
                                     <li><a href="/noticia" >Noticias</a></li>
                                     <li><a href="404" >Imágenes</a></li>
-                                    <li><a href="404" >Videos</a></li>
+                                    <li><a href="/videos" >Videos</a></li>
                                 </ul>
                                 
                     </nav>
@@ -44,16 +44,17 @@
         <div id="form_new">
         <%= form_for(@noticium) do |f| %>
           <% if @noticium.errors.any? %>
-            <div id="error_explanation">
-              <h2><%= pluralize(@noticium.errors.count, "error") %> prohibited this noticium from being saved:</h2>
-        
-              <ul>
-              <% @noticium.errors.full_messages.each do |msg| %>
+        <div id="error">
+            <div id="error_title">
+                <h2>Error en la registración, se <%= @noticium.errors.count > 1 ? "han" : "ha" %> encontrado <%= @noticium.errors.count%> <%= @noticium.errors.count > 1 ? "errores" : "error" %>:</h2>
+           </div>
+           <ul>
+           <% @noticium.errors.full_messages.each do |msg| %>
                 <li><%= msg %></li>
-              <% end %>
-              </ul>
-            </div>
-          <% end %>
+           <% end %>
+           </ul>
+        </div>
+   <% end %>
         
           <div class="field">
             <%= f.label :titulo %><br />
@@ -73,9 +74,9 @@
         <% end %>
         </div>
         <div id="footer">
-                <a href="/logout"  >
-         <img src="/picture/exit1.png" style=" margin-top: 30px; margin-left: 20px;">
-      </a>
+            <a href="/logout"  >
+                <img src="/picture/exit1.png" style=" margin-top: 30px; margin-left: 20px;">
+            </a>
         </div>
         
 </body>

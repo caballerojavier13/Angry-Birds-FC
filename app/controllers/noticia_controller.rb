@@ -42,9 +42,10 @@ class NoticiaController < SecurityController
   # POST /noticia
   # POST /noticia.json
   def create
-    @noticium = Noticium.new(params[:noticium])
-    @noticium.persona= Persona.find(session[:usuario_id])
     @persona = Persona.find(session[:usuario_id])
+    @noticium = Noticium.new(params[:noticium])
+    @noticium.persona=  @persona
+    
     respond_to do |format|
       if @noticium.save
         format.html { redirect_to @noticium, notice: 'Noticium was successfully created.' }
