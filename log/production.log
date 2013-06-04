@@ -9408,3 +9408,1176 @@ Compiled tipo_usuario_funcionalidads.css  (1ms)  (pid 9627)
 Compiled tipo_usuarios.css  (1ms)  (pid 9627)
 Compiled videos.css  (1ms)  (pid 9627)
 Compiled application.css  (151ms)  (pid 9627)
+Connecting to database specified by database.yml
+Compiled jquery.js  (3ms)  (pid 26277)
+Compiled jquery_ujs.js  (0ms)  (pid 26277)
+Compiled calificacions.js  (156ms)  (pid 26277)
+Compiled funcionalidads.js  (1ms)  (pid 26277)
+Compiled imagens.js  (1ms)  (pid 26277)
+Compiled inicio.js  (1ms)  (pid 26277)
+Compiled noticia.js  (1ms)  (pid 26277)
+Compiled password.js  (1ms)  (pid 26277)
+Compiled personas.js  (1ms)  (pid 26277)
+Compiled reset_password.js  (1ms)  (pid 26277)
+Compiled tipo_usuario_funcionalidads.js  (0ms)  (pid 26277)
+Compiled tipo_usuarios.js  (1ms)  (pid 26277)
+Compiled videos.js  (1ms)  (pid 26277)
+Compiled application.js  (574ms)  (pid 26277)
+Connecting to database specified by database.yml
+Compiled jquery.js  (2ms)  (pid 26277)
+Compiled jquery_ujs.js  (0ms)  (pid 26277)
+Compiled calificacions.js  (103ms)  (pid 26277)
+Compiled funcionalidads.js  (1ms)  (pid 26277)
+Compiled imagens.js  (0ms)  (pid 26277)
+Compiled inicio.js  (0ms)  (pid 26277)
+Compiled noticia.js  (0ms)  (pid 26277)
+Compiled password.js  (0ms)  (pid 26277)
+Compiled personas.js  (1ms)  (pid 26277)
+Compiled reset_password.js  (0ms)  (pid 26277)
+Compiled tipo_usuario_funcionalidads.js  (0ms)  (pid 26277)
+Compiled tipo_usuarios.js  (0ms)  (pid 26277)
+Compiled videos.js  (49ms)  (pid 26277)
+Compiled application.js  (282ms)  (pid 26277)
+Connecting to database specified by database.yml
+Started GET "/" for 127.0.0.1 at 2013-06-04 08:14:37 -0300
+Processing by SessionsController#inicio as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2013-06-04 08:14:37 -0300
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (22.1ms)
+Completed 500 Internal Server Error in 195ms
+[Rollbar] Reporting exception: appliation.css isn't precompiled
+[Rollbar] Scheduling payload
+[Rollbar] Sending payload
+[Rollbar] Got unexpected status code from Rollbar api: 403
+[Rollbar] Response: {
+  "err": 1,
+  "message": "access token not found"
+}
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=052cb8a5-6dd8-49d7-a25b-498048227b46 (only available if report was successful)
+
+ActionView::Template::Error (appliation.css isn't precompiled):
+    2: <html>
+    3: <head>
+    4:   <title>Angry Birds Fan Club</title>
+    5:   <%= stylesheet_link_tag    "appliation", :media => "all" %>
+    6:   <%= javascript_include_tag "application" %>
+    7:   <%= csrf_meta_tags %>
+    8: 
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__520938344_92111330'
+
+
+[Rollbar] Reporting exception: appliation.css isn't precompiled
+[Rollbar] Scheduling payload
+[Rollbar] Sending payload
+[Rollbar] Got unexpected status code from Rollbar api: 403
+[Rollbar] Response: {
+  "err": 1,
+  "message": "access token not found"
+}
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=69efa343-dd66-4caf-980e-c39db75595a9 (only available if report was successful)
+Connecting to database specified by database.yml
+Compiled jquery.js  (2ms)  (pid 28732)
+Compiled jquery_ujs.js  (0ms)  (pid 28732)
+Compiled calificacions.js  (99ms)  (pid 28732)
+Compiled funcionalidads.js  (1ms)  (pid 28732)
+Compiled imagens.js  (0ms)  (pid 28732)
+Compiled inicio.js  (0ms)  (pid 28732)
+Compiled noticia.js  (0ms)  (pid 28732)
+Compiled password.js  (1ms)  (pid 28732)
+Compiled personas.js  (1ms)  (pid 28732)
+Compiled reset_password.js  (0ms)  (pid 28732)
+Compiled tipo_usuario_funcionalidads.js  (0ms)  (pid 28732)
+Compiled tipo_usuarios.js  (1ms)  (pid 28732)
+Compiled videos.js  (0ms)  (pid 28732)
+Compiled application.js  (317ms)  (pid 28732)
+Compiled calificacions.css  (75ms)  (pid 28732)
+Compiled funcionalidads.css  (1ms)  (pid 28732)
+Compiled imagens.css  (1ms)  (pid 28732)
+Compiled inicio.css  (1ms)  (pid 28732)
+Compiled noticia.css  (1ms)  (pid 28732)
+Compiled password.css  (40ms)  (pid 28732)
+Compiled personas.css  (1ms)  (pid 28732)
+Compiled scaffolds.css  (12ms)  (pid 28732)
+Compiled tipo_usuario_funcionalidads.css  (1ms)  (pid 28732)
+Compiled tipo_usuarios.css  (1ms)  (pid 28732)
+Compiled videos.css  (1ms)  (pid 28732)
+Compiled application.css  (202ms)  (pid 28732)
+Connecting to database specified by database.yml
+Compiled jquery.js  (2ms)  (pid 28732)
+Compiled jquery_ujs.js  (0ms)  (pid 28732)
+Compiled calificacions.js  (100ms)  (pid 28732)
+Compiled funcionalidads.js  (1ms)  (pid 28732)
+Compiled imagens.js  (0ms)  (pid 28732)
+Compiled inicio.js  (0ms)  (pid 28732)
+Compiled noticia.js  (1ms)  (pid 28732)
+Compiled password.js  (0ms)  (pid 28732)
+Compiled personas.js  (0ms)  (pid 28732)
+Compiled reset_password.js  (0ms)  (pid 28732)
+Compiled tipo_usuario_funcionalidads.js  (0ms)  (pid 28732)
+Compiled tipo_usuarios.js  (0ms)  (pid 28732)
+Compiled videos.js  (0ms)  (pid 28732)
+Compiled application.js  (265ms)  (pid 28732)
+Compiled calificacions.css  (9ms)  (pid 28732)
+Compiled funcionalidads.css  (1ms)  (pid 28732)
+Compiled imagens.css  (1ms)  (pid 28732)
+Compiled inicio.css  (1ms)  (pid 28732)
+Compiled noticia.css  (1ms)  (pid 28732)
+Compiled password.css  (2ms)  (pid 28732)
+Compiled personas.css  (1ms)  (pid 28732)
+Compiled scaffolds.css  (14ms)  (pid 28732)
+Compiled tipo_usuario_funcionalidads.css  (1ms)  (pid 28732)
+Compiled tipo_usuarios.css  (2ms)  (pid 28732)
+Compiled videos.css  (1ms)  (pid 28732)
+Compiled application.css  (143ms)  (pid 28732)
+Connecting to database specified by database.yml
+Started GET "/login" for 127.0.0.1 at 2013-06-04 08:16:00 -0300
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (9.4ms)
+Completed 500 Internal Server Error in 107ms
+[Rollbar] Reporting exception: appliation.css isn't precompiled
+[Rollbar] Scheduling payload
+[Rollbar] Sending payload
+[Rollbar] Got unexpected status code from Rollbar api: 403
+[Rollbar] Response: {
+  "err": 1,
+  "message": "access token not found"
+}
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=73845ba2-59d2-4e32-a86c-b4288a3da0d8 (only available if report was successful)
+
+ActionView::Template::Error (appliation.css isn't precompiled):
+    2: <html>
+    3: <head>
+    4:   <title>Angry Birds Fan Club</title>
+    5:   <%= stylesheet_link_tag    "appliation", :media => "all" %>
+    6:   <%= javascript_include_tag "application" %>
+    7:   <%= csrf_meta_tags %>
+    8: 
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___803607745_79174870'
+
+
+[Rollbar] Reporting exception: appliation.css isn't precompiled
+[Rollbar] Scheduling payload
+[Rollbar] Sending payload
+[Rollbar] Got unexpected status code from Rollbar api: 403
+[Rollbar] Response: {
+  "err": 1,
+  "message": "access token not found"
+}
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=32b78941-e5c9-4393-a1a6-1e185295c190 (only available if report was successful)
+Started GET "/favicon.ico" for 127.0.0.1 at 2013-06-04 08:16:04 -0300
+[Rollbar] Reporting exception: No route matches [GET] "/favicon.ico"
+[Rollbar] Scheduling payload
+[Rollbar] Sending payload
+[Rollbar] Got unexpected status code from Rollbar api: 403
+[Rollbar] Response: {
+  "err": 1,
+  "message": "access token not found"
+}
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=f2b1d84a-e548-4685-9bc3-e2d8df453c2a (only available if report was successful)
+
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  rollbar (0.9.13) lib/rollbar/middleware/rails/show_exceptions.rb:13:in `call_with_rollbar'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+[Rollbar] Reporting exception: No route matches [GET] "/favicon.ico"
+[Rollbar] Scheduling payload
+[Rollbar] Sending payload
+[Rollbar] Got unexpected status code from Rollbar api: 403
+[Rollbar] Response: {
+  "err": 1,
+  "message": "access token not found"
+}
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=7c4b3c1c-95d6-4771-a7fa-eb0d9073f481 (only available if report was successful)
+Connecting to database specified by database.yml
+Compiled jquery.js  (2ms)  (pid 1214)
+Compiled jquery_ujs.js  (0ms)  (pid 1214)
+Compiled calificacions.js  (137ms)  (pid 1214)
+Compiled funcionalidads.js  (1ms)  (pid 1214)
+Compiled imagens.js  (1ms)  (pid 1214)
+Compiled inicio.js  (0ms)  (pid 1214)
+Compiled noticia.js  (0ms)  (pid 1214)
+Compiled password.js  (0ms)  (pid 1214)
+Compiled personas.js  (0ms)  (pid 1214)
+Compiled reset_password.js  (0ms)  (pid 1214)
+Compiled tipo_usuario_funcionalidads.js  (0ms)  (pid 1214)
+Compiled tipo_usuarios.js  (1ms)  (pid 1214)
+Compiled videos.js  (1ms)  (pid 1214)
+Compiled application.js  (392ms)  (pid 1214)
+Compiled calificacions.css  (87ms)  (pid 1214)
+Compiled funcionalidads.css  (1ms)  (pid 1214)
+Compiled imagens.css  (1ms)  (pid 1214)
+Compiled inicio.css  (1ms)  (pid 1214)
+Compiled noticia.css  (1ms)  (pid 1214)
+Compiled password.css  (54ms)  (pid 1214)
+Compiled personas.css  (1ms)  (pid 1214)
+Compiled scaffolds.css  (12ms)  (pid 1214)
+Compiled tipo_usuario_funcionalidads.css  (1ms)  (pid 1214)
+Compiled tipo_usuarios.css  (1ms)  (pid 1214)
+Compiled videos.css  (1ms)  (pid 1214)
+Compiled application.css  (276ms)  (pid 1214)
+Connecting to database specified by database.yml
+Compiled jquery.js  (3ms)  (pid 1214)
+Compiled jquery_ujs.js  (0ms)  (pid 1214)
+Compiled calificacions.js  (97ms)  (pid 1214)
+Compiled funcionalidads.js  (1ms)  (pid 1214)
+Compiled imagens.js  (0ms)  (pid 1214)
+Compiled inicio.js  (0ms)  (pid 1214)
+Compiled noticia.js  (0ms)  (pid 1214)
+Compiled password.js  (0ms)  (pid 1214)
+Compiled personas.js  (0ms)  (pid 1214)
+Compiled reset_password.js  (0ms)  (pid 1214)
+Compiled tipo_usuario_funcionalidads.js  (0ms)  (pid 1214)
+Compiled tipo_usuarios.js  (0ms)  (pid 1214)
+Compiled videos.js  (0ms)  (pid 1214)
+Compiled application.js  (298ms)  (pid 1214)
+Compiled calificacions.css  (9ms)  (pid 1214)
+Compiled funcionalidads.css  (1ms)  (pid 1214)
+Compiled imagens.css  (1ms)  (pid 1214)
+Compiled inicio.css  (1ms)  (pid 1214)
+Compiled noticia.css  (1ms)  (pid 1214)
+Compiled password.css  (1ms)  (pid 1214)
+Compiled personas.css  (1ms)  (pid 1214)
+Compiled scaffolds.css  (11ms)  (pid 1214)
+Compiled tipo_usuario_funcionalidads.css  (1ms)  (pid 1214)
+Compiled tipo_usuarios.css  (1ms)  (pid 1214)
+Compiled videos.css  (1ms)  (pid 1214)
+Compiled application.css  (286ms)  (pid 1214)
+Connecting to database specified by database.yml
+Started GET "/login" for 127.0.0.1 at 2013-06-04 08:20:05 -0300
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (43.6ms)
+Completed 500 Internal Server Error in 195ms
+[Rollbar] Reporting exception: appliation.css isn't precompiled
+[Rollbar] Scheduling payload
+[Rollbar] Sending payload
+[Rollbar] Got unexpected status code from Rollbar api: 403
+[Rollbar] Response: {
+  "err": 1,
+  "message": "access token not found"
+}
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=dc431cb8-f32e-43e2-a8a9-89201a5cedc1 (only available if report was successful)
+
+ActionView::Template::Error (appliation.css isn't precompiled):
+    3: <head>
+    4:   <title>Angry Birds Fan Club</title>
+    5: 	<link rel="shortcut icon" href="/favicon.ico" />
+    6:   <%= stylesheet_link_tag    "appliation", :media => "all" %>
+    7:   <%= javascript_include_tag "application" %>
+    8:   <%= csrf_meta_tags %>
+    9: 
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb__95896590_78909220'
+
+
+[Rollbar] Reporting exception: appliation.css isn't precompiled
+[Rollbar] Scheduling payload
+[Rollbar] Sending payload
+[Rollbar] Got unexpected status code from Rollbar api: 403
+[Rollbar] Response: {
+  "err": 1,
+  "message": "access token not found"
+}
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=6e0ad201-58e6-422f-9609-ffbd1f5d969f (only available if report was successful)
+Started GET "/favicon.ico" for 127.0.0.1 at 2013-06-04 08:20:11 -0300
+[Rollbar] Reporting exception: No route matches [GET] "/favicon.ico"
+[Rollbar] Scheduling payload
+[Rollbar] Sending payload
+[Rollbar] Got unexpected status code from Rollbar api: 403
+[Rollbar] Response: {
+  "err": 1,
+  "message": "access token not found"
+}
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=9f1c44f5-39d0-4048-a897-1716cfba951f (only available if report was successful)
+
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  rollbar (0.9.13) lib/rollbar/middleware/rails/show_exceptions.rb:13:in `call_with_rollbar'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+[Rollbar] Reporting exception: No route matches [GET] "/favicon.ico"
+[Rollbar] Scheduling payload
+[Rollbar] Sending payload
+[Rollbar] Got unexpected status code from Rollbar api: 403
+[Rollbar] Response: {
+  "err": 1,
+  "message": "access token not found"
+}
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=5fe6ddaa-ca37-42b4-9748-24e300dd5d5c (only available if report was successful)
+Connecting to database specified by database.yml
+Compiled jquery.js  (46ms)  (pid 7851)
+Compiled jquery_ujs.js  (0ms)  (pid 7851)
+Compiled calificacions.js  (98ms)  (pid 7851)
+Compiled funcionalidads.js  (1ms)  (pid 7851)
+Compiled imagens.js  (0ms)  (pid 7851)
+Compiled inicio.js  (0ms)  (pid 7851)
+Compiled noticia.js  (0ms)  (pid 7851)
+Compiled password.js  (0ms)  (pid 7851)
+Compiled personas.js  (0ms)  (pid 7851)
+Compiled reset_password.js  (0ms)  (pid 7851)
+Compiled tipo_usuario_funcionalidads.js  (1ms)  (pid 7851)
+Compiled tipo_usuarios.js  (0ms)  (pid 7851)
+Compiled videos.js  (0ms)  (pid 7851)
+Compiled application.js  (274ms)  (pid 7851)
+Compiled calificacions.css  (47ms)  (pid 7851)
+Compiled funcionalidads.css  (1ms)  (pid 7851)
+Compiled imagens.css  (1ms)  (pid 7851)
+Compiled inicio.css  (1ms)  (pid 7851)
+Compiled noticia.css  (1ms)  (pid 7851)
+Compiled password.css  (1ms)  (pid 7851)
+Compiled personas.css  (1ms)  (pid 7851)
+Compiled scaffolds.css  (11ms)  (pid 7851)
+Compiled tipo_usuario_funcionalidads.css  (1ms)  (pid 7851)
+Compiled tipo_usuarios.css  (1ms)  (pid 7851)
+Compiled videos.css  (1ms)  (pid 7851)
+Compiled application.css  (175ms)  (pid 7851)
+Connecting to database specified by database.yml
+Compiled jquery.js  (46ms)  (pid 7851)
+Compiled jquery_ujs.js  (0ms)  (pid 7851)
+Compiled calificacions.js  (102ms)  (pid 7851)
+Compiled funcionalidads.js  (1ms)  (pid 7851)
+Compiled imagens.js  (0ms)  (pid 7851)
+Compiled inicio.js  (0ms)  (pid 7851)
+Compiled noticia.js  (0ms)  (pid 7851)
+Compiled password.js  (0ms)  (pid 7851)
+Compiled personas.js  (0ms)  (pid 7851)
+Compiled reset_password.js  (0ms)  (pid 7851)
+Compiled tipo_usuario_funcionalidads.js  (0ms)  (pid 7851)
+Compiled tipo_usuarios.js  (1ms)  (pid 7851)
+Compiled videos.js  (0ms)  (pid 7851)
+Compiled application.js  (268ms)  (pid 7851)
+Compiled calificacions.css  (9ms)  (pid 7851)
+Compiled funcionalidads.css  (1ms)  (pid 7851)
+Compiled imagens.css  (1ms)  (pid 7851)
+Compiled inicio.css  (1ms)  (pid 7851)
+Compiled noticia.css  (1ms)  (pid 7851)
+Compiled password.css  (1ms)  (pid 7851)
+Compiled personas.css  (1ms)  (pid 7851)
+Compiled scaffolds.css  (11ms)  (pid 7851)
+Compiled tipo_usuario_funcionalidads.css  (1ms)  (pid 7851)
+Compiled tipo_usuarios.css  (1ms)  (pid 7851)
+Compiled videos.css  (1ms)  (pid 7851)
+Compiled application.css  (121ms)  (pid 7851)
+Connecting to database specified by database.yml
+Started GET "/login" for 127.0.0.1 at 2013-06-04 08:23:54 -0300
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (8.6ms)
+Completed 500 Internal Server Error in 97ms
+[Rollbar] Reporting exception: appliation.css isn't precompiled
+[Rollbar] Scheduling payload
+[Rollbar] Sending payload
+[Rollbar] Got unexpected status code from Rollbar api: 403
+[Rollbar] Response: {
+  "err": 1,
+  "message": "access token not found"
+}
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=b7caa02a-8e08-4923-8ed9-cee829ef25b2 (only available if report was successful)
+
+ActionView::Template::Error (appliation.css isn't precompiled):
+    3: <head>
+    4:   <title>Angry Birds Fan Club</title>
+    5: 	<link rel="shortcut icon" href="/favicon2.ico" />
+    6:   <%= stylesheet_link_tag    "appliation", :media => "all" %>
+    7:   <%= javascript_include_tag "application" %>
+    8:   <%= csrf_meta_tags %>
+    9: 
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb___634044737_81168320'
+
+
+[Rollbar] Reporting exception: appliation.css isn't precompiled
+[Rollbar] Scheduling payload
+[Rollbar] Sending payload
+[Rollbar] Got unexpected status code from Rollbar api: 403
+[Rollbar] Response: {
+  "err": 1,
+  "message": "access token not found"
+}
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=7a8b8a98-4892-475e-9e16-9fd224f7db12 (only available if report was successful)
+Started GET "/favicon.ico" for 127.0.0.1 at 2013-06-04 08:23:59 -0300
+[Rollbar] Reporting exception: No route matches [GET] "/favicon.ico"
+[Rollbar] Scheduling payload
+[Rollbar] Sending payload
+[Rollbar] Got unexpected status code from Rollbar api: 403
+[Rollbar] Response: {
+  "err": 1,
+  "message": "access token not found"
+}
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=a29820b3-af40-464c-8d40-d557b8dcee17 (only available if report was successful)
+
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  rollbar (0.9.13) lib/rollbar/middleware/rails/show_exceptions.rb:13:in `call_with_rollbar'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+[Rollbar] Reporting exception: No route matches [GET] "/favicon.ico"
+[Rollbar] Scheduling payload
+[Rollbar] Sending payload
+[Rollbar] Got unexpected status code from Rollbar api: 403
+[Rollbar] Response: {
+  "err": 1,
+  "message": "access token not found"
+}
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=a171a233-b1a6-416b-baa1-cf49fdcf4f63 (only available if report was successful)
+Connecting to database specified by database.yml
+Compiled jquery.js  (2ms)  (pid 13910)
+Compiled jquery_ujs.js  (0ms)  (pid 13910)
+Compiled calificacions.js  (98ms)  (pid 13910)
+Compiled funcionalidads.js  (1ms)  (pid 13910)
+Compiled imagens.js  (0ms)  (pid 13910)
+Compiled inicio.js  (0ms)  (pid 13910)
+Compiled noticia.js  (0ms)  (pid 13910)
+Compiled password.js  (0ms)  (pid 13910)
+Compiled personas.js  (0ms)  (pid 13910)
+Compiled reset_password.js  (0ms)  (pid 13910)
+Compiled tipo_usuario_funcionalidads.js  (0ms)  (pid 13910)
+Compiled tipo_usuarios.js  (1ms)  (pid 13910)
+Compiled videos.js  (0ms)  (pid 13910)
+Compiled application.js  (257ms)  (pid 13910)
+Compiled calificacions.css  (70ms)  (pid 13910)
+Compiled funcionalidads.css  (1ms)  (pid 13910)
+Compiled imagens.css  (1ms)  (pid 13910)
+Compiled inicio.css  (1ms)  (pid 13910)
+Compiled noticia.css  (1ms)  (pid 13910)
+Compiled password.css  (49ms)  (pid 13910)
+Compiled personas.css  (1ms)  (pid 13910)
+Compiled scaffolds.css  (13ms)  (pid 13910)
+Compiled tipo_usuario_funcionalidads.css  (1ms)  (pid 13910)
+Compiled tipo_usuarios.css  (1ms)  (pid 13910)
+Compiled videos.css  (1ms)  (pid 13910)
+Compiled application.css  (205ms)  (pid 13910)
+Connecting to database specified by database.yml
+Compiled jquery.js  (2ms)  (pid 13910)
+Compiled jquery_ujs.js  (0ms)  (pid 13910)
+Compiled calificacions.js  (113ms)  (pid 13910)
+Compiled funcionalidads.js  (1ms)  (pid 13910)
+Compiled imagens.js  (0ms)  (pid 13910)
+Compiled inicio.js  (0ms)  (pid 13910)
+Compiled noticia.js  (0ms)  (pid 13910)
+Compiled password.js  (0ms)  (pid 13910)
+Compiled personas.js  (0ms)  (pid 13910)
+Compiled reset_password.js  (0ms)  (pid 13910)
+Compiled tipo_usuario_funcionalidads.js  (0ms)  (pid 13910)
+Compiled tipo_usuarios.js  (0ms)  (pid 13910)
+Compiled videos.js  (0ms)  (pid 13910)
+Compiled application.js  (274ms)  (pid 13910)
+Compiled calificacions.css  (9ms)  (pid 13910)
+Compiled funcionalidads.css  (1ms)  (pid 13910)
+Compiled imagens.css  (1ms)  (pid 13910)
+Compiled inicio.css  (1ms)  (pid 13910)
+Compiled noticia.css  (1ms)  (pid 13910)
+Compiled password.css  (1ms)  (pid 13910)
+Compiled personas.css  (1ms)  (pid 13910)
+Compiled scaffolds.css  (11ms)  (pid 13910)
+Compiled tipo_usuario_funcionalidads.css  (1ms)  (pid 13910)
+Compiled tipo_usuarios.css  (1ms)  (pid 13910)
+Compiled videos.css  (1ms)  (pid 13910)
+Compiled application.css  (120ms)  (pid 13910)
+Connecting to database specified by database.yml
+Started GET "/" for 127.0.0.1 at 2013-06-04 08:28:21 -0300
+Processing by SessionsController#inicio as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2013-06-04 08:28:21 -0300
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 65ms (Views: 63.9ms | ActiveRecord: 0.0ms)
+Started GET "/assets/application-c14f59963e6294e00890fd2d361e0e0d.css" for 127.0.0.1 at 2013-06-04 08:28:21 -0300
+[Rollbar] Reporting exception: No route matches [GET] "/assets/application-c14f59963e6294e00890fd2d361e0e0d.css"
+[Rollbar] Scheduling payload
+[Rollbar] Sending payload
+[Rollbar] Got unexpected status code from Rollbar api: 403
+[Rollbar] Response: {
+  "err": 1,
+  "message": "access token not found"
+}
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=73a2bf0d-ab64-473e-a695-388beaef675e (only available if report was successful)
+
+ActionController::RoutingError (No route matches [GET] "/assets/application-c14f59963e6294e00890fd2d361e0e0d.css"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  rollbar (0.9.13) lib/rollbar/middleware/rails/show_exceptions.rb:13:in `call_with_rollbar'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+[Rollbar] Reporting exception: No route matches [GET] "/assets/application-c14f59963e6294e00890fd2d361e0e0d.css"
+[Rollbar] Scheduling payload
+[Rollbar] Sending payload
+[Rollbar] Got unexpected status code from Rollbar api: 403
+[Rollbar] Response: {
+  "err": 1,
+  "message": "access token not found"
+}
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=ed2ece9c-aace-4c0e-b1c8-475f0b42438e (only available if report was successful)
+Started GET "/assets/application-437f5218c61228c6d90cd42f0ec75ffe.js" for 127.0.0.1 at 2013-06-04 08:28:25 -0300
+[Rollbar] Reporting exception: No route matches [GET] "/assets/application-437f5218c61228c6d90cd42f0ec75ffe.js"
+[Rollbar] Scheduling payload
+[Rollbar] Sending payload
+[Rollbar] Got unexpected status code from Rollbar api: 403
+[Rollbar] Response: {
+  "err": 1,
+  "message": "access token not found"
+}
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=87bde33b-4c0d-41aa-a997-7e4cbdc06a3b (only available if report was successful)
+
+ActionController::RoutingError (No route matches [GET] "/assets/application-437f5218c61228c6d90cd42f0ec75ffe.js"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  rollbar (0.9.13) lib/rollbar/middleware/rails/show_exceptions.rb:13:in `call_with_rollbar'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+[Rollbar] Reporting exception: No route matches [GET] "/assets/application-437f5218c61228c6d90cd42f0ec75ffe.js"
+[Rollbar] Scheduling payload
+[Rollbar] Sending payload
+[Rollbar] Got unexpected status code from Rollbar api: 403
+[Rollbar] Response: {
+  "err": 1,
+  "message": "access token not found"
+}
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=7384016a-2d22-458c-8325-639e0f2358b5 (only available if report was successful)
+Started GET "/css/stylesheet1.css" for 127.0.0.1 at 2013-06-04 08:28:28 -0300
+[Rollbar] Reporting exception: No route matches [GET] "/css/stylesheet1.css"
+[Rollbar] Scheduling payload
+[Rollbar] Sending payload
+[Rollbar] Got unexpected status code from Rollbar api: 403
+[Rollbar] Response: {
+  "err": 1,
+  "message": "access token not found"
+}
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=326c700a-3d27-44e4-92c5-3cd1374192d0 (only available if report was successful)
+
+ActionController::RoutingError (No route matches [GET] "/css/stylesheet1.css"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  rollbar (0.9.13) lib/rollbar/middleware/rails/show_exceptions.rb:13:in `call_with_rollbar'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+[Rollbar] Reporting exception: No route matches [GET] "/css/stylesheet1.css"
+[Rollbar] Scheduling payload
+[Rollbar] Sending payload
+[Rollbar] Got unexpected status code from Rollbar api: 403
+[Rollbar] Response: {
+  "err": 1,
+  "message": "access token not found"
+}
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=7413c898-3503-4904-a19e-4f8d5c33cbdd (only available if report was successful)
+Started GET "/css/stylesheetNoScript.css" for 127.0.0.1 at 2013-06-04 08:28:32 -0300
+[Rollbar] Reporting exception: No route matches [GET] "/css/stylesheetNoScript.css"
+[Rollbar] Scheduling payload
+[Rollbar] Sending payload
+[Rollbar] Got unexpected status code from Rollbar api: 403
+[Rollbar] Response: {
+  "err": 1,
+  "message": "access token not found"
+}
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=5677db20-387f-4580-9d7a-93deca6e9a5f (only available if report was successful)
+
+ActionController::RoutingError (No route matches [GET] "/css/stylesheetNoScript.css"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  rollbar (0.9.13) lib/rollbar/middleware/rails/show_exceptions.rb:13:in `call_with_rollbar'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+[Rollbar] Reporting exception: No route matches [GET] "/css/stylesheetNoScript.css"
+[Rollbar] Scheduling payload
+[Rollbar] Sending payload
+[Rollbar] Got unexpected status code from Rollbar api: 403
+[Rollbar] Response: {
+  "err": 1,
+  "message": "access token not found"
+}
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=b5ea587d-3c1f-44e1-9aa8-d133e31f6285 (only available if report was successful)
+Started GET "/css/stylesheetLoad.css" for 127.0.0.1 at 2013-06-04 08:28:35 -0300
+[Rollbar] Reporting exception: No route matches [GET] "/css/stylesheetLoad.css"
+[Rollbar] Scheduling payload
+[Rollbar] Sending payload
+[Rollbar] Got unexpected status code from Rollbar api: 403
+[Rollbar] Response: {
+  "err": 1,
+  "message": "access token not found"
+}
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=fd9ce847-ebc9-4f79-bf1e-054755d55420 (only available if report was successful)
+
+ActionController::RoutingError (No route matches [GET] "/css/stylesheetLoad.css"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  rollbar (0.9.13) lib/rollbar/middleware/rails/show_exceptions.rb:13:in `call_with_rollbar'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+[Rollbar] Reporting exception: No route matches [GET] "/css/stylesheetLoad.css"
+[Rollbar] Scheduling payload
+[Rollbar] Sending payload
+[Rollbar] Got unexpected status code from Rollbar api: 403
+[Rollbar] Response: {
+  "err": 1,
+  "message": "access token not found"
+}
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=e386afd6-5730-40bb-88ac-67f5bd3fa2dc (only available if report was successful)
+Started GET "/js/scriptLoad.js" for 127.0.0.1 at 2013-06-04 08:28:39 -0300
+[Rollbar] Reporting exception: No route matches [GET] "/js/scriptLoad.js"
+[Rollbar] Scheduling payload
+[Rollbar] Sending payload
+[Rollbar] Got unexpected status code from Rollbar api: 403
+[Rollbar] Response: {
+  "err": 1,
+  "message": "access token not found"
+}
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=7576dcae-4dab-46b6-9533-31a4464a3c03 (only available if report was successful)
+
+ActionController::RoutingError (No route matches [GET] "/js/scriptLoad.js"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  rollbar (0.9.13) lib/rollbar/middleware/rails/show_exceptions.rb:13:in `call_with_rollbar'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+[Rollbar] Reporting exception: No route matches [GET] "/js/scriptLoad.js"
+[Rollbar] Scheduling payload
+[Rollbar] Sending payload
+[Rollbar] Got unexpected status code from Rollbar api: 403
+[Rollbar] Response: {
+  "err": 1,
+  "message": "access token not found"
+}
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=a28c539f-5ec6-45ee-a451-0f466cac56c8 (only available if report was successful)
+Started GET "/picture/space/ice.png" for 127.0.0.1 at 2013-06-04 08:28:44 -0300
+[Rollbar] Reporting exception: No route matches [GET] "/picture/space/ice.png"
+[Rollbar] Scheduling payload
+[Rollbar] Sending payload
+[Rollbar] Got unexpected status code from Rollbar api: 403
+[Rollbar] Response: {
+  "err": 1,
+  "message": "access token not found"
+}
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=8633d3ee-a152-466a-b0f9-0d5b9224a2b0 (only available if report was successful)
+
+ActionController::RoutingError (No route matches [GET] "/picture/space/ice.png"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  rollbar (0.9.13) lib/rollbar/middleware/rails/show_exceptions.rb:13:in `call_with_rollbar'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+[Rollbar] Reporting exception: No route matches [GET] "/picture/space/ice.png"
+[Rollbar] Scheduling payload
+[Rollbar] Sending payload
+[Rollbar] Got unexpected status code from Rollbar api: 403
+[Rollbar] Response: {
+  "err": 1,
+  "message": "access token not found"
+}
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=db86a0c9-b530-4802-83ee-03646e9a8cae (only available if report was successful)
+Started GET "/picture/space/laser.png" for 127.0.0.1 at 2013-06-04 08:28:51 -0300
+[Rollbar] Reporting exception: No route matches [GET] "/picture/space/laser.png"
+[Rollbar] Scheduling payload
+[Rollbar] Sending payload
+[Rollbar] Got unexpected status code from Rollbar api: 403
+[Rollbar] Response: {
+  "err": 1,
+  "message": "access token not found"
+}
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=e7bf356d-d4ba-4171-969a-6e97df322b75 (only available if report was successful)
+
+ActionController::RoutingError (No route matches [GET] "/picture/space/laser.png"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  rollbar (0.9.13) lib/rollbar/middleware/rails/show_exceptions.rb:13:in `call_with_rollbar'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+[Rollbar] Reporting exception: No route matches [GET] "/picture/space/laser.png"
+[Rollbar] Scheduling payload
+[Rollbar] Sending payload
+[Rollbar] Got unexpected status code from Rollbar api: 403
+[Rollbar] Response: {
+  "err": 1,
+  "message": "access token not found"
+}
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=89d602d2-56ec-4b30-a26b-c0d6ca0caaac (only available if report was successful)
+Started GET "/picture/space/bomb.png" for 127.0.0.1 at 2013-06-04 08:28:56 -0300
+[Rollbar] Reporting exception: No route matches [GET] "/picture/space/bomb.png"
+[Rollbar] Scheduling payload
+[Rollbar] Sending payload
+[Rollbar] Got unexpected status code from Rollbar api: 403
+[Rollbar] Response: {
+  "err": 1,
+  "message": "access token not found"
+}
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=0335b66c-b88d-44d2-89b0-38db40d78170 (only available if report was successful)
+
+ActionController::RoutingError (No route matches [GET] "/picture/space/bomb.png"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  rollbar (0.9.13) lib/rollbar/middleware/rails/show_exceptions.rb:13:in `call_with_rollbar'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+[Rollbar] Reporting exception: No route matches [GET] "/picture/space/bomb.png"
+[Rollbar] Scheduling payload
+[Rollbar] Sending payload
+[Rollbar] Got unexpected status code from Rollbar api: 403
+[Rollbar] Response: {
+  "err": 1,
+  "message": "access token not found"
+}
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=8c8b9981-1730-45f9-993e-5495798c6020 (only available if report was successful)
+Started GET "/picture/space/green.png" for 127.0.0.1 at 2013-06-04 08:29:00 -0300
+[Rollbar] Reporting exception: No route matches [GET] "/picture/space/green.png"
+[Rollbar] Scheduling payload
+[Rollbar] Sending payload
+[Rollbar] Got unexpected status code from Rollbar api: 403
+[Rollbar] Response: {
+  "err": 1,
+  "message": "access token not found"
+}
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=8c017a41-7980-4637-80bb-c9a36c16ff33 (only available if report was successful)
+
+ActionController::RoutingError (No route matches [GET] "/picture/space/green.png"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  rollbar (0.9.13) lib/rollbar/middleware/rails/show_exceptions.rb:13:in `call_with_rollbar'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+[Rollbar] Reporting exception: No route matches [GET] "/picture/space/green.png"
+[Rollbar] Scheduling payload
+[Rollbar] Sending payload
+[Rollbar] Got unexpected status code from Rollbar api: 403
+[Rollbar] Response: {
+  "err": 1,
+  "message": "access token not found"
+}
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=6ba6ffbd-fc7b-4538-92b3-972ac21700fe (only available if report was successful)
+Started GET "/picture/btn_cancel1.png" for 127.0.0.1 at 2013-06-04 08:29:03 -0300
+[Rollbar] Reporting exception: No route matches [GET] "/picture/btn_cancel1.png"
+[Rollbar] Scheduling payload
+[Rollbar] Sending payload
+[Rollbar] Got unexpected status code from Rollbar api: 403
+[Rollbar] Response: {
+  "err": 1,
+  "message": "access token not found"
+}
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=4eb4a3a5-459c-47a5-934b-05c94663f476 (only available if report was successful)
+
+ActionController::RoutingError (No route matches [GET] "/picture/btn_cancel1.png"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  rollbar (0.9.13) lib/rollbar/middleware/rails/show_exceptions.rb:13:in `call_with_rollbar'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+[Rollbar] Reporting exception: No route matches [GET] "/picture/btn_cancel1.png"
+[Rollbar] Scheduling payload
+[Rollbar] Sending payload
+[Rollbar] Got unexpected status code from Rollbar api: 403
+[Rollbar] Response: {
+  "err": 1,
+  "message": "access token not found"
+}
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=4caa1c9b-9e40-4b42-a398-0bbaf071365e (only available if report was successful)
+Started GET "/favicon.ico" for 127.0.0.1 at 2013-06-04 08:29:05 -0300
+[Rollbar] Reporting exception: No route matches [GET] "/favicon.ico"
+[Rollbar] Scheduling payload
+[Rollbar] Sending payload
+[Rollbar] Got unexpected status code from Rollbar api: 403
+[Rollbar] Response: {
+  "err": 1,
+  "message": "access token not found"
+}
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=03afd449-2197-4495-a4fd-fa353d9b0b78 (only available if report was successful)
+
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  rollbar (0.9.13) lib/rollbar/middleware/rails/show_exceptions.rb:13:in `call_with_rollbar'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+[Rollbar] Reporting exception: No route matches [GET] "/favicon.ico"
+[Rollbar] Scheduling payload
+[Rollbar] Sending payload
+[Rollbar] Got unexpected status code from Rollbar api: 403
+[Rollbar] Response: {
+  "err": 1,
+  "message": "access token not found"
+}
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=e92b1497-425f-4585-8a47-821bd0b3b317 (only available if report was successful)
+Connecting to database specified by database.yml
+Compiled jquery.js  (60ms)  (pid 17780)
+Compiled jquery_ujs.js  (0ms)  (pid 17780)
+Compiled calificacions.js  (114ms)  (pid 17780)
+Compiled funcionalidads.js  (1ms)  (pid 17780)
+Compiled imagens.js  (1ms)  (pid 17780)
+Compiled inicio.js  (1ms)  (pid 17780)
+Compiled noticia.js  (1ms)  (pid 17780)
+Compiled password.js  (1ms)  (pid 17780)
+Compiled personas.js  (1ms)  (pid 17780)
+Compiled reset_password.js  (1ms)  (pid 17780)
+Compiled tipo_usuario_funcionalidads.js  (1ms)  (pid 17780)
+Compiled tipo_usuarios.js  (1ms)  (pid 17780)
+Compiled videos.js  (1ms)  (pid 17780)
+Compiled application.js  (321ms)  (pid 17780)
+Compiled calificacions.css  (44ms)  (pid 17780)
+Compiled funcionalidads.css  (1ms)  (pid 17780)
+Compiled imagens.css  (7ms)  (pid 17780)
+Compiled inicio.css  (1ms)  (pid 17780)
+Compiled noticia.css  (1ms)  (pid 17780)
+Compiled password.css  (1ms)  (pid 17780)
+Compiled personas.css  (1ms)  (pid 17780)
+Compiled scaffolds.css  (17ms)  (pid 17780)
+Compiled tipo_usuario_funcionalidads.css  (1ms)  (pid 17780)
+Compiled tipo_usuarios.css  (1ms)  (pid 17780)
+Compiled videos.css  (1ms)  (pid 17780)
+Compiled application.css  (228ms)  (pid 17780)
+Connecting to database specified by database.yml
+Compiled jquery.js  (39ms)  (pid 17780)
+Compiled jquery_ujs.js  (0ms)  (pid 17780)
+Compiled calificacions.js  (98ms)  (pid 17780)
+Compiled funcionalidads.js  (1ms)  (pid 17780)
+Compiled imagens.js  (0ms)  (pid 17780)
+Compiled inicio.js  (0ms)  (pid 17780)
+Compiled noticia.js  (0ms)  (pid 17780)
+Compiled password.js  (0ms)  (pid 17780)
+Compiled personas.js  (0ms)  (pid 17780)
+Compiled reset_password.js  (0ms)  (pid 17780)
+Compiled tipo_usuario_funcionalidads.js  (0ms)  (pid 17780)
+Compiled tipo_usuarios.js  (1ms)  (pid 17780)
+Compiled videos.js  (0ms)  (pid 17780)
+Compiled application.js  (257ms)  (pid 17780)
+Compiled calificacions.css  (11ms)  (pid 17780)
+Compiled funcionalidads.css  (1ms)  (pid 17780)
+Compiled imagens.css  (1ms)  (pid 17780)
+Compiled inicio.css  (1ms)  (pid 17780)
+Compiled noticia.css  (1ms)  (pid 17780)
+Compiled password.css  (1ms)  (pid 17780)
+Compiled personas.css  (1ms)  (pid 17780)
+Compiled scaffolds.css  (11ms)  (pid 17780)
+Compiled tipo_usuario_funcionalidads.css  (1ms)  (pid 17780)
+Compiled tipo_usuarios.css  (1ms)  (pid 17780)
+Compiled videos.css  (1ms)  (pid 17780)
+Compiled application.css  (136ms)  (pid 17780)
