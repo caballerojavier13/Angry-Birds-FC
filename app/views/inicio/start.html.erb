@@ -117,8 +117,43 @@
 							</section>
 				        </div>
 				</div>
-				<div id="visorVideo"  class="borde">
-				        <iframe height="200" width="200" src="http://www.youtube.com/embed/3mbBbFH9fAg"></iframe>
+				
+				<div id="visorVideo"  style="height: 500px; overflow: auto;" class="borde" >
+			       <div id="experiment">
+                        <div id="cube">
+                            <div class="face one">
+                                <img class="imagenVideo" src="<%=VideoInfo.get(@videos.at(0).url).thumbnail_large %>" >
+                                <img class="play" src="/picture/playYouTuBe.png">
+                                <a class="covertor" href="/videos" ></a>
+                            </div>
+                            <div class="face two">
+                                <img class="imagenVideo" src="<%=VideoInfo.get(@videos.at(1).url).thumbnail_large %>" >
+                                <img class="play" src="/picture/playYouTuBe.png">
+                                <a class="covertor" href="/videos" ></a>
+                            </div>
+                            <div class="face three">
+                                <img class="imagenVideo" src="<%=VideoInfo.get(@videos.at(2).url).thumbnail_large %>" >
+                                <img class="play" src="/picture/playYouTuBe.png">
+                                <a class="covertor" href="/videos" ></a>
+                            </div>
+                            <div class="face four">
+                                <img class="imagenVideo" src="<%=VideoInfo.get(@videos.at(3).url).thumbnail_large %>" >
+                                <img class="play" src="/picture/playYouTuBe.png">
+                                <a class="covertor" href="/videos" ></a>
+                            </div>
+                            <div class="face five">
+                                <img class="imagenVideo" src="<%=VideoInfo.get(@videos.at(4).url).thumbnail_large %>" >
+                                <img class="play" src="/picture/playYouTuBe.png">
+                                <a class="covertor" href="/videos" ></a>
+                            </div>
+                            <div class="face six">
+                                <img class="imagenVideo" src="<%=VideoInfo.get(@videos.at(5).url).thumbnail_large %>" >
+                                <img class="play" src="/picture/playYouTuBe.png">
+                                <a class="covertor" href="/videos" ></a>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="covertor" href="/videos" ></a>
 				</div>							
 		</div>
 		<div id="footer">

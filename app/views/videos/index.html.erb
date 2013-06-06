@@ -64,7 +64,7 @@
                 </div>
                 <div id="contenido" width="1022px" >
                     
-                    <ul id="listado_videos"> 
+                    <ul id="listado_videos" class="borde"> 
                     <% @videos.each do |app| %>
                          <li>  
                              <div class="video-borde">
@@ -73,7 +73,7 @@
 						                  <p><%= app.titulo %></p>
 					                </div>
     				                <div  class="video_conteiner" >
-                                 		<iframe type="text/html" width="100%" height="100%" frameborder="0"src="<%= app.url%>"></iframe>
+                                 		<iframe type="text/html" width="480px" height="360px" frameborder="0"src="<%= app.url%>"></iframe>
                              		</div>
 			                     </div>
                             </div>

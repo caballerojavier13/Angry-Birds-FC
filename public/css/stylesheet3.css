@@ -248,8 +248,8 @@ a{
     position:relative;
     top:0px;
     left:0px;
-    width: 350px;
-    height: 350px;
+    width: 480px;
+    height: 360px;
     z-index: 1;
 backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
@@ -276,8 +276,8 @@ backface-visibility: hidden;
     position:relative;
     top:25px;
     left:25px;
-    width: 350px;
-    height: 350px
+    width: 480px;
+    height: 360px
    -webkit-transition: all 1s ease;
   -o-transition: all 1s ease;
   -moz-transition: all 1s ease;
@@ -304,8 +304,8 @@ backface-visibility: hidden;
     position: absolute;
     top:0px;
     left:0px;
-    width: 346px;
-    height: 346px;	
+    width: 476px;
+    height: 356px;	
   -webkit-transition: all 1s ease;
   -o-transition: all 1s ease;
   -moz-transition: all 1s ease;
@@ -338,15 +338,21 @@ backface-visibility: hidden;
     text-align:center;
     width: 1022px;
     margin: 0 auto;
+    
+    background: rgba(109,212,188,1);
+    border-style: solid;
+    border-color: yellow;
+    border-radius: 20px;
+    padding-bottom: 50px;
 }
 #listado_videos li{
     position: relative;
     top: 20px;
     left: 0;
-    display: inline-block;
-    margin: 0 auto;
-    width: 400px;
-    height:400px;
+    display:block;
+    margin: 25px auto;
+    width: 530px;
+    height:410px;
 }
 .video-borde{
     position:relative;
@@ -354,7 +360,9 @@ backface-visibility: hidden;
     height:100%;
     background-image:  url("../picture/piedra1.png");
     border-radius: 10px;
-
+    border.style: solid;
+    border:color: yellow;
+    box-shadow: 0 0 10px rgba(0,0,0,0.8);
 }
 .video-borde:hover .contenedor{
     transform: rotatey(180deg) translatex(-100%);

@@ -10,7 +10,10 @@ gem 'rollbar'
 
 group :development do
   gem 'better_errors'
+  
 end
+
+gem "binding_of_caller"
 
 gem 'client_side_validations'
 

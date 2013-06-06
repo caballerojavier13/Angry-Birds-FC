@@ -3,7 +3,7 @@ class VideosController < SecurityController
   # GET /videos.json
   def index
     @persona = Persona.find(session[:usuario_id])
-    @videos = Video.order('id DESC').paginate(:page => params[:page], :per_page => 8)
+    @videos = Video.order('id DESC').paginate(:page => params[:page], :per_page => 5)
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @videos }
@@ -46,7 +46,7 @@ class VideosController < SecurityController
     @video.persona= Persona.find(session[:usuario_id])
     respond_to do |format|
       if @video.save
-        format.html { redirect_to @video, notice: 'Video was successfully created.' }
+        format.html { redirect_to "/videos", notice: 'Video was successfully created.' }
         format.json { render json: @video, status: :created, location: @video }
       else
         format.html { render action: "new" }

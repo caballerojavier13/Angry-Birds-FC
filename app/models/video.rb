@@ -9,7 +9,7 @@ class Video < ActiveRecord::Base
   
   def titulo_must_be_present
     self.titulo = self.titulo.capitalize
-    self.titulo.gsub! /\s+/, ''
+    self.titulo.gsub! /\s+/, ' '
     self.titulo.split(' ').join(' ')
     errors.add(" ", "El titulo no puede estar en blanco.") unless self.titulo.present?
   end

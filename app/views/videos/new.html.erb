@@ -30,12 +30,12 @@
                 <div id="accesoDirecto" class="borde">
                     <a href="/videos" >
                         <div id="accesoDirecto1">
-                            Noticias
+                            Videos
                         </div>
                     </a>
                     <a href="" >
                         <div id="accesoDirecto2">
-                            Mis Noticias
+                            Mis Videos
                         </div>
                     </a>
                 </div>
@@ -64,12 +64,12 @@
                 <%= f.label :url %><br />
                 <%= f.text_field :url %>
               </div>
-              <div class="actions">
-                <%= f.submit %>
+              <div class="field">
+                <%= f.submit 'Guardar', :id=> 'boton_guardar'  %>
               </div>
             <% end %>
 
-            <%= link_to 'Back', videos_path %>
+            
         </div>
         <div id="footer">
             <a href="/logout"  >
