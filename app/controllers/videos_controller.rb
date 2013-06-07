@@ -2,7 +2,7 @@ class VideosController < SecurityController
   # GET /videos
   # GET /videos.json
   def index
-    @persona = Persona.find(session[:usuario_id])
+    
     @videos = Video.order('id DESC').paginate(:page => params[:page], :per_page => 5)
     respond_to do |format|
       format.html # index.html.erb
@@ -10,6 +10,11 @@ class VideosController < SecurityController
     end
   end
 
+  def mis_videos
+    
+    @videos = Video.where(persona_id: session[:usuario_id]).order('id DESC').paginate(:page => params[:page], :per_page => 5)
+    
+  end
   # GET /videos/1
   # GET /videos/1.json
   def show
@@ -20,7 +25,7 @@ class VideosController < SecurityController
       format.json { render json: @video }
     end
   end
-
+  
   # GET /videos/new
   # GET /videos/new.json
   def new

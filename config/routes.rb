@@ -19,6 +19,8 @@ FanClub::Application.routes.draw do
   match 'change_password' => 'personas#change_password', :as => :change_password, :via => :get
 
   match 'logout' => 'admin#logout', :as => :logout, :via => :get
+  
+  match 'mis_videos' => 'videos#mis_videos', :as => :mis_videos, :via => :get
 
   resources :tipo_usuario_funcionalidads
 
@@ -42,6 +44,8 @@ FanClub::Application.routes.draw do
 
   resources :personas
 
+  
+  
   resources :personas do
      get :activate, on: :member
   end

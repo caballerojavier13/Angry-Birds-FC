@@ -48,7 +48,7 @@
                     <img src=<%= session[:genero] ? ("/picture/hombre.png") : ("/picture/mujer.png") %> src="" id="fotoPerfil" >
                 </div>
                 <div id="titulo" class="borde">
-                    Videos
+                    Mis Videos
                 </div>
                 <div id="accesoDirecto" class="borde">
                     <a href="/videos/new" >
@@ -56,9 +56,9 @@
                             Agregar Video
                         </div>
                     </a>
-                    <a href="/mis_videos" >
+                    <a href="/videos" >
                         <div id="accesoDirecto2">
-                            Mis Videos
+                            Videos
                         </div>
                     </a>
                 </div>
@@ -68,14 +68,14 @@
                     <% @videos.each do |app| %>
                          <li>  
                              <div class="video-borde">
-				                <div class="contenedor">					
-                              		<div class="titulo_video">
-						                  <p><%= app.titulo %></p>
-					                </div>
-    				                <div  class="video_conteiner" >
-                                 		<iframe type="text/html" width="480px" height="360px" frameborder="0"src="<%= app.url%>"></iframe>
-                             		</div>
-			                     </div>
+                                <div class="contenedor">                    
+                                    <div class="titulo_video">
+                                          <p><%= app.titulo %></p>
+                                    </div>
+                                    <div  class="video_conteiner" >
+                                        <iframe type="text/html" width="480px" height="360px" frameborder="0"src="<%= app.url%>"></iframe>
+                                    </div>
+                                 </div>
                             </div>
                         </li>
                     <% end %>

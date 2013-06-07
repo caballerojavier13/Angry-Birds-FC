@@ -44,7 +44,7 @@
 								</ul>
 								
 	    			</nav>
-	    			<img src=<%= @persona.genero ? ("/picture/hombre.png") : ("/picture/mujer.png") %> src="" id="fotoPerfil" >
+	    			<img src=<%= session[:genero] ? ("/picture/hombre.png") : ("/picture/mujer.png") %> src="" id="fotoPerfil" >
 				</div>
 				<div id="bienvenida" class="borde">
 					<img src="/picture/bienvenida2.png"  height="250" width="1022px">

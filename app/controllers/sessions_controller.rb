@@ -11,6 +11,7 @@ class SessionsController < ApplicationController
 	    if !(@persona.nil?)
 	      if @persona.activo
 		session[:usuario_id] = @persona.id
+		session[:genero] = @persona.genero
 		redirect_to "/start"
 	      else
 		redirect_to "/login", :alert => "Usuario inactivo."
@@ -38,6 +39,7 @@ class SessionsController < ApplicationController
   end
   def destroy
     session[:usuario_id] = nil
+    session[:genero] = nil
     redirect_to store_url, :notice => "Logged out"
   end
 end

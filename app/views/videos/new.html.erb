@@ -22,7 +22,7 @@
                                 </ul>
                                 
                     </nav>
-                    <img src=<%= @persona.genero ? ("/picture/hombre.png") : ("/picture/mujer.png") %> src="" id="fotoPerfil" >
+                    <img src=<%= session[:genero] ? ("/picture/hombre.png") : ("/picture/mujer.png") %> src="" id="fotoPerfil" >
                 </div>
                 <div id="titulo" class="borde">
                     Agregar Video

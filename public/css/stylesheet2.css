@@ -186,38 +186,42 @@ html, body{
       position: absolute;
       height: 240px;
       width: 240px;
+
       background-color: transparent;      
       transition: 1s linear;    
+	border-style:solid;
+	border-color: yellow;
+	box-shadow: inset 0 0 10px rgba(50,50,50,0.8);
     }
 
     #cube .one  {
-      -webkit-transform: rotateX(90deg) translateZ(130px);
-      -moz-transform: rotateX(90deg) translateZ(130px);
+      -webkit-transform: rotateX(90deg) translateZ(120px);
+      -moz-transform: rotateX(90deg) translateZ(120px);
     }
 
     #cube .two {
-      -webkit-transform: translateZ(130px);
-      -moz-transform: translateZ(130px);
+      -webkit-transform: translateZ(120px);
+      -moz-transform: translateZ(120px);
     }
 
     #cube .three {
-      -webkit-transform: rotateY(90deg) translateZ(130px);
-      -moz-transform: rotateY(90deg) translateZ(130px);
+      -webkit-transform: rotateY(90deg) translateZ(120px);
+      -moz-transform: rotateY(90deg) translateZ(120px);
     }
 
     #cube .four {
-      -webkit-transform: rotateY(180deg) translateZ(130px);
-      -moz-transform: rotateY(180deg) translateZ(130px);
+      -webkit-transform: rotateY(180deg) translateZ(120px);
+      -moz-transform: rotateY(180deg) translateZ(120px);
     }
 
     #cube .five {
-      -webkit-transform: rotateY(-90deg) translateZ(130px);
-      -moz-transform: rotateY(-90deg) translateZ(130px);
+      -webkit-transform: rotateY(-90deg) translateZ(120px);
+      -moz-transform: rotateY(-90deg) translateZ(120px);
     }
 
     #cube .six {
-      -webkit-transform: rotateX(-90deg) rotate(180deg) translateZ(130px);
-      -moz-transform: rotateX(-90deg) rotate(180deg) translateZ(130px);
+      -webkit-transform: rotateX(-90deg) rotate(180deg) translateZ(120px);
+      -moz-transform: rotateX(-90deg) rotate(180deg) translateZ(120px);
     }
     
     :hover > #cube .one  {
@@ -266,7 +270,7 @@ html, body{
     left: 0;
     height: 100%;
     width: 100%;
-    border-radius: 5px;
+	
 }
 .play{
     position: absolute;
