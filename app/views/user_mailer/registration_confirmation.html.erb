@@ -1,13 +1,45 @@
-<h1> <%= @persona.nombre %> <%= @persona.apellido%>:</h1>
-<br/>
-<h2> Gracias por registrarte.</h2>
-<br/>
-<p> Para contrinuar con el proceso de registración, por favor haga clic <a href="http://angrybirdsfc.herokuapp.com/personas/<%= @persona.id%>/activate?codigo=<%=@persona.codigo %>"> aquí</a>.
-</p>
-<br/>
-<p></p>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Angry Birds Fan Club</title>
+    <link rel="shortcut icon" href="/favicon1.ico" />
+    <link rel="stylesheet" href="../../../public/css/stylesheetMail.css" />
 
-
+</head>
+<body style="margin:0"> 
+    <table cellpadding="0" cellspacing="0">
+        <tr>
+            <td>
+                <img src="https://lh6.googleusercontent.com/-UlscjeGz6DU/Uc-1WqmiPaI/AAAAAAAAACs/_8w3UNu5Ias/w535-h150-no/logo2.png" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h1> <%= @persona.nombre %> <%= @persona.apellido%>:</h1>            
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <br/>
+                <h2> Gracias por registrarte.</h2>
+                <br/>            
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p> Para contrinuar con el proceso de registración, por favor haga clic <a href="http://angrybirdsfc.herokuapp.com/personas/<%= @persona.id%>/activate?codigo=<%=@persona.codigo %>"> aquí</a>.
+                </p>
+                <br/>          
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img src="https://lh5.googleusercontent.com/-wZlqHz8XvGw/Uc-JMn2l5dI/AAAAAAAAABk/Z2sxSf0vU2M/w449-h572-no/footer.png" height="30%" width="100%"/>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
 
 
 
