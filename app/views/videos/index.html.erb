@@ -23,7 +23,14 @@
         </div>
         
     </div>
+    <div id="visorVideoPantallaCompleta">
+        <div id="proyector">
+            <button type="button" class="close" data-dismiss="alert" onclick="hideVisor()" >&times;</button>
+            <img id="imagenPantalaCompleta" src="/images/1.jpg" width="90%" height="90%" style="margin-left:5%; margin-top:2.5%;">
+        </div>
+    </div>
     <div id="page">
+        
         <div id="conteiner">
 
 
@@ -67,13 +74,15 @@
                     <ul id="listado_videos" class="borde"> 
                     <% @videos.each do |app| %>
                          <li>  
-                             <div class="video-borde">
+                             <div class="video-borde" onclick="showVisor()">
 				                <div class="contenedor">					
                               		<div class="titulo_video">
 						                  <p><%= app.titulo %></p>
 					                </div>
-    				                <div  class="video_conteiner" >
-                                 		<iframe type="text/html" width="480px" height="360px" frameborder="0"src="<%= app.url%>"></iframe>
+    				                <div  class="video_conteiner" width="480px" height="360px" style="cursor: pointer;">
+                                 		<img src="<%= VideoInfo.get(app.url).thumbnail_large %>"/> 
+                                        <img class="play2" src="/picture/playYouTuBe.png" />
+                                        
                              		</div>
 			                     </div>
                             </div>
@@ -88,10 +97,12 @@
                 <img src="/picture/exit1.png" style=" margin-top: 30px; margin-left: 20px;">
             </a>
         </div>
+        
     </div>    
     </div>
     
     <script src= '/js/scriptLoad.js' > </script>
+    <script src= '/js/script2.js' > </script>
         <script language="javascript">
                 window.onload = inicio;
             </script>
@@ -119,4 +130,5 @@
             
         });
     </script>
+    
 </body>
