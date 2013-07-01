@@ -107,11 +107,11 @@
 	color:white;
 	
     text-shadow: 5px 5px 10px rgba(0,0,0,0.7);
-	-webkit-animation: opa 7s linear infinite;
-	-moz-animation: opa 7s linear infinite;
-	-ms-animation: opa 7s linear infinite;
-	-o-animation: opa 7s linear infinite;
-	animation: opa 7s linear infinite;
+	-webkit-animation: opa 2s linear infinite;
+	-moz-animation: opa 2s linear infinite;
+	-ms-animation: opa 2s linear infinite;
+	-o-animation: opa 2s linear infinite;
+	animation: opa 2s linear infinite;
 }
 #circulo{
 	height: 400px;
@@ -172,44 +172,59 @@
 
 
 @-webkit-keyframes opa{
-    from{
-        opacity: 1;
+    0%{
+        opacity: 0;
     }
-	to{
-		opacity: 0;
+	50%{
+		opacity: 1;
+	}
+	100%{
+	    opacity: 0;
 	}
 }
 @-moz-keyframes opa{
-	from{
+	0%{
+        opacity: 0;
+    }
+    50%{
         opacity: 1;
     }
-	to{
-		opacity: 0;
-	}
+    100%{
+        opacity: 0;
+    }
 }
 @-ms-keyframes opa{
-	from{
+	0%{
+        opacity: 0;
+    }
+    50%{
         opacity: 1;
     }
-	to{
-		opacity: 0;
-	}
+    100%{
+        opacity: 0;
+    }
 }
 @-o-keyframes opa{
-	from{
+	0%{
+        opacity: 0;
+    }
+    50%{
         opacity: 1;
     }
-	to{
-		opacity: 0;
-	}
+    100%{
+        opacity: 0;
+    }
 }
 @keyframes opa{
-    from{
+    0%{
+        opacity: 0;
+    }
+    50%{
         opacity: 1;
     }
-	to{
-		opacity: 0;
-	}
+    100%{
+        opacity: 0;
+    }
 }
 
 #background {

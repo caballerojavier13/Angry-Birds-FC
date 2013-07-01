@@ -514,13 +514,13 @@ backface-visibility: hidden;
 }
 #visorVideoPantallaCompleta{
  display:none;
- position: absolute;
+ position: relative;
  margin: 0;
  top: 0;
  left: 0;
  width: 100%;
  height: 100%;
- background: rgba(50,50,50,0.7);
+ background: rgba(179,250,255,0.7);
  box-shadow: inset 0 0 40px rgba(0,0,0,1);
  z-index: 99;   
 }
@@ -551,7 +551,7 @@ button.close {
   border: 0;
   -webkit-appearance: none;
 }
-#proyector{
+.proyector{
     position: relative;
     width: 80%;
     height: 80%;
@@ -564,4 +564,11 @@ button.close {
     border-color: yellow;
     border-width: 4px;
     
+}
+.iframePantallaCompleta{
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    top: 5%;
+    left: 5%;
 }

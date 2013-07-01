@@ -5,7 +5,7 @@
         <link rel="stylesheet" type="text/css" href="/css/stylesheetNoScript.css" />
         <link rel="stylesheet" type="text/css" href="/css/stylesheetLoad.css" />
 </head>
-<body>
+<body onkeydown="tecla(event);">
     <div id="loading">
         <div id="background"></div>
         <div id="midground"></div>
@@ -23,12 +23,17 @@
         </div>
         
     </div>
-    <div id="visorVideoPantallaCompleta">
-        <div id="proyector">
-            <button type="button" class="close" data-dismiss="alert" onclick="hideVisor()" >&times;</button>
-            <img id="imagenPantalaCompleta" src="/images/1.jpg" width="90%" height="90%" style="margin-left:5%; margin-top:2.5%;">
+    <% contador=0%>
+    <div id="visorVideoPantallaCompleta" onkeydown="tecla(event);" onclick="hideVisor()">
+        <% @videos.each do |app| %>
+        <div class="proyector" id="proyector<%=contador%>" onkeydown="tecla(event);" style="display: none;">
+            <button type="button" class="close" data-dismiss="alert" onclick="hideVisor()">&times;</button>
+            <iframe class="iframePantallaCompleta" id="iframePantallaCompleta<%=contador%>" src= <%= app.url%>  onkeydown="tecla(event);"></iframe>
+            <%contador +=1%>
         </div>
+        <% end %>
     </div>
+    
     <div id="page">
         
         <div id="conteiner">
@@ -71,22 +76,24 @@
                 </div>
                 <div id="contenido" width="1022px" >
                     
-                    <ul id="listado_videos" class="borde"> 
+                    <ul id="listado_videos" class="borde">
+                    <% contador=0%> 
                     <% @videos.each do |app| %>
                          <li>  
-                             <div class="video-borde" onclick="showVisor()">
+                             <div class="video-borde"  onclick="showVisor(<%= contador%>,<%= @videos.size%>);" style="cursor: pointer;">
 				                <div class="contenedor">					
                               		<div class="titulo_video">
 						                  <p><%= app.titulo %></p>
 					                </div>
-    				                <div  class="video_conteiner" width="480px" height="360px" style="cursor: pointer;">
-                                 		<img src="<%= VideoInfo.get(app.url).thumbnail_large %>"/> 
-                                        <img class="play2" src="/picture/playYouTuBe.png" />
+    				                <div  class="video_conteiner" width="480px" height="360px" >
+                                 		<img src="<%= VideoInfo.get(app.url).thumbnail_large %>"> 
+                                        <img class="play2" src="/picture/playYouTuBe.png" >
                                         
                              		</div>
 			                     </div>
                             </div>
                         </li>
+                        <%contador +=1%>
                     <% end %>
                     </ul>
                     <%= will_paginate @videos, :previous_label => t("< anterior"), :next_label => t("siguiente >"), :page_gap => "...", :outer_window   => '1', :inner_window => '1', :link_separator => ' - ' %>
