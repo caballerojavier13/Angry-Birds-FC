@@ -256,11 +256,10 @@ backface-visibility: hidden;
   -moz-backface-visibility: hidden;
   -ms-backface-visibility: hidden;
   -o-backface-visibility: hidden;
-	background-color:#6dd4bc;
+	background-color:rgba(85,85,85,0.7);
 	border-style: solid;
 	border-width: 2px;
 	border-color:yellow;
-	box-shadow:inset 0px 0px 20px rgba(50,50,50,0.8);
    
 }
 .video-covertor{
@@ -363,6 +362,7 @@ backface-visibility: hidden;
     border.style: solid;
     border:color: yellow;
     box-shadow: 0 0 10px rgba(0,0,0,0.8);
+    z-index: 2;
 }
 .video-borde:hover .contenedor{
     transform: rotatey(180deg) translatex(-100%);
@@ -524,33 +524,7 @@ backface-visibility: hidden;
  box-shadow: inset 0 0 40px rgba(0,0,0,1);
  z-index: 99;   
 }
-.close {
-     position: relative;
-     right: 20px;
-  float: right;
-  font-size: 20px;
-  font-weight: bold;
-  line-height: 21px;
-  color: #000000;
-  text-shadow: 0 1px 0 #ffffff;
-  opacity: 0.2;
-  filter: alpha(opacity=20);
-}
-.close:hover,
-.close:focus {
-  color: #000000;
-  text-decoration: none;
-  cursor: pointer;
-  opacity: 0.4;
-  filter: alpha(opacity=100);
-}
-button.close {
-  padding: 0;
-  cursor: pointer;
-  background: transparent;
-  border: 0;
-  -webkit-appearance: none;
-}
+
 .proyector{
     position: relative;
     width: 80%;
@@ -567,8 +541,125 @@ button.close {
 }
 .iframePantallaCompleta{
     position: absolute;
+    
     width: 90%;
     height: 90%;
     top: 5%;
     left: 5%;
+}
+.etiqueta_funcion{
+    position: absolute;
+    
+    height: 40px;
+    background-color: rgba(85,85,85,0.7);
+    text-align: right;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    z-index: 0;
+    transition: all 1s linear;
+}
+.etiqueta_funcion p a{
+    position: relative;
+    left: 0;
+    padding-left: 10px;
+    color: yellow;
+    text-align: right;
+    font-family: "AngryBirds";
+    font-size:35px;    
+    line-height: 40px;    
+}
+
+.etiqueta_funcion p a:hover{
+    text-shadow: 0 0 10px black;
+}
+.etiqueta_funcion img{
+    position: relative;
+    display: inline-block;
+    top: -45px;
+    left: 50px;
+    background-color: rgba(85,85,85,0.7);
+    width: 40px;
+    height: 40px;
+    padding:5px;
+    border-radius: 0 5px 5px 0;
+}
+#etiqueta_eliminar{
+    top:40px;
+    left: 395px;
+    transition: all 1s linear;
+}
+#etiqueta_editar{
+    top:120px;
+    left: 425px;
+    transition: all 1s linear;
+    
+}
+#etiqueta_eliminar:hover{
+    left: 530px;
+}
+#etiqueta_editar:hover{
+    left: 530px;
+}
+
+#titulo img{
+    position: absolute;
+    top: -50px;
+    left:-50px;
+    z-index: 10;
+    width: 100px;
+    height: 100px;
+}
+
+
+
+
+#error{
+  border: 2px solid red;
+  height: 100%;
+  background-color: #f0f0f0;
+    border-width: 2px;
+    width: 800px;
+    margin: 0 auto;
+    margin-top: 30px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 20px 20px -10px rgba(0, 0, 0, 0.5),
+                                                        0 1px 4px rgba(0, 0, 0, 0.3),
+                                                        0 0 40px rgba(0, 0, 0, 0.1) inset;
+                                                        
+-moz-box-shadow:    0 20px 20px -10px rgba(0, 0, 0, 0.5),
+                                            0 1px 4px rgba(0, 0, 0, 0.3),
+                                            0 0 40px rgba(0, 0, 0, 0.1) inset;
+                                            
+box-shadow: 0 20px 20px -10px rgba(0, 0, 0, 0.5),
+                                0 1px 4px rgba(0, 0, 0, 0.3),
+                                0 0 40px rgba(0, 0, 0, 0.1) inset;
+  
+  
+}
+#error_title{
+    position: relative;
+    top: -10px;
+    height: 100%;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    background-color: #c00;
+    color: white;
+    font-weight: bold;
+  font-size: 20px;
+}
+#error ul{
+        list-style:none;    
+  }
+#error ul li {
+     padding: 5px;
+     font-size: 20px;
+}
+#error:hover{
+        margin-top: 35px;
+        margin-bottom: -5px;
+        -webkit-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+-moz-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
 }

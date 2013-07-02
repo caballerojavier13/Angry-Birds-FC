@@ -10,20 +10,20 @@ class SessionsController < ApplicationController
 	    @persona = Persona.authenticate(params[:username], params[:password])
 	    if !(@persona.nil?)
 	      if @persona.activo
-		session[:usuario_id] = @persona.id
-		session[:genero] = @persona.genero
-		redirect_to "/start"
+      		session[:usuario_id] = @persona.id
+      		session[:genero] = @persona.genero
+      		redirect_to "/start"
 	      else
-		redirect_to "/login", :alert => "Usuario inactivo."
+		      redirect_to "/login", :alert => "Usuario inactivo."
 	      end
 	    else
 	      redirect_to "/login", :alert => "Verifique los datos ingresados."
 	    end
 	end
     else
-	session[:mail] = params[:mail]
-	params[:mail] = nil
-	redirect_to "/change_password"
+    	session[:mail] = params[:mail]
+    	params[:mail] = nil
+    	redirect_to "/change_password"
     end
   end
   def inicio

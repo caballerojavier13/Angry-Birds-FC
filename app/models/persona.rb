@@ -70,8 +70,8 @@ class Persona < ActiveRecord::Base
 
   def usuario_must_be_unique
     if username.present?
-	self.username.delete(' ')
-	errors.add(" ", "El Usuario seleccionado ya se encuentra registrado.") unless Persona.find_all_by_username(username).at(0).nil?
+    	self.username.delete(' ')
+    	errors.add(" ", "El Usuario seleccionado ya se encuentra registrado.") unless Persona.find_all_by_username(username).at(0).nil?
     end
   end
 

@@ -61,6 +61,7 @@
                 </div>
                 <div id="titulo" class="borde">
                     Videos
+                    <img src="/picture/video_icono.png" />
                 </div>
                 <div id="accesoDirecto" class="borde">
                     <a href="/videos/new" >
@@ -75,7 +76,9 @@
                     </a>
                 </div>
                 <div id="contenido" width="1022px" >
-                    
+                    <% if flash[:alert] %>
+                        <div id="mensajes" ><p> <%= flash[:alert]%> </p><button type="button" class="close" data-dismiss="alert" style="position: absolute; top: 0; right: 10px; color: white; opacity: 0.5" onclick="hide('mensajes')">&times;</button></div>
+                    <% end %>
                     <ul id="listado_videos" class="borde">
                     <% contador=0%> 
                     <% @videos.each do |app| %>

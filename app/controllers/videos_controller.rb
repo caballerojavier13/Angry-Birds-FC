@@ -51,8 +51,7 @@ class VideosController < SecurityController
     @video.persona= Persona.find(session[:usuario_id])
     respond_to do |format|
       if @video.save
-        format.html { redirect_to "/videos", notice: 'Video was successfully created.' }
-        format.json { render json: @video, status: :created, location: @video }
+        format.html {redirect_to "/videos", :alert => "Video subido correctamente."}
       else
         format.html { render action: "new" }
         format.json { render json: @video.errors, status: :unprocessable_entity }
@@ -67,8 +66,7 @@ class VideosController < SecurityController
 
     respond_to do |format|
       if @video.update_attributes(params[:video])
-        format.html { redirect_to @video, notice: 'Video was successfully updated.' }
-        format.json { head :no_content }
+        format.html {redirect_to "/mis_videos", :alert => "Video modificado correctamente."}
       else
         format.html { render action: "edit" }
         format.json { render json: @video.errors, status: :unprocessable_entity }
@@ -83,7 +81,7 @@ class VideosController < SecurityController
     @video.destroy
 
     respond_to do |format|
-      format.html { redirect_to videos_url }
+      format.html { redirect_to "/mis_videos", :alert => "video eliminado." }
       format.json { head :no_content }
     end
   end
