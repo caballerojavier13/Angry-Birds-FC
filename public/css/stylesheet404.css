@@ -35,12 +35,13 @@ p{
     text-shadow: 5px 5px 10px rgba(0,0,0,0.7);
 }
 img{
-    height: 30%;
-    max-height: 150px;
+    height: 50%;
+    border-radius: 30px;
+    border: solid yellow 4px;
+    box-shadow: 0 0 20px black;
     transition: all 1s linear;
 }
 img:hover{
-    max-height: 200px;
-    height: 50%;
+    height: 55%;
     transition: all 1s linear;
 }
