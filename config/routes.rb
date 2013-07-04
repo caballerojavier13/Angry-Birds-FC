@@ -2,11 +2,13 @@ FanClub::Application.routes.draw do
 
   get "inicio/start"
 
+  match 'start' => 'inicio#start', :as => :start, :via => :get
+
+  match 'logout' => 'admin#logout', :as => :logout, :via => :get
+
   match 'password/:id' => 'password#edit', :as => :password, :via => :get
 
   match 'password/:id' => 'password#update', :as => :password, :via => :post
-
-  match 'start' => 'inicio#start', :as => :start, :via => :get
 
   match 'registro' => 'personas#new', :as => :registro, :via => :get
 
@@ -18,7 +20,9 @@ FanClub::Application.routes.draw do
 
   match 'change_password' => 'personas#change_password', :as => :change_password, :via => :get
 
-  match 'logout' => 'admin#logout', :as => :logout, :via => :get
+
+
+  resources :videos
   
   match 'mis_videos' => 'videos#mis_videos', :as => :mis_videos, :via => :get
 
@@ -40,7 +44,7 @@ FanClub::Application.routes.draw do
   resources :imagens
 
 
-  resources :videos
+
 
   resources :personas
 
