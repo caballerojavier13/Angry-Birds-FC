@@ -61,7 +61,30 @@ body{
         box-shadow: 0 0 10px black;  
     }    
 }
-@media all and (orientation:landscape) and (max-width: 1024px) and (min-width: 640px){
+@media all and (orientation:landscape) and (max-width: 1024px) and (min-width: 600px){
+    h1{
+        position: relative;
+        text-align: center;
+        top: 5%;
+        margin: 0 auto;
+        margin-bottom: 5%;
+        font-family: "AngryBirds"; 
+        font-size:40px;    
+        color: white;
+        text-shadow: 5px 5px 10px rgba(0,0,0,0.7);
+    }
+    #img1{
+        position: relative;
+        top: 15px;
+        max-height: 60%;
+        max-width: 80%;        
+        background-color:#6dd4bc;
+        border: solid yellow 4px;
+        box-shadow: 0 0 10px black; 
+    }    
+}
+
+@media all and (orientation:portrait) and (max-width: 1024px) and (min-width: 600px){
     h1{
         position: relative;
         text-align: center;
@@ -75,7 +98,7 @@ body{
     }
     #img1{
         position: absolute;
-        bottom: 10%;
+        top: 30%;
         left: 15%;
         width: 70%;
         background-color:#6dd4bc;
@@ -84,30 +107,7 @@ body{
     }    
 }
 
-@media all and (orientation:portrait) and (max-width: 1024px) and (min-width: 640px){
-    h1{
-        position: relative;
-        text-align: center;
-        top: 5%;
-        margin: 0 auto;
-        margin-bottom: 5%;
-        font-family: "AngryBirds"; 
-        font-size:40px;    
-        color: white;
-        text-shadow: 5px 5px 10px rgba(0,0,0,0.7);
-    }
-    #img1{
-        position: absolute;
-        bottom: 200px;
-        left: 15%;
-        width: 70%;
-        background-color:#6dd4bc;
-        border: solid yellow 4px;
-        box-shadow: 0 0 10px black;  
-    }    
-}
-
-@media all and (orientation:landscape) and (max-width: 640px){
+@media all and (orientation:landscape) and (max-width: 600px){
     h1{
         position: relative;
         text-align: center;
@@ -128,7 +128,7 @@ body{
         box-shadow: 0 0 10px black;  
     }
 }
-@media all and (orientation:portrait) and (max-width: 640px){
+@media all and (orientation:portrait) and (max-width: 600px){
     h1{
         position: relative;
         text-align: center;
