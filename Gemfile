@@ -2,9 +2,11 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
 
-gem "mail"
+gem 'rake',  '~>10.1.0'
 
-gem 'friendly_id'
+gem 'picasa', '~> 0.6.7'
+
+gem "mail"
 
 gem 'rollbar'
 
@@ -31,8 +33,6 @@ gem 'video_info'
 gem 'pg'
 
 gem 'json'
-
-gem 'dropbox'
 
 # Gems used only for assets and not required
 # in production environments by default.

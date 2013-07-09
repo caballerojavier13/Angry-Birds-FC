@@ -1,13 +1,18 @@
+#coding: utf-8
 class ImagensController < SecurityController
   # GET /imagens
   # GET /imagens.json
   def index
-    @imagens = Imagen.all
-
+    @imagens = Imagen.order('id DESC').paginate(:page => params[:page], :per_page => 21)
+    params[:picture]=nil
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @imagens }
     end
+  end
+  def mis_imagenes
+    @imagens = Imagen.where(persona_id: session[:usuario_id]).order('id DESC').paginate(:page => params[:page], :per_page => 21)
+    params[:picture]=nil
   end
 
   # GET /imagens/1
@@ -40,15 +45,22 @@ class ImagensController < SecurityController
   # POST /imagens
   # POST /imagens.json
   def create
-    @imagen = Imagen.new(params[:imagen])
-
-    respond_to do |format|
-      if @imagen.save
-        format.html { redirect_to @imagen, notice: 'Imagen was successfully created.' }
-        format.json { render json: @imagen, status: :created, location: @imagen }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @imagen.errors, status: :unprocessable_entity }
+    @imagen = Imagen.new()
+    @imagen.persona_id = session[:usuario_id]
+    if params[:picture].nil?
+    redirect_to "/imagenes", alert: "seleccione una imagen antes de guardar."  
+  else
+    picture = Picasaphoto.new.subir_imagen params[:picture] 
+    @imagen.url = picture.content.src
+    @imagen.picasa_id = picture.id
+      respond_to do |format|
+        if @imagen.save
+          format.html { redirect_to "/imagenes", alert: 'La imagen fue correctamente guardada.' }
+          format.json { render json: @imagen, status: :created, location: @imagen }
+        else
+          format.html {redirect_to "/imagenes", alert: 'Error en el guardado.'  }
+          format.json { render json: @imagen.errors, status: :unprocessable_entity }
+        end
       end
     end
   end
@@ -70,14 +82,14 @@ class ImagensController < SecurityController
   end
 
   # DELETE /imagens/1
-  # DELETE /imagens/1.json
+  # DELETE /imagens/1.json  
   def destroy
-    @imagen = Imagen.find(params[:id])
-    @imagen.destroy
-
-    respond_to do |format|
-      format.html { redirect_to imagens_url }
-      format.json { head :no_content }
-    end
+      @imagen = Imagen.find(params[:id])
+      if Picasaphoto.new.eliminar @imagen.picasa_id
+        @imagen.destroy
+        redirect_to "/mis_imagenes", alert:"Imagen correctamente eliminada"
+      else
+        redirect_to "/mis_imagenes", alert:"Error en la eliminación"
+      end        
   end
 end

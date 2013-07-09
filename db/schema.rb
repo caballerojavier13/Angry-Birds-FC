@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130519204247) do
+ActiveRecord::Schema.define(:version => 20130709114906) do
 
   create_table "calificacions", :force => true do |t|
     t.integer  "valor"
@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(:version => 20130519204247) do
     t.datetime "updated_at", :null => false
     t.integer  "persona_id"
     t.datetime "created_at", :null => false
+    t.string   "picasa_id"
   end
 
   create_table "noticia", :force => true do |t|

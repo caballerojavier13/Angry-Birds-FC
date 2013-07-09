@@ -20,7 +20,7 @@ FanClub::Application.routes.draw do
 
   match 'change_password' => 'personas#change_password', :as => :change_password, :via => :get
 
-
+  
 
   resources :videos
   
@@ -43,9 +43,10 @@ FanClub::Application.routes.draw do
 
   resources :imagens
 
+  match 'imagenes' => 'imagens#index', :as => :imagenes, :via => :get
 
-
-
+  match 'mis_imagenes' => 'imagens#mis_imagenes', :as => :mis_imagenes, :via => :get
+  
   resources :personas
 
   
@@ -64,7 +65,6 @@ FanClub::Application.routes.draw do
 
   get "sessions/create"
 
-  get "sessions/destroy"
 
   root :to => 'sessions#inicio'
 end
