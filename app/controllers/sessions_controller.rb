@@ -12,6 +12,8 @@ class SessionsController < ApplicationController
 	      if @persona.activo
       		session[:usuario_id] = @persona.id
       		session[:genero] = @persona.genero
+		cookies.permanent[:usuario_id] = @persona.id
+		cookies.permanent[:genero] = @persona.genero
       		redirect_to "/start"
 	      else
 		      redirect_to "/login", :alert => "Usuario inactivo."
@@ -34,12 +36,25 @@ class SessionsController < ApplicationController
 	        redirect_to "/login"			
    	end
     else
-      redirect_to "/login"
+	    if cookies[:usuario_id] != nil
+		session[:usuario_id] = cookies[:usuario_id]
+    	        session[:genero] = cookies[:genero]
+		if Persona.find(session[:usuario_id])
+			redirect_to "/start"
+		else
+			redirect_to "/login"			
+	   	end
+	    else
+
+	      redirect_to "/login"
+	    end
     end
   end
   def destroy
     session[:usuario_id] = nil
     session[:genero] = nil
+    cookies[:usuario_id] = nil
+    cookies[:genero] = nil
     redirect_to store_url, :notice => "Logged out"
   end
 end
