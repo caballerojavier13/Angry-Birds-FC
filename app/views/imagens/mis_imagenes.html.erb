@@ -33,7 +33,7 @@
                 <%contador=0%>
                 <% @imagens.each do |app| %>
                      <div id="etiqueta_eliminar<%=contador%>" class="etiqueta_eliminar">
-                        <p><%= link_to 'Eliminar', app, method: :eliminar, data: { confirm: '¿Estás seguro que deseas eliminar la imagen?' } %></p>
+                        <p><%= link_to 'Eliminar', app, method: :delete, data: { confirm: '¿Estás seguro que deseas eliminar la imagen?' } %></p>
                         <img src="/picture/delete.png"/>
                     </div> 
                      <img id="imagenPC<%=contador%>" src="<%= app.url%>" />
