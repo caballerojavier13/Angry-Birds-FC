@@ -48,21 +48,25 @@ class ImagensController < SecurityController
     @imagen = Imagen.new()
     @imagen.persona_id = session[:usuario_id]
     if params[:picture].nil?
-    redirect_to "/imagenes", alert: "seleccione una imagen antes de guardar."  
-  else
-    picture = Picasaphoto.new.subir_imagen params[:picture] 
-    @imagen.url = picture.content.src
-    @imagen.picasa_id = picture.id
-      respond_to do |format|
-        if @imagen.save
-          format.html { redirect_to "/imagenes", alert: 'La imagen fue correctamente guardada.' }
-          format.json { render json: @imagen, status: :created, location: @imagen }
-        else
-          format.html {redirect_to "/imagenes", alert: 'Error en el guardado.'  }
-          format.json { render json: @imagen.errors, status: :unprocessable_entity }
-        end
-      end
-    end
+	    redirect_to "/imagenes", alert: "seleccione una imagen antes de guardar."  
+   else
+     picture = Picasaphoto.new.subir_imagen params[:picture] 
+     if picture.nil?
+	    redirect_to "/imagenes", alert: "Error al guardar."  
+     else  
+	     @imagen.url = picture.content.src
+	     @imagen.picasa_id = picture.id
+	      respond_to do |format|
+		if @imagen.save
+		  format.html { redirect_to "/imagenes", alert: 'La imagen fue correctamente guardada.' }
+		  format.json { render json: @imagen, status: :created, location: @imagen }
+		else
+		  format.html {redirect_to "/imagenes", alert: 'Error en el guardado.'  }
+		  format.json { render json: @imagen.errors, status: :unprocessable_entity }
+		end
+	      end
+	    end
+   end
   end
 
   # PUT /imagens/1

@@ -18,7 +18,8 @@ class Picasaphoto
 
 		return imagen_creada
 	rescue Picasa::ForbiddenError
-		
+
+		return nil
 	end
 
   end
