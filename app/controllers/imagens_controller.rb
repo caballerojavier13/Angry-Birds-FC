@@ -52,7 +52,7 @@ class ImagensController < SecurityController
    else
      picture = Picasaphoto.new.subir_imagen params[:picture] 
      if picture.nil?
-	    redirect_to "/imagenes", alert: "Error al guardar."  
+	    redirect_to "/imagenes", alert: "Error al guardar"  
      else  
 	     @imagen.url = picture.content.src
 	     @imagen.picasa_id = picture.id
