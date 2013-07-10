@@ -49,6 +49,7 @@ GEM
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
+    flickraw (0.9.6)
     hike (1.2.2)
     httparty (0.11.0)
       multi_json (~> 1.0)
@@ -60,6 +61,8 @@ GEM
       thor (>= 0.14, < 2.0)
     jquery_datepicker (0.4)
     json (1.7.7)
+    launchy (2.3.0)
+      addressable (~> 2.3)
     libv8 (3.11.8.17)
     mail (2.5.3)
       i18n (>= 0.4.0)
@@ -125,6 +128,8 @@ GEM
     uglifier (2.0.1)
       execjs (>= 0.3.0)
       multi_json (~> 1.0, >= 1.0.2)
+    upflickr (0.1.8)
+      mime-types
     video_info (1.4.0)
       addressable
       multi_json
@@ -140,9 +145,11 @@ DEPENDENCIES
   binding_of_caller
   client_side_validations
   coffee-rails (~> 3.2.1)
+  flickraw
   jquery-rails
   jquery_datepicker
   json
+  launchy
   mail
   pg
   picasa (~> 0.6.7)
@@ -153,6 +160,7 @@ DEPENDENCIES
   simple_form
   therubyracer
   uglifier (>= 1.0.3)
+  upflickr
   video_info
   will_paginate
   will_paginate-bootstrap

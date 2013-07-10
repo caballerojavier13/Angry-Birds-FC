@@ -51,7 +51,7 @@ class ImagensController < SecurityController
 	    redirect_to "/imagenes", alert: "seleccione una imagen antes de guardar."  
    else
      flickr_id = Flickrphoto.new.subir_imagen params[:picture] 
-     if picture.nil?
+     if flickr_id.nil?
 	    redirect_to "/imagenes", alert: "Error al guardar"  
      else  
 	     @imagen.url = Flickrphoto.new.get_url_flickr flickr_id
