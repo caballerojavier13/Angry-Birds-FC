@@ -17,7 +17,7 @@ class Picasaphoto
 		    })
 
 		return imagen_creada
-	rescue Picasa::ForbiddenError
+	rescue 
 		return nil
 	end
 
@@ -41,7 +41,7 @@ class Picasaphoto
   end
 
   def conexion
-	return Picasa::Client.new(:user_id => "xavier.linux13@gmail.com", :password => "psjpbrqrwynmovur")
+	return Picasa::Client.new(:user_id => "xavier.linux13@gmail.com", :password => "36416999")
   end
   def buscar_album client
 	albums = client.album.list.entries

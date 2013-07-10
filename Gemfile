@@ -6,6 +6,12 @@ gem 'rake',  '~>10.1.0'
 
 gem 'picasa', '~> 0.6.7'
 
+gem 'flickraw'
+
+gem 'upflickr'
+
+gem 'launchy'
+
 gem "mail"
 
 gem 'rollbar'

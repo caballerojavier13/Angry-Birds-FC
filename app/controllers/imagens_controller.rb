@@ -50,12 +50,12 @@ class ImagensController < SecurityController
     if params[:picture].nil?
 	    redirect_to "/imagenes", alert: "seleccione una imagen antes de guardar."  
    else
-     picture = Picasaphoto.new.subir_imagen params[:picture] 
+     flickr_id = Flickrphoto.new.subir_imagen params[:picture] 
      if picture.nil?
 	    redirect_to "/imagenes", alert: "Error al guardar"  
      else  
-	     @imagen.url = picture.content.src
-	     @imagen.picasa_id = picture.id
+	     @imagen.url = Flickrphoto.new.get_url_flickr flickr_id
+	     @imagen.picasa_id = flickr_id
 	      respond_to do |format|
 		if @imagen.save
 		  format.html { redirect_to "/imagenes", alert: 'La imagen fue correctamente guardada.' }
@@ -89,11 +89,7 @@ class ImagensController < SecurityController
   # DELETE /imagens/1.json  
   def destroy
       @imagen = Imagen.find(params[:id])
-      if Picasaphoto.new.eliminar @imagen.picasa_id
-        @imagen.destroy
-        redirect_to "/mis_imagenes", alert:"Imagen correctamente eliminada"
-      else
-        redirect_to "/mis_imagenes", alert:"Error en la eliminación"
-      end        
+      @imagen.destroy
+      redirect_to "/mis_imagenes", alert:"Imagen correctamente eliminada"
   end
 end
