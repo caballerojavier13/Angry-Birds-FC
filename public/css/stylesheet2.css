@@ -141,17 +141,7 @@ html, body{
 	
 	background-color:#6dd4bc;
 }
-#visorVideo{
-    position: relative;
-    height: 400px;
-    margin-top: 60px;
-    
-    background-color:#6dd4bc;
-}
-#conteiner{
-    min-height:100%;
-   position:relative;
-}
+
 
 
 

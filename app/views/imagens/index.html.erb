@@ -104,16 +104,13 @@
                             <p> <%= flash[:alert]%> </p>
                         </div>
                     <% end %>
-                    
-                    <%contador=0%>
-                    <% @imagens.each do |app| %>
-                         <div class="lista_imagen">
-                             <img onclick="showVisorSet(<%=contador%>,<%=@imagens.size%>)" src="<%= app.url %>"  style="cursor: pointer" />
-                         </div>
-                         <%contador +=1%>
-                    <%end%>
-                    
-                    <%= will_paginate @imagens, :previous_label => t("< anterior"), :next_label => t("siguiente >"), :page_gap => "...", :outer_window   => '1', :inner_window => '1', :link_separator => ' - ' %>
+                    <div id="pagListado">
+                        <%if @imagens.size > 0 %>
+                            <%= render 'listado' %>
+                        <%else%>
+                            <%= render 'nada' %>
+                        <%end%>
+                    </div>
                 </div>
                         
         </div>

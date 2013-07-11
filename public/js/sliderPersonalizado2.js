@@ -10,7 +10,7 @@ function hide(id){
     document.getElementById(id).style.display="none";
 }
 
-var activa= 1;
+var activa= 0;
 var max;
 function showVisorSet(valor, total){
     activa = valor;
@@ -43,7 +43,7 @@ function tecla (e){
     
 }
 function next(){
-    if(activa< max){
+    if(activa < max){
         hide("imagenPC" + activa);
         hide("etiqueta_eliminar" + activa);
         activa = activa + 1 ;
@@ -52,16 +52,16 @@ function next(){
     }else{
         hide("imagenPC" + activa);
         hide("etiqueta_eliminar" + activa);
-        activa = 1 ;
+        activa = 0 ;
         show("imagenPC" + activa);
         show("etiqueta_eliminar" + activa);
     }    
 }
 function prev(){
-    if(activa == 1){
+    if(activa == 0){
         hide("imagenPC" + activa);
         hide("etiqueta_eliminar" + activa);
-        activa = max ;
+        activa = max;
         show("imagenPC" + activa);
         show("etiqueta_eliminar" + activa);
     }else{

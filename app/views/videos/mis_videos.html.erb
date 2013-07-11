@@ -3,8 +3,7 @@
 <head>
     <title>Angry Birds Fan Club</title>
     <link rel="shortcut icon" href="/favicon1.ico" />
-        <link rel="stylesheet" href="/css/stylesheet2.css">
-        <link rel="stylesheet" href="/css/stylesheet3.css">
+        <link rel="stylesheet" href="/css/stylesheetVideo.css">
         <link rel="stylesheet" type="text/css" href="/css/stylesheetNoScript.css" />
         <link rel="stylesheet" type="text/css" href="/css/stylesheetLoad.css" />
 </head>
@@ -76,40 +75,17 @@
                         </div>
                     </a>
                 </div>
-                <div id="contenido" width="1022px" >
+                <div id="contenido">
                     <% if flash[:alert] %>
                         <div id="mensajes" ><p><%= flash[:alert]%> </p><button type="button" class="close" data-dismiss="alert" style="position: absolute; top: 0; right: 10px; color: white; opacity: 0.5" onclick="hide('mensajes')">&times;</button></div>
                     <% end %>
-                    <ul id="listado_videos" class="borde"> 
-                         <% contador=0%> 
-                    <% @videos.each do |app| %>
-                         <li>  
-                             <div class="video-borde"  onclick="showVisor(<%= contador%>,<%= @videos.size%>);" style="cursor: pointer;">
-                                <div class="contenedor">                    
-                                    <div class="titulo_video">
-                                          <p><%= app.titulo %></p>
-                                    </div>
-                                    <div  class="video_conteiner" width="480px" height="360px" >
-                                        <img src="<%= VideoInfo.get(app.url).thumbnail_large %>"> 
-                                        <img class="play2" src="/picture/playYouTuBe.png" >
-                                        
-                                    </div>
-                                 </div>
-                            </div>
-                            <div id="etiqueta_eliminar" class="etiqueta_funcion">
-                                <p><%= link_to 'Eliminar', app, method: :delete, data: { confirm: '¿Estás seguro que deseas eliminar el video?' } %></p>
-                                <img src="/picture/delete.png"/>
-                            </div>
-                            <div id="etiqueta_editar" class="etiqueta_funcion">
-                                <p><%= link_to 'Editar', edit_video_path(app) %></p>
-                                <img src="/picture/edit.png"
-                            </div>
-                                
-                        </li>
-                        <%contador +=1%>
-                    <% end %>
-                    </ul>
-                    <%= will_paginate @videos, :previous_label => t("< anterior"), :next_label => t("siguiente >"), :page_gap => "...", :outer_window   => '1', :inner_window => '1', :link_separator => ' - ' %>
+                    <div id="pagListado">
+                        <%if @videos.size > 0 %>
+                            <%= render 'mi_listado' %>
+                        <%else%>
+                            <%= render 'nada' %>
+                        <%end%>
+                    </div>                   
                 </div>        
         </div>
         <div id="footer">

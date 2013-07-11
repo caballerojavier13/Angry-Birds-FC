@@ -3,8 +3,7 @@
 <head>
     <title>Angry Birds Fan Club</title>
     <link rel="shortcut icon" href="/favicon1.ico" />
-        <link rel="stylesheet" href="/css/stylesheet2.css">
-        <link rel="stylesheet" href="/css/stylesheet3.css">
+        <link rel="stylesheet" href="/css/stylesheetVideo.css">
         <link rel="stylesheet" type="text/css" href="/css/stylesheetNoScript.css" />
         <link rel="stylesheet" type="text/css" href="/css/stylesheetLoad.css" />
 </head>
@@ -41,8 +40,6 @@
         
         <div id="conteiner">
 
-
-    
         <div id="body">
         
                 <div id="header">
@@ -78,12 +75,16 @@
                         </div>
                     </a>
                 </div>
-                <div id="contenido" width="1022px" >
+                <div id="contenido"  >
                     <% if flash[:alert] %>
                         <div id="mensajes" ><p> <%= flash[:alert]%> </p><button type="button" class="close" data-dismiss="alert" style="position: absolute; top: 0; right: 10px; color: white; opacity: 0.5" onclick="hide('mensajes')">&times;</button></div>
                     <% end %>
                     <div id="pagListado">
-                        <%= render 'listado' %>
+                        <%if @videos.size > 0 %>
+                            <%= render 'listado' %>
+                        <%else%>
+                            <%= render 'nada' %>
+                        <%end%>
                     </div>
                 </div>        
         </div>

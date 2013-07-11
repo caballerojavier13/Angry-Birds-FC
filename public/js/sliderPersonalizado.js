@@ -41,20 +41,20 @@ function tecla (e){
     
 }
 function next(){
-    if(activa< max){
+    if(activa < max){
         hide("imagenPC" + activa);
         activa = activa + 1 ;
         show("imagenPC" + activa);
     }else{
         hide("imagenPC" + activa);
-        activa = 1 ;
+        activa = 0 ;
         show("imagenPC" + activa);
     }    
 }
 function prev(){
-    if(activa == 1){
+    if(activa == 0){
         hide("imagenPC" + activa);
-        activa = max ;
+        activa = max;
         show("imagenPC" + activa);
     }else{
         hide("imagenPC" + activa);

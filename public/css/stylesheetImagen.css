@@ -328,7 +328,7 @@ a{
     max-height: 90%;
     
     border: 2px solid yellow;
-    border-radius: 8%;
+    border-radius: 15px;
     
     box-shadow: 0 0 20px black;
     
@@ -678,4 +678,18 @@ box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 
     -webkit-transform: translate(0, 0);
     -moz-transform: translate(0, 0);
     -ms-transform: translate(0, 0);
+}
+
+
+#nada{
+    position: relative;
+    margin: 0 auto;
+    width: 80%;
+    min-width: 600px;
+}
+#nada h1{
+    color: red;
+    font-family: "AngryBirds";
+    font-size:60px;    
+    line-height: 80px;    
 }
