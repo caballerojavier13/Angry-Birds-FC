@@ -171,7 +171,7 @@
     <script>
         $(function(){
             $(".custom-input-file input:file").change(function(){
-                $(this).parent().find(".archivo").html($(this).val());
+                $(this).parent().find(".archivo").html($(this).val().replace(/C:\\fakepath\\/i, ''));
             }).css('border-width',function(){
                 if(navigator.appName == "Microsoft Internet Explorer")
                     return 0;

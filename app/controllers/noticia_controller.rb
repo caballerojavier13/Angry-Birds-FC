@@ -3,7 +3,7 @@ class NoticiaController < SecurityController
   # GET /noticia.json
   def index
     @persona = Persona.find(session[:usuario_id])
-    @noticia = Noticium.order('id DESC').paginate(:page => params[:page], :per_page => 1)
+    @noticia = Noticium.order('id DESC').paginate(:page => params[:page], :per_page => 5)
 
       respond_to do |format|
       format.html # index.html.erb
@@ -45,7 +45,18 @@ class NoticiaController < SecurityController
     @persona = Persona.find(session[:usuario_id])
     @noticium = Noticium.new(params[:noticium])
     @noticium.persona=  @persona
-    
+    unless params[:picture].nil?
+      @imagen = Imagen.new()
+      flickr_id = Flickrphoto.new.subir_imagen params[:picture] 
+       if flickr_id.nil?
+         @noticium.imagen = nil 
+       else
+         @imagen.url = Flickrphoto.new.get_url_flickr flickr_id
+         @imagen.picasa_id = flickr_id
+         @imagen.save
+         @noticium.imagen = @imagen
+       end
+    end
     respond_to do |format|
       if @noticium.save
         format.html { redirect_to @noticium, notice: 'Noticium was successfully created.' }

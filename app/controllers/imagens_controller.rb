@@ -57,13 +57,13 @@ class ImagensController < SecurityController
 	     @imagen.url = Flickrphoto.new.get_url_flickr flickr_id
 	     @imagen.picasa_id = flickr_id
 	      respond_to do |format|
-		if @imagen.save
-		  format.html { redirect_to "/imagenes", alert: 'La imagen fue correctamente guardada.' }
-		  format.json { render json: @imagen, status: :created, location: @imagen }
-		else
-		  format.html {redirect_to "/imagenes", alert: 'Error en el guardado.'  }
-		  format.json { render json: @imagen.errors, status: :unprocessable_entity }
-		end
+      		if @imagen.save
+      		  format.html { redirect_to "/imagenes", alert: 'La imagen fue correctamente guardada.' }
+      		  format.json { render json: @imagen, status: :created, location: @imagen }
+      		else
+      		  format.html {redirect_to "/imagenes", alert: 'Error en el guardado.'  }
+      		  format.json { render json: @imagen.errors, status: :unprocessable_entity }
+      		end
 	      end
 	    end
    end
