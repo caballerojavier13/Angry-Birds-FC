@@ -3,7 +3,7 @@ class NoticiaController < SecurityController
   # GET /noticia.json
   def index
     @persona = Persona.find(session[:usuario_id])
-    @noticia = Noticium.order('id DESC').paginate(:page => params[:page], :per_page => 5)
+    @noticia = Noticium.order('id DESC').paginate(:page => params[:page], :per_page => 8)
 
       respond_to do |format|
       format.html # index.html.erb
@@ -43,10 +43,13 @@ class NoticiaController < SecurityController
   # POST /noticia.json
   def create
     @persona = Persona.find(session[:usuario_id])
-    @noticium = Noticium.new(params[:noticium])
+    @noticium = Noticium.new()
+    @noticium.titulo = params[:titulo]
+    @noticium.cuerpo = params[:cuerpo]
     @noticium.persona=  @persona
     unless params[:picture].nil?
       @imagen = Imagen.new()
+      @imagen.persona=@persona
       flickr_id = Flickrphoto.new.subir_imagen params[:picture] 
        if flickr_id.nil?
          @noticium.imagen = nil 
@@ -62,6 +65,7 @@ class NoticiaController < SecurityController
         format.html { redirect_to @noticium, notice: 'Noticium was successfully created.' }
         format.json { render json: @noticium, status: :created, location: @noticium }
       else
+        @imagen.destroy unless @imagen.nil?
         format.html { render action: "new" }
         format.json { render json: @noticium.errors, status: :unprocessable_entity }
       end

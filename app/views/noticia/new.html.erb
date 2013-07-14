@@ -4,9 +4,10 @@
     <title>Angry Birds Fan Club</title>
     <link rel="shortcut icon" href="/favicon1.ico" />
         <link rel="stylesheet" href="/css/stylesheetNoticia.css">
+        <link rel="stylesheet" href="/css/stylesheetAll.css">
         <link rel="stylesheet" type="text/css" href="/css/stylesheetNoScript.css" />
         <link rel="stylesheet" type="text/css" href="/css/stylesheetLoad.css" />
-        <%= javascript_include_tag "application" %>
+
 </head>
 <body>
     <div id="loading">
@@ -65,7 +66,7 @@
                         
         </div>
         <div id="form_new">
-        <%= form_for(@noticium, :multipart => "1") do |f| %>
+        <%= form_tag({:action => :create}, :multipart => "1", :id => "form_up") do   %>
             <% if @noticium.errors.any? %>
                 <div id="error">
                     <div id="error_title">
@@ -80,20 +81,20 @@
             <% end %>
         
           <div class="field">
-            <%= f.label :titulo %><br />
-            <%= f.text_field :titulo, :size => 30%>
+            <%= label_tag :titulo %><br />
+            <%= text_field_tag :titulo, nil , {maxlength: 50}  %>
           </div>
           <div class="field">
-            <%= f.label "Texto:" %><br />
-            <%= f.text_area :cuerpo %>
+            <%= label_tag "Texto:" %><br />
+            <%= text_area_tag :cuerpo %>
           </div>
           <div class="custom-input-file">      
             <%= file_field_tag :picture, accept: 'image/png,image/gif,image/jpeg', :class => "input-file"  %>
-            Seleccionar Archivo:
+            Seleccionar Imagen:
             <div class="archivo">...</div>
           </div>
           <div class="actions field">
-            <%= f.submit 'Guardar', :id=> 'boton_guardar' %>
+            <%= submit_tag 'Guardar', :id=> 'boton_guardar' %>
           </div>
         <% end %>
         </div>

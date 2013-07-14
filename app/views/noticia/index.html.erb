@@ -4,6 +4,7 @@
     <title>Angry Birds Fan Club</title>
     <link rel="shortcut icon" href="/favicon1.ico" />
 		<link rel="stylesheet" href="/css/stylesheetNoticia.css">
+		<link rel="stylesheet" href="/css/stylesheetAll.css">
 		<link rel="stylesheet" type="text/css" href="/css/stylesheetNoScript.css" />
         <link rel="stylesheet" type="text/css" href="/css/stylesheetLoad.css" />
 </head>
@@ -61,21 +62,31 @@
 						</div>
 					</a>
 				</div>
-				<div id="lista_conteiner">
-				<% @noticia.each do |app| %>
-                    <div class="list_noticia borde">
-                        <h1><%= app.titulo%></h1>
-                        <p><%= app.cuerpo%></p>
-                        <img src="images/1.png" >
-                        <div class="mask mask-1"></div>
-                        <div class="mask mask-2"></div>
-                        <div class="content">
-                        </div>
-                    </div>
-                    
-                <% end %>
-                <%= will_paginate @noticia, :previous_label => t("< anterior"), :next_label => t("siguiente >"), :page_gap => "...", :outer_window   => '1', :inner_window => '1', :link_separator => ' - ' %>
-            </div>		
+				<div id="wrapper">
+				    <ul id="columns">
+                        <% @noticia.each do |app| %>
+                            <li class="pin">
+                                <div class="contenido">
+                                    <h1><%= app.titulo%></h1>
+                                    <%unless app.imagen.nil?%>
+                                        <img src="<%=app.imagen.url%>" >
+                                    <%end%>
+                                    <p id="texto">
+                                        <%if app.cuerpo.size < 200 %>
+                                            <%=app.cuerpo%>
+                                        <%else%>
+                                            <%=app.cuerpo.at(0..197) +"..."%>
+                                        <%end%>
+                                    </p>
+                                    <div id="covertor">
+                                        <%= link_to 'Ver más', app %>
+                                    </div>       
+                                </div>
+                            </li>
+                        <% end %>
+                        <%= will_paginate @noticia, :previous_label => t("< anterior"), :next_label => t("siguiente >"), :page_gap => "...", :outer_window   => '1', :inner_window => '1', :link_separator => ' - ' %>
+                    </ul>       
+				</div>
 		</div>
 		
 		<div id="footer">
@@ -86,12 +97,13 @@
 	</div>
 	<script src= '/js/scriptLoad.js' > </script>
     
-        <script language="javascript">
-                window.onload = inicio;
-            </script>
-        <noscript><div id="noscript"><br/>Javascript deshabilitado: para poder apreciar la pagina web por favor activa javascript en tu navegador</div></noscript>
-        <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
-    <script src="js/jquery.backgroundPosition.js" type="text/javascript"></script>
+    <script language="javascript">
+        window.onload = inicio;
+    </script>
+    <noscript><div id="noscript"><br/>Javascript deshabilitado: para poder apreciar la pagina web por favor activa javascript en tu navegador</div></noscript>
+    <script type="text/javascript" src="/js/jquery-2.0.0.min.js"></script>
+    <script type="text/javascript" src="/js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="/js/jquery.backgroundPosition.js" type="text/javascript"></script>
     <script type="text/javascript">
         $(function(){
         
@@ -112,6 +124,6 @@
             }, 480000, 'linear');
             
         });
-    </script>	
+    </script> 
 </body>
 </html>
