@@ -113,10 +113,14 @@ class NoticiaController < SecurityController
   # DELETE /noticia/1.json
   def destroy
     @noticium = Noticium.find(params[:id])
+    imagen = @noticium.imagen
+    unless imagen.nil?
+      @noticium.imagen = nil
+      imagen.destroy
+    end
     @noticium.destroy
-
     respond_to do |format|
-      format.html { redirect_to noticia_url }
+      format.html { redirect_to "/mis_noticias" }
       format.json { head :no_content }
     end
   end
