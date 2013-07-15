@@ -3,11 +3,10 @@
 <head>
     <title>Angry Birds Fan Club</title>
     <link rel="shortcut icon" href="/favicon1.ico" />
-        <link rel="stylesheet" href="/css/stylesheetNoticia.css">
-        <link rel="stylesheet" href="/css/stylesheetAll.css">
-        <link rel="stylesheet" type="text/css" href="/css/stylesheetNoScript.css" />
-        <link rel="stylesheet" type="text/css" href="/css/stylesheetLoad.css" />
-
+    <link rel="stylesheet" href="/css/stylesheetNoticia.css">
+    <link rel="stylesheet" href="/css/stylesheetAll.css">
+    <link rel="stylesheet" type="text/css" href="/css/stylesheetNoScript.css" />
+    <link rel="stylesheet" type="text/css" href="/css/stylesheetLoad.css" />
 </head>
 <body>
     <div id="loading">
@@ -49,7 +48,7 @@
                     <img src=<%= @persona.genero ? ("/picture/hombre.png") : ("/picture/mujer.png") %> src="" id="fotoPerfil" >
                 </div>
                 <div id="titulo" class="borde">
-                    Agregar Noticias
+                    Agregar Noticia
                 </div>
                 <div id="accesoDirecto" class="borde">
                     <a href="/noticia" >
@@ -57,7 +56,7 @@
                             Noticia
                         </div>
                     </a>
-                    <a href="/404" >
+                    <a href="/mis_noticias" >
                         <div id="accesoDirecto2">
                             Mis Noticias
                         </div>
@@ -86,7 +85,7 @@
           </div>
           <div class="field">
             <%= label_tag "Texto:" %><br />
-            <%= text_area_tag :cuerpo %>
+            <div id="textarea"><%= text_area_tag :cuerpo %></div>
           </div>
           <div class="custom-input-file">      
             <%= file_field_tag :picture, accept: 'image/png,image/gif,image/jpeg', :class => "input-file"  %>
@@ -105,13 +104,9 @@
         </div>
     </div>
     <script src= '/js/scriptLoad.js' > </script>
-    
-        <script language="javascript">
-                window.onload = inicio;
-            </script>
-        <noscript><div id="noscript"><br/>Javascript deshabilitado: para poder apreciar la pagina web por favor activa javascript en tu navegador</div></noscript>
-        <script type="text/javascript" src="/js/jquery-2.0.0.min.js"></script>
-    <script src="js/jquery.backgroundPosition.js" type="text/javascript"></script>
+    <noscript><div id="noscript"><br/>Javascript deshabilitado: para poder apreciar la pagina web por favor activa javascript en tu navegador</div></noscript>
+    <script type="text/javascript" src="/js/jquery-1.7.1.min.js"></script>
+    <script src="/js/jquery.backgroundPosition.js" type="text/javascript"></script>
     <script type="text/javascript">
         $(function(){
         
@@ -142,6 +137,12 @@
                     return 0;
             });
         });
-    </script>   
+    </script>
+    <script>
+        $(function(){
+          inicio();
+        });
+    </script> 
+         
 </body>
 </html>

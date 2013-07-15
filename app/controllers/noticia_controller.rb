@@ -1,8 +1,8 @@
+#coding: utf-8
 class NoticiaController < SecurityController
   # GET /noticia
   # GET /noticia.json
   def index
-    @persona = Persona.find(session[:usuario_id])
     @noticia = Noticium.order('id DESC').paginate(:page => params[:page], :per_page => 8)
 
       respond_to do |format|
@@ -10,7 +10,14 @@ class NoticiaController < SecurityController
       format.json { render json: @noticia }
     end
   end
+  def mis_noticias
+    @noticia = Noticium.where(persona_id: session[:usuario_id]).order('id DESC').paginate(:page => params[:page], :per_page => 8)
 
+      respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @noticia }
+    end
+  end
   # GET /noticia/1
   # GET /noticia/1.json
   def show
@@ -37,6 +44,7 @@ class NoticiaController < SecurityController
   # GET /noticia/1/edit
   def edit
     @noticium = Noticium.find(params[:id])
+    params[:titulo] = @noticium.titulo
   end
 
   # POST /noticia
@@ -76,7 +84,20 @@ class NoticiaController < SecurityController
   # PUT /noticia/1.json
   def update
     @noticium = Noticium.find(params[:id])
-
+    unless params[:picture].nil?
+      @persona = Persona.find(session[:usuario_id])
+      @imagen = Imagen.new()
+      @imagen.persona=@persona
+      flickr_id = Flickrphoto.new.subir_imagen params[:picture] 
+       if flickr_id.nil?
+         @noticium.imagen = nil 
+       else
+         @imagen.url = Flickrphoto.new.get_url_flickr flickr_id
+         @imagen.picasa_id = flickr_id
+         @imagen.save
+         @noticium.imagen = @imagen
+       end
+    end
     respond_to do |format|
       if @noticium.update_attributes(params[:noticium])
         format.html { redirect_to @noticium, notice: 'Noticium was successfully updated.' }

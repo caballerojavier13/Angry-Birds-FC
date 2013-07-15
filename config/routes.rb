@@ -39,6 +39,8 @@ FanClub::Application.routes.draw do
 
 
   resources :noticia
+  
+  match 'mis_noticias' => 'noticia#mis_noticias', :as => :mis_noticias, :via => :get
 
 
   resources :imagens

@@ -54,10 +54,10 @@
                 <div id="accesoDirecto" class="borde">
                     <a href="/noticia" >
                         <div id="accesoDirecto1">
-                            Noticia
+                            Noticias
                         </div>
                     </a>
-                    <a href="/404" >
+                    <a href="/mis_noticias" >
                         <div id="accesoDirecto2">
                             Mis Noticias
                         </div>
@@ -67,8 +67,11 @@
         </div>
         <div id="noticia">
             <h1><%= @noticium.titulo%></h1>
-            <img />
-            <p><%= @noticium.cuerpo%></p>            
+            <%unless @noticium.imagen.nil?%>
+                <img src="<%= @noticium.imagen.url%>" />
+            <%end%>
+            <%= simple_format @noticium.cuerpo %>
+                        
         </div>
         <div id="footer">
             <a href="/logout"  >
@@ -82,8 +85,8 @@
                 window.onload = inicio;
             </script>
         <noscript><div id="noscript"><br/>Javascript deshabilitado: para poder apreciar la pagina web por favor activa javascript en tu navegador</div></noscript>
-        <script type="text/javascript" src="/js/jquery-2.0.0.min.js"></script>
-    <script src="js/jquery.backgroundPosition.js" type="text/javascript"></script>
+        <script type="text/javascript" src="/js/jquery-1.7.1.min.js"></script>
+    <script src="/js/jquery.backgroundPosition.js" type="text/javascript"></script>
     <script type="text/javascript">
         $(function(){
         
@@ -105,5 +108,13 @@
             
         });
     </script>
+    <script src="/js/jquery.slickwrap.js" type="text/javascript"></script>
+    <script>
+        $(document).ready(function(){
+            $('#noticia img').slickWrap();
+            
+        });
+    </script>
+    
 </body>
 </html>

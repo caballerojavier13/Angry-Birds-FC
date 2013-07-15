@@ -7,7 +7,6 @@ class Noticium < ActiveRecord::Base
   belongs_to :imagen
 
   has_many :calificaciones
-  
   validate :titulo_must_be_present
   validate :cuerpo_must_be_present
   validate :titulo_must_be_unique
@@ -19,11 +18,10 @@ class Noticium < ActiveRecord::Base
     errors.add(" ", "El titulo no puede estar en blanco.") unless self.titulo.present?
   end
   def cuerpo_must_be_present
-    self.cuerpo.gsub! /\s+/, ' '
-    self.cuerpo.split(' ').join(' ')
     errors.add(" ", "Debe escribir algo en el texto de la noticia.") unless self.cuerpo.present?
   end
   def titulo_must_be_unique
+    
     if titulo.present?
       self.titulo = self.titulo.capitalize
       self.titulo.gsub! /\s+/, ' '
