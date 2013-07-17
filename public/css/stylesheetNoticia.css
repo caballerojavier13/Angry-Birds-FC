@@ -322,15 +322,11 @@ box-shadow: 0 20px 20px -10px rgba(0, 0, 0, 0.5),
 }
 
 #columns {
-    -webkit-column-count: 2;
-    -webkit-column-gap: 10px;
-    -webkit-column-fill: auto;
-    -moz-column-count: 2;
-    -moz-column-gap: 10px;
-    -moz-column-fill: auto;
-    column-count: 2;
-    column-gap: 15px;
-    column-fill: auto;
+    columns:100px 2;
+    -webkit-columns:10px 2; /* Safari and Chrome */
+    -moz-columns:10px 2; /* Firefox */
+   -ms-columns:10px 2;
+   -o-columns:10px 2;
 }
 
 .pin {
@@ -338,9 +334,6 @@ box-shadow: 0 20px 20px -10px rgba(0, 0, 0, 0.5),
     background: none;
     border: none;
     margin: 0 2px 15px;
-    -webkit-column-break-inside: avoid;
-    -moz-column-break-inside: avoid;
-    column-break-inside: avoid;
     opacity: 1;
     
     -webkit-transition: all .2s ease;
@@ -354,10 +347,14 @@ box-shadow: 0 20px 20px -10px rgba(0, 0, 0, 0.5),
     position: absolute;
     display: none;
     top: 50%;
-    left: 25%;
-    width: 50%;
-    margin-top: -25%;
-    background: rgba(0,0,0,0.6);
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);    
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    background: rgba(0,0,0,0.8);
     border-radius: 20px;
     z-index: 50;
         
@@ -365,11 +362,15 @@ box-shadow: 0 20px 20px -10px rgba(0, 0, 0, 0.5),
 }
 #covertor a{
     font-family: "AngryBirds"; 
-    text-align:left;
+    text-align:center;
     font-size:50px; 
-    line-height: 60px;
+    line-height: 100%;
     color: white;
     text-align: center;
+}
+#covertor a:hover{
+    text-shadow:0 0 2px black, 0 0 10px white;
+    color: yellow;
 }
 .pin .contenido:hover #covertor{
     display: block;
@@ -551,6 +552,7 @@ box-shadow: 0 20px 20px -10px rgba(0, 0, 0, 0.5),
     border-radius: 20px;
     border: none;
     transition: all 0.3 linear;
+    cursor: pointer;
 }
 #form_new .field #boton_guardar:hover{
     color: yellow;
@@ -876,12 +878,70 @@ box-shadow: 0 20px 20px -10px rgba(0, 0, 0, 0.5),
 #fondo_eliminar div a:hover{
     color:yellow;
 }
+
+
+
+.fondo_eliminar{
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.8);
+    z-index: 100;
+}
+.fondo_eliminar div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 200px;
+    box-shadow: inset 0 0 20px rgba(50,50,50,0.8);
+    padding: 10px;
+    border-radius: 20px;
+    background: #6DD4BC;
+    border: 2px solid yellow;
+    transform: translate(-50%, -50%);    
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    
+    
+    
+    color: white;
+    font-family: "AngryBirds";
+    font-size:60px;    
+    line-height: 70px;
+    text-align: center;
+    text-shadow: 0 0 10px black;
+}
+.fondo_eliminar div a{
+    color: gray;
+    font-family: "AngryBirds";
+    font-size:40px;    
+    line-height: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    text-shadow: 0 0 10px white;
+}
+.fondo_eliminar div a:hover{
+    color:yellow;
+}
+
+
      
 #nada{
     position: relative;
     margin: 0 auto;
+    margin-top: 40px;
+    margin-bottom: 170px;
     width: 80%;
     min-width: 600px;
+    background: #6DD4BC;
+    box-shadow: inset 0 0 20px rgba(50,50,50,0.8);
+    border: 2px solid yellow;
+    border-radius: 20px;
 }
 #nada h1{
     color: red;

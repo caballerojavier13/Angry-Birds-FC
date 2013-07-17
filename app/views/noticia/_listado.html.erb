@@ -1,0 +1,23 @@
+<div id="wrapper">
+    <ul id="columns">
+        <% @noticia.each do |app| %>
+            <li class="pin">
+                <div class="contenido">
+                    <h1><%= app.titulo%></h1>
+                    <%unless app.imagen.nil?%>
+                        <img src="<%=app.imagen.url%>" >
+                    <%end%>
+                    <%if app.cuerpo.size < 200 %>
+                        <%=simple_format app.cuerpo%>
+                    <%else%>
+                        <%=simple_format app.cuerpo.at(0..197) +"..."%>
+                    <%end%>
+                    <div id="covertor">
+                        <%= link_to 'Ver más', app %>
+                    </div>       
+                </div>
+            </li>
+        <% end %>
+        <%= will_paginate @noticia, :previous_label => t("< anterior"), :next_label => t("siguiente >"), :page_gap => "...", :outer_window   => '1', :inner_window => '1', :link_separator => ' - ' %>
+    </ul>       
+</div>

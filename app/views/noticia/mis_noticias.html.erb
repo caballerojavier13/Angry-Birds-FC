@@ -3,10 +3,10 @@
 <head>
     <title>Angry Birds Fan Club</title>
     <link rel="shortcut icon" href="/favicon1.ico" />
-        <link rel="stylesheet" href="/css/stylesheetNoticia.css">
-        <link rel="stylesheet" href="/css/stylesheetAll.css">
-        <link rel="stylesheet" type="text/css" href="/css/stylesheetNoScript.css" />
-        <link rel="stylesheet" type="text/css" href="/css/stylesheetLoad.css" />
+    <link rel="stylesheet" href="/css/stylesheetNoticia.css">
+    <link rel="stylesheet" href="/css/stylesheetAll.css">
+    <link rel="stylesheet" type="text/css" href="/css/stylesheetNoScript.css" />
+    <link rel="stylesheet" type="text/css" href="/css/stylesheetLoad.css" />
 </head>
 <body>
     <div id="loading">
@@ -28,6 +28,20 @@
     </div>
     
     <div id="page">
+        <%contador = 0%>
+        <% @noticia.each do |app| %>
+            <% id_fondo = "fondo_eliminar" + contador.to_s%>
+            <div id= "<%=id_fondo%>" class="fondo_eliminar">
+                <div>
+                    ¿Desea Eliminar esta noticia?
+                    <% id_cancel = "cancel_eliminar" + contador.to_s%>
+                    <a id="<%=id_cancel%>">Cancelar </a>
+                    <%url = "/noticia/"+app.id.to_s + "/delete" %>
+                    <%= link_to "Eliminar", url%>
+                </div>
+            </div>
+            <%contador +=1%>
+        <%end%>
         <div id="body" >
         
                 <div id="header">
@@ -62,30 +76,11 @@
                         </div>
                     </a>
                 </div>
-                <div id="wrapper">
-                    <ul id="columns">
-                        <% @noticia.each do |app| %>
-                            <li class="pin">
-                                <div class="contenido">
-                                    <h1><%= app.titulo%></h1>
-                                    <%unless app.imagen.nil?%>
-                                        <img src="<%=app.imagen.url%>" >
-                                    <%end%>
-                                    <%if app.cuerpo.size < 200 %>
-                                        <%=simple_format app.cuerpo%>
-                                    <%else%>
-                                        <%=simple_format app.cuerpo.at(0..197) +"..."%>
-                                    <%end%>
-                                    <div id="covertor">
-                                        <%= link_to 'Ver más', app %>
-                                        <%= link_to 'Editar', edit_noticium_path(app) %>
-                                    </div>       
-                                </div>
-                            </li>
-                        <% end %>
-                        <%= will_paginate @noticia, :previous_label => t("< anterior"), :next_label => t("siguiente >"), :page_gap => "...", :outer_window   => '1', :inner_window => '1', :link_separator => ' - ' %>
-                    </ul>       
-                </div>
+                <%if @noticia.size > 0 %>
+                    <%= render 'mi_listado' %>
+                <%else%>
+                    <%= render 'nada' %>
+                <%end%>
         </div>
         
         <div id="footer">
@@ -126,6 +121,22 @@
         $(function(){
           inicio();
         });
-    </script>    
+    </script>
+    <script>
+        <%contador = 0%>
+        <% @noticia.each do |app| %>
+            <%id_elim = "#eliminar" + contador.to_s%>
+            <%id_fondo_elim = "#fondo_eliminar" + contador.to_s%>
+            <%id_cancel_elim = "#cancel_eliminar" + contador.to_s%>
+            
+            $( "<%=id_elim.to_s%>" ).click(function() {
+              $( "<%=id_fondo_elim.to_s%>" ).show( "puff", 700 );
+            });
+            $( "<%=id_cancel_elim.to_s%>" ).click(function() {
+              $( "<%=id_fondo_elim.to_s%>" ).hide( "scale", 500 );
+            });
+            <%contador +=1%>
+        <%end%>
+    </script>   
 </body>
 </html>
