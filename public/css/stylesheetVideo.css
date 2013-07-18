@@ -693,6 +693,97 @@ button.close {
     height: 70px;
     z-index: 20;
 }
+
+
+#ajax_loading{
+    display: none;
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    margin-left: -150px;
+    
+    height: 30px;
+    width: 300px;
+    padding-bottom: 5px;
+    
+    background-color:#6dd4bc;
+    border: solid 2px yellow;
+    border-radius: 5px;
+    box-shadow: inset 0 0 10px rgba(50,50,50,0.6);
+    box-shadow: 0 0 20px black;
+    
+    text-align: center;
+    z-index: 1000;
+}
+#ajax_loading img{
+    display: inline-block;
+    top: 2.5px;
+    height: 30px;
+    margin-right: 10px;
+}
+#ajax_loading h1{
+    display: inline-block;
+    margin-left: 10px;
+    top: -5px;
+     color: white;
+     text-decoration:inherit;
+     font-family: "AngryBirds"; 
+     text-align:center;
+     font-size:30px;   
+     line-height: 30px;
+}
+
+
+.fondo_eliminar{
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.8);
+    z-index: 100;
+}
+.fondo_eliminar div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 200px;
+    box-shadow: inset 0 0 20px rgba(50,50,50,0.8);
+    padding: 10px;
+    border-radius: 20px;
+    background: #6DD4BC;
+    border: 2px solid yellow;
+    transform: translate(-50%, -50%);    
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    
+    
+    
+    color: white;
+    font-family: "AngryBirds";
+    font-size:60px;    
+    line-height: 70px;
+    text-align: center;
+    text-shadow: 0 0 10px black;
+}
+.fondo_eliminar div a{
+    color: gray;
+    font-family: "AngryBirds";
+    font-size:40px;    
+    line-height: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    text-shadow: 0 0 10px white;
+}
+.fondo_eliminar div a:hover{
+    color:yellow;
+}
+
+
+
 #nada{
     position: relative;
     background-color:#6dd4bc;
