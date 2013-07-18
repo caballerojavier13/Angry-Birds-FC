@@ -37,10 +37,24 @@
         <% end %>
     </div>
     <div id="page">
-        <div id="conteiner">
-
-
+        <%contador = 0%>
+        <% @videos.each do |app| %>
+            <% id_fondo = "fondo_eliminar" + contador.to_s%>
+            <div id= "<%=id_fondo%>" class="fondo_eliminar">
+                <div>
+                    ¿Desea Eliminar este video?
+                    <% id_cancel = "cancel_eliminar" + contador.to_s%>
+                    <a id="<%=id_cancel%>">Cancelar </a>
+                    <%url = "/videos/"+app.id.to_s + "/delete" %>
+                    <%= link_to "Eliminar", url%>
+                </div>
+            </div>
+.etiqueta_eliminar p{
     
+}
+            <%contador +=1%>
+        <%end%>
+        <div id="conteiner">
         <div id="body">
         
                 <div id="header">
@@ -97,14 +111,13 @@
     </div>    
     </div>
     
-    <script src= '/js/scriptLoad.js' > </script>
-    <script src= '/js/script2.js' > </script>
-        <script language="javascript">
-                window.onload = inicio;
-            </script>
-        <noscript><div id="noscript"><br/>Javascript deshabilitado: para poder apreciar la pagina web por favor activa javascript en tu navegador</div></noscript>
-        <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
-    <script src="js/jquery.backgroundPosition.js" type="text/javascript"></script>
+    <script type="text/javascript" src= '/js/scriptLoad.js' > </script>
+    <script type="text/javascript" src= '/js/script2.js' > </script>
+    
+    <noscript><div id="noscript"><br/>Javascript deshabilitado: para poder apreciar la pagina web por favor activa javascript en tu navegador</div></noscript>
+    <script type="text/javascript" src="/js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="/js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="/js/jquery.backgroundPosition.js" type="text/javascript"></script>
     <script type="text/javascript">
         $(function(){
         
@@ -126,5 +139,26 @@
             
         });
     </script>
+    <script type="text/javascript">
+        $(function(){
+            inicio();
+        });
+    </script>
+    <script type="text/javascript">
+        <%contador = 0%>
+        <% @videos.each do |app| %>
+            <%id_elim = "#eliminar" + contador.to_s%>
+            <%id_fondo_elim = "#fondo_eliminar" + contador.to_s%>
+            <%id_cancel_elim = "#cancel_eliminar" + contador.to_s%>
+            
+            $( "<%=id_elim.to_s%>" ).click(function() {
+              $( "<%=id_fondo_elim.to_s%>" ).show( "puff", 700 );
+            });
+            $( "<%=id_cancel_elim.to_s%>" ).click(function() {
+              $( "<%=id_fondo_elim.to_s%>" ).hide( "scale", 500 );
+            });
+            <%contador +=1%>
+        <%end%>
+    </script>     
 </body>
 </html>

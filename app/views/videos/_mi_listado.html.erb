@@ -15,7 +15,8 @@
              </div>
         </div>
         <div id="etiqueta_eliminar" class="etiqueta_funcion">
-            <p><%= link_to 'Eliminar', app, method: :delete, data: { confirm: '¿Estás seguro que deseas eliminar el video?' } %></p>
+            <%id_eliminar = "eliminar" + contador.to_s%>            
+            <a id="<%=id_eliminar%>"> Eliminar </a>
             <img src="/picture/delete.png"/>
         </div>
         <div id="etiqueta_editar" class="etiqueta_funcion">

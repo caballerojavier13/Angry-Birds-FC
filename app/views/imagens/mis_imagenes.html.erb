@@ -33,7 +33,8 @@
                 <%contador=0%>
                 <% @imagens.each do |app| %>
                      <div id="etiqueta_eliminar<%=contador%>" class="etiqueta_eliminar">
-                        <p><%= link_to 'Eliminar', app, method: :delete, data: { confirm: '¿Estás seguro que deseas eliminar la imagen?' } %></p>
+                         <%id_eliminar = "eliminar" + contador.to_s%>
+                        <p id="<%=id_eliminar%>"> Eliminar </p>
                         <img src="/picture/delete.png"/>
                     </div> 
                      <img id="imagenPC<%=contador%>" src="<%= app.url%>" />
@@ -46,8 +47,22 @@
                 <img src="/picture/Flecha.png" id="nav-arrows-next" onclick="next()"/>
          </div>
     </div>
-    
+    <%contador = 0%>
+        <% @imagens.each do |app| %>
+            <% id_fondo = "fondo_eliminar" + contador.to_s%>
+            <div id= "<%=id_fondo%>" class="fondo_eliminar">
+                <div>
+                    ¿Desea Eliminar esta imagen?
+                    <% id_cancel = "cancel_eliminar" + contador.to_s%>
+                    <a id="<%=id_cancel%>">Cancelar </a>
+                    <%url = "/imagenes/"+app.id.to_s + "/delete" %>
+                    <%= link_to "Eliminar", url%>
+                </div>
+            </div>
+            <%contador +=1%>
+        <%end%>
     <div id="page">
+        
         <div id="ajax_loading">
             <img src="/picture/icon/upload.gif" />
             <h1 id="subiendo" >Subiendo...</h1>   
@@ -191,6 +206,22 @@
     $( "#guardar" ).click(function() {
       $( "#ajax_form" ).hide( "drop", 1000 );
     });
+    </script>
+    <script type="text/javascript">
+        <%contador = 0%>
+        <% @imagens.each do |app| %>
+            <%id_elim = "#eliminar" + contador.to_s%>
+            <%id_fondo_elim = "#fondo_eliminar" + contador.to_s%>
+            <%id_cancel_elim = "#cancel_eliminar" + contador.to_s%>
+            
+            $( "<%=id_elim.to_s%>" ).click(function() {
+              $( "<%=id_fondo_elim.to_s%>" ).show( "puff", 700 );
+            });
+            $( "<%=id_cancel_elim.to_s%>" ).click(function() {
+              $( "<%=id_fondo_elim.to_s%>" ).hide( "scale", 500 );
+            });
+            <%contador +=1%>
+        <%end%>
     </script>
 </body>
 </html>

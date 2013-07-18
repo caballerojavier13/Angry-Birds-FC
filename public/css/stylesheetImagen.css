@@ -643,14 +643,15 @@ box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 
 
 .etiqueta_eliminar{
     position: absolute;
-    bottom: 10px;
+    bottom: 2px;
     right: 50px;
     display: none;
     opacity: 0.4;
 }
-.etiqueta_eliminar p a{
+.etiqueta_eliminar p {
+    position: relative;
     color: rgba(255,255,255,1);
-    
+    cursor: pointer;
      text-decoration:inherit;
      font-family: "AngryBirds"; 
      text-align:center;
@@ -660,9 +661,6 @@ box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 
 }
 .etiqueta_eliminar:hover{
     opacity: 1;
-}
-.etiqueta_eliminar p{
-    position: relative;
 }
 .etiqueta_eliminar img{
     position: absolute;
@@ -678,6 +676,53 @@ box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 
     -webkit-transform: translate(0, 0);
     -moz-transform: translate(0, 0);
     -ms-transform: translate(0, 0);
+}
+.fondo_eliminar{
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.8);
+    z-index: 2000;
+}
+.fondo_eliminar div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 200px;
+    box-shadow: inset 0 0 20px rgba(50,50,50,0.8);
+    padding: 10px;
+    border-radius: 20px;
+    background: #6DD4BC;
+    border: 2px solid yellow;
+    transform: translate(-50%, -50%);    
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    
+    
+    
+    color: white;
+    font-family: "AngryBirds";
+    font-size:60px;    
+    line-height: 70px;
+    text-align: center;
+    text-shadow: 0 0 10px black;
+}
+.fondo_eliminar div a{
+    color: gray;
+    font-family: "AngryBirds";
+    font-size:40px;    
+    line-height: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    text-shadow: 0 0 10px white;
+}
+.fondo_eliminar div a:hover{
+    color:yellow;
 }
 
 

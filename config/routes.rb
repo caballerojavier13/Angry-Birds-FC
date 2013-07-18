@@ -25,6 +25,9 @@ FanClub::Application.routes.draw do
   resources :videos
   
   match 'mis_videos' => 'videos#mis_videos', :as => :mis_videos, :via => :get
+  
+  match 'videos/:id/delete' => 'videos#destroy', :via => :get
+  
 
   resources :tipo_usuario_funcionalidads
 
@@ -39,6 +42,7 @@ FanClub::Application.routes.draw do
 
 
   resources :noticia
+  
   match 'noticias' => 'noticia#index', :as => :noticias, :via => :get
   
   match 'mis_noticias' => 'noticia#mis_noticias', :as => :mis_noticias, :via => :get
@@ -52,13 +56,15 @@ FanClub::Application.routes.draw do
 
   match 'mis_imagenes' => 'imagens#mis_imagenes', :as => :mis_imagenes, :via => :get
   
-  resources :personas
+  match 'imagenes/:id/delete' => 'imagens#destroy', :via => :get
 
   
+  resources :personas
   
   resources :personas do
      get :activate, on: :member
   end
+  
   
   get 'admin' => 'admin#index'
 
@@ -66,6 +72,7 @@ FanClub::Application.routes.draw do
     get  'login' => :new
     post 'login' => :create
   end
+  
   get "admin/index"
 
   get "sessions/create"

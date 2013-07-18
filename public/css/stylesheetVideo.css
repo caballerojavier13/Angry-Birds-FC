@@ -432,7 +432,7 @@ backface-visibility: hidden;
     z-index: 0;
     transition: all 1s linear;
 }
-.etiqueta_funcion p a{
+.etiqueta_funcion a{
     position: relative;
     left: 0;
     padding-left: 10px;
@@ -440,7 +440,8 @@ backface-visibility: hidden;
     text-align: right;
     font-family: "AngryBirds";
     font-size:35px;    
-    line-height: 40px;    
+    line-height: 40px;
+    cursor: pointer;    
 }
 
 .etiqueta_funcion p a:hover{
