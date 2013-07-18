@@ -389,30 +389,26 @@ backface-visibility: hidden;
 }
 
 #visorVideoPantallaCompleta{
- display:none;
- position: relative;
- margin: 0;
- top: 0;
- left: 0;
- width: 100%;
- height: 100%;
- background: rgba(179,250,255,0.7);
- box-shadow: inset 0 0 40px rgba(0,0,0,1);
- z-index: 99;   
+    display:none;
+    position: absolute;
+    margin: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    background: rgba(0,0,0,0.7);
 }
 
 .proyector{
     position: relative;
-    width: 80%;
-    height: 80%;
-    top: 10%;
-    left: 10%;
-    background: rgba(109,212,188,1);
-    box-shadow: 0 0 40px rgba(0,0,0,1);
-    border-radius: 30px;
-    border-style: solid;
-    border-color: yellow;
-    border-width: 4px;
+    position: absolute;
+    width: 98%;
+    height: 98%;
+    top: 1%;
+    left: 1%;
+    box-shadow: inset 0 0 20px black;
+    background: rgba(0,0,0,0.5);
     
 }
 .iframePantallaCompleta{
@@ -422,6 +418,8 @@ backface-visibility: hidden;
     height: 90%;
     top: 5%;
     left: 5%;
+    border: none;
+    box-shadow: 0 0 20px black;
 }
 .etiqueta_funcion{
     position: absolute;
@@ -529,6 +527,14 @@ box-shadow: 0 20px 20px -10px rgba(0, 0, 0, 0.5),
 box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
 }
 
+#close_proyector{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+}
+
 .close {
     position: relative;
     right: 20px;
@@ -592,6 +598,8 @@ button.close {
 .field{
     position: relative;
     width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
     margin: 0 auto;
     margin-top: 40px;
     margin-bottom: 20px;
@@ -604,48 +612,80 @@ button.close {
 .field label{
     color: white;
     text-align: right;
-    font-size:35px;    
-    line-height: 40px;
+    font-size:50px;  
+    line-height: 60px;
     margin-bottom:20px;
     margin-top: 20px;
-    text-shadow: 0 0 10px black;    
+    text-shadow: 0 0 10px black;
 }
 .field input{
     text-align:center;
     font-family: "AngryBirds";
-    color: white;
+    color: black;
     position: relative;
     margin: 0 auto;
     margin-bottom:20px;
-    
+    margin-top: 20px;
     width: 90%;
     height: 40px;
     border-radius: 20px;
-    background: rgba(50,50,50,0.6);
-    box-shadow: inset 0 0 20px black;
+    background: rgba(0,0,0,0.6);
+    box-shadow: inset 0 0 20px black, 0 0 20px rgba(0,0,0,0.6);
+    text-shadow:  0 0 2px white;
     border: none;
-    font-size:35px;    
-    line-height: 40px;
-    padding-left: 10px;
-    padding-right: 10px;
+    font-size:40px;    
+    line-height: 42px;
+    padding: 10px;
 }
 #boton_guardar{
-    width: 200px;
-    
-    font-size:35px;    
-    line-height: 40px;
+    width: 300px;
+    height: 70px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size:45px;    
+    line-height: 50px;
     margin-bottom: 10px;
     margin-top: 10px;
+    background: rgba(50,50,50,1);
+    box-shadow: 0 10px rgba(0,0,0,1), inset 0 0 10px rgba(0,0,0,0.8);
+    cursor: pointer;
+    margin-right: 20px;
 }
 #boton_guardar:hover{
-    text-shadow: 0 0 10px black;
-    box-shadow: inset 0 0 5px rgba(255,255,255,0.6);
+    text-shadow: 0 0 1px black;
+    color: rgba(122,122,122,1);
+    text-shadow: 0 0 1px black;
+    top: 5px;
+    box-shadow: 0 5px rgba(0,0,0,1), inset 0 0 10px rgba(0,0,0,0.8);
 }
 #boton_guardar:active{
-    box-shadow: inset 0 0 40px black;
+    text-shadow: 0 0 1px black;
+    color: rgba(222,222,222,1);
+    top:10px;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.8);
 }
 
-
+#form_new a{
+    color: white;
+    font-family: "AngryBirds";
+    font-size:45px;    
+    line-height: 50px;
+    margin-left: 20px;
+    text-shadow: 0 0 10px black;  
+}
+#form_new a:hover{
+    color: yellow;
+}
+.play2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -35px;
+    width: 100px;
+    height: 70px;
+    z-index: 20;
+}
 #nada{
     position: relative;
     background-color:#6dd4bc;

@@ -4,6 +4,7 @@
     <title>Angry Birds Fan Club</title>
     <link rel="shortcut icon" href="/favicon1.ico" />
         <link rel="stylesheet" href="/css/stylesheetVideo.css">
+        <link rel="stylesheet" href="/css/stylesheetAll.css">
         <link rel="stylesheet" type="text/css" href="/css/stylesheetNoScript.css" />
         <link rel="stylesheet" type="text/css" href="/css/stylesheetLoad.css" />
 </head>
@@ -29,7 +30,7 @@
     <div id="visorVideoPantallaCompleta" onkeydown="tecla(event);" >
         <% @videos.each do |app| %>
         <div class="proyector" id="proyector<%=contador%>" onkeydown="tecla(event);" style="display: none;">
-            <button type="button" class="close" data-dismiss="alert" onclick="hideVisor()">&times;</button>
+            <img id="close_proyector" src="/picture/icon-close.png" class="close" onclick="hideVisor()" />
             <iframe class="iframePantallaCompleta" id="iframePantallaCompleta<%=contador%>" src= <%= app.url%>  onkeydown="tecla(event);"></iframe>
             <%contador +=1%>
         </div>

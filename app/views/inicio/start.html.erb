@@ -6,8 +6,7 @@
         <link rel="shortcut icon" href="/favicon1.ico" />
         <link rel="stylesheet" href="/css/stylesheetAll.css">
         <link rel="stylesheet" href="/css/stylesheetInicio.css">
-        <link rel="stylesheet" type="text/css" href="/css/style.css" />
-        <link rel="stylesheet" type="text/css" href="/css/style2.css" />
+        <link rel="stylesheet" type="text/css" href="/css/stylesheetImagenSlider.css" />
         <link rel="stylesheet" type="text/css" href="/css/stylesheetNoScript.css" />
         <link rel="stylesheet" type="text/css" href="/css/stylesheetLoad.css" />
 		
@@ -84,42 +83,13 @@
 						</div>
 					</a>
 				</div>
+					
+                <%if @imagenes.size > 4 %>
+                    <%= render 'imagenes' %>
+                <%else%>
+                    <%= render 'nada_imagen' %>
+                <%end%>
 				
-				<script type="text/javascript">
-						$(function() {
-			
-								$('#da-slider').cslider({
-									autoplay	: true,
-									bgincrement	: 5000
-								});
-								$('#dg-container').gallery({
-									autoplay	: true, 
-									interval	: 3000
-  							});
-			
-						});
-					</script>	
-				<div id="visorImagen" class="borde">
-					<div class="container" >
-			
-							<section id="dg-container" class="dg-container">
-									<div class="dg-wrapper">
-												<a href="#"><img src="images/1.jpg" ></a>
-												<a href="#"><img src="images/2.jpg" ></a>
-												<a href="#"><img src="images/3.jpg" ></a>
-												<a href="#"><img src="images/4.jpg" ></a>
-												<a href="#"><img src="images/5.jpg" ></a>
-												<a href="#"><img src="images/6.jpg" ></a>
-												<a href="#"><img src="images/7.jpg" ></a>
-												<a href="#"><img src="images/8.jpg" ></a>
-												<a href="#"><img src="images/9.jpg" ></a>
-												<a href="#"><img src="images/10.jpg" ></a>
-												<a href="#"><img src="images/11.jpg" ></a>
-												<a href="#"><img src="images/12.jpg" ></a>
-									</div>
-							</section>
-				        </div>
-				</div>
 				<%if @videos.size > 5 %>
                     <%= render 'videos' %>
                 <%else%>
@@ -135,10 +105,7 @@
 </div>
 
 		
-		<script type="text/javascript" src="/js/jquery-1.7.1.min.js"></script>
-		<script type="text/javascript" src="/js/modernizr.custom.js"></script>
-   		<script type="text/javascript" src="/js/jquery.cslider.js"></script>
-	  	<script type="text/javascript" src="/js/jquery.gallery.js"></script>
+		<script type="text/javascript" src="/js/jquery.min.js"></script>
 		<script src= '/js/scriptLoad.js' > </script>
 		<script language="javascript">
         		window.onload = inicio;

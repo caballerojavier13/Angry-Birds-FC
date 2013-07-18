@@ -81,6 +81,7 @@ a{
 #bienvenida h1{
     position: relative;
     top: -200px;
+    color: white;
 }
 
 #navegador{
@@ -259,17 +260,29 @@ a{
     overflow: hidden;
     background-color:#6dd4bc;
 }
+#visorImagen #icono{
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    height: 100px;
+    width: 100px;
+}
 #visorImagen{
     width: 80%;
     min-width: 600px;
     position: relative;
-    height: 450px;
+    height: 410px;
     margin-top: 60px;
-    overflow: hidden;
     
     background-color:#6dd4bc;
 }
-
+#visorVideo{
+    width: 80%;
+    min-width: 600px;
+    position: relative;
+    margin-top: 60px;
+    background-color:#6dd4bc; 
+}
 
 
 
@@ -343,32 +356,32 @@ a{
       -moz-transform: rotateX(-90deg) rotate(180deg) translateZ(120px);
     }
     
-    :hover > #cube .one  {
+    #visorVideo:hover  #cube .one  {
       -webkit-transform: rotateX(90deg) translateZ(200px);
       -moz-transform: rotateX(90deg) translateZ(200px);
     }
 
-    :hover > #cube .two {
+    #visorVideo:hover  #cube .two {
       -webkit-transform: translateZ(200px);
       -moz-transform: translateZ(200px);
     }
 
-    :hover > #cube .three {
+    #visorVideo:hover  #cube .three {
       -webkit-transform: rotateY(90deg) translateZ(200px);
       -moz-transform: rotateY(90deg) translateZ(200px);
     }
 
-    :hover > #cube .four {
+    #visorVideo:hover  #cube .four {
       -webkit-transform: rotateY(180deg) translateZ(200px);
       -moz-transform: rotateY(180deg) translateZ(200px);
     }
 
-    :hover > #cube .five {
+    #visorVideo:hover  #cube .five {
       -webkit-transform: rotateY(-90deg) translateZ(200px);
       -moz-transform: rotateY(-90deg) translateZ(200px);
     }
 
-    :hover > #cube .six {
+    #visorVideo:hover  #cube .six {
       -webkit-transform: rotateX(-90deg) rotate(180deg) translateZ(200px);
       -moz-transform: rotateX(-90deg) rotate(180deg) translateZ(200px);
    }    
@@ -418,6 +431,7 @@ a{
     height: 100%;
     cursor: pointer;
 }
+
 #visorVideo #icono{
     position: absolute;
     top: -50px;
