@@ -3,97 +3,141 @@
 <head>
     <title>Angry Birds Fan Club</title>
     <link rel="shortcut icon" href="/favicon1.ico" />
-			<link rel="stylesheet" href="/css/stylesheet1.css">
-			<link rel="stylesheet" href="/css/stylesheet4.css">
+	<link rel="stylesheet" href="/css/stylesheetUsuario.css">
+	<link rel="stylesheet" href="/css/stylesheetNoScript.css">
+    <link rel="stylesheet" type="text/css" href="/css/stylesheetLoad.css" />
 </head>
 <body>
-	<div id="body">
-	
-
-
-		<%= form_for(@persona) do |f| %>
-  		
-  	<div class="field">
-			  <h1>
-			   Nuevo Usuario 
-			  </h1>
-	</div>
-	<div class="field" style="background-image: none; padding: 0; height: 400px;">
-	    <img src="/picture/areyou.jpg" height="400px" width="100%" />
-	</div>	
-		
-	<% if @persona.errors.any? %>
-        <div id="error">
-        	<div id="error_title">
-          		<h2>Error en la registración, se <%= @persona.errors.count > 1 ? "han" : "ha" %> encontrado <%= @persona.errors.count%> <%= @persona.errors.count > 1 ? "errores" : "error" %>:</h2>
-    	   </div>
-           <ul>
-           <% @persona.errors.full_messages.each do |msg| %>
-                <li><%= msg %></li>
-           <% end %>
-           </ul>
+    <div id="loading">
+        <div id="background"></div>
+        <div id="midground"></div>
+        <div id="foreground"></div>
+        <div id="tapa"></div>
+            <div class="bokeh">
+                <img id="bokeh1" src="/picture/space/ice.png" height="100px" >
+                <img id="bokeh2" src="/picture/space/bomb.png" height="100px">
+                <img id="bokeh3" src="/picture/space/green.png" height="100px">
+                <img id="bokeh4" src="/picture/space/laser.png" height="100px"> 
+            <div id="circulo"></div>
         </div>
-   <% end %>
-  
-  	<div class="field">
-   		<%= f.label "Nombre:"%><br />
-   		<%= f.text_field :nombre , :size => 15, :class => 'txtInput' %>
-   		
-  	</div>
-  	<div class="field">
-   		<%= f.label "Apellido:" %><br />
-      <%= f.text_field :apellido, :size => 15 ,:class => 'txtInput'%>
-   </div>
-   <div class="field">
-      <%= f.label "Usuario:" , :class=>"control-label" %>
-      <br />
-      <%= f.text_field :username, :size => 40 ,:class => 'txtInput'%>
-   </div>
-   <div class="field">
-      <%= f.label "E-Mail:" %><br />
-      <%= f.text_field :email ,:class => 'txtInput'%>
-   </div>
-   <div class="field">
-     <%= f.label "Género:" %><br />
-	<div id="genero">
-		<span class="cool_checkbox">
-			<%= f.check_box :genero %>
-				<label for="persona_genero">
-					<span><p class="etiqueta_genero">Hombre</p> <img src="/picture/hombre.png"> </span>
-					<span>
-						<span>/</span>
-					</span>
-					<span><p class="etiqueta_genero">Mujer</p> <img src="/picture/mujer.png" ></span>
-				</label>
-		</span>  
-	</div>
-   </div>
-   <div class="field">
-     <%= f.label "Fecha de Nacimiento:" %><br />
-
-     <%= f.date_select :fechaNacimiento,:order => [:day, :month, :year], start_year: @year_inicio, end_year: @year_fin, :id => 'fecha' %>
-   </div>
-   <div class="field">
-     <%= f.label "Contraseña:" , :class=>"control-label" %>
-     <%= f.password_field :password, :size => 40 ,:class => 'txtInput'%>
-   </div>
- 
-   <div class="field">
-     <%= f.label "Confirmar Contraseña:" , :class=>"control-label"%>
-     <br />
-     <%= f.password_field :password_confirmation, :size => 40 ,:class => 'txtInput'%>
-   </div>
-
-   <div class="field2" style="height: 110px;">     
-     <a href="/login">
-     		<div id="cancel"></div>
-     </a>
-     <%= f.submit '', :class=> 'guardar' %>  
-   </div>
- <% end %>
-
-
- 
- </div>
+            <div id="bokehText">
+            <p>Cargando...</p>
+        </div>  
+    </div>      
+    <div id="page">
+    	<div id="body">
+    		<%= form_for(@persona) do |f| %>
+      		
+              	<div class="field">
+            			  <h1>
+            			   Nuevo Usuario 
+            			  </h1>
+            	</div>
+            	<div id="imagenDecoracion">
+            	   <img src="/picture/areyou.jpg" />    
+            	</div>
+            	
+            		
+            	<% if @persona.errors.any? %>
+                    <div id="error">
+                    	<div id="error_title">
+                      		<h2>Error en la registración, se <%= @persona.errors.count > 1 ? "han" : "ha" %> encontrado <%= @persona.errors.count%> <%= @persona.errors.count > 1 ? "errores" : "error" %>:</h2>
+                	   </div>
+                       <ul>
+                       <% @persona.errors.full_messages.each do |msg| %>
+                            <li><%= msg %></li>
+                       <% end %>
+                       </ul>
+                    </div>
+               <% end %>
+      
+              	<div class="field">
+               		<%= f.label "Nombre:"%><br />
+               		<%= f.text_field :nombre , :size => 15, :class => 'txtInput' %>
+               		
+              	</div>
+              	<div class="field">
+               		<%= f.label "Apellido:" %><br />
+                  <%= f.text_field :apellido, :size => 15 ,:class => 'txtInput'%>
+               </div>
+               <div class="field">
+                  <%= f.label "Usuario:" , :class=>"control-label" %>
+                  <br />
+                  <%= f.text_field :username, :size => 40 ,:class => 'txtInput'%>
+               </div>
+               <div class="field">
+                  <%= f.label "E-Mail:" %><br />
+                  <%= f.text_field :email ,:class => 'txtInput'%>
+               </div>
+               <div class="field">
+                 <%= f.label "Género:" %><br />
+            	<div id="genero">
+            		<span class="cool_checkbox">
+            			<%= f.check_box :genero %>
+            				<label for="persona_genero">
+            					<span><p class="etiqueta_genero">Hombre</p> <img src="/picture/hombre.png"> </span>
+            					<span>
+            						<span>/</span>
+            					</span>
+            					<span><p class="etiqueta_genero">Mujer</p> <img src="/picture/mujer.png" ></span>
+            				</label>
+            		</span>  
+            	</div>
+               </div>
+               <div class="field">
+                 <%= f.label "Fecha de Nacimiento:" %><br />
+            
+                 <%= f.date_select :fechaNacimiento,:order => [:day, :month, :year], start_year: @year_inicio, end_year: @year_fin, :id => 'fecha' %>
+               </div>
+               <div class="field">
+                 <%= f.label "Contraseña:" , :class=>"control-label" %>
+                 <br/>
+                 <%= f.password_field :password, :size => 40 ,:class => 'txtInput'%>
+               </div>
+     
+               <div class="field">
+                 <%= f.label "Confirmar Contraseña:" , :class=>"control-label"%>
+                 <br />
+                 <%= f.password_field :password_confirmation, :size => 40 ,:class => 'txtInput'%>
+               </div>
+            
+               <div class="field2" style="height: 110px;">     
+                 <a href="/login">
+                 		<div id="cancel"></div>
+                 </a>
+                 <%= f.submit '', :class=> 'guardar' %>  
+               </div>
+             <% end %>
+             
+        </div>
+     </div>
+     <script src= '/js/scriptLoad.js' > </script>
+    <script language="javascript">
+            window.onload = inicio;
+        </script>
+    <noscript><div id="noscript"><br/>Javascript deshabilitado: para poder apreciar la pagina web por favor activa javascript en tu navegador</div></noscript>
+    <script src="/js/jquery-1.7.1.min.js" type="text/javascript"></script>
+    <script src="/js/jquery.backgroundPosition.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function(){
+        
+          $('#midground').css({backgroundPosition: '0px 0px'});
+          $('#foreground').css({backgroundPosition: '0px 0px'});
+          $('#background').css({backgroundPosition: '0px 0px'});
+        
+            $('#midground').animate({
+                backgroundPosition:"(-10000px -2000px)"
+            }, 240000, 'linear');
+            
+            $('#foreground').animate({
+                backgroundPosition:"(-10000px -2000px)"
+            }, 120000, 'linear');
+            
+            $('#background').animate({
+                backgroundPosition:"(-10000px -2000px)"
+            }, 480000, 'linear');
+            
+        });
+    </script>
 </body>
 </html>
