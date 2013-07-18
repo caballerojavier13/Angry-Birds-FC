@@ -676,6 +676,13 @@ button.close {
 #form_new a:hover{
     color: yellow;
 }
+
+.icono_decoracion{
+    position: absolute;
+    top: -25px;
+    left: -25px;
+    width: 50px;
+}
 .play2{
     position: absolute;
     top: 50%;
