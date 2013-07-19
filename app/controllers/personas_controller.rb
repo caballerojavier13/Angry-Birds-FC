@@ -2,9 +2,10 @@
 class PersonasController < ApplicationController
   # GET /personas
   # GET /personas.json
+  before_action :only_admin, only: :index
+  
   def index
     @personas = Persona.all
-
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @personas }
@@ -67,7 +68,7 @@ class PersonasController < ApplicationController
 
      @persona=Persona.where(email: session[:mail]).first 
      if @persona == nil
-	    redirect_to "/login"
+	    redirect_to "/login", :alert => 'Debe ingresar el email de un usuario para recuperar contraseña.'
      else
      	@persona.update_attribute(:codigo, Persona.generate_activation_code)
      	session[:mail] = nil

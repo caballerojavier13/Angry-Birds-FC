@@ -25,6 +25,11 @@
         </div>  
     </div>      
     <div id="page">
+        <div id="ajax_loading">
+            <img src="/picture/icon/upload.gif" />
+            <h1 id="subiendo" >Guardando...</h1>   
+            <h1 id="ajax_mensaje"></h1>
+        </div>
     	<div id="body">
     		<%= form_for(@persona) do |f| %>
       		
@@ -105,18 +110,18 @@
                  <a href="/login">
                  		<div id="cancel"></div>
                  </a>
-                 <%= f.submit '', :class=> 'guardar' %>  
+                 <%= f.submit '', :class=> 'guardar',:id=> 'boton_guardar' %>  
                </div>
              <% end %>
              
         </div>
      </div>
      <script src= '/js/scriptLoad.js' > </script>
-    <script language="javascript">
-            window.onload = inicio;
-        </script>
+   
     <noscript><div id="noscript"><br/>Javascript deshabilitado: para poder apreciar la pagina web por favor activa javascript en tu navegador</div></noscript>
-    <script src="/js/jquery-1.7.1.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="/js/jquery-ui-1.10.3.custom.min.js" ></script>
+    <script type="text/javascript" src="/js/modernizr.custom.67524.js"></script>
     <script src="/js/jquery.backgroundPosition.js" type="text/javascript"></script>
     <script type="text/javascript">
         $(function(){
@@ -139,5 +144,22 @@
             
         });
     </script>
+    <script>
+        $(function(){
+          inicio();
+        });
+    </script>
+    <script type="text/javascript" src="/js/jquery.textillate.js"></script>
+    <script type="text/javascript" src="/js/jquery.lettering.js"></script>
+    <script>
+        $(function() {
+            $('#subiendo').textillate();
+        });
+    </script>
+    <script>
+        $( "#boton_guardar" ).click(function() {
+          $( "#ajax_loading" ).show( "puff", 1000 );
+        });
+    </script> 
 </body>
 </html>

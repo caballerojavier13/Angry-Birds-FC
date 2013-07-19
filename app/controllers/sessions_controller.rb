@@ -30,31 +30,31 @@ class SessionsController < ApplicationController
   end
   def inicio
     if session[:usuario_id] != nil
-	if Persona.find(session[:usuario_id])
-		redirect_to "/start"
-	else
-	        redirect_to "/login"			
-   	end
+	    if Persona.find(session[:usuario_id])
+		    redirect_to "/start"
+	    else
+	      redirect_to "/login"			
+      end
     else
 	    if cookies[:usuario_id] != nil
-		session[:usuario_id] = cookies[:usuario_id]
-    	        session[:genero] = cookies[:genero]
-		if Persona.find(session[:usuario_id])
-			redirect_to "/start"
-		else
-			redirect_to "/login"			
-	   	end
+    		session[:usuario_id] = cookies[:usuario_id]
+        session[:genero] = cookies[:genero]
+    		if Persona.find(session[:usuario_id])
+    			redirect_to "/start"
+    		else
+    			redirect_to "/login"			
+       	end
 	    else
-
 	      redirect_to "/login"
 	    end
     end
   end
+  
   def destroy
     session[:usuario_id] = nil
     session[:genero] = nil
-    cookies[:usuario_id] = nil
-    cookies[:genero] = nil
+    cookies.permanent[:usuario_id] = nil
+    cookies.permanent[:genero] = nil
     redirect_to store_url, :notice => "Logged out"
   end
 end

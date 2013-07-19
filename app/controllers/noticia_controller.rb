@@ -6,17 +6,16 @@ class NoticiaController < SecurityController
     @noticia = Noticium.order('id DESC').paginate(:page => params[:page], :per_page => 8)
 
       respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @noticia }
-    end
+        format.html # index.html.erb
+        format.json { render json: @noticia }
+      end
   end
   def mis_noticias
     @noticia = Noticium.where(persona_id: session[:usuario_id]).order('id DESC').paginate(:page => params[:page], :per_page => 8)
-
       respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @noticia }
-    end
+        format.html # index.html.erb
+        format.json { render json: @noticia }
+      end
   end
   # GET /noticia/1
   # GET /noticia/1.json
@@ -44,7 +43,12 @@ class NoticiaController < SecurityController
   # GET /noticia/1/edit
   def edit
     @noticium = Noticium.find(params[:id])
-    params[:titulo] = @noticium.titulo
+    if @noticium.persona.id == session[:usuario_id]
+      params[:titulo] = @noticium.titulo
+    else
+      redirect_to "/noticias", :alert => 'Solo el dueño de la noticia puede editarla.'
+    end
+    
   end
 
   # POST /noticia
@@ -112,16 +116,22 @@ class NoticiaController < SecurityController
   # DELETE /noticia/1
   # DELETE /noticia/1.json
   def destroy
+    
     @noticium = Noticium.find(params[:id])
-    imagen = @noticium.imagen
-    unless imagen.nil?
-      @noticium.imagen = nil
-      imagen.destroy
+    if @noticium.persona.id == session[:usuario_id]
+      imagen = @noticium.imagen
+      unless imagen.nil?
+        @noticium.imagen = nil
+        imagen.destroy
+      end
+      @noticium.destroy
+      respond_to do |format|
+        format.html { redirect_to "/mis_noticias", :alert =>'La noticia fue correctamente eliminada.' }
+        format.json { head :no_content }
+      end
+    else
+      redirect_to "/noticias", :alert => 'Solo el dueño de la noticia puede eliminarla.'
     end
-    @noticium.destroy
-    respond_to do |format|
-      format.html { redirect_to "/mis_noticias", :alert =>'La noticia fue correctamente eliminada.' }
-      format.json { head :no_content }
-    end
+    
   end
 end
