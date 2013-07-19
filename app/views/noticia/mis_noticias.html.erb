@@ -77,6 +77,11 @@
                         </div>
                     </a>
                 </div>
+                <div id="contenedor_mensaje">
+                    <% if flash[:alert] %>
+                        <div id="mensajes" ><p> <%= flash[:alert]%> </p><button type="button" class="close" data-dismiss="alert" style="position: absolute; top: 0; right: 10px; color: white; opacity: 0.5" onclick="hide('mensajes')">&times;</button></div>
+                    <% end %>
+                </div>
                 <%if @noticia.size > 0 %>
                     <%= render 'mi_listado' %>
                 <%else%>

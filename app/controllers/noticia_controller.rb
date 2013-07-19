@@ -70,7 +70,7 @@ class NoticiaController < SecurityController
     end
     respond_to do |format|
       if @noticium.save
-        format.html { redirect_to @noticium, notice: 'Noticium was successfully created.' }
+        format.html { redirect_to @noticium, :alert => 'Noticia creada correctamente.' }
         format.json { render json: @noticium, status: :created, location: @noticium }
       else
         @imagen.destroy unless @imagen.nil?
@@ -100,7 +100,7 @@ class NoticiaController < SecurityController
     end
     respond_to do |format|
       if @noticium.update_attributes(params[:noticium])
-        format.html { redirect_to @noticium, notice: 'Noticium was successfully updated.' }
+        format.html { redirect_to @noticium, :alert =>'Los cambios han sido guardados.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -120,7 +120,7 @@ class NoticiaController < SecurityController
     end
     @noticium.destroy
     respond_to do |format|
-      format.html { redirect_to "/mis_noticias" }
+      format.html { redirect_to "/mis_noticias", :alert =>'La noticia fue correctamente eliminada.' }
       format.json { head :no_content }
     end
   end
