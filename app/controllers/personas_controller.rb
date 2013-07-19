@@ -2,7 +2,6 @@
 class PersonasController < ApplicationController
   # GET /personas
   # GET /personas.json
-  before_action :only_admin, only: :index
   
   def index
     @personas = Persona.all
