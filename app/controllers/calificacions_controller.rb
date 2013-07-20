@@ -1,3 +1,4 @@
+#coding: utf-8
 class CalificacionsController < SecurityController
   # GET /calificacions
   # GET /calificacions.json

@@ -1,3 +1,4 @@
+#coding: utf-8
 class TipoUsuariosController < SecurityController
   # GET /tipo_usuarios
   # GET /tipo_usuarios.json

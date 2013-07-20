@@ -1,3 +1,4 @@
+#coding: utf-8
 class VideosController < SecurityController
   # GET /videos
   # GET /videos.json

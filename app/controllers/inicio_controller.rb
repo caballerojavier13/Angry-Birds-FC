@@ -1,3 +1,4 @@
+#coding: utf-8
 class InicioController < SecurityController
   def start
   	@persona = Persona.find(session[:usuario_id])

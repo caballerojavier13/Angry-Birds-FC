@@ -1,3 +1,4 @@
+#coding: utf-8
 class SecurityController < MasterSecurityController
   before_filter :authorize
   def authorize

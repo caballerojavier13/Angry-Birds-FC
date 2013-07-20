@@ -1,3 +1,4 @@
+#coding: utf-8
 class FuncionalidadsController < SecurityController
   # GET /funcionalidads
   # GET /funcionalidads.json
