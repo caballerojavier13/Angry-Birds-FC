@@ -1,6 +1,6 @@
 #coding: utf-8
 class PersonasController < MasterSecurityController
-  before_filter :only_admin, only: [:destroy]
+  before_filter :only_admin, only: [:index, :destroy]
 
   # GET /personas
   # GET /personas.json
