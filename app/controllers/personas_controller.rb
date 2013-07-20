@@ -1,5 +1,7 @@
 #coding: utf-8
-class PersonasController < ApplicationController
+class PersonasController < MasterSecurityController
+  before_filter :only_admin, only: [:destroy]
+
   # GET /personas
   # GET /personas.json
   
@@ -47,39 +49,48 @@ class PersonasController < ApplicationController
 
 
   def activate
-      	@persona = Persona.unscoped.find(params[:id])
-	if @persona != nil
-		if @persona.codigo == params[:codigo]
-			@persona.activate! 
-			session[:usuario_id] = @persona.id
-			redirect_to "/start"
-		else
-			redirect_to "/error_activation"
-		end
-
-	else
-		redirect_to "/error_activation"
-	end
+    @persona = Persona.unscoped.find(params[:id])
+  	if @persona != nil
+  		if @persona.codigo == params[:codigo]
+  			@persona.activate! 
+  			session[:usuario_id] = @persona.id
+  			redirect_to "/start"
+  		else
+  			redirect_to "/error_activation"
+  		end
+  
+  	else
+  		redirect_to "/error_activation"
+  	end
 
   end
 
   def change_password
-
-     @persona=Persona.where(email: session[:mail]).first 
-     if @persona == nil
-	    redirect_to "/login", :alert => 'Debe ingresar el email de un usuario para recuperar contraseña.'
-     else
+    mail_username = session[:mail]
+    persona_mail = Persona.where(email: mail_username).first 
+    persona_username = Persona.where(username: mail_username).first
+    if persona_mail.nil?
+      @persona = persona_username
+    else
+      @persona = persona_mail
+    end         
+    unless @persona.nil?
      	@persona.update_attribute(:codigo, Persona.generate_activation_code)
      	session[:mail] = nil
 	    UserMailer.forgot_password(@persona).deliver
+	    session[:id]= @persona.id
      	redirect_to "/thanks"
+     else
+       redirect_to "/login", :alert => 'No se encuentró ningún usuario.'
      end
   end
 
 
   def thanks
-     
+    @persona = Persona.find(session[:id])
+    session[:id]= nil
   end
+  
   # DELETE /personas/1
   # DELETE /personas/1.json
   def destroy

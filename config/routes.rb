@@ -4,7 +4,7 @@ FanClub::Application.routes.draw do
 
   match 'start' => 'inicio#start', :as => :start, :via => :get
 
-  match 'logout' => 'admin#logout', :as => :logout, :via => :get
+  match 'logout' => 'sessions#destroy', :as => :logout, :via => :get
 
   match 'password/:id' => 'password#edit', :as => :password, :via => :get
 
@@ -28,18 +28,6 @@ FanClub::Application.routes.draw do
   
   match 'videos/:id/delete' => 'videos#destroy', :via => :get
   
-
-  resources :tipo_usuario_funcionalidads
-
-
-  resources :tipo_usuarios
-
-
-  resources :funcionalidads
-
-
-  resources :calificacions
-
 
   resources :noticia
   
@@ -72,8 +60,6 @@ FanClub::Application.routes.draw do
     get  'login' => :new
     post 'login' => :create
   end
-  
-  get "admin/index"
 
   get "sessions/create"
 

@@ -41,7 +41,9 @@
     			<img class="nube" id="nube3" src="/picture/nube3.png" >
     			<img class="nube" id="nube4" src="/picture/nube4.png" >
     		<% if flash[:alert] %>
-         		<div id="cont_noticia"> <p id="noticia"><%= flash[:alert] %></p><button type="button" class="close" data-dismiss="alert" onclick="hide('cont_noticia')">&times;</button></div>
+         		<div id="cont_noticia"> 
+         		    <p id="noticia"><%= flash[:alert] %></p><button type="button" class="close" data-dismiss="alert" onclick="hide('cont_noticia')">&times;</button>
+     		    </div>
 	        <% end %>
       		<div id="main">
       			
@@ -104,7 +106,7 @@
     				<%= form_tag do %>
                         <label id="labelRecPass">Recuperar Contraseña</label>
                         <div style="margin-top: 0px; margin-bottom: 10px;">
-		                <%= text_field_tag :mail, session[:mail] , :placeholder=> 'E-mail',:class => 'txtInput', :id => 'inputMail'%>
+		                <%= text_field_tag :mail, session[:mail] , :placeholder=> 'E-mail/usuario',:class => 'txtInput', :id => 'inputMail'%>
                 		</div>
                         <div style="display: inline;">
 				        <%= submit_tag "", :class => 'boton1' %>

@@ -91,10 +91,12 @@
                 <img src="<%= @noticium.imagen.url%>" onclick="pantallaCompleta()" />
             <%end%>
             <%= simple_format @noticium.cuerpo %>
+            <%if session[:usuario_id] == @noticium.persona.id %>
             <div id="acciones_noticia">
                 <%= link_to 'Editar', edit_noticium_path(@noticium) %>
                 <a id="eliminar"> Eliminar </a>
-            </div>            
+            </div>
+            <%end%>            
         </div>
         <div id="footer">
             <a href="/logout"  >

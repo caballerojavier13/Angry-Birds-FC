@@ -41,6 +41,9 @@ class VideosController < SecurityController
   # GET /videos/1/edit
   def edit
     @video = Video.find(params[:id])
+    unless @video.persona.id == session[:usuario_id]
+      redirect_to "/videos", :alert => "Solo el dueño del video puede editarlo."
+    end
   end
 
   # POST /videos
@@ -78,11 +81,15 @@ class VideosController < SecurityController
   # DELETE /videos/1.json
   def destroy
     @video = Video.find(params[:id])
-    @video.destroy
+    if @video.persona.id == session[:usuario_id]
+      @video.destroy
 
-    respond_to do |format|
-      format.html { redirect_to "/mis_videos", :alert => "video eliminado." }
-      format.json { head :no_content }
+      respond_to do |format|
+        format.html { redirect_to "/mis_videos", :alert => "video eliminado." }
+        format.json { head :no_content }
+      end
+    else
+      redirect_to "/videos", :alert => "Solo el dueño del video puede eliminarlo."
     end
   end
 end

@@ -3,7 +3,7 @@
 <head>
     <title>Angry Birds Fan Club</title>
     <link rel="shortcut icon" href="/favicon1.ico" />
-			<link rel="stylesheet" href="/css/stylesheet1.css">
+    <link rel="stylesheet" href="/css/stylesheetLogin.css">
   </head>
   <body>
 		
@@ -13,8 +13,8 @@
 			<img  src="/picture/logo2.png"  height="150" >
 		</div>
 	</div>
-   	<div id="mensaje" style="margin-top: -150px;">
-		<h1>Se ha enviado un mail de confirmación, por favor revisa tu buzón de correo electrónico.</h1>
+   	<div id="mensaje">
+		<h1>Se ha enviado un mail de confirmación a <%= @persona.email%>, por favor revisa tu buzón de correo electrónico.</h1>
 	</div>
    </div>
    <div id="footer">

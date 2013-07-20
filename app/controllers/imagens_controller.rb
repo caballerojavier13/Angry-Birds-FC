@@ -15,17 +15,6 @@ class ImagensController < SecurityController
     params[:picture]=nil
   end
 
-  # GET /imagens/1
-  # GET /imagens/1.json
-  def show
-    @imagen = Imagen.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @imagen }
-    end
-  end
-
   # GET /imagens/new
   # GET /imagens/new.json
   def new
@@ -35,11 +24,6 @@ class ImagensController < SecurityController
       format.html # new.html.erb
       format.json { render json: @imagen }
     end
-  end
-
-  # GET /imagens/1/edit
-  def edit
-    @imagen = Imagen.find(params[:id])
   end
 
   # POST /imagens
@@ -68,28 +52,15 @@ class ImagensController < SecurityController
 	    end
    end
   end
-
-  # PUT /imagens/1
-  # PUT /imagens/1.json
-  def update
-    @imagen = Imagen.find(params[:id])
-
-    respond_to do |format|
-      if @imagen.update_attributes(params[:imagen])
-        format.html { redirect_to @imagen, notice: 'Imagen was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: "edit" }
-        format.json { render json: @imagen.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
   # DELETE /imagens/1
   # DELETE /imagens/1.json  
   def destroy
-      @imagen = Imagen.find(params[:id])
+    @imagen = Imagen.find(params[:id])
+    if @imagen.persona.id = session[:usuario_id]
       @imagen.destroy
-      redirect_to "/mis_imagenes", alert:"Imagen correctamente eliminada"
+      redirect_to "/mis_imagenes", :alert =>"Imagen correctamente eliminada"
+    else
+      redirect_to "/videos", :alert =>"Acceso denegado."
+    end
   end
 end
