@@ -16,7 +16,11 @@
                             <%=simple_format @noticias.at(0).cuerpo.at(0..197) +"..."%>
                         <%end%>
                         
-                        <img src="/images/1.png" />
+                        <%if @noticias.at(0).imagen.nil? %>
+                            <img src="/picture/newspaper.jpg" />
+                        <%else%>
+                            <img src=" <%= @noticias.at(0).imagen.url %>"/>
+                        <%end%>
                         
                     </div>
                     
@@ -30,7 +34,11 @@
                             <%=simple_format @noticias.at(1).cuerpo.at(0..197) +"..."%>
                         <%end%>
                         
-                        <img src="/images/2.png" />
+                        <%if @noticias.at(1).imagen.nil? %>
+                            <img src="/picture/newspaper.jpg" />
+                        <%else%>
+                            <img src=" <%= @noticias.at(1).imagen.url %>"/>
+                        <%end%>
                         
                     </div>
                     
@@ -44,7 +52,11 @@
                             <%=simple_format @noticias.at(2).cuerpo.at(0..197) +"..."%>
                         <%end%>
                         
-                        <img src="/images/3.png" />
+                        <%if @noticias.at(2).imagen.nil? %>
+                            <img src="/picture/newspaper.jpg" />
+                        <%else%>
+                            <img src=" <%= @noticias.at(2).imagen.url %>"/>
+                        <%end%>
                         
                     </div>
                 
@@ -58,7 +70,11 @@
                             <%=simple_format @noticias.at(3).cuerpo.at(0..197) +"..."%>
                         <%end%>
                         
-                        <img src="/images/4.png" />
+                        <%if @noticias.at(3).imagen.nil? %>
+                            <img src="/picture/newspaper.jpg" />
+                        <%else%>
+                            <img src=" <%= @noticias.at(3).imagen.url %>"/>
+                        <%end%>
                         
                     </div>
                 </div>

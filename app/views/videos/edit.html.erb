@@ -68,50 +68,47 @@
                     </a>
                 </div>
                 <div id="form_new">
-            <%= form_for(@video) do |f| %>
-              <% if @video.errors.any? %>
-                    <div id="error">
-                        <div id="error_title">
-                            <h2>Error en la registración, se <%= @video.errors.count > 1 ? "han" : "ha" %> encontrado <%= @video.errors.count%> <%= @video.errors.count > 1 ? "errores" : "error" %>:</h2>
-                       </div>
-                       <ul>
-                       <% @video.errors.full_messages.each do |msg| %>
-                            <li><%= msg %></li>
+                    <%= form_for :video do |f| %>
+                      <% if @video.errors.any? %>
+                            <div id="error">
+                               <div id="error_title">
+                                 <h2>Error en la registración, se <%= @video.errors.count > 1 ? "han" : "ha" %> encontrado <%= @video.errors.count%> <%= @video.errors.count > 1 ? "errores" : "error" %>:</h2>
+                               </div>
+                               <ul>
+                                 <% @video.errors.full_messages.each do |msg| %>
+                                    <li><%= msg %></li>
+                                 <% end %>
+                               </ul>
+                            </div>
                        <% end %>
-                       </ul>
-                    </div>
-               <% end %>
-            
-              <div class="field">
-                <img class="icono_decoracion" src="/picture/toons/bomb.png" />
-                <%= f.label :titulo %><br />
-                <%= f.text_field :titulo %>
-              </div>
-              <div class="field">
-                  <img class="icono_decoracion" src="/picture/toons/bomb.png" />
-                <%= label_tag "Dirección de video de Youtube:"%><br />
-                <%= f.text_field :url %>
-              </div>
-              <div class="field">
-                  <img class="icono_decoracion" src="/picture/toons/bomb.png" />
-                  <%= f.submit 'Guardar', :id=> 'boton_guardar'  %>
-                <a href="/videos">Cancelar</a>
-              </div>
-            <% end %>
-
-            
-        </div>                
+                    
+                       <div class="field">
+                         <img class="icono_decoracion" src="/picture/toons/bomb.png" />
+                         <%= f.label :titulo %><br />
+                         <%= f.text_field :titulo %>
+                       </div>
+                       <div class="field">
+                         <img class="icono_decoracion" src="/picture/toons/bomb.png" />
+                         <%= label_tag "Dirección de video de Youtube:"%><br />
+                         <%= f.text_field :url %>
+                       </div>
+                       <div class="field">
+                         <img class="icono_decoracion" src="/picture/toons/bomb.png" />
+                         <%= f.submit 'Guardar', :id=> 'boton_guardar'  %>
+                         <a href="/videos">Cancelar</a>
+                       </div>
+                    <% end %>
+                </div>                
         </div>
-            
         <div id="footer">
             <a href="/logout"  >
-                <img src="/picture/exit1.png" style=" margin-top: 30px; margin-left: 20px;">
+              <img src="/picture/exit1.png" style=" margin-top: 30px; margin-left: 20px;">
             </a>
         </div>
     </div>
     <script src= '/js/scriptLoad.js' > </script>
     <script language="javascript">
-                window.onload = inicio;
+      window.onload = inicio;
     </script>    
     <noscript><div id="noscript"><br/>Javascript deshabilitado: para poder apreciar la pagina web por favor activa javascript en tu navegador</div></noscript>
     <script type="text/javascript" src="/js/jquery-1.7.1.min.js"></script>

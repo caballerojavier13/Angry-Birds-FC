@@ -22,11 +22,21 @@ FanClub::Application.routes.draw do
 
   
 
-  resources :videos
+  
+  match 'videos' => 'videos#index', :as => :videos, :via => :get
   
   match 'mis_videos' => 'videos#mis_videos', :as => :mis_videos, :via => :get
   
+  match 'videos' => 'videos#create', :as => :videos, :via => :post
+  
+  match 'videos/new' => 'videos#new', :as => :new_video, :via => :get
+
   match 'videos/:id/delete' => 'videos#destroy', :via => :get
+  
+  match 'videos/:id/edit' => 'videos#edit', :as => :edit_video, :via => :get
+  
+  match 'videos/:id/edit' => 'videos#update', :via => :post
+    
   
 
   resources :noticia
@@ -54,8 +64,6 @@ FanClub::Application.routes.draw do
   end
   
   
-  get 'admin' => 'admin#index'
-
   controller :sessions do
     get  'login' => :new
     post 'login' => :create
