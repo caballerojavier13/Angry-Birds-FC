@@ -7,9 +7,10 @@
         <link rel="stylesheet" href="/css/stylesheetAll.css">
         <link rel="stylesheet" href="/css/stylesheetInicio.css">
         <link rel="stylesheet" type="text/css" href="/css/stylesheetImagenSlider.css" />
+        <link rel="stylesheet" type="text/css" href="/css/stylesheetNoticiaSlider.css" />
         <link rel="stylesheet" type="text/css" href="/css/stylesheetNoScript.css" />
         <link rel="stylesheet" type="text/css" href="/css/stylesheetLoad.css" />
-		
+        <script type="text/javascript" src="/js/modernizr.custom.28468.js"></script>		
 </head>
 <body>
 <div id="loading">
@@ -53,36 +54,12 @@
 					<h1><%= session[:genero] ? "Bienvenido" : "Bienvenida" %> <%= @persona.nombre %> <%= @persona.apellido %></h1>
 
 				</div>
-				<div id="visorNoticia" class="borde">
-				    <a href="/noticias" >
-						<div id="da-slider" class="da-slider">
-								<div class="da-slide">
-										<h2>012345678901234567890123L</h2>
-										<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-										
-										<div class="da-img"><img src="images/2.png" alt="image01" width="256px" height="256px" /></div>
-								</div>
-								<div class="da-slide">
-										<h2>Revolution</h2>
-										<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-										
-										<div class="da-img"><img src="images/3.png" alt="image01" width="256px" height="256px" /></div>
-								</div>
-								<div class="da-slide">
-										<h2>Warm welcome</h2>
-										<p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane.</p>
-										
-										<div class="da-img"><img src="images/1.png" alt="image01" width="256px" height="256px" /></div>
-								</div>
-								<div class="da-slide">
-										<h2>Quality Control</h2>
-										<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-										
-										<div class="da-img"><img src="images/4.png" alt="image01" width="256px" height="256px" /></div>
-								</div>
-						</div>
-					</a>
-				</div>
+				
+				<%if @noticias.size > 3 %>
+                    <%= render 'noticias' %>
+                <%else%>
+                    <%= render 'nada_noticia' %>
+                <%end%>
 					
                 <%if @imagenes.size > 4 %>
                     <%= render 'imagenes' %>
@@ -103,16 +80,13 @@
 	                </a>
 		</div>
 </div>
-
-		
-		<script type="text/javascript" src="/js/jquery-1.7.1.min.js"></script>
-		<script src= '/js/scriptLoad.js' > </script>
-		<script language="javascript">
-        		window.onload = inicio;
-	    </script>
-		<noscript><div id="noscript"><br/>Javascript deshabilitado: para poder apreciar la pagina web por favor activa javascript en tu navegador</div></noscript>
-
-	   <script src="/js/jquery.backgroundPosition.js" type="text/javascript"></script>
+	<script type="text/javascript" src="/js/jquery-1.7.1.min.js"></script>
+	<script src= '/js/scriptLoad.js' > </script>
+	<script language="javascript">
+    		window.onload = inicio;
+    </script>
+	<noscript><div id="noscript"><br/>Javascript deshabilitado: para poder apreciar la pagina web por favor activa javascript en tu navegador</div></noscript>
+    <script src="/js/jquery.backgroundPosition.js" type="text/javascript"></script>
 	<script type="text/javascript">
 		$(function(){
 		
@@ -134,5 +108,18 @@
 			
 		});
 	</script>
+	<script type="text/javascript" src="/js/jquery.cslider.js"></script>
+    <script type="text/javascript">
+        $(function() {
+        
+            $('#da-slider').cslider({
+                autoplay    : true,
+                bgincrement : 0,
+                current     : 1,
+                interval    : 20000 
+            });
+        
+        });
+    </script>
 </body>
 </html>

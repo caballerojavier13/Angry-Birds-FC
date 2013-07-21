@@ -1,0 +1,20 @@
+<div id="visorNoticia" class="borde">
+    <img id="icono" src="/picture/noticia_icono.png" />
+    <a href="/noticias" >
+        <div id="da-slider" class="da-slider">
+            <% @noticias.each do |app| %>
+                <div class="da-slide">
+                    <h2><%=app.titulo%></h2>
+                    <%if app.cuerpo.size < 200 %>
+                        <%=simple_format app.cuerpo%>
+                    <%else%>
+                        <%=simple_format app.cuerpo.at(0..197) +"..."%>
+                    <%end%>
+                    <%unless app.imagen.nil?%>
+                        <div class="da-img"><img src="<%=app.imagen.url%>"/></div>
+                    <%end%>
+                </div>
+            <%end%>
+        </div>
+    </a>
+</div>

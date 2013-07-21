@@ -64,5 +64,5 @@ FanClub::Application.routes.draw do
   get "sessions/create"
 
 
-  root :to => 'sessions#inicio'
+  root :to => 'inicio#start'
 end

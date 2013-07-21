@@ -387,12 +387,10 @@ a{
     margin-bottom: 20px;
     
     padding: 10px;
-    font-family: "AngryBirds"; 
-    text-align:left;
+    font-family: "AngryBirds";
     font-size:50px; 
     line-height: 55px;
     color: white;
-    text-align: center;
     
     text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
     font-weight: 700;
@@ -415,7 +413,12 @@ a{
     font-size:25px; 
     line-height: 29px;
     font-weight: bold;
-    -moz-hyphens:auto; -ms-hyphens:auto; -webkit-hyphens:auto; -o-hyphens:auto; hyphens:auto; word-wrap:break-word; 
+    -moz-hyphens:auto; 
+    -ms-hyphens:auto; 
+    -webkit-hyphens:auto; 
+    -o-hyphens:auto; 
+    hyphens:auto; 
+    word-wrap:break-word; 
 }
 .pin .contenido img{
     position: relative;
@@ -693,7 +696,12 @@ a{
     font-size:25px; 
     line-height: 29px;
     font-weight: bold;
-    -moz-hyphens:auto; -ms-hyphens:auto; -webkit-hyphens:auto; -o-hyphens:auto; hyphens:auto; word-wrap:break-word;   
+    -moz-hyphens:auto; 
+    -ms-hyphens:auto; 
+    -webkit-hyphens:auto; 
+    -o-hyphens:auto; 
+    hyphens:auto; 
+    word-wrap:break-word;   
 }
 #noticia img{
     float: left;

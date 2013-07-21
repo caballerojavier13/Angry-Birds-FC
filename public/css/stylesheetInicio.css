@@ -258,8 +258,14 @@ a{
     position: relative;
     height: 400px;
     margin-top: 60px;
-    overflow: hidden;
     background-color:#6dd4bc;
+}
+#visorNoticia #icono{
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    height: 100px;
+    width: 100px;
 }
 #visorImagen #icono{
     position: absolute;
