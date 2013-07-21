@@ -1,20 +1,69 @@
 <div id="visorNoticia" class="borde">
     <img id="icono" src="/picture/noticia_icono.png" />
     <a href="/noticias" >
-        <div id="da-slider" class="da-slider">
-            <% @noticias.each do |app| %>
-                <div class="da-slide">
-                    <h2><%=app.titulo%></h2>
-                    <%if app.cuerpo.size < 200 %>
-                        <%=simple_format app.cuerpo%>
-                    <%else%>
-                        <%=simple_format app.cuerpo.at(0..197) +"..."%>
-                    <%end%>
-                    <%unless app.imagen.nil?%>
-                        <div class="da-img"><img src="<%=app.imagen.url%>"/></div>
-                    <%end%>
+        
+            <div id="slider">
+    
+                <div id="mover">
+            
+                    <div id="slide-1" class="slide">
+                    
+                        <h1><%= @noticias.at(0).titulo%></h1>
+                        
+                        <%if @noticias.at(0).cuerpo.size < 200 %>
+                            <%=simple_format @noticias.at(0).cuerpo%>
+                        <%else%>
+                            <%=simple_format @noticias.at(0).cuerpo.at(0..197) +"..."%>
+                        <%end%>
+                        
+                        <img src="/images/1.png" />
+                        
+                    </div>
+                    
+                    <div class="slide">
+                    
+                        <h1><%= @noticias.at(1).titulo%></h1>
+                        
+                        <%if @noticias.at(1).cuerpo.size < 200 %>
+                            <%=simple_format @noticias.at(1).cuerpo%>
+                        <%else%>
+                            <%=simple_format @noticias.at(1).cuerpo.at(0..197) +"..."%>
+                        <%end%>
+                        
+                        <img src="/images/2.png" />
+                        
+                    </div>
+                    
+                    <div class="slide">
+                    
+                        <h1><%= @noticias.at(2).titulo%></h1>
+                        
+                        <%if @noticias.at(2).cuerpo.size < 200 %>
+                            <%=simple_format @noticias.at(2).cuerpo%>
+                        <%else%>
+                            <%=simple_format @noticias.at(2).cuerpo.at(0..197) +"..."%>
+                        <%end%>
+                        
+                        <img src="/images/3.png" />
+                        
+                    </div>
+                
+                    <div class="slide">
+                    
+                        <h1><%= @noticias.at(3).titulo%></h1>
+                        
+                        <%if @noticias.at(3).cuerpo.size < 200 %>
+                            <%=simple_format @noticias.at(3).cuerpo%>
+                        <%else%>
+                            <%=simple_format @noticias.at(3).cuerpo.at(0..197) +"..."%>
+                        <%end%>
+                        
+                        <img src="/images/4.png" />
+                        
+                    </div>
                 </div>
-            <%end%>
-        </div>
+            
+            </div>
+            
     </a>
 </div>
