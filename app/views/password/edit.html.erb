@@ -15,14 +15,14 @@
 			<img  src="/picture/logo2.png"  height="150" >
 		</div>
 	</div>
-	<div>
+	<div style="position: absolute; left: 25%; top: 250px; ">
 	<% if flash[:alert] %>
            	<div id="cont_noticia"> <p id="noticia"><%= flash[:alert] %></p><button type="button" class="close" data-dismiss="alert" onclick="hide('cont_noticia')">&times;</button></div>
   	<% end %>
 	</div>
    	<div id="mensaje" >
 	
-            <%=form_tag  do%> 
+      <%= form_tag({controller: "password", action: "update"}, method: "put") do %>
 		<div>
 		    <br/>
 		    <%= password_field_tag :password, params[:password], :placeholder=> 'Contraseña',:class => 'txtInput'%>
@@ -37,7 +37,7 @@
 				<img src="/picture/btn_cancel1.png" width="80" class="btn-mail" id="btn_email2">
 			</a> 
 		</div>
-            <% end %>
+      <% end %>
 	</div>
    </div>
    <div id="footer">

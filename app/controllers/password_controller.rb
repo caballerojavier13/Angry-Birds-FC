@@ -12,15 +12,18 @@ class PasswordController < ApplicationController
   end
   
   def update
-    @persona = Persona.find(params[:id])
+    @persona = Persona.find(session[:persona])
   	if (params[:password]).size < 4
-  	  redirect_to "/password/" + (@persona.id).to_s + "?=" + @persona.codigo, :alert => "La contraseña debe tener más de 3 caracteres." 
+  	  redirect_to "/password/" + (@persona.id).to_s + "?codigo=" + @persona.codigo, :alert => "La contraseña debe tener más de 3 caracteres." 
   	else
-  		if (params[:password]) == (params[:repassword])
+  	  pass = params[:password]
+      repass = params[:password_confirmation]
+  		if (pass.casecmp repass)
   			@persona.cambiar_pass params[:password]
-  			redirect_to "/login"
+  			session[:persona]= nil
+  			redirect_to "/login", :alert => "Contraseña cambiada con éxito."
   		else	
-  			redirect_to "/password/" + (@persona.id).to_s + "?=" + @persona.codigo, :alert => "Las contraseñas ingresadas no coinciden." 
+  			redirect_to "/password/" + (@persona.id).to_s + "?codigo=" + @persona.codigo, :alert => "Las contraseñas ingresadas no coinciden." 
   		end    
 	  end
   end
