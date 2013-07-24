@@ -1,13 +1,60 @@
-<h1> <%= @persona.nombre %> <%= @persona.apellido%>:</h1>
-<br/>
-<h2> Gracias por registrarte.</h2>
-<br/>
-<p> Para contrinuar con el proceso de registración, por favor haga clic <a href="http://localhost:3000/personas/<%= @persona.id%>/activate?codigo=<%=@persona.codigo %>"> aquí</a>.
-</p>
-<br/>
-<p></p>
-
-
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Angry Birds Fan Club</title>
+  <link rel="shortcut icon" href="/favicon1.ico" />
+  <style type="text/css">
+  		table{
+  				border-spacing: 0px;
+  		}
+			tr{
+					top: -20px;
+					border-spacing: 0px;
+			}
+			td{
+					border-spacing: 0px;
+			}
+  </style>
+</head>
+<body style="margin: 0;"> 
+    <table cellpadding="0" cellspacing="0" style="width: 100%;max-width: 500px;">
+        <tr>
+            <td>
+		<img src="https://lh6.googleusercontent.com/-GfwpsXhruFw/UdB7-6amF5I/AAAAAAAAADM/tnse8O_Gz5M/w958-h418-no/AngryBirds_Hero.JPG" width="100%"  />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img src="https://lh3.googleusercontent.com/-j8xlnVIAQ9U/Uc-IOdiKccI/AAAAAAAAAAs/X2e1DnZ7fQA/w535-h150-no/logo2.png" width="100%"  />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h1 style="margin-left:20px;"> <%= @persona.nombre %> <%= @persona.apellido%>:</h1>            
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <br/>
+                <h2 style="margin-left:20px;"> Gracias por registrarte.</h2>
+                <br/>            
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p style="margin-left:20px;"> Para continuar con el proceso de registración, por favor haga clic <a href="http://angrybirdsfc.herokuapp.com/personas/<%= @persona.id%>/activate?codigo=<%=@persona.codigo %>"> aquí</a>.
+                </p>
+                <br/>          
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img src="https://lh4.googleusercontent.com/-PPuFRd-UGFE/UdB8AisGg7I/AAAAAAAAADU/suvT1zYjcY8/w600-h330-no/Bad-Piggies-600x330.jpg" width="100%"/>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
 
 
 
