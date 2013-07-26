@@ -1,6 +1,6 @@
 #coding: utf-8
 class PersonasController < MasterSecurityController
-  before_filter :only_admin, only: [ :destroy]
+
 
   # GET /personas
   # GET /personas.json
@@ -37,7 +37,7 @@ class PersonasController < MasterSecurityController
     respond_to do |format|
       if @persona.save
 	      UserMailer.registration_confirmation(@persona).deliver
-        format.html { redirect_to "/thanks", notice: 'Persona was successfully created.' }
+        format.html { redirect_to "/thanks/?id=" + @persona.id.to_s , notice: 'Persona was successfully created.' }
         format.json { render json: @persona, status: :created, location: @persona }
       else
         format.html { render action: "new" }
@@ -77,9 +77,9 @@ class PersonasController < MasterSecurityController
     unless @persona.nil?
      	@persona.update_attribute(:codigo, Persona.generate_activation_code)
      	session[:mail] = nil
-	    UserMailer.forgot_password(@persona).deliver
-	    session[:id]= @persona.id
-     	redirect_to "/thanks"
+	UserMailer.forgot_password(@persona).deliver
+	session[:id]= @persona.id_to_s
+        redirect_to "/thanks/?id=" + @persona.id.to_s
      else
        redirect_to "/login", :alert => 'No se encuentró ningún usuario.'
      end
@@ -87,13 +87,14 @@ class PersonasController < MasterSecurityController
 
 
   def thanks
-    @persona = Persona.find(session[:id])
-    session[:id]= nil
+    @persona = Persona.find(params[:id])
+    params[:id]= nil
   end
   
   # DELETE /personas/1
   # DELETE /personas/1.json
   def destroy
+	 
     @persona = Persona.find(params[:id])
     @persona.destroy
 
