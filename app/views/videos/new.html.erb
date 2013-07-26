@@ -85,7 +85,7 @@
               <div class="field">
                   <img class="icono_decoracion" src="/picture/toons/bomb.png" />
                 <%= f.label :titulo %><br />
-                <%= f.text_field :titulo %>
+                <%= f.text_field :titulo , :maxlength=> "60" %>
               </div>
               <div class="field">
                   <img class="icono_decoracion" src="/picture/toons/bomb.png" />
@@ -151,5 +151,12 @@
           $( "#ajax_loading" ).show( "puff", 1000 );
         });
     </script> 
+	<script>
+	  $(function() {
+             if ($.browser.opera || $.browser.msie ) {
+               alert( "Por favor no uses este navegador. Usa firefox o Chrome. Si no los tienes instalalos." );
+	     }
+          });
+	</script>
 </body>
 </html>

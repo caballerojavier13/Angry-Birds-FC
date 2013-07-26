@@ -26,17 +26,20 @@
 }
 .bokeh {
     font-size: 100px;
+    position: absolute;
     width: 400px;
     height: 400px;
-    position: relative;
-    margin: 100px auto;
+    left: 50%;
+    top: 50%;
+    margin: 0;
+    margin-top: -200px;
+    margin-left: -200px;
     list-style: none;
     z-index: 110;  
 	border-radius: 50%;
     -webkit-animation: rota 10s linear infinite;
     -moz-animation: rota 10s linear infinite;
     -ms-animation: rota 10s linear infinite;
-    -o-animation: rota 10s linear infinite;
     animation: rota 10s linear infinite;
 }
 #bokeh1{
@@ -46,7 +49,6 @@
     -webkit-animation: rota 10s linear infinite;
     -moz-animation: rota 10s linear infinite;
     -ms-animation: rota 10s linear infinite;
-    -o-animation: rota 10s linear infinite;
     animation: rota 10s linear infinite;
 }
 #bokeh2{
@@ -56,7 +58,6 @@
     -webkit-animation: rota 10s linear infinite;
     -moz-animation: rota 10s linear infinite;
     -ms-animation: rota 10s linear infinite;
-    -o-animation: rota 10s linear infinite;
     animation: rota 10s linear infinite;
 }
 #bokeh3{
@@ -66,7 +67,6 @@
     -webkit-animation: rota 10s linear infinite;
     -moz-animation: rota 10s linear infinite;
     -ms-animation: rota 10s linear infinite;
-    -o-animation: rota 10s linear infinite;
     animation: rota 10s linear infinite;
 }
 #bokeh4{
@@ -76,16 +76,16 @@
     -webkit-animation: rota 10s linear infinite;
     -moz-animation: rota 10s linear infinite;
     -ms-animation: rota 10s linear infinite;
-    -o-animation: rota 10s linear infinite;
     animation: rota 10s linear infinite;
 }
 #bokehText{
-	position: relative;
-	top: -350px;
-	margin: 100px auto;
-	left: 12.5%;
-	width: 50%;
-	height: 100px;
+    position: absolute;
+	left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);    
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
     	
 	z-index:111;
 	text-align: left;
@@ -96,11 +96,13 @@
     	text-shadow: 5px 5px 10px rgba(0,0,0,0.7);
 }
 #bokehText p{
-	position: absolute;
-	top:-150px;
-	left: -60px;
-	height: 100px;
-	width: 100px;
+    position: absolute;
+	left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);    
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
 	font-family: "AngryBirds"; 
 	font-size:100px;	
 	line-height: 400px;
@@ -110,23 +112,20 @@
 	-webkit-animation: opa 2s linear infinite;
 	-moz-animation: opa 2s linear infinite;
 	-ms-animation: opa 2s linear infinite;
-	-o-animation: opa 2s linear infinite;
 	animation: opa 2s linear infinite;
 }
 #circulo{
 	height: 400px;
 	width: 400px;
 	position: absolute;
-	top: auto;
-	left: auto;
-	margin:0 auto;
-	box-shadow:inset 0px 0px 100px rgba(255,255,255,1),0px 0px 100px rgba(255,255,255,1);	
+	left: 0;
+	top: 0;
+	box-shadow:inset 0px 0px 100px rgba(255,255,255,1),0px 0px 100px rgba(255,255,255,1);
+	-o-box-shadow:inset 0px 0px 25% rgba(255,255,255,1),0px 0px 25% rgba(255,255,255,1);		
 	border-radius: 50%;
 	-webkit-animation: tama 5s linear infinite;
 	-moz-animation: tama 5s linear infinite;
 	-ms-animation: tama 5s linear infinite;
-	-o-animation: tama 5s linear infinite;
-	animation: tama 5s linear infinite;
 	z-index: 108;
 }
 @-webkit-keyframes rota {
@@ -139,10 +138,6 @@
 
 @-ms-keyframes rota {
     to { -ms-transform: rotate(360deg); }
-}
-
-@-o-keyframes rota {
-    to { -o-transform: rotate(360deg); }
 }
 
 @keyframes rota {
@@ -164,9 +159,9 @@
 	-ms-transform:scale(0.2,0.2); 
   }
 }
-@-o-keyframes tama {
+@keyframes tama {
   to {
-	-o-transform:scale(0.2,0.2); 
+	transform:scale(0.7,0.7); 
   }
 }
 
@@ -194,17 +189,6 @@
     }
 }
 @-ms-keyframes opa{
-	0%{
-        opacity: 0;
-    }
-    50%{
-        opacity: 1;
-    }
-    100%{
-        opacity: 0;
-    }
-}
-@-o-keyframes opa{
 	0%{
         opacity: 0;
     }

@@ -127,11 +127,15 @@ a{
      border-radius:2px;
      text-shadow: 3px 3px 4px rgba(0,0,0,0.6); 
 }
+nav{
+  position: relative;
+}
 #fotoPerfil{
     position: absolute;
     right: 10px;
     top: 5px;
     width: 40px;
+    
 }
 .borde{
     margin: 0 auto;
@@ -300,6 +304,9 @@ a{
     margin: 0 auto;
       -webkit-perspective: 800;
       -webkit-perspective-origin: 50% 50%;
+      
+      perspective: 800;
+      perspective-origin: 50% 50%;
 
       -moz-perspective: 800;
       -moz-perspective-origin: 50% 50%;
@@ -315,88 +322,148 @@ a{
 
       -moz-transition: -moz-transform 2s linear;
       -moz-transform-style: preserve-3d;
+      
+      transition: transform 2s linear;
+      transform-style: preserve-3d;
 
-    -webkit-animation: rota3d 30s linear infinite;
-    -moz-animation: rota3d 30s linear infinite;
-        
+      -webkit-animation: rota3d 30s linear infinite;
+      -moz-animation: rota3d 30s linear infinite;
+      animation: rota3d 30s linear infinite;   
     }
 
-    .face {
-      position: absolute;
-      height: 240px;
-      width: 240px;
-
-      background-color: transparent;      
-      transition: 1s linear;    
+#cube .one  {
+    position: absolute;
+    height: 240px;
+    width: 240px;
+    
+    background-color: transparent;      
+    transition: 1s linear;    
     border-style:solid;
     border-color: yellow;
     box-shadow: inset 0 0 10px rgba(50,50,50,0.8);
-    }
-
-    #cube .one  {
       -webkit-transform: rotateX(90deg) translateZ(120px);
       -moz-transform: rotateX(90deg) translateZ(120px);
-    }
+      -o-transform: rotateX(90deg) translateZ(120px);
+}
 
-    #cube .two {
+#cube .two {
+    position: absolute;
+    height: 240px;
+    width: 240px;
+    
+    background-color: transparent;      
+    transition: 1s linear;    
+    border-style:solid;
+    border-color: yellow;
+    box-shadow: inset 0 0 10px rgba(50,50,50,0.8);
       -webkit-transform: translateZ(120px);
       -moz-transform: translateZ(120px);
-    }
+      -o-transform: translateZ(120px);
+}
 
-    #cube .three {
+#cube .three {
+    position: absolute;
+    height: 240px;
+    width: 240px;
+    
+    background-color: transparent;      
+    transition: 1s linear;    
+    border-style:solid;
+    border-color: yellow;
+    box-shadow: inset 0 0 10px rgba(50,50,50,0.8);
       -webkit-transform: rotateY(90deg) translateZ(120px);
       -moz-transform: rotateY(90deg) translateZ(120px);
-    }
+      -o-transform: rotateY(90deg) translateZ(120px);
+}
 
-    #cube .four {
+#cube .four {
+    position: absolute;
+    height: 240px;
+    width: 240px;
+    
+    background-color: transparent;      
+    transition: 1s linear;    
+    border-style:solid;
+    border-color: yellow;
+    box-shadow: inset 0 0 10px rgba(50,50,50,0.8);
       -webkit-transform: rotateY(180deg) translateZ(120px);
       -moz-transform: rotateY(180deg) translateZ(120px);
-    }
+      -o-transform: rotateY(180deg) translateZ(120px);
+}
 
-    #cube .five {
+#cube .five {
+    position: absolute;
+    height: 240px;
+    width: 240px;
+    
+    background-color: transparent;      
+    transition: 1s linear;    
+    border-style:solid;
+    border-color: yellow;
+    box-shadow: inset 0 0 10px rgba(50,50,50,0.8);
       -webkit-transform: rotateY(-90deg) translateZ(120px);
       -moz-transform: rotateY(-90deg) translateZ(120px);
-    }
+      -o-transform: rotateY(-90deg) translateZ(120px);
+}
 
-    #cube .six {
+#cube .six {
+    position: absolute;
+    height: 240px;
+    width: 240px;
+    
+    background-color: transparent;      
+    transition: 1s linear;    
+    border-style:solid;
+    border-color: yellow;
+    box-shadow: inset 0 0 10px rgba(50,50,50,0.8);
       -webkit-transform: rotateX(-90deg) rotate(180deg) translateZ(120px);
       -moz-transform: rotateX(-90deg) rotate(180deg) translateZ(120px);
-    }
+      -o-transform: rotateX(-90deg) rotate(180deg) translateZ(120px);
+}
     
     #visorVideo:hover  #cube .one  {
       -webkit-transform: rotateX(90deg) translateZ(200px);
       -moz-transform: rotateX(90deg) translateZ(200px);
+      transform: rotateX(90deg) translateZ(200px);
     }
 
     #visorVideo:hover  #cube .two {
       -webkit-transform: translateZ(200px);
       -moz-transform: translateZ(200px);
+      transform: translateZ(200px);
     }
 
     #visorVideo:hover  #cube .three {
       -webkit-transform: rotateY(90deg) translateZ(200px);
       -moz-transform: rotateY(90deg) translateZ(200px);
+      transform: rotateY(90deg) translateZ(200px);
     }
 
     #visorVideo:hover  #cube .four {
       -webkit-transform: rotateY(180deg) translateZ(200px);
       -moz-transform: rotateY(180deg) translateZ(200px);
+      transform: rotateY(180deg) translateZ(200px);
     }
 
     #visorVideo:hover  #cube .five {
       -webkit-transform: rotateY(-90deg) translateZ(200px);
       -moz-transform: rotateY(-90deg) translateZ(200px);
+      transform: rotateY(-90deg) translateZ(200px);
     }
 
     #visorVideo:hover  #cube .six {
       -webkit-transform: rotateX(-90deg) rotate(180deg) translateZ(200px);
       -moz-transform: rotateX(-90deg) rotate(180deg) translateZ(200px);
+      transform: rotateX(-90deg) rotate(180deg) translateZ(200px);
    }    
     @-webkit-keyframes rota3d {
        to { -webkit-transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg)}
     }
     @-moz-keyframes rota3d {
        to { -moz-transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg)}
+    }
+    @keyframes rota3d {
+       to { transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg)}
     }
     
 

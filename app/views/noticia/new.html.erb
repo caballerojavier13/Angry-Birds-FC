@@ -87,7 +87,7 @@
         
           <div class="field">
             <%= label_tag :titulo %><br />
-            <%= text_field_tag :titulo, nil , {maxlength: 50}  %>
+            <%= text_field_tag :titulo, nil , {maxlength: 60}  %>
           </div>
           <div class="field">
             <%= label_tag "Texto:" %><br />
@@ -164,5 +164,12 @@
           $( "#ajax_loading" ).show( "puff", 1000 );
         });
     </script>          
+	<script>
+	  $(function() {
+             if ($.browser.opera || $.browser.msie ) {
+               alert( "Por favor no uses este navegador. Usa firefox o Chrome. Si no los tienes instalalos." );
+	     }
+          });
+	</script>
 </body>
 </html>

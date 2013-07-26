@@ -12,6 +12,8 @@
     <div id="loading" >
         <div id="background"></div>
         <div id="midground"></div>
+    
+    margin: 0 auto;
         <div id="foreground"></div>
         <div id="tapa"></div>
         <div class="bokeh">
@@ -90,7 +92,7 @@
         
           <div class="field">
             <%= label_tag :titulo %><br/>
-            <%= f.text_field :titulo , :maxlength=> "50"  %>
+            <%= f.text_field :titulo , :maxlength=> "60"  %>
           </div>
           <div class="field">
             <%= label_tag "Texto:" %><br />
@@ -173,5 +175,12 @@
           $( "#ajax_loading" ).show( "puff", 1000 );
         });
     </script> 
+	<script>
+	  $(function() {
+             if ($.browser.opera || $.browser.msie ) {
+               alert( "Por favor no uses este navegador. Usa firefox o Chrome. Si no los tienes instalalos." );
+	     }
+          });
+	</script>
 </body>
 </html>
