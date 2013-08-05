@@ -7,6 +7,9 @@ class Noticium < ActiveRecord::Base
   belongs_to :imagen
 
   has_many :calificaciones
+  has_many :comentarios
+  has_many :notificaciones
+
   validate :titulo_must_be_present
   validate :cuerpo_must_be_present
   validate :titulo_must_be_unique

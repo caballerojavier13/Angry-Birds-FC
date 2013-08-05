@@ -7,6 +7,8 @@ class Persona < ActiveRecord::Base
   has_many :noticia
   has_many :videos
   has_many :calificaciones
+  has_many :comentarios
+  has_many :notificaciones
 
   has_one :tipo_usuario
 

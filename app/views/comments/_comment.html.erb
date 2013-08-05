@@ -1,0 +1,10 @@
+<%= div_for comment do %>
+	<%usuario = Persona.find(comment.usuario_id)%>
+    <h3> <%=usuario.nombre + ' ' + usuario.apellido%></h3><h4>(<%=usuario.username%>)</h4>
+    <p>
+        <%=simple_format comment.cuerpo%>
+    </p>
+    <p class="fecha">
+        <%=time_ago_in_words(comment.updated_at).capitalize + "."%>
+    </p>
+<% end %>

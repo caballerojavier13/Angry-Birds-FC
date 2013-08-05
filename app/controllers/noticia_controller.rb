@@ -5,10 +5,6 @@ class NoticiaController < SecurityController
   def index
     @noticia = Noticium.order('id DESC').paginate(:page => params[:page], :per_page => 8)
 
-      respond_to do |format|
-        format.html # index.html.erb
-        format.json { render json: @noticia }
-      end
   end
   def mis_noticias
     @noticia = Noticium.where(persona_id: session[:usuario_id]).order('id DESC').paginate(:page => params[:page], :per_page => 8)
@@ -20,12 +16,9 @@ class NoticiaController < SecurityController
   # GET /noticia/1
   # GET /noticia/1.json
   def show
+    @usuario_id = session[:usuario_id]
     @noticium = Noticium.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @noticium }
-    end
+    @comentarios = Comment.where(noticia_id: @noticium.id).order('id ASC')
   end
 
   # GET /noticia/new
@@ -134,4 +127,19 @@ class NoticiaController < SecurityController
     end
     
   end
+
+  def comentar
+    @comment = Comment.new
+    usuario_id = params[:usuario]
+    @comment.usuario_id = usuario_id
+    @comment.noticia_id = params[:noticia]
+    
+    @comment.cuerpo = params[:text_area_comment]
+    @comment.save
+    url = "/noticias/" + params[:noticia].to_s + "/comentarios"
+      respond_to do |format|
+	    format.js
+      end
+
+  end 
 end

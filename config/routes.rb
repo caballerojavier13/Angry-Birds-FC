@@ -1,5 +1,9 @@
 FanClub::Application.routes.draw do
 
+  resources :notifications
+
+  resources :comments
+
   match 'videos' => 'videos#index', :as => :videos, :via => :get
   
   match 'mis_videos' => 'videos#mis_videos', :as => :mis_videos, :via => :get
@@ -31,6 +35,10 @@ FanClub::Application.routes.draw do
   match 'mis_noticias' => 'noticia#mis_noticias', :as => :mis_noticias, :via => :get
   
   match 'noticia/:id/delete' => 'noticia#destroy', :via => :get
+
+  match 'noticia/comentar' => 'noticia#comentar', :via => :post
+
+  match 'comentario/:id/delete' => 'comments#destroy', :via => :get
 
 
 

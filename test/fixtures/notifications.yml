@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  usuario_id: MyString
+  integer: MyString
+  noticia_id: MyString
+  integer: MyString
+  read: MyString
+  boolean: MyString
+  mensaje: MyString
+  string: MyString
+
+two:
+  usuario_id: MyString
+  integer: MyString
+  noticia_id: MyString
+  integer: MyString
+  read: MyString
+  boolean: MyString
+  mensaje: MyString
+  string: MyString
