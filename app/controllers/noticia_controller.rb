@@ -19,6 +19,11 @@ class NoticiaController < SecurityController
     @usuario_id = session[:usuario_id]
     @noticium = Noticium.find(params[:id])
     @comentarios = Comment.where(noticia_id: @noticium.id).order('id ASC')
+    @notificaciones = Notification.where("read = ? AND persona_id = ? AND noticia_id = ?", false, session[:usuario_id],params[:id])
+    @notificaciones.each do |n|
+      #n.mark_as_read
+    end
+    @notificaciones = Notification.where("read = ? AND persona_id = ?", false, session[:usuario_id])
   end
 
   # GET /noticia/new

@@ -1,0 +1,18 @@
+<%= div_for notification do %>
+  <a href="/noticias/<%=notification.noticia_id%>">
+    <p>
+        <%
+        if notification.persona_id == @noticium.persona_id
+        %>
+            <%= notification.noticia_propia%>    
+        <%   
+        else
+        %>
+            <%= notification.noticia_otro%>    
+        <%       
+        end 
+        
+        %>
+     </p>
+   </a>
+<% end %>

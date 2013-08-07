@@ -1,7 +1,9 @@
 FanClub::Application.routes.draw do
 
   resources :notifications
-
+  
+  match 'notificaciones' => 'notifications#index', :as => :notificaciones, :via => :get
+  
   resources :comments
 
   match 'videos' => 'videos#index', :as => :videos, :via => :get

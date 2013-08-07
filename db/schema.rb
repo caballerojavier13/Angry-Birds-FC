@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130805051728) do
+ActiveRecord::Schema.define(:version => 20130805084959) do
 
   create_table "calificacions", :force => true do |t|
     t.integer  "valor"
@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(:version => 20130805051728) do
   end
 
   create_table "comments", :force => true do |t|
-    t.integer  "usuario_id"
+    t.integer  "persona_id"
     t.integer  "noticia_id"
     t.text     "cuerpo"
     t.datetime "created_at", :null => false
@@ -54,7 +54,7 @@ ActiveRecord::Schema.define(:version => 20130805051728) do
   end
 
   create_table "notifications", :force => true do |t|
-    t.integer  "usuario_id"
+    t.integer  "persona_id"
     t.integer  "noticia_id"
     t.boolean  "read"
     t.string   "mensaje"

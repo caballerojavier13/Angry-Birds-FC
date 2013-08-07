@@ -2,12 +2,14 @@
 
 class Persona < ActiveRecord::Base
   attr_accessible :apellido, :email, :fechaNacimiento, :genero, :hashed_password, :nombre, :salt, :username,:password, :password_confirmation, :activo, :codigo
-
+  
+  scope :activo, -> { where activo: true }
+  
   has_many :imagens
   has_many :noticia
   has_many :videos
   has_many :calificaciones
-  has_many :comentarios
+  has_many :comments
   has_many :notificaciones
 
   has_one :tipo_usuario

@@ -1,0 +1,28 @@
+<% @notificaciones.each do |noti| %>
+    <li class = "<%= "unread" if noti.read?%>" >
+      <a href="/noticias/<%=noti.noticia_id%>">
+        <p>
+            <%
+            @noticium = Noticium.find(noti.noticia_id)
+            if noti.persona_id == @noticium.persona_id
+            %>
+                <%= noti.noticia_propia%>    
+            <%   
+            else
+            %>
+                <%= noti.noticia_otro%>    
+            <%       
+            end 
+            
+            %>
+         </p>
+         <%if noti.read?%>
+            <div class="mark">
+                <img src="/picture/icon/mark_as_read.png" />
+            </div>
+         <%end%>
+       </a>
+       
+    </li>
+<% end %>
+<%= will_paginate @notificaciones, :previous_label => t("< anterior"), :next_label => t("siguiente >"), :page_gap => "...", :outer_window   => '1', :inner_window => '1', :link_separator => ' - ' %>

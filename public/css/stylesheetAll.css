@@ -69,13 +69,13 @@ textarea {
 }
 #notificacion .circulo img{
     position: absolute;
-    top: 40px;
-    left: 40px;
+    top: 45px;
+    left: 45px;
 }
 #notificacion .triangulo{
     position: absolute;
     left: 35px;
-    top: 27px;
+    top: 23px;
     width: 0;
     height: 0;
     border-top: 8px solid transparent;
@@ -85,7 +85,7 @@ textarea {
 }
 #notificacion .notifica{
     position: absolute;
-    top:10px;
+    top:5px;
     left: 55px;
     background: #6dd4bc;
     border: yellow 2px solid;
@@ -96,7 +96,7 @@ textarea {
     height: 16px;
 
     color: blue;
-    top:25px;
+    top:21px;
     padding-left: 5px;
     padding-right: 5px;
     text-align: center;
@@ -107,14 +107,40 @@ textarea {
 }
 #notificacion #notif_max{
     width: 250px;
-    height: 400px;
+    max-height: 800px;
     color: white;
     left: 55px;
-    top:15px;
+    top:10px;
     border-radius: 10px;
     box-shadow: 0 0 10px black;
     display: none;
 }
-
+#all_notificaciones{
+    border-top: 2px solid yellow;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+    background: #5cc3ab;
+    border-radius: 0 0 10px 10px;
+    
+}
+#all_notificaciones a{
+    color: white;
+    font-size: 20px;
+    font-weight: 450;
+     text-shadow: 0 0 5px black;
+}
+.notification{
+    padding: 5px;
+    border-top: solid 1px gray;
+}
+.notification:first-child{
+    border: none;
+}
+.notification a p{
+    color: white;
+    font-weight: bold;
+    text-shadow: 0 0 5px black;
+}
 
 
