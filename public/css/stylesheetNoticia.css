@@ -1249,6 +1249,9 @@ button.close {
 #socials{
     position: absolute;
     text-align: right;
-    top: 0;
+    top: 25px;
     right: 20px;
+}
+.fb-like{
+    margin-right: 40px;
 }
