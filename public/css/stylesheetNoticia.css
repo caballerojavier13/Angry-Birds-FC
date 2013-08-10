@@ -1250,5 +1250,5 @@ button.close {
     position: absolute;
     text-align: right;
     top: 0;
-    right: 0;
+    right: 20px;
 }
