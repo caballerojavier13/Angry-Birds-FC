@@ -41,15 +41,26 @@ class CalificacionsController < SecurityController
   # POST /calificacions
   # POST /calificacions.json
   def create
-    @calificacion = Calificacion.new(params[:calificacion])
-
-    respond_to do |format|
-      if @calificacion.save
-        format.html { redirect_to @calificacion, notice: 'Calificacion was successfully created.' }
-        format.json { render json: @calificacion, status: :created, location: @calificacion }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @calificacion.errors, status: :unprocessable_entity }
+    @calificacion = Calificacion.new
+    @calificacion.persona_id = session[:usuario_id]
+    @calificacion.noticia_id = params[:noticia]
+    @calificacion.valor = params[:valor]
+    @calificacion.save
+    calificaciones = Calificacion.where("noticia_id = ?",params[:noticia])
+    @total = 0
+    @promedio = 0
+    calificaciones.each do|c|
+      @total += c.valor
+    end
+    @promedio = Float( Float(@total) / Float(calificaciones.size)).round(2)
+    if request.xhr?
+      respond_to do |format|
+        format.js   
+      end 
+    else
+      respond_to do |format|
+        format.html { redirect_to url }
+        format.json { head :no_content }
       end
     end
   end

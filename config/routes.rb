@@ -2,9 +2,17 @@ FanClub::Application.routes.draw do
 
   resources :notifications
   
+  match 'calificacion/:noticia/nueva' => 'calificacions#create', :via => :post
+  
+  
   match 'notificaciones' => 'notifications#index', :as => :notificaciones, :via => :get
   
+  match 'nuevas_notificaciones' => 'notifications#nuevas_notificaciones',:via => :get
+  
   resources :comments
+  
+  match 'comments/:id/delete/:noticia' => 'comments#destroy', :via => :get
+  
 
   match 'videos' => 'videos#index', :as => :videos, :via => :get
   

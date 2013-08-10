@@ -21,9 +21,22 @@ class NoticiaController < SecurityController
     @comentarios = Comment.where(noticia_id: @noticium.id).order('id ASC')
     @notificaciones = Notification.where("read = ? AND persona_id = ? AND noticia_id = ?", false, session[:usuario_id],params[:id])
     @notificaciones.each do |n|
-      #n.mark_as_read
+      n.mark_as_read
     end
+    @total = 0
+    @califico = true
     @notificaciones = Notification.where("read = ? AND persona_id = ?", false, session[:usuario_id])
+    unless @noticium.persona_id == @usuario_id
+      @califico = !(Calificacion.where("noticia_id = ? AND persona_id = ?",params[:id], session[:usuario_id]).nil?)  
+    end
+    calificaciones = Calificacion.where("noticia_id = ?",params[:id])
+    @promedio = 0
+    calificaciones.each do|c|
+      @total += c.valor
+    end
+    if @total > 0
+      @promedio = Float( Float(@total) / Float(calificaciones.size)).round(2)
+    end
   end
 
   # GET /noticia/new

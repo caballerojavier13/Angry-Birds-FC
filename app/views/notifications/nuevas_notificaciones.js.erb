@@ -1,0 +1,2 @@
+$('#notificaciones').replaceWith('<%= escape_javascript(render(:partial => @notificaciones)) %>');
+$('#notif_min').html(<%= @notificaciones.size %>);

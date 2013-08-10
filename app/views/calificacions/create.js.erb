@@ -1,0 +1,10 @@
+$("#califi_promedio").html(<%=@promedio%>);
+
+<%if @promedio > 1.5%>
+    <%if @promedio > 2.5%>
+        $("#star_c_2").attr("src", "/picture/icon/star.png");
+        $("#star_c_3").attr("src", "/picture/icon/star.png");
+    <%else%>
+        $("#star_c_2").attr("src", "/picture/icon/star.png");
+    <%end%>
+<%end%>

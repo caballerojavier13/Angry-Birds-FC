@@ -1,8 +1,10 @@
-class NotificationsController < ApplicationController
+#coding: utf-8
+class NotificationsController < SecurityController
+
   # GET /notifications
   # GET /notifications.json
   def index
-    @notificaciones = Notification.where("persona_id = ?", session[:usuario_id]).paginate(:page => params[:page], :per_page => 20)
+    @notificaciones = Notification.where("persona_id = ?", session[:usuario_id]).order('id DESC').paginate(:page => params[:page], :per_page => 20)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -80,4 +82,18 @@ class NotificationsController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  def nuevas_notificaciones
+    @notificaciones = Notification.where("read = ? AND persona_id = ?", false, session[:usuario_id]).order('id DESC')
+    if request.xhr?
+      respond_to do |format|
+        format.js   { render :notificaciones => @notificaciones }
+      end 
+    else
+      respond_to do |format|
+        format.json { head :no_content }
+      end
+    end
+  end
+    
 end

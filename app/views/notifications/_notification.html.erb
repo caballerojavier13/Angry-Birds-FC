@@ -2,7 +2,8 @@
   <a href="/noticias/<%=notification.noticia_id%>">
     <p>
         <%
-        if notification.persona_id == @noticium.persona_id
+        noticia = Noticium.find(notification.noticia_id)
+        if notification.persona_id == noticia.persona_id
         %>
             <%= notification.noticia_propia%>    
         <%   

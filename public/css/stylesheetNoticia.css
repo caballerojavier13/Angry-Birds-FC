@@ -1081,14 +1081,28 @@ button.close {
     background: #7ee5cd;
     color: white;
     font-family: "AngryBirds";
+    transition: all linear 1s;
 }
 
 #boton_comment:hover{
     text-shadow: 0 1px rgba(0,0,0,0.6);
+    transition: all linear 1s;
 }
 #boton_comment:active{
     box-shadow: none;
     color: gray;
+    transition: all linear 1s;
+}
+#boton_comment:disabled{
+    background: gray;
+    color: gray;
+    text-shadow: 0 0 2px rgba(0,0,0,0.8);
+    opacity: 0.5;
+    transition: all linear 1s;
+}
+#boton_comment:disabled:hover{
+    text-shadow: 0 0 2px rgba(0,0,0,0.8);
+    transition: all linear 1s;
 }
 #comentarios{
     position: relative;
@@ -1105,6 +1119,7 @@ button.close {
     padding: 10px;
 }
 #comentarios div{
+    position: relative;
     margin: 0 auto;
     margin-bottom: 5%;
     
@@ -1161,6 +1176,20 @@ button.close {
     word-wrap:break-word; 
     text-align: justify;
 }
+#comentarios div .delete_comment{
+    border: none;
+    position: absolute;
+    width: 20px;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+#comentarios div .delete_comment img{
+    opacity: 0.4;
+}
+#comentarios div .delete_comment img:hover{
+    opacity: 1;
+}
 #comment_loading{
     display: none;
     font-size: larger;
@@ -1177,5 +1206,49 @@ button.close {
     -moz-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
 }
-#form_comment{
+#ranking{
+    position: relative;
+    width: 80%;
+    min-width: 600px;
+    height: 50px;
+    margin: 0 auto;
+    margin-top: -140px;
+    margin-bottom: 170px;
+    
+    background-color: #6dd4bc;
+    border: solid 2px yellow;
+    border-radius: 20px;
+    box-shadow: inset 0 0 20px rgba(50,50,50,0.8);
+    padding: 10px;
+}
+#msj_califi{
+    text-shadow: 0 2px rgba(0,0,0,0.6);
+    color: white;
+    font-family: "AngryBirds";
+    font-size: 50px;
+    display: none;
+}
+#calificacion{
+    text-shadow: 0 2px rgba(0,0,0,0.6);
+    color: white;
+    font-family: "AngryBirds";
+    font-size: 25px;
+    line-height: 50px;
+    display: none;
+}
+#calificacion p{
+   position: relative;
+   display: inline-block;
+    font-size: 25px;
+    line-height: 50px;
+}
+#calificacion img{
+	cusor: default;
+}
+
+#socials{
+    position: absolute;
+    text-align: right;
+    top: 0;
+    right: 0;
 }

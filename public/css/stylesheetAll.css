@@ -107,13 +107,16 @@ textarea {
 }
 #notificacion #notif_max{
     width: 250px;
-    max-height: 800px;
     color: white;
     left: 55px;
     top:10px;
     border-radius: 10px;
     box-shadow: 0 0 10px black;
     display: none;
+}
+#notificacion #notif_max #notificaciones{
+    max-height: 400px;
+    overflow-y: auto;
 }
 #all_notificaciones{
     border-top: 2px solid yellow;
@@ -126,10 +129,12 @@ textarea {
 }
 #all_notificaciones a{
     color: white;
+    width: 235px;
     font-size: 20px;
     font-weight: 450;
      text-shadow: 0 0 5px black;
 }
+
 .notification{
     padding: 5px;
     border-top: solid 1px gray;
@@ -141,6 +146,11 @@ textarea {
     color: white;
     font-weight: bold;
     text-shadow: 0 0 5px black;
+    -moz-hyphens:auto;
+    -ms-hyphens:auto;
+    -webkit-hyphens:auto;
+    -o-hyphens:auto; hyphens:auto;
+    word-wrap:break-word;
 }
 
 

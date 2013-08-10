@@ -1,1 +1,3 @@
-$('#comentarios').append('<%= escape_javascript(render(:partial => @comment)) %>');
+<% if params[:text_area_comment].size > 0%>
+    $('#comentarios').append('<%= escape_javascript(render(:partial => @comment)) %>');
+<%end%>
