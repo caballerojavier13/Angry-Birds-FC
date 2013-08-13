@@ -38,7 +38,48 @@
     </div>
     
     <div id="page">
-        
+        <div id="search">
+            <div id="bar_search_left_h"></div>
+            <div id="bar_search_left_v"></div>
+            <div class="middle">
+                
+                <div class="left">Bus</div>
+                <div class="center">
+                    <form style="width: 100%;">
+                        <input type="search" placeholder="Buscar por titulo" name="search" />
+                        <img src="/picture/icon/Search.png" width="10%" onclick="submit()"/>
+                    </form>
+                </div>
+                <div class="right">car</div>
+            </div>
+            <div id="bar_search_right_v"></div>
+            <div id="bar_search_right_h"></div>
+        </div>
+        <div id="notificacion">
+            <div class="circulo">
+              <img src="/picture/icon/notificacion.png" width="50" height="50" />  
+            </div>
+            <div class="triangulo"></div>
+            <div id="notif_min" class="notifica">
+                <%if @notificaciones.nil?%>
+                    <%=0%>
+                <%else%>
+                    <%=@notificaciones.size%>
+                <%end%>
+            </div>
+            <div id="notif_max" class="notifica">
+                <div id="notificaciones">
+                    <%unless @notificaciones.nil?%>    
+                        <%= render :partial => @notificaciones%>
+                    <%end%>
+                </div>
+                <div id="all_notificaciones" >
+                    <a href="/notificaciones">
+                        Todas las las notificaciones
+                    </a>
+                </div>
+            </div>
+        </div>
         <div id="conteiner">
 
         <div id="body">
@@ -104,8 +145,9 @@
                 window.onload = inicio;
             </script>
         <noscript><div id="noscript"><br/>Javascript deshabilitado: para poder apreciar la pagina web por favor activa javascript en tu navegador</div></noscript>
-        <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
-    <script src="js/jquery.backgroundPosition.js" type="text/javascript"></script>
+        <script type="text/javascript" src="/js/jquery-1.7.1.min.js"></script>
+        <script type="text/javascript" src="/js/jquery.timer.js" ></script>
+    <script src="/js/jquery.backgroundPosition.js" type="text/javascript"></script>
     <script type="text/javascript">
         $(function(){
         
@@ -134,5 +176,42 @@
 	     }
           });
 	</script>
+	<script type="text/javascript">
+          $(".circulo").click(function(){
+            $("#notif_min").toggle(500);
+            $("#notif_max").toggle(500);
+          });
+    </script>
+    <script>
+        $(function(){
+            $.timer(30000, function(){
+                url = "/nuevas_notificaciones"
+                $.get(url, null,
+                    function(data){
+                        if(parseInt($("#notif_min").html()) == 0){
+                            $("#notificacion").hide();      
+                        }else{
+                               $("#notificacion").show();
+                            if(parseInt($("#notif_min").html()) > 20){
+                                $('#notif_min').html("+20");      
+                            }
+                        }
+                    });
+                return false;
+            });
+        });
+    </script>
+    <script>
+        $(function(){
+            if(parseInt($("#notif_min").html()) == 0){
+                $("#notificacion").hide();      
+            }else{
+                   $("#notificacion").show();
+                if(parseInt($("#notif_min").html()) > 20){
+                    $('#notif_min').html("+20");      
+                }
+            }
+        });
+    </script>
 </body>
 </html>

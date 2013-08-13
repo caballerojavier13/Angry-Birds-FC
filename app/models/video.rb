@@ -25,7 +25,6 @@ class Video < ActiveRecord::Base
   end
   def titulo_must_be_unique
     if titulo.present?
-      self.titulo = self.titulo.capitalize
       self.titulo.gsub! /\s+/, ' '
       self.titulo.split(' ').join(' ')
       @videoEncontrado = Video.find_all_by_titulo(titulo).at(0)
@@ -47,7 +46,11 @@ class Video < ActiveRecord::Base
       
     end
   end
-  def self.search(page)
-    paginate :per_page => 5, :page => page
+  def self.search( parametro )
+    parametro = parametro
+    Video.where("titulo LIKE :param", {:param => "%#{parametro}%"})
   end
+  def self.titulo
+    return titulo.capitalize
+  end  
 end

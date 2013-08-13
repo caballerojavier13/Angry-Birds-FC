@@ -3,6 +3,7 @@ class ImagensController < SecurityController
   # GET /imagens
   # GET /imagens.json
   def index
+    @notificaciones = Notification.where("read = ? AND persona_id = ?", false, session[:usuario_id])
     @imagens = Imagen.order('id DESC').paginate(:page => params[:page], :per_page => 21)
     params[:picture]=nil
     respond_to do |format|
@@ -11,6 +12,7 @@ class ImagensController < SecurityController
     end
   end
   def mis_imagenes
+    @notificaciones = Notification.where("read = ? AND persona_id = ?", false, session[:usuario_id])
     @imagens = Imagen.where(persona_id: session[:usuario_id]).order('id DESC').paginate(:page => params[:page], :per_page => 21)
     params[:picture]=nil
   end

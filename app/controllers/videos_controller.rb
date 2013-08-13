@@ -3,8 +3,17 @@ class VideosController < SecurityController
   # GET /videos
   # GET /videos.json
   def index
+    @notificaciones = Notification.where("read = ? AND persona_id = ?", false, session[:usuario_id])
     
-    @videos = Video.order('id DESC').paginate(:page => params[:page], :per_page => 5)
+    if params[:search].nil?
+      @videos = Video.order('id DESC').paginate(:page => params[:page], :per_page => 5)
+    else
+      if params[:search].to_s.size > 0
+        @videos = Video.search(params[:search]).order('id DESC').paginate(:page => params[:page], :per_page => 5)
+      else
+        @videos = Video.order('id DESC').paginate(:page => params[:page], :per_page => 5)
+      end  
+    end
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @videos }
@@ -12,9 +21,16 @@ class VideosController < SecurityController
   end
 
   def mis_videos
-    
-    @videos = Video.where(persona_id: session[:usuario_id]).order('id DESC').paginate(:page => params[:page], :per_page => 5)
-    
+    @notificaciones = Notification.where("read = ? AND persona_id = ?", false, session[:usuario_id])
+    if params[:search].nil?
+      @videos = Video.where(persona_id: session[:usuario_id]).order('id DESC').paginate(:page => params[:page], :per_page => 5)
+    else
+      if params[:search].to_s.size > 0
+        @videos = Video.where(persona_id: session[:usuario_id]).search(params[:search]).order('id DESC').paginate(:page => params[:page], :per_page => 5)
+      else
+        @videos = Video.where(persona_id: session[:usuario_id]).order('id DESC').paginate(:page => params[:page], :per_page => 5)
+      end  
+    end
   end
   # GET /videos/1
   # GET /videos/1.json
@@ -30,6 +46,7 @@ class VideosController < SecurityController
   # GET /videos/new
   # GET /videos/new.json
   def new
+    @notificaciones = Notification.where("read = ? AND persona_id = ?", false, session[:usuario_id])
     @persona = Persona.find(session[:usuario_id])
     @video = Video.new
     @video.persona = @persona
@@ -41,6 +58,7 @@ class VideosController < SecurityController
 
   # GET /videos/1/edit
   def edit
+    @notificaciones = Notification.where("read = ? AND persona_id = ?", false, session[:usuario_id])
     @video = Video.find(params[:id])
     unless @video.persona.id == session[:usuario_id]
       redirect_to "/videos", :alert => "Solo el dueño del video puede editarlo."

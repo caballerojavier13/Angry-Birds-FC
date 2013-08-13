@@ -3,11 +3,31 @@ class NoticiaController < SecurityController
   # GET /noticia
   # GET /noticia.json
   def index
-    @noticia = Noticium.order('id DESC').paginate(:page => params[:page], :per_page => 8)
-
+    if params[:search].nil?
+      @noticia = Noticium.order('id DESC').paginate(:page => params[:page], :per_page => 8)
+    else
+      if params[:search].to_s.size > 0
+        @noticia = Noticium.search(params[:search]).order('id DESC').paginate(:page => params[:page], :per_page => 8)
+      else
+        @noticia = Noticium.order('id DESC').paginate(:page => params[:page], :per_page => 8)
+      end
+      @noticia = Noticium.search(params[:search]).order('id DESC').paginate(:page => params[:page], :per_page => 8)  
+    end
+    @notificaciones = Notification.where("read = ? AND persona_id = ?", false, session[:usuario_id])
   end
   def mis_noticias
-    @noticia = Noticium.where(persona_id: session[:usuario_id]).order('id DESC').paginate(:page => params[:page], :per_page => 8)
+    @notificaciones = Notification.where("read = ? AND persona_id = ?", false, session[:usuario_id])
+    if params[:search].nil?
+      @noticia = Noticium.where(persona_id: session[:usuario_id]).order('id DESC').paginate(:page => params[:page], :per_page => 8)
+    else
+      if params[:search].to_s.size > 0
+        @noticia = Noticium.where(persona_id: session[:usuario_id]).search(params[:search]).order('id DESC').paginate(:page => params[:page], :per_page => 8)
+      else
+        @noticia = Noticium.where(persona_id: session[:usuario_id]).order('id DESC').paginate(:page => params[:page], :per_page => 8)
+      end
+    end
+    
+    
       respond_to do |format|
         format.html # index.html.erb
         format.json { render json: @noticia }
@@ -42,6 +62,7 @@ class NoticiaController < SecurityController
   # GET /noticia/new
   # GET /noticia/new.json
   def new
+    @notificaciones = Notification.where("read = ? AND persona_id = ?", false, session[:usuario_id])
     @persona = Persona.find(session[:usuario_id])
     @noticium = Noticium.new
     
@@ -53,6 +74,7 @@ class NoticiaController < SecurityController
 
   # GET /noticia/1/edit
   def edit
+    @notificaciones = Notification.where("read = ? AND persona_id = ?", false, session[:usuario_id])
     @noticium = Noticium.find(params[:id])
     if @noticium.persona.id == session[:usuario_id]
       params[:titulo] = @noticium.titulo
@@ -127,9 +149,8 @@ class NoticiaController < SecurityController
   # DELETE /noticia/1
   # DELETE /noticia/1.json
   def destroy
-    
     @noticium = Noticium.find(params[:id])
-    if @noticium.persona.id == session[:usuario_id]
+    if @noticium.persona_id.to_s == session[:usuario_id].to_s
       imagen = @noticium.imagen
       unless imagen.nil?
         @noticium.imagen = nil
@@ -143,7 +164,6 @@ class NoticiaController < SecurityController
     else
       redirect_to "/noticias", :alert => 'Solo el dueño de la noticia puede eliminarla.'
     end
-    
   end
 
   def comentar

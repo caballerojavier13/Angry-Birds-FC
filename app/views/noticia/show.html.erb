@@ -51,11 +51,17 @@
             </div>
             <div class="triangulo"></div>
             <div id="notif_min" class="notifica">
-                <%=@notificaciones.size%>
+                <%if @notificaciones.nil?%>
+                    <%=0%>
+                <%else%>
+                    <%=@notificaciones.size%>
+                <%end%>
             </div>
             <div id="notif_max" class="notifica">
                 <div id="notificaciones">
-                    <%= render :partial => @notificaciones%>
+                    <%unless @notificaciones.nil?%>    
+                        <%= render :partial => @notificaciones%>
+                    <%end%>
                 </div>
                 <div id="all_notificaciones" >
                     <a href="/notificaciones">

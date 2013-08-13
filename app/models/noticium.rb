@@ -15,7 +15,6 @@ class Noticium < ActiveRecord::Base
   validate :titulo_must_be_unique
   
   def titulo_must_be_present
-    self.titulo = self.titulo.capitalize
     self.titulo.gsub! /\s+/, ' '
     self.titulo.split(' ').join(' ')
     errors.add(" ", "El titulo no puede estar en blanco.") unless self.titulo.present?
@@ -36,5 +35,12 @@ class Noticium < ActiveRecord::Base
         end  
       end
     end
+  end
+  def self.search( parametro )
+    parametro = parametro
+    Noticium.where("titulo LIKE :param", {:param => "%#{parametro}%"})
+  end  
+  def self.titulo
+    return titulo.capitalize
   end
 end

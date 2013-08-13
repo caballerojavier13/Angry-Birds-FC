@@ -5,5 +5,6 @@ class InicioController < SecurityController
     @videos = Video.all.last(6)
     @imagenes = Imagen.all.last(5)
     @noticias = Noticium.all.last(4)
+    @notificaciones = Notification.where("read = ? AND persona_id = ?", false, session[:usuario_id])
   end
 end
