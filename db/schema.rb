@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130805084959) do
+ActiveRecord::Schema.define(:version => 20130813145800) do
 
   create_table "calificacions", :force => true do |t|
     t.integer  "valor"
@@ -27,13 +27,6 @@ ActiveRecord::Schema.define(:version => 20130805084959) do
     t.text     "cuerpo"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
-  end
-
-  create_table "funcionalidads", :force => true do |t|
-    t.string   "nombre"
-    t.string   "descripcion"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
   end
 
   create_table "imagens", :force => true do |t|
@@ -74,23 +67,8 @@ ActiveRecord::Schema.define(:version => 20130805084959) do
     t.date     "fechaNacimiento"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
-    t.integer  "tipo_usuario_id"
     t.boolean  "activo"
     t.string   "codigo"
-  end
-
-  create_table "tipo_usuario_funcionalidads", :force => true do |t|
-    t.integer  "tipoUsuario_id"
-    t.integer  "funcionalidad"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
-  end
-
-  create_table "tipo_usuarios", :force => true do |t|
-    t.string   "nombre"
-    t.string   "descripcion"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
   end
 
   create_table "videos", :force => true do |t|

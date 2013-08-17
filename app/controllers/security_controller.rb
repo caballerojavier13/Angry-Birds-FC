@@ -2,12 +2,12 @@
 class SecurityController < MasterSecurityController
   before_filter :authorize
   def authorize
-    unless cookies[:usuario_id] != 0
+    if cookies[:usuario_id].to_s != "0"
       unless Persona.find_by_id(session[:usuario_id])
         redirect_to "/login", :alert => "Por favor inicie sesion."
       end
     else
-      session[:usuario_id] = cookies[:usuario_id]
+      session[:usuario_id] = cookies[:usuario_id].to_i
     end  
     
   end

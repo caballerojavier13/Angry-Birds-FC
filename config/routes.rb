@@ -111,9 +111,9 @@ FanClub::Application.routes.draw do
 
   match 'logout' => 'sessions#destroy', :as => :logout, :via => :get
   
-  
-  
   match 'start' => 'inicio#start', :as => :start, :via => :get
+  
+  match 'admin' => 'admin#index', :as => :dmin, :via => :get
 
 
 

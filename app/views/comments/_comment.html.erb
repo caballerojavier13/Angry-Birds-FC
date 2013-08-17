@@ -6,7 +6,7 @@
     <p class="fecha">
         <%=time_ago_in_words(comment.updated_at).capitalize + "."%>
     </p>
-    <%unless comment.persona.id != session[:usuario_id]%>  
+    <%unless comment.persona.id != session[:usuario_id].to_i%>  
         <a href="#" class="delete_comment" onclick='$.get("/comments/<%=comment.id%>/delete/<%=comment.noticia_id%>", null,
                     function(data){
                         $("#comment_<%=comment.id%>").hide("scale",{duration: 3000});

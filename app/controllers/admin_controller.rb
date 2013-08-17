@@ -1,21 +1,14 @@
 #coding: utf-8
-class AdminController < SecurityController
+class AdminController < MasterSecurityController
 
   def index
-    @persona = Persona.find(session[:usuario_id])
-
+    @usu_gen_f = Persona.activo.where("genero = ?", false).count.to_s
+    @usu_gen_m = Persona.activo.where("genero = ?", true).count.to_s
+    @usu_gen_t = @usu_gen_f.to_i + @usu_gen_m.to_i
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @user }
     end
   end
-  def create
-    session[:usuario_id] = nil
-    redirect_to "/start"
-  end
-
-  def logout
-    session[:usuario_id] = nil
-    redirect_to "/login", :notice => "Logged out"
-  end
 end
+
