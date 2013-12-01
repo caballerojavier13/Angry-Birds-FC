@@ -1,5 +1,5 @@
 <%= div_for notification do %>
-  <a href="/noticias/<%=notification.noticia_id%>">
+  <a href="/noticias/<%=notification.noticia_id%>/#new_comment">
     <p>
         <%
         noticia = Noticium.find(notification.noticia_id)

@@ -50,29 +50,62 @@
                 <div id="main">
                     <div id="usuario">
                         <h1>Usuarios</h1>
-                        <table style="width: 100%;">
-                            <tr >
+                        <table style="width: 100%;" >
+                            <tr style="width: 50%;">
+                                <td >
+                                    <table class="datos" style=" margin: 0 auto;">
+                                        <tr>
+                                            <td>Bloqueado</td>
+                                            <td>Cantidad</td>
+                                            <td>Procentaje</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Bloqueados:</td>
+                                            <td><%=@usu_act_bloq%></td>
+                                            <td><%=((@usu_act_bloq.to_i / (@usu_act_bloq.to_i + @usu_act_no_bloq.to_i ))* 100).to_s + "%"%></td>
+                                        </tr>
+                                        <tr>
+                                            <td>No bloqueados:</td>
+                                            <td><%=@usu_act_no_bloq%></td>
+                                            <td><%=((@usu_act_no_bloq.to_i / (@usu_act_bloq.to_i + @usu_act_no_bloq.to_i ))* 100).to_s + "%"%></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Total:</td>
+                                            <td><%=(@usu_act_bloq.to_i + @usu_act_no_bloq.to_i )%></td>
+                                            <td>100%</td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td style="width: 50%;">
+                                    <div id="grafico_usuario_bloqueado" style=" margin: 0 auto;"></div>
+                                </td>
+                            </tr>
+                            <tr style="width: 50%;">
                                 <td >
                                     <table class="datos" style=" margin: 0 auto;">
                                         <tr>
                                             <td>Genero</td>
-                                            <td></td>
+                                            <td>Cantidad</td>
+                                            <td>Procentaje</td>
                                         </tr>
                                         <tr>
                                             <td>Mujeres:</td>
                                             <td><%=@usu_gen_f%></td>
+                                            <td><%=((@usu_gen_f.to_i / @usu_gen_t.to_i)* 100).to_s + "%"%></td>
                                         </tr>
                                         <tr>
                                             <td>Hombres:</td>
                                             <td><%=@usu_gen_m%></td>
+                                            <td><%=((@usu_gen_m.to_i / @usu_gen_t.to_i)* 100).to_s + "%"%></td>
                                         </tr>
                                         <tr>
                                             <td>Total:</td>
                                             <td><%=@usu_gen_t%></td>
+                                            <td>100%</td>
                                         </tr>
                                     </table>
                                 </td>
-                                <td>
+                                <td style="width: 50%;">
                                     <div id="grafico_usuario_genero" style=" margin: 0 auto;"></div>
                                 </td>
                             </tr>
@@ -127,6 +160,15 @@
           data: [
             {label: "Mujeres", value: <%=@usu_gen_f%>},
             {label: "Hombres", value: <%=@usu_gen_m%>},
+          ]
+        });
+    </script>
+    <script>
+        Morris.Donut({
+          element: 'grafico_usuario_bloqueado',
+          data: [
+            {label: "Bloqueados", value: <%=@usu_act_bloq%>},
+            {label: "No bloqueados", value: <%=@usu_act_no_bloq%>},
           ]
         });
     </script>

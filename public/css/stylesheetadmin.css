@@ -141,17 +141,17 @@ a{
    width: 100%;    
 }
 .datos tr{
-   
    text-align: left;
+   
 }
 .datos tr td{
     padding-left: 10px;
     padding-right: 10px;
 }
 .datos tr td:first-child{
-    width: 150px;
+    text-align: left;
 }
-.datos tr td:last-child{
+.datos tr td{
     text-align: right;
 }
 .datos tr:first-child td:first-child{
@@ -176,6 +176,10 @@ a{
 }
 
 #grafico_usuario_genero{
+    width: 200px;
+    height: 200px;
+}
+#grafico_usuario_bloqueado{
     width: 200px;
     height: 200px;
 }

@@ -29,10 +29,10 @@ class CommentsController < SecurityController
       if @comment.save
         #Crear Notificaciones
         @personas = Persona.activo.where(['personas.id <> ?', params[:usuario]]).joins(:comments).where(comments: {noticia_id: params[:noticia]})
-        
+
           @personas.uniq.each do |p|
     	        @notifications = Notification.where("noticia_id = ? AND read = ? AND persona_id = ?",params[:noticia], false, p.id)
-      	      unless @notifications.nil?
+      	      if @notifications.size > 0
     	          @notifications.at(0).actualizar_notificacion comentarista.nombre + " " + comentarista.apellido unless @notifications.at(0).nil?
       	      else
     	          notificacion = Notification.new

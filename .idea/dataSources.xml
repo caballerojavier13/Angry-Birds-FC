@@ -1,5 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" compressed="false" hash="1311987197" />
+  <component name="DataSourceManagerImpl" format="xml" hash="4285630526">
+    <data-source source="LOCAL" name="Rails Angry Birds: test" product="PostgreSQL" version="9.1.9" jdbc-version="3.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.1 JDBC3 (build 901)" uuid="094ab255-c868-4e9f-8062-f1a66d986ac7">
+      <identifier-quote-string>&quot;</identifier-quote-string>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:angrybirds_development</jdbc-url>
+      <user-name>javier</user-name>
+      <user-password>dfc0dfcbdfdcdfc3dfcfdfd8</user-password>
+      <libraries>
+        <library>
+          <url>file://$USER_HOME$/.RubyMine40/config/jdbc-drivers/postgresql-driver-license.txt</url>
+        </library>
+        <library>
+          <url>file://$USER_HOME$/.RubyMine40/config/jdbc-drivers/postgresql-9.1-901.jdbc3.jar</url>
+        </library>
+      </libraries>
+    </data-source>
+    <data-source source="LOCAL" name="Rails Angry Birds: production" product="PostgreSQL" version="9.1.9" jdbc-version="3.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.1 JDBC3 (build 901)" uuid="16c3df6f-3470-47f7-84b9-6fa48a62cbac">
+      <identifier-quote-string>&quot;</identifier-quote-string>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:angrybirds_production</jdbc-url>
+      <user-name>javier</user-name>
+      <user-password>dfc0dfcbdfdcdfc3dfcfdfd8</user-password>
+      <libraries>
+        <library>
+          <url>file://$USER_HOME$/.RubyMine40/config/jdbc-drivers/postgresql-driver-license.txt</url>
+        </library>
+        <library>
+          <url>file://$USER_HOME$/.RubyMine40/config/jdbc-drivers/postgresql-9.1-901.jdbc3.jar</url>
+        </library>
+      </libraries>
+    </data-source>
+    <data-source source="LOCAL" name="Rails Angry Birds: development" product="PostgreSQL" version="9.1.10" jdbc-version="3.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.1 JDBC3 (build 901)" uuid="4ea30eef-27fe-4bca-96b2-0034d5606ba9">
+      <identifier-quote-string>&quot;</identifier-quote-string>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:angrybirds_development</jdbc-url>
+      <user-name>javier</user-name>
+      <user-password>dfc0dfcbdfdcdfc3dfcfdfd8</user-password>
+      <libraries>
+        <library>
+          <url>file://$USER_HOME$/.RubyMine40/config/jdbc-drivers/postgresql-driver-license.txt</url>
+        </library>
+        <library>
+          <url>file://$USER_HOME$/.RubyMine40/config/jdbc-drivers/postgresql-9.1-901.jdbc3.jar</url>
+        </library>
+      </libraries>
+    </data-source>
+    <data-source source="LOCAL" name="Rails Angry Birds: development" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="8768dc55-f712-46a6-b8fa-a9a002833918">
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:angrybirds_development</jdbc-url>
+      <user-name>javier</user-name>
+      <user-password>dfc0dfcbdfdcdfc3dfcfdfd8</user-password>
+      <libraries>
+        <library>
+          <url>file://$USER_HOME$/.RubyMine40/config/jdbc-drivers/postgresql-driver-license.txt</url>
+        </library>
+        <library>
+          <url>file://$USER_HOME$/.RubyMine40/config/jdbc-drivers/postgresql-9.1-901.jdbc3.jar</url>
+        </library>
+      </libraries>
+    </data-source>
+    <data-source source="LOCAL" name="Rails Angry Birds: production" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="3748fc46-3cc3-4d01-bc0e-b23c0cbaab7d">
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:angrybirds_production</jdbc-url>
+      <user-name>javier</user-name>
+      <user-password>dfc0dfcbdfdcdfc3dfcfdfd8</user-password>
+      <libraries>
+        <library>
+          <url>file://$USER_HOME$/.RubyMine40/config/jdbc-drivers/postgresql-driver-license.txt</url>
+        </library>
+        <library>
+          <url>file://$USER_HOME$/.RubyMine40/config/jdbc-drivers/postgresql-9.1-901.jdbc3.jar</url>
+        </library>
+      </libraries>
+    </data-source>
+    <data-source source="LOCAL" name="Rails Angry Birds: test" product="" version="" jdbc-version="" driver-name="" driver-version="" uuid="af270667-e7ff-4817-8c75-39b3cd44f78a">
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:angrybirds_development</jdbc-url>
+      <user-name>javier</user-name>
+      <user-password>dfc0dfcbdfdcdfc3dfcfdfd8</user-password>
+      <libraries>
+        <library>
+          <url>file://$USER_HOME$/.RubyMine40/config/jdbc-drivers/postgresql-driver-license.txt</url>
+        </library>
+        <library>
+          <url>file://$USER_HOME$/.RubyMine40/config/jdbc-drivers/postgresql-9.1-901.jdbc3.jar</url>
+        </library>
+      </libraries>
+    </data-source>
+  </component>
 </project>
 

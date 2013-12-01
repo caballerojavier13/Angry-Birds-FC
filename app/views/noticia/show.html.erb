@@ -134,19 +134,37 @@
         </div>
 	<div id="ranking">
 	    <%unless @califico%>
-    	    <div id="star">
-    		<a><img id="star1" src="/picture/icon/star2.png" width="50"/></a>
-    		<a><img id="star2" src="/picture/icon/star2.png" width="50"/></a>
-    		<a><img id="star3" src="/picture/icon/star2.png" width="50"/></a>
+          <div id="star">
+            <a><img id="star1" src="/picture/icon/star2.png" width="50"/></a>
+            <a><img id="star2" src="/picture/icon/star2.png" width="50"/></a>
+            <a><img id="star3" src="/picture/icon/star2.png" width="50"/></a>
+          </div>
+    	    <div id="calificacion">
+    		    <a><img id="star1c" src="/picture/icon/star2.png" width="50"/></a>
+    		    <a><img id="star2c" src="/picture/icon/star2.png" width="50"/></a>
+    		    <a><img id="star3c" src="/picture/icon/star2.png" width="50"/></a>
     	    </div>
-	    <%end%>
-	    
-	    <div id="calificacion">
-		   <img id="star_c_1" src="/picture/icon/star.png" width="50"/>
-		   <img id="star_c_2" src="/picture/icon/star2.png" width="50"/>
-		   <img id="star_c_3" src="/picture/icon/star2.png" width="50"/>
-		<p>Calificación: <span id="califi_promedio"><%=@promedio%></span>/<span id="califi_total">3</span></p>
-	    </div>
+	    <%else%>
+            <div id="star">
+              <% if @promedio < 1.5%>
+                  <img id="star1c" src="/picture/icon/star.png" width="50"/>
+                  <img id="star2c" src="/picture/icon/star2.png" width="50"/>
+                  <img id="star3c" src="/picture/icon/star2.png" width="50"/>
+              <% else %>
+                  <% if @promedio < 2.5%>
+                      <img id="star1c" src="/picture/icon/star.png" width="50"/>
+                      <img id="star2c" src="/picture/icon/star.png" width="50"/>
+                      <img id="star3c" src="/picture/icon/star2.png" width="50"/>
+                  <% else %>
+                      <img id="star1c" src="/picture/icon/star.png" width="50"/>
+                      <img id="star2c" src="/picture/icon/star.png" width="50"/>
+                      <img id="star3c" src="/picture/icon/star.png" width="50"/>
+                  <% end %>
+              <% end %>
+            <p>Calificación: <span id="califi_promedio"><%=@promedio%></span>/<span id="califi_total">3</span></p>
+            </div>
+        <%end%>
+
 	    <div id="msj_califi">
 		Gracias por su calificación.
 	    </div>
@@ -263,6 +281,7 @@
 	      });
 	      url = $("#form_comment").attr( 'submit' );//obtiene el url declarado en el form en la propiedad action
             var serializedForm = $("#form_comment").serialize();//Obtienes los campos del formulario
+
             $.post(url, serializedForm,
                function(data){
                  $("#form_comment").show();
@@ -321,40 +340,45 @@
             });
         });
     </script>
+    <%unless @califico%>
 	<script>
-	$("#star1").hover(
-	  function () {
-		$("#star1").attr("src", "/picture/icon/star.png");
-	  },
-	  function () {
-		$("#star1").attr("src", "/picture/icon/star2.png");
-	  }
-	);
-	$("#star2").hover(
-	  function () {
-		$("#star1").attr("src", "/picture/icon/star.png");
-		$("#star2").attr("src", "/picture/icon/star.png");
-	  },
-	  function () {
-		$("#star1").attr("src", "/picture/icon/star2.png");
-		$("#star2").attr("src", "/picture/icon/star2.png");
-	  }
-	);
-	$("#star3").hover(
-	  function () {
-		$("#star1").attr("src", "/picture/icon/star.png");
-		$("#star2").attr("src", "/picture/icon/star.png");
-		$("#star3").attr("src", "/picture/icon/star.png");
-	  },
-	  function () {
-		$("#star1").attr("src", "/picture/icon/star2.png");
-		$("#star2").attr("src", "/picture/icon/star2.png");
-		$("#star3").attr("src", "/picture/icon/star2.png");
-	  }
-	);
+      $(function(){
+
+          $("#star1").hover(
+                  function () {
+                      $("#star1").attr("src", "/picture/icon/star.png");
+                  },
+                  function () {
+                      $("#star1").attr("src", "/picture/icon/star2.png");
+                  }
+          );
+          $("#star2").hover(
+                  function () {
+                      $("#star1").attr("src", "/picture/icon/star.png");
+                      $("#star2").attr("src", "/picture/icon/star.png");
+                  },
+                  function () {
+                      $("#star1").attr("src", "/picture/icon/star2.png");
+                      $("#star2").attr("src", "/picture/icon/star2.png");
+                  }
+          );
+          $("#star3").hover(
+                  function () {
+                      $("#star1").attr("src", "/picture/icon/star.png");
+                      $("#star2").attr("src", "/picture/icon/star.png");
+                      $("#star3").attr("src", "/picture/icon/star.png");
+                  },
+                  function () {
+                      $("#star1").attr("src", "/picture/icon/star2.png");
+                      $("#star2").attr("src", "/picture/icon/star2.png");
+                      $("#star3").attr("src", "/picture/icon/star2.png");
+                  }
+          );
+      });
 	</script>
 	<script>
 	  $("#star1").click(function(){
+          alert("Hola");
 		$("#star").hide();
 		$("#msj_califi").html("Calificando...")
 		$("#msj_califi").show();
@@ -362,6 +386,7 @@
                function(data){
                     $("#msj_califi").html("Gracias por su calificación.");
                     $.timer(5000, function(){
+                        $("#star1c").attr("src", "/picture/icon/star.png");
                         $("#calificacion").show();
                         $("#msj_califi").hide();
                     });        
@@ -375,6 +400,8 @@
                function(data){
                     $("#msj_califi").html("Gracias por su calificación.");
                     $.timer(5000, function(){
+                        $("#star1c").attr("src", "/picture/icon/star.png");
+                        $("#star2c").attr("src", "/picture/icon/star.png");
                         $("#calificacion").show();
                         $("#msj_califi").hide();
                     });        
@@ -388,30 +415,16 @@
                function(data){
                     $("#msj_califi").html("Gracias por su calificación.");
                     $.timer(5000, function(){
+                        $("#star1c").attr("src", "/picture/icon/star.png");
+                        $("#star2c").attr("src", "/picture/icon/star.png");
+                        $("#star3c").attr("src", "/picture/icon/star.png");
                         $("#calificacion").show();
                         $("#msj_califi").hide();
                     });        
                });
       });
 	</script>
-	<%if @califico%>
-    	<script>
-            $("#calificacion").show();
-            <%if @promedio > 1.5%>
-                <%if @promedio > 2.5%>
-                    $("#star_c_2").attr("src", "/picture/icon/star.png");
-                    $("#star_c_3").attr("src", "/picture/icon/star.png");
-                    $("#star_c_1").attr("src", "/picture/icon/star.png");
-                <%else%>
-                    $("#star_c_2").attr("src", "/picture/icon/star.png");
-                    $("#star_c_1").attr("src", "/picture/icon/star.png");
-                <%end%>
-            <%else%>
-                <%if @promedio == 0 %>
-                    $("#star_c_1").attr("src", "/picture/icon/star2.png");
-                <%end%>
-            <%end%>	       
-    	</script>
+
 	<%end%>
 </body>
 

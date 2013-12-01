@@ -46,8 +46,9 @@ class NoticiaController < SecurityController
     @total = 0
     @califico = true
     @notificaciones = Notification.where("read = ? AND persona_id = ?", false, session[:usuario_id])
-    unless @noticium.persona_id == @usuario_id
-      @califico = !(Calificacion.where("noticia_id = ? AND persona_id = ?",params[:id], session[:usuario_id]).nil?)  
+
+    if @noticium.persona_id != @usuario_id
+      @califico = (Calificacion.where("noticia_id = ? AND persona_id = ?",params[:id], session[:usuario_id]).size > 0)
     end
     calificaciones = Calificacion.where("noticia_id = ?",params[:id])
     @promedio = 0

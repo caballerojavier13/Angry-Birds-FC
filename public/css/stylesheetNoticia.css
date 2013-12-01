@@ -1228,6 +1228,23 @@ button.close {
     font-size: 50px;
     display: none;
 }
+#star{
+    text-shadow: 0 2px rgba(0,0,0,0.6);
+    color: white;
+    font-family: "AngryBirds";
+    font-size: 25px;
+    line-height: 50px;
+}
+#star p{
+   position: relative;
+   display: inline-block;
+    font-size: 25px;
+    line-height: 50px;
+}
+#star img{
+	cusor: default;
+}
+
 #calificacion{
     text-shadow: 0 2px rgba(0,0,0,0.6);
     color: white;
@@ -1237,15 +1254,14 @@ button.close {
     display: none;
 }
 #calificacion p{
-   position: relative;
-   display: inline-block;
+    position: relative;
+    display: inline-block;
     font-size: 25px;
     line-height: 50px;
 }
 #calificacion img{
-	cusor: default;
+    cusor: default;
 }
-
 #socials{
     position: absolute;
     text-align: right;

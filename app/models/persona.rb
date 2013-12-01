@@ -1,7 +1,7 @@
 #coding: utf-8
 
 class Persona < ActiveRecord::Base
-  attr_accessible :apellido, :email, :fechaNacimiento, :genero, :hashed_password, :nombre, :salt, :username,:password, :password_confirmation, :activo, :codigo
+  attr_accessible :apellido, :email, :fechaNacimiento, :genero, :hashed_password, :nombre, :salt, :username,:password, :password_confirmation, :activo, :codigo, :personas, :cant_cont_bloq, :bloqueado
   
   scope :activo, -> { where activo: true }
   
