@@ -62,8 +62,6 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/picture/icon/icon_search.png" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/public/picture/icono.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/notifications/nuevas_notificaciones.js.erb" afterPath="$PROJECT_DIR$/app/views/notifications/nuevas_notificaciones.js.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Angry Birds.iws" />
     <ignored path=".idea/workspace.xml" />
