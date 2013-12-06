@@ -16,8 +16,6 @@ class AdminController < MasterSecurityController
     @usu_act = Persona.activo.count.to_s
     @usu_act_t = @all_personas.count.to_s
 
-
-
     @edades = Array.new()
 
     @all_personas.each do  |p|
@@ -64,6 +62,18 @@ class AdminController < MasterSecurityController
         end
       end
     end
+
+    @Progreso_usu = Array.new(12)
+
+    (0..12).to_a.each do |i|
+      @Progreso_usu[i] = Persona.where(
+          'created_at >= :inicio AND created_at < :fin ',
+          inicio: i.month.ago, fin: (i-1).month.ago
+      ).count
+    end
+
+    @Progreso_usu.delete_at 0
+    @Progreso_usu.reverse!
 
     respond_to do |format|
       format.html # index.html.erb
