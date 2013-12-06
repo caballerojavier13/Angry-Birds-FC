@@ -77,12 +77,12 @@ class PersonasController < MasterSecurityController
     unless @persona.nil?
      	@persona.update_attribute(:codigo, Persona.generate_activation_code)
      	session[:mail] = nil
-	UserMailer.forgot_password(@persona).deliver
-	session[:id]= @persona.id.to_s
-        redirect_to "/thanks/?id=" + @persona.id.to_s
-     else
-       redirect_to "/login", :alert => 'No se encuentró ningún usuario.'
-     end
+	    UserMailer.forgot_password(@persona).deliver
+	    session[:id]= @persona.id.to_s
+      redirect_to "/thanks/?id=" + @persona.id.to_s
+    else
+      redirect_to "/login", :alert => 'No se encuentró ningún usuario.'
+    end
   end
 
 

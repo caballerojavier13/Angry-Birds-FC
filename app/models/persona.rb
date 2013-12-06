@@ -104,6 +104,20 @@ class Persona < ActiveRecord::Base
 	end
   end
 #Funciones adicionales
+  def getEdad
+    hoy = Date.today
+    edad = hoy.year.to_i - self.fechaNacimiento.year.to_i
+    if(hoy.month.to_i < self.fechaNacimiento.month.to_i)
+      edad -= 1
+    else
+      if(hoy.month.to_i == self.fechaNacimiento.month.to_i)
+        if(hoy.day.to_i < self.fechaNacimiento.day.to_i)
+          edad -= 1
+        end
+      end
+    end
+    return edad
+  end
   def cambiar_pass pass
      self.update_attribute(:hashed_password, Persona.encrypt_password(pass, self.salt))
   end
@@ -145,6 +159,7 @@ class Persona < ActiveRecord::Base
       self.hashed_password = self.class.encrypt_password(password, salt)
     end
   end
+
 
   private
   def  es_correo_valido? (correoE)
