@@ -73,7 +73,7 @@ class AdminController < MasterSecurityController
     end
     @Progreso_usu.delete_at 0
 
-    (1..11).to_a.reverse!.each do |i|
+    (0..11).to_a.reverse!.each do |i|
       @Progreso_usu[i] += @Progreso_usu[i+1].to_i
     end
     @Progreso_usu.reverse!
