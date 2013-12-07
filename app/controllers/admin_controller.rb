@@ -67,12 +67,15 @@ class AdminController < MasterSecurityController
 
     (0..12).to_a.each do |i|
       @Progreso_usu[i] = Persona.where(
-          'created_at >= :inicio AND created_at < :fin ',
+          'created_at >= :inicio AND created_at < :fin',
           inicio: i.month.ago, fin: (i-1).month.ago
       ).count
     end
-
     @Progreso_usu.delete_at 0
+
+    (1..11).to_a.reverse!.each do |i|
+      @Progreso_usu[i] += @Progreso_usu[i+1].to_i
+    end
     @Progreso_usu.reverse!
 
     respond_to do |format|
