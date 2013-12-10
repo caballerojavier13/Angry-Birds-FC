@@ -10,11 +10,19 @@ class SessionsController < ApplicationController
 	    @persona = Persona.authenticate(params[:username], params[:password])
 	    if !(@persona.nil?)
 	      if @persona.activo
-      		session[:usuario_id] = @persona.id
-      		session[:genero] = @persona.genero
-		      cookies[:usuario_id] = @persona.id
-		      cookies[:genero] = @persona.genero
-      		redirect_to "/start"
+          unless @persona.bloqueado
+
+            session[:usuario_id] = @persona.id
+            session[:genero] = @persona.genero
+
+
+            cookies[:usuario_id]= { :value => @persona.id, :expires => 1.week.from_now }
+            cookies[:genero] = { :value =>@persona.genero, :expires => 1.week.from_now }
+
+            redirect_to "/start"
+          else
+            redirect_to "/login", :alert => "Usuario bloqueado."
+          end
 	      else
 		      redirect_to "/login", :alert => "Usuario inactivo."
 	      end

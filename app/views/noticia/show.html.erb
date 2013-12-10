@@ -178,11 +178,13 @@
 	        
 	    </div>
 	</div>
-        <%if @comentarios.size > 0 %>
+
 	   <div  id="comentarios">
-		<%= render :partial => @comentarios%>
+         <%if @comentarios.size > 0 %>
+		    <%= render :partial => @comentarios%>
+         <%end%>
 	   </div>
-        <%end%>
+
         <div id = "new_comment">
             <%= form_tag({controller: "comments", action: "create", noticia:  @noticium.id.to_s, usuario: @usuario_id.to_s} , 'data-type' => 'json', :id=> "form_comment", :remote => "true")  do |f|  %>
                 <div id="text_comment">
@@ -378,7 +380,6 @@
 	</script>
 	<script>
 	  $("#star1").click(function(){
-          alert("Hola");
 		$("#star").hide();
 		$("#msj_califi").html("Calificando...")
 		$("#msj_califi").show();

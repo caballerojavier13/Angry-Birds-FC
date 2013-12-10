@@ -33,9 +33,11 @@
                         <li class="seleccionado">
                             Resumen 
                         </li>
+                        <a href="/admin/usuarios">
                         <li>
                             Usuarios
                         </li>
+                        </a>
                         <li>
                             Noticias
                         </li>
@@ -62,12 +64,12 @@
                                         <tr>
                                             <td>Bloqueados:</td>
                                             <td><%=@usu_act_bloq%></td>
-                                            <td><%=((@usu_act_bloq.to_i / (@usu_act_bloq.to_i + @usu_act_no_bloq.to_i ))* 100).to_s + "%"%></td>
+                                            <td><%=(( @usu_act_bloq.to_f / @all_personas.count.to_f )*100).to_i%>%</td>
                                         </tr>
                                         <tr>
                                             <td>No bloqueados:</td>
                                             <td><%=@usu_act_no_bloq%></td>
-                                            <td><%=((@usu_act_no_bloq.to_i / (@usu_act_bloq.to_i + @usu_act_no_bloq.to_i ))* 100).to_s + "%"%></td>
+                                          <td><%=(( @usu_act_no_bloq.to_f / @all_personas.count.to_f )*100).to_i%>%</td>
                                         </tr>
                                         <tr>
                                             <td>Total:</td>
@@ -78,35 +80,6 @@
                                 </td>
                                 <td style="width: 50%;">
                                     <div id="grafico_usuario_bloqueado" style=" margin: 0 auto;"></div>
-                                </td>
-                            </tr>
-                            <tr style="width: 50%;">
-                                <td >
-                                    <table class="datos" style=" margin: 0 auto;">
-                                        <tr>
-                                            <td>Genero</td>
-                                            <td>Cantidad</td>
-                                            <td>Procentaje</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Mujeres:</td>
-                                            <td><%=@usu_gen_f%></td>
-                                            <td><%=((@usu_gen_f.to_i / @usu_gen_t.to_i)* 100).to_s + "%"%></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Hombres:</td>
-                                            <td><%=@usu_gen_m%></td>
-                                            <td><%=((@usu_gen_m.to_i / @usu_gen_t.to_i)* 100).to_s + "%"%></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Total:</td>
-                                            <td><%=@usu_gen_t%></td>
-                                            <td>100%</td>
-                                        </tr>
-                                    </table>
-                                </td>
-                                <td style="width: 50%;">
-                                    <div id="grafico_usuario_genero" style=" margin: 0 auto;"></div>
                                 </td>
                             </tr>
                           <tr style="width: 50%;">
@@ -120,12 +93,12 @@
                                 <tr>
                                   <td>Activos:</td>
                                   <td><%=@usu_act%></td>
-                                  <td><%=((@usu_act.to_i / @usu_act_t.to_i)* 100).to_s + "%"%></td>
+                                  <td><%=((@usu_act.to_f / @usu_act_t.to_f)* 100).to_i%>%</td>
                                 </tr>
                                 <tr>
                                   <td>No Activos:</td>
                                   <td><%=(@usu_act_t.to_i - @usu_act.to_i).to_s%></td>
-                                  <td><%=(((@usu_act_t.to_i - @usu_act.to_i) / @usu_act_t.to_i)* 100).to_s + "%"%></td>
+                                  <td><%=(((@usu_act_t.to_f - @usu_act.to_f) / @usu_act_t.to_f)* 100).to_i%>%</td>
                                 </tr>
                                 <tr>
                                   <td>Total:</td>
@@ -138,9 +111,41 @@
                               <div id="grafico_usuario_activo" style=" margin: 0 auto;"></div>
                             </td>
                           </tr>
-                        </table>
+                            <tr style="width: 50%;">
+                                <td >
+                                    <table class="datos" style=" margin: 0 auto;">
+                                        <tr>
+                                            <td>Genero</td>
+                                            <td>Cantidad</td>
+                                            <td>Procentaje</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Mujeres:</td>
+                                            <td><%=@usu_gen_f%></td>
+                                            <td><%=((@usu_gen_f.to_f / @usu_gen_t.to_f)* 100).to_i%>%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Hombres:</td>
+                                            <td><%=@usu_gen_m%></td>
+                                            <td><%=((@usu_gen_m.to_f / @usu_gen_t.to_f)* 100).to_i%>%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Total:</td>
+                                            <td><%=@usu_gen_t%></td>
+                                            <td>100%</td>
+                                        </tr>
+                                    </table>
+                                </td>
+                                <td style="width: 50%;">
+                                    <div id="grafico_usuario_genero" style=" margin: 0 auto;"></div>
+                                </td>
+                            </tr>
 
-                            <div id="graph_usr_edad" style="height: 400px; position: relative; margin: 0 auto; margin-top: 50px; width: 800px;"></div>
+                        </table>
+                        <h2 class="subtitulo">Clasificación de Usuarios por Edad</h2>
+                        <div id="graph_usr_edad" style="height: 400px; position: relative; margin: 0 auto; margin-top: 50px; width: 800px;"></div>
+                        <h2 class="subtitulo">Progreso de los Usuarios Activos en el tiempo</h2>
+                        <div id="grafico_usuario_progreso" style="height: 400px; position: relative; margin: 0 auto; margin-top: 50px; width: 800px;"></div>
 
                     </div>
                     <div id="noticia" class="resumen">
@@ -157,7 +162,15 @@
                     </div>
                 </div>
             </div>
-            <div id="footer"></div>
+            <div id="footer">
+
+              <a href="/logout" style="position: absolute; right: 20px; bottom: 0px;">
+                <img src="/picture/exit1.png" style=" margin-top: 30px; margin-left: 20px;">
+              </a>
+              <a href="/" style="position: absolute; left:20px; bottom: 10px;">
+                <img src="/picture/icon/back.png" height="80px" />
+              </a>
+            </div>
         </div>  
         
     </body>
@@ -271,7 +284,7 @@
     </script>
     <script>
         $(function () {
-            $('#graph_not').highcharts({
+            $('#grafico_usuario_progreso').highcharts({
                 chart: {
                     type: "line",
                     zoomType: 'x',
@@ -305,6 +318,46 @@
                         ["#6dd4bc"],
                 series: [{
                     data: <%= @Progreso_usu %>
+                }]
+            });
+        });
+    </script>
+    <script>
+        $(function () {
+            $('#graph_not').highcharts({
+                chart: {
+                    type: "line",
+                    zoomType: 'x',
+                    spacingRight: 20
+                },
+                tooltip: {
+                    headerFormat: '<span style="font-size:10px">Cantidad de usuarios registrados: <span style="color:{series.color};padding:0"><strong>{point.y}</strong></span></span>',
+                    pointFormat: '',
+                    shared: true,
+                    useHTML: true
+                },
+                title: {
+                    text: ''
+                },
+                legend: {
+                    enabled: false
+                },
+                yAxis: {
+                    gridLineWidth: 1,
+                    gridLineColor: "yellow",
+                    title: {
+                        text: ''
+                    }
+                },
+                xAxis: {
+
+                    lineColor: "#6dd4bc",
+                    categories: ['0-9', '10-19', '20-29', '30-39', '40-49', '50-59', '60-69', '70-79', '80-89', '90-99']
+                },
+                colors:
+                        ["#6dd4bc"],
+                series: [{
+                    data: [29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1]
                 }]
             });
         });

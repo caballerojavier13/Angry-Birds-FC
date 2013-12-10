@@ -86,6 +86,9 @@ a{
 #header ul li:hover{
     box-shadow: 0 0 5px black;
 }
+#header a{
+    text-decoration: none;
+}
 #body{
     text-align: center;
     width: 100%;
@@ -111,6 +114,49 @@ a{
     z-index: 3;
 }
 
+
+.pagination{
+    top: 100%;
+    margin: 0 auto;
+    color: gray;
+    margin-top: 50px;
+    font-family: "AngryBirds";
+    font-size:30px;
+    line-height: 50px;
+}
+.pagination span:hover{
+}
+.pagination a{
+    color: rgba(25,25,25,1);
+    text-decoration: none;
+}
+.pagination a:hover{
+    color: yellow;
+    text-shadow: 0px 0px 5px rgba(0,0,0,0.8);
+}
+.current{
+    color: white;
+    text-shadow: 0px 0px 5px rgba(0,0,0,0.8);
+}
+.disabled{
+    color: gray;
+}
+.disabled:hover{
+    color: gray;
+}
+.gap{
+    --display: none;
+}
+
+
+
+
+
+
+
+
+
+
 #main{
     position: relative;
     text-align:center;
@@ -122,7 +168,7 @@ a{
     overflow: hidden;
 }
 #main div{
-    background-color:#6dd4bc;   
+    background-color:#6dd4bc;
 }
 #main div h1{
     text-align: left;line-height: 30px;
@@ -188,4 +234,838 @@ a{
     width: 200px;
     height: 200px;
 }
+.subtitulo{
+    font-family: "AngryBirds";
+    color: white;
+    text-shadow: 0 0 10px black;
+    margin-top: 100px;
+    margin-bottom: -30px;
+}
 
+#listadoUsuario{
+    width: 80%;
+    min-width: 600px;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 0px;
+    padding: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color:#6dd4bc;
+    border: solid 2px #ffff00;
+    border-radius: 5px;
+    box-shadow: inset 0 0 10px rgba(50,50,50,0.8), 0 0 10px black;
+}
+.itemUsuario{
+    position: relative;
+    margin: 0 auto;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    z-index: 1;
+}
+.limitador{
+    box-shadow: 0 0 10px black;
+    border: solid 2px white;
+    z-index: 2;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.limitador2{
+    position: relative;
+    box-shadow: 0 0 10px black;
+    border: solid 1px transparent;
+    z-index: 2;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: -50%;
+    width: 200%;
+}
+
+.limitador3{
+    position: relative;
+    box-shadow: 0 0 10px black;
+    border: solid 1px transparent;
+    z-index: 2;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+
+    width: 90%;
+}
+.edad{
+    position: absolute;
+    top: 0;
+    font-family: "AngryBirds";
+    font-size: 40px;
+    color: white;
+    text-shadow: 0 0 1px black;
+    text-align: right;
+    width: 100%;
+    line-height: 30px;
+}
+
+.boton{
+    position: relative;
+    margin: 0 auto;
+    height: 50px;
+    width: 200px;
+    border: solid 1px #d7d901;
+    border-radius: 3px;
+    box-shadow: 0 5px 5px grey;
+    text-decoration: none;
+    font-family: "AngryBirds";
+    color: #6DD4BC;
+    text-shadow: 0 0 2px white;
+    line-height: 50px;
+    font-size: 30px;
+    transition: linear all 0.5s;
+}
+.boton:hover{
+    box-shadow: 0 3px 3px grey;
+    color: #ffffff;
+    text-shadow: 0 0 2px yellow;
+    border-color: #ffff00;
+    transition: linear all 0.5s;
+}
+.boton:active{
+    color: #6DD4BC;
+    box-shadow: none;
+    transition: linear all 0.5s;
+}
+.tabla_ancha{
+    width: 100%;
+    padding-bottom: 10px;
+    border-collapse: collapse;
+}
+.tabla_ancha td:first-child{
+    text-align: left;
+}
+.tabla_ancha tr td{
+    padding: 5px;
+    border-bottom: solid 1px black;
+}
+.tabla_ancha tr:last-child td{
+    border-bottom: none;
+}
+.itemUsuario ul{
+    margin-top: 10px;
+    border-top: solid 1px yellow;
+    padding-top: 30px;
+    list-style: none;
+}
+.itemUsuario ul li{
+    position:relative;
+    width:30%;
+    line-height: 20px;
+    font-family: "AngryBirds";
+    font-size: 20px;
+
+    display: inline-block;
+}
+#titulo{
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+    font-family: "angrybirds";
+    font-size: 70px;
+    border:none;
+    color: #ffffff;
+    text-shadow: 0 0 10px black, 0 0 1px black;
+
+}
+
+
+#contenedor{
+    position: relative;
+    margin: 0 auto;
+    margin-top: -2px;
+    width: 80%;
+    min-height: 100px;
+    height: inherit;
+    background: #6DD4BC;
+    border-radius: 5px;
+    box-shadow: 0 0 10px black;
+    border: solid yellow 2px;
+    z-index: 10;
+    transition: all linear 2s;
+}
+#pestaña{
+    position: relative;
+    list-style: none;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+#pestaña li{
+    position:relative;
+    width:30%;
+    line-height: 20px;
+    font-family: "AngryBirds";
+    font-size: 20px;
+    display: inline-block;
+    border-radius: 10px 10px 0 0;
+
+    border: solid 2px #ffff00;
+    border-bottom: none;
+    cursor: pointer;
+}
+.pestaña_select{
+    z-index: 20;
+    background: #6DD4BC;
+    color: white;
+    padding: 10px 0 12px 0;
+}
+.pestaña_no_select{
+    z-index: 5;
+    background: #57ae97;
+    padding: 10px 0 10px 0;
+}
+
+
+
+
+
+.onoffswitch {
+    position: relative; width: 96px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+    display: block;
+    margin-left: 100%;
+}
+
+.onoffswitch-checkbox {
+    display: none;
+}
+
+.onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 2px solid #FFFF00; border-radius: 5px;
+    margin: 0 auto;
+
+}
+
+.onoffswitch-inner {
+    width: 200%; margin-left: -100%;
+    -moz-transition: margin 0.3s ease-in 0s; -webkit-transition: margin 0.3s ease-in 0s;
+    -o-transition: margin 0.3s ease-in 0s; transition: margin 0.3s ease-in 0s;
+}
+
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+    float: left; width: 50%; height: 31px; padding: 0; line-height: 31px;
+    font-size: 19px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+
+.onoffswitch-inner:before {
+    content: "Si";
+    padding-left: 15px;
+    background-color: #F8F8F8; color: #666666;
+    text-align: left;
+}
+
+.onoffswitch-inner:after {
+    content: "No";
+    padding-right: 15px;
+    background-color: #F8F8F8; color: #666666;
+    text-align: right;
+}
+
+.onoffswitch-switch {
+    width: 37px; margin: 0px;
+    background: #A3A1A1;
+    border: 2px solid #FFFF00; border-radius: 5px;
+    position: absolute; top: 0; bottom: 0; right: 55px;
+    -moz-transition: all 0.3s ease-in 0s; -webkit-transition: all 0.3s ease-in 0s;
+    -o-transition: all 0.3s ease-in 0s; transition: all 0.3s ease-in 0s;
+    background-image: -moz-linear-gradient(center top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 100%);
+    background-image: -webkit-linear-gradient(center top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 100%);
+    background-image: -o-linear-gradient(center top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 100%);
+    background-image: linear-gradient(center top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 100%);
+}
+
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px;
+}
+
+#espera{
+    display: none;
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(50,50,50,0.8);
+    z-index: 100;
+}
+#espera_img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -120px;
+    margin-left: -120px;
+    width:200px;
+    height: 200px;
+    background: #6DD4BC;
+    padding: 20px;
+    border: solid 2px yellow;
+    border-radius: 10px;
+
+}
+.listado_form_admin{
+    position: relative;
+    margin: 0 auto;
+    width: 40%;
+    list-style: none;
+    text-align: left;
+}
+.listado_form_admin li{
+    margin: 20px auto;
+
+}
+.listado_form_admin li ul{
+    position: relative;
+
+    list-style: none;
+}
+.listado_form_admin li ul li{
+    display: inline-block;
+    width: 40%;
+}
+
+
+
+
+.listado_form_info{
+    position: relative;
+    margin: 0 auto;
+    width: 80%;
+    list-style: none;
+}
+.listado_form_info li{
+    margin: 20px auto;
+
+}
+.listado_form_info li:first-child{
+    margin: 20px auto;
+    margin-top: 50px;
+
+}
+.listado_form_info li ul{
+    position: relative;
+
+    list-style: none;
+}
+.listado_form_info li ul li{
+    display: inline-block;
+    width: 40%;
+}
+
+.txtInput{
+    position: relative;
+    margin: 0 auto;
+    width: 40%;
+    background: #ffffff;
+    border: solid 1px yellow;
+    border-radius: 5px;
+    height: 28px;
+    line-height: 28px;
+    font-family: Tahoma;
+    font-size: 20px;
+    display: inline-block;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-shadow: inset 0 0 10px grey;
+}
+
+.listado_form_info .label{
+    position: relative;
+    margin: 0 auto;
+    width: 40%;
+    line-height: 30px;
+    font-size: 20px;
+    font-family: Tahoma;
+    display: inline-block;
+    text-align: left;
+    text-shadow: 0 0 3px white;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+.checkbox-label{
+    position: relative;
+    margin: auto;
+    background-color: none;
+    border: none;
+    line-height: 34px;
+    display: block; overflow: hidden;
+}
+.checkbox-label h3{
+    position: relative;
+    margin:0 auto;
+    width: 100%;
+    text-align: left;
+}
+
+#boton_delete{
+    position: relative;
+    left: 50%;
+    margin: 0px auto;
+    margin-left: -150px;
+
+    height: 50px;
+    width: 300px;
+    background: red;
+    border: solid 2px darkred;
+    color: #ffffff;
+    border-radius: 5px;
+
+    font-size: 40px;
+    line-height: 50px;
+    font-family: "angrybirds";
+
+    box-shadow: 0 0 10px black;
+    text-shadow: 0 0 5px grey;
+
+    cursor: pointer;
+
+}
+
+
+
+
+
+
+
+#followingBallsG{
+    position:relative;
+    width:160px;
+    height:20px;
+}
+
+.followingBallsG{
+    background-color:#6DD4BC;
+    position:absolute;
+    top:0;
+    left:0;
+    width:10px;
+    height:10px;
+    -moz-border-radius:10px;
+    -moz-animation-name:bounce_followingBallsG;
+    -moz-animation-duration:2.5s;
+    -moz-animation-iteration-count:infinite;
+    -moz-animation-direction:linear;
+    -webkit-border-radius:10px;
+    -webkit-animation-name:bounce_followingBallsG;
+    -webkit-animation-duration:2.5s;
+    -webkit-animation-iteration-count:infinite;
+    -webkit-animation-direction:linear;
+    -ms-border-radius:10px;
+    -ms-animation-name:bounce_followingBallsG;
+    -ms-animation-duration:2.5s;
+    -ms-animation-iteration-count:infinite;
+    -ms-animation-direction:linear;
+    -o-border-radius:10px;
+    -o-animation-name:bounce_followingBallsG;
+    -o-animation-duration:2.5s;
+    -o-animation-iteration-count:infinite;
+    -o-animation-direction:linear;
+    border-radius:10px;
+    animation-name:bounce_followingBallsG;
+    animation-duration:2.5s;
+    animation-iteration-count:infinite;
+    animation-direction:linear;
+}
+
+#followingBallsG_1{
+    -moz-animation-delay:0s;
+}
+
+#followingBallsG_1{
+    -webkit-animation-delay:0s;
+}
+
+#followingBallsG_1{
+    -ms-animation-delay:0s;
+}
+
+#followingBallsG_1{
+    -o-animation-delay:0s;
+}
+
+#followingBallsG_1{
+    animation-delay:0s;
+}
+
+#followingBallsG_2{
+    -moz-animation-delay:0.25s;
+    -webkit-animation-delay:0.25s;
+    -ms-animation-delay:0.25s;
+    -o-animation-delay:0.25s;
+    animation-delay:0.25s;
+}
+
+#followingBallsG_3{
+    -moz-animation-delay:0.5s;
+    -webkit-animation-delay:0.5s;
+    -ms-animation-delay:0.5s;
+    -o-animation-delay:0.5s;
+    animation-delay:0.5s;
+}
+
+#followingBallsG_4{
+    -moz-animation-delay:0.75s;
+    -webkit-animation-delay:0.75s;
+    -ms-animation-delay:0.75s;
+    -o-animation-delay:0.75s;
+    animation-delay:0.75s;
+}
+
+@-moz-keyframes bounce_followingBallsG{
+    0%{
+        left:0px;
+        background-color:#ffffff;
+    }
+
+    50%{
+        left:190px;
+        background-color:#FFFF00;
+    }
+
+    100%{
+        left:0px;
+        background-color:#ffffff;
+    }
+
+}
+
+@-webkit-keyframes bounce_followingBallsG{
+    0%{
+        left:0px;
+        background-color:#ffffff;
+    }
+
+    50%{
+        left:190px;
+        background-color:#FFFF00;
+    }
+
+    100%{
+        left:0px;
+        background-color:#ffffff;
+    }
+
+}
+
+@-ms-keyframes bounce_followingBallsG{
+    0%{
+        left:0px;
+        background-color:#ffffff;
+    }
+
+    50%{
+        left:190px;
+        background-color:#FFFF00;
+    }
+
+    100%{
+        left:0px;
+        background-color:#ffffff;
+    }
+
+}
+
+@-o-keyframes bounce_followingBallsG{
+    0%{
+        left:0px;
+        background-color:#ffffff;
+    }
+
+    50%{
+        left:190px;
+        background-color:#FFFF00;
+    }
+
+    100%{
+        left:0px;
+        background-color:#ffffff;
+    }
+
+}
+
+@keyframes bounce_followingBallsG{
+    0%{
+        left:0px;
+        background-color:#ffffff;
+    }
+
+    50%{
+        left:190px;
+        background-color:#FFFF00;
+    }
+
+    100%{
+        left:0px;
+        background-color:#ffffff;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+select{
+    background-color:#6dd4bc;
+    height: 30px;
+
+    border-color: yellow;
+    border-radius: 5px;
+    border-width: 2px;
+    border-style: solid;
+
+    color: yellow;
+
+    text-align: center;
+    font-weight: bolder;
+    font-family: "AngryBirds";
+    font-size:20px;
+    line-height: 30px;
+
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+
+.cool_checkbox, .cool_checkbox *{
+    height:50px;
+    margin:0;
+    padding:0;
+    display:inline-block;
+    white-space:nowrap; user-select: none;
+}
+.cool_checkbox {
+    font-family: sans-serif;
+    width: 300px;
+    position: relative;
+    overflow: hidden;
+    box-shadow:inset 0px 0px 20px rgba(0,0,0,1);
+    border-radius: 4px;
+    background-color: transparent;
+}
+
+.cool_checkbox input{
+    display:none;
+}
+.cool_checkbox label{
+    position:absolute;
+    width:120px;
+    cursor:pointer;
+    transition: left 0.2s ease-in-out;
+    vertical-align:top;
+    line-height:100%;
+    left:-258px;
+    display:block;
+    font-size:20px;
+    line-height: 20px;
+
+}
+.cool_checkbox > input:checked + label{
+    left:0px;
+}
+
+.cool_checkbox > input:disabled + label{
+    opacity:0.8;
+}
+.cool_checkbox label > span {
+    text-align: center;
+    font-weight: bolder;
+    font-family: sans;
+    width: 246px;
+    position: relative;
+    z-index: 0;
+    border-radius: 5px;
+    vertical-align: middle;
+    line-height: 30px;
+}
+.cool_checkbox label > span:nth-child(1){
+    padding-right:15px;
+    text-align:center;
+}
+
+.cool_checkbox label > span:nth-child(2){
+    width:40px;
+    margin:-2px -10px;
+    z-index:1;
+    border-radius: 6px;
+}
+
+.cool_checkbox label > span:nth-child(2) > span{
+    width:38px;
+    overflow:hidden;
+    text-indent:-999em;
+    border-radius: 5px;
+    height: 44px;
+}
+
+.cool_checkbox label > span:nth-child(3){
+    padding-left:20px;
+    text-align:center;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* A partir de aquÃ­: arreglos temporales hasta que CSS3 estÃ© bien soportado */
+.cool_checkbox{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+}
+.cool_checkbox label{
+    -moz-transition: left 0.2s ease-in-out;
+    -webkit-transition: left 0.2s ease-in-out;
+    -o-transition: left 0.2s ease-in-out;
+}
+.cool_checkbox label > span{
+    -moz-box-shadow: inset 0px 0px 2px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: inset 0px 0px 2px rgba(0, 0, 0, 0.5);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+}
+.cool_checkbox label > span:nth-child(1){
+    background-color: transparent;
+}
+.cool_checkbox label > span:nth-child(2){
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+}
+.cool_checkbox label > span:nth-child(2) > span{
+    background-color:#6dd4bc;
+    border-style: solid;
+    border-color: yellow;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+}
+.cool_checkbox label > span:nth-child(3){
+    background-color: transparent;
+}
+.etiqueta_genero{
+    position: relative;
+    top: -10px;
+    font-size:40px;
+    line-height: 25px;
+    color: yellow;
+    font-family: "AngryBirds";
+}
+
+
+
+
+
+
+#fondo_eliminar{
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.8);
+    z-index: 100;
+}
+#fondo_eliminar div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 200px;
+    box-shadow: inset 0 0 20px rgba(50,50,50,0.8);
+    padding: 10px;
+    border-radius: 20px;
+    background: #6DD4BC;
+    border: 2px solid yellow;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+
+
+
+    color: white;
+    font-family: "AngryBirds";
+    font-size:60px;
+    line-height: 70px;
+    text-align: center;
+    text-shadow: 0 0 10px black;
+}
+#fondo_eliminar div a{
+    color: gray;
+    font-family: "AngryBirds";
+    font-size:40px;
+    line-height: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    text-shadow: 0 0 10px white;
+    text-decoration: none;
+}
+#fondo_eliminar div a:hover{
+    color:yellow;
+}
+
+
+
+.fondo_eliminar{
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.8);
+    z-index: 100;
+}
+
+#link_back{
+    position: relative;
+    margin: auto;
+    top: 50px;
+
+    line-height: 100px;
+    font-size: 60px;
+    font-family: "angrybirds";
+    text-decoration: none;
+    color: white;
+    text-shadow: 0 0 1px black,0 0 10px yellow;
+}
+#link_back:hover{
+    color:yellow;
+    text-shadow: 0 0 1px black,0 0 10px #6dd4bc;
+}

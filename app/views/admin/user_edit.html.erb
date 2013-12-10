@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Angry Birds Fan Club</title>
+  <link rel="shortcut icon" href="/favicon1.ico" />
+  <link rel="stylesheet" href="/css/stylesheetAll.css">
+  <link rel="stylesheet" type="text/css" href="/css/stylesheetNoScript.css" />
+  <link rel="stylesheet" type="text/css" href="/css/stylesheetLoad.css" />
+  <link rel="stylesheet" type="text/css" href="/css/stylesheetadmin.css" />
+</head>
+<body>
+<div id="loading">
+  <div id="background"></div>
+  <div id="midground"></div>
+  <div id="foreground"></div>
+  <div id="tapa"></div>
+  <div class="bokeh">
+    <img id="bokeh1" src="/picture/space/ice.png" height="100px" >
+    <img id="bokeh2" src="/picture/space/bomb.png" height="100px">
+    <img id="bokeh3" src="/picture/space/green.png" height="100px">
+    <img id="bokeh4" src="/picture/space/laser.png" height="100px">
+    <div id="circulo"></div>
+  </div>
+  <div id="bokehText">
+    <p>Cargando...</p>
+  </div>
+</div>
+
+<div id="page">
+  <div id="espera">
+    <div id="espera_img">
+      <img src="/picture/gif_loading/5.gif"/>
+      <div id="followingBallsG">
+        <div id="followingBallsG_1" class="followingBallsG">
+        </div>
+        <div id="followingBallsG_2" class="followingBallsG">
+        </div>
+        <div id="followingBallsG_3" class="followingBallsG">
+        </div>
+        <div id="followingBallsG_4" class="followingBallsG">
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div id="fondo_eliminar">
+    <div>
+      ¿Desea Eliminar este usuario?
+      <a href="#" id="cancel_eliminar">Cancelar </a>
+      <a href="#" id="confirm_eliminar">Eliminar </a>
+    </div>
+  </div>
+  <div id="body">
+    <div id="header">
+      <p>Administrador</p>
+      <ul>
+        <a href="/admin">
+          <li>
+            Resumen
+          </li>
+        </a>
+        <li class="seleccionado">
+          Usuarios
+        </li>
+        <li>
+          Noticias
+        </li>
+        <li>
+          Imagenes
+        </li>
+        <li>
+          Videos
+        </li>
+      </ul>
+    </div>
+    <div id="main">
+      <h1 id="titulo"><%= @usuario.nombre + @usuario.apellido%></h1>
+      <ul id="pestaña">
+        <li class="pestaña_select" data-link="#info" >Información</li>
+        <li class="pestaña_no_select"data-link="#pub">Resumen Publicaciones</li>
+        <li class="pestaña_no_select" data-link="#admin">Administración de cuenta</li>
+      </ul>
+      <div id="contenedor">
+        <div id="info" style="display: block" class="contenido">
+          <%= form_for @usuario, :html=> {:id => 'data_user'} do |f| %>
+            <ul class="listado_form_info">
+              <li>
+                <%= f.label "Nombre:", :class => 'label'%>
+                <%= f.text_field :nombre , :size => 15, :class => 'txtInput' %>
+              </li>
+              <div class="limitador3"></div>
+              <li>
+                <%= f.label "Apellido:", :class => 'label'%>
+                <%= f.text_field :apellido, :size => 15 ,:class => 'txtInput'%>
+              </li>
+              <div class="limitador3"></div>
+              <li>
+                <%= f.label "Usuario:", :class => 'label'%>
+                <%= f.text_field :username, :size => 40 ,:class => 'txtInput', :readonly=>"readonly"%>
+              </li>
+              <div class="limitador3"></div>
+              <li>
+                <%= f.label "E-Mail:", :class => 'label'%>
+                <%= f.text_field :email ,:class => 'txtInput', :readonly=>"readonly"%>
+              </li>
+              <div class="limitador3"></div>
+              <li>
+                <%= f.label "Género:", :class => 'label', :style=>"text-align: center; width: 100%;"%><br/>
+                <div id="genero">
+            		<span class="cool_checkbox">
+            			<%= f.check_box :genero %>
+                      <label for="persona_genero">
+                        <span><p class="etiqueta_genero">Hombre</p> <img src="/picture/hombre.png"> </span>
+            					<span>
+            						<span>/</span>
+            					</span>
+                        <span><p class="etiqueta_genero">Mujer</p> <img src="/picture/mujer.png" ></span>
+                      </label>
+            		</span>
+                </div>
+              </li>
+              <div class="limitador3"></div>
+              <li>
+                <%= f.label "Fecha de Nacimiento:", :class => 'label'%>
+                <div style="position: relative;width: 40%; margin: 0 auto; display: inline-block;padding-left: 10px;padding-right: 10px;">
+                    <%= f.date_select :fechaNacimiento,:order => [:day, :month, :year], start_year: @year_inicio, end_year: @year_fin, :id => 'fecha' %>
+                </div>
+              </li>
+            </ul>
+          <%end%>
+        </div>
+        <div id="pub" style="display: none" class="contenido">
+            Resumen de Pubicaciones
+        </div>
+        <div id="admin" style="display: none" class="contenido">
+
+          <%= form_for @usuario, :html=> {:id => 'data_account'} do |f| %>
+              <ul class="listado_form_admin">
+                <li>
+                  <ul>
+                    <li>
+                      <div class="checkbox-label">
+                        <h3>Activo:</h3>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="onoffswitch">
+                        <%= f.check_box :activo, :class=>"onoffswitch-checkbox", :id=>"activo-checkbox"  %>
+                        <label class="onoffswitch-label" for="activo-checkbox">
+                          <div class="onoffswitch-inner"></div>
+                          <div class="onoffswitch-switch"></div>
+                        </label>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+                <div class="limitador2"></div>
+                <li>
+                  <ul>
+                    <li>
+                      <div class="checkbox-label">
+                        <h3>Bloqueado:</h3>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="onoffswitch">
+                        <%= f.check_box :bloqueado, :class=>"onoffswitch-checkbox", :id=>"bloqueado-checkbox"  %>
+                        <label class="onoffswitch-label" for="bloqueado-checkbox">
+                          <div class="onoffswitch-inner"></div>
+                          <div class="onoffswitch-switch"></div>
+                        </label>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+                <div class="limitador2"></div>
+                <li>
+                  <ul>
+                    <li>
+                      <div class="checkbox-label">
+                        <h3>Administrador:</h3>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="onoffswitch">
+                        <%= f.check_box :admin, :class=>"onoffswitch-checkbox", :id=>"admin-checkbox"  %>
+                        <label class="onoffswitch-label" for="admin-checkbox">
+                          <div class="onoffswitch-inner"></div>
+                          <div class="onoffswitch-switch"></div>
+                        </label>
+                      </div>
+                    </li>
+                    <div class="limitador2"></div>
+                    <li style="width: 100%; display: inline-block; position: relative">
+                        <input type="button" value="Eliminar Usuario" id="boton_delete">
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+          <% end %>
+        </div>
+      </div>
+
+       <a id="link_back" href="/admin/usuarios"><-Atrás</a>
+    </div>
+
+  </div>
+  <div id="footer"></div>
+</div>
+
+</body>
+<script src= '/js/scriptLoad.js' > </script>
+<script language="javascript">
+    window.onload = inicio;
+</script>
+<noscript><div id="noscript"><br/>Javascript deshabilitado: para poder apreciar la pagina web por favor activa javascript en tu navegador</div></noscript>
+<script src="/js/jquery-1.7.1.min.js" type="text/javascript"></script>
+
+<script src="/js/jquery.backgroundPosition.js" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+    $(function(){
+
+        $('#midground').css({backgroundPosition: '0px 0px'});
+        $('#foreground').css({backgroundPosition: '0px 0px'});
+        $('#background').css({backgroundPosition: '0px 0px'});
+
+        $('#midground').animate({
+            backgroundPosition:"(-10000px -2000px)"
+        }, 240000, 'linear');
+
+        $('#foreground').animate({
+            backgroundPosition:"(-10000px -2000px)"
+        }, 120000, 'linear');
+
+        $('#background').animate({
+            backgroundPosition:"(-10000px -2000px)"
+        }, 480000, 'linear');
+
+    });
+</script>
+<script>
+    $(function() {
+        if ($.browser.opera || $.browser.msie ) {
+            alert( "Por favor no uses este navegador. Usa firefox o Chrome. Si no los tienes instalalos." );
+        }
+    });
+</script>
+<script>
+
+    $("#pestaña li").click(function(){
+        $("#pestaña li").removeClass("pestaña_select");
+        $("#pestaña li").addClass("pestaña_no_select");
+        $(this).removeClass("pestaña_no_select");
+        $(this).addClass("pestaña_select");
+        $(".contenido").hide();
+        var activeTab = $(this).attr('data-link');
+        $(activeTab).show();
+    });
+    $("#activo-checkbox").change(function(){
+        $("#espera").show();
+        var valor = $(this).prop('checked');
+        var request = $.ajax({
+            type: "PUT",
+            url: "/admin/usuarios/<%= @usuario.id %>/change_atributo",
+            data: { atributo: "activo", valor: valor}
+        });
+        request.done(function(  ) {
+            $("#espera").hide();
+        });
+        request.fail(function(){
+            $("#espera").hide();
+        });
+    });
+    $("#bloqueado-checkbox").change(function(){
+        $("#espera").show();
+        var valor = $(this).prop('checked');
+        var request = $.ajax({
+            type: "PUT",
+            url: "/admin/usuarios/<%= @usuario.id %>/change_atributo",
+            data: { atributo: "bloqueado", valor: valor}
+        });
+
+        request.done(function(  ) {
+            $("#espera").hide();
+        });
+        request.fail(function(){
+            $("#espera").hide();
+        });
+    });
+    $("#admin-checkbox").change(function(){
+        $("#espera").show();
+        var valor = $(this).prop('checked');
+        var request = $.ajax({
+            type: "PUT",
+            url: "/admin/usuarios/<%= @usuario.id %>/change_atributo",
+            data: { atributo: "admin", valor: valor}
+        });
+
+        request.done(function(  ) {
+            $("#espera").hide();
+        });
+        request.fail(function(){
+            $("#espera").hide();
+        });
+    });
+    $("#persona_nombre").change(function(){
+        $("#espera").show();
+        var valor = $(this).val();
+        var request = $.ajax({
+            type: "PUT",
+            url: "/admin/usuarios/<%= @usuario.id %>/change_atributo",
+            data: { atributo: "nombre", valor: valor}
+        });
+
+        request.done(function(  ) {
+            $("#espera").hide();
+        });
+        request.fail(function(){
+            $("#espera").hide();
+        });
+    });
+    $("#persona_apellido").change(function(){
+        $("#espera").show();
+        var valor = $(this).val();
+        var request = $.ajax({
+            type: "PUT",
+            url: "/admin/usuarios/<%= @usuario.id %>/change_atributo",
+            data: { atributo: "apellido", valor: valor}
+        });
+
+        request.done(function(  ) {
+            $("#espera").hide();
+        });
+        request.fail(function(){
+            $("#espera").hide();
+        });
+    });
+    $("#persona_genero").change(function(){
+        $("#espera").show();
+        var valor = $(this).prop('checked');
+        var request = $.ajax({
+            type: "PUT",
+            url: "/admin/usuarios/<%= @usuario.id %>/change_atributo",
+            data: { atributo: "genero", valor: valor}
+        });
+
+        request.done(function(  ) {
+            $("#espera").hide();
+        });
+        request.fail(function(){
+            $("#espera").hide();
+        });
+    });
+    $("#persona_fechaNacimiento_1i").change(function(){
+        $("#espera").show();
+        var valor1 = $("#persona_fechaNacimiento_1i").val();
+        var valor2 = $("#persona_fechaNacimiento_2i").val();
+        var valor3 = $("#persona_fechaNacimiento_3i").val();
+        var valor = valor1 + "-" +valor2 + "-" +valor3
+        var request = $.ajax({
+            type: "PUT",
+            url: "/admin/usuarios/<%= @usuario.id %>/change_atributo",
+            data: { atributo: "fechaNacimiento", valor: valor}
+        });
+
+        request.done(function(  ) {
+            $("#espera").hide();
+        });
+        request.fail(function(){
+            $("#espera").hide();
+        });
+    });
+    $("#persona_fechaNacimiento_2i").change(function(){
+        $("#espera").show();
+        var valor1 = $("#persona_fechaNacimiento_1i").val();
+        var valor2 = $("#persona_fechaNacimiento_2i").val();
+        var valor3 = $("#persona_fechaNacimiento_3i").val();
+        var valor = valor1 + "-" +valor2 + "-" +valor3
+        var request = $.ajax({
+            type: "PUT",
+            url: "/admin/usuarios/<%= @usuario.id %>/change_atributo",
+            data: { atributo: "fechaNacimiento", valor: valor}
+        });
+
+        request.done(function(  ) {
+            $("#espera").hide();
+        });
+        request.fail(function(){
+            $("#espera").hide();
+        });
+    });
+    $("#persona_fechaNacimiento_3i").change(function(){
+        $("#espera").show();
+        var valor1 = $("#persona_fechaNacimiento_1i").val();
+        var valor2 = $("#persona_fechaNacimiento_2i").val();
+        var valor3 = $("#persona_fechaNacimiento_3i").val();
+        var valor = valor1 + "-" +valor2 + "-" +valor3
+        var request = $.ajax({
+            type: "PUT",
+            url: "/admin/usuarios/<%= @usuario.id %>/change_atributo",
+            data: { atributo: "fechaNacimiento", valor: valor}
+        });
+
+        request.done(function(  ) {
+            $("#espera").hide();
+        });
+        request.fail(function(){
+            $("#espera").hide();
+        });
+    });
+    $("#boton_delete").click(function(){
+        $("#fondo_eliminar").show();
+    });
+    $("#cancel_eliminar").click(function(){
+        $("#fondo_eliminar").hide();
+    });
+
+    $("#confirm_eliminar").click(function(){
+        $("#fondo_eliminar").hide();
+        var url = "/admin/usuarios";
+        $("#espera").show();
+        var request = $.ajax({
+            type: "DELETE",
+            format: "json",
+            url: "/personas/<%= @usuario.id %>/delete"
+        });
+
+        request.done(function(  ) {
+            $(location).attr('href',url)
+        });
+        request.fail(function(){
+            $("#espera").hide();
+        });
+    });
+</script>
+</html>

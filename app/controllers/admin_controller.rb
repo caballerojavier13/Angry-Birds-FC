@@ -10,8 +10,8 @@ class AdminController < MasterSecurityController
     @usu_act_bloq = Persona.activo.where("bloqueado = ?", false).count.to_s
     @usu_act_no_bloq = (Persona.activo.count - @usu_bloq.to_i).to_s
 
-    @usu_act_bloq = Persona.activo.where("bloqueado = ?", false).count.to_s
-    @usu_act_no_bloq = (Persona.activo.count - @usu_bloq.to_i).to_s
+    @usu_act_bloq = Persona.bloqueado.count.to_s
+    @usu_act_no_bloq = (@all_personas.count.to_i - @usu_act_bloq.to_i).to_s
 
     @usu_act = Persona.activo.count.to_s
     @usu_act_t = @all_personas.count.to_s
@@ -66,7 +66,7 @@ class AdminController < MasterSecurityController
     @Progreso_usu = Array.new(12)
 
     (0..12).to_a.each do |i|
-      @Progreso_usu[i] = Persona.where(
+      @Progreso_usu[i] = Persona.activo.where(
           'created_at >= :inicio AND created_at < :fin',
           inicio: i.month.ago, fin: (i-1).month.ago
       ).count
@@ -83,5 +83,23 @@ class AdminController < MasterSecurityController
       format.xml  { render :xml => @user }
     end
   end
+
+  def user
+    @usuarios = Persona.order('id ASC').paginate(:page => params[:page], :per_page => 2)
+  end
+
+  def user_edit
+    @usuario = Persona.find params[:id]
+    @year_fin = Date.today.year
+    @year_inicio = @year_fin - 100
+  end
+
+
+  def change_atributo
+    @persona = Persona.find params[:id]
+    @persona.change_data_account(params[:atributo],params[:valor])
+  end
+
+
 end
 

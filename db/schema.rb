@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130818024452) do
+ActiveRecord::Schema.define(:version => 20131209020043) do
 
   create_table "calificacions", :force => true do |t|
     t.integer  "valor"
@@ -70,7 +70,7 @@ ActiveRecord::Schema.define(:version => 20130818024452) do
     t.boolean  "activo"
     t.string   "codigo"
     t.boolean  "bloqueado"
-    t.integer  "cant_cont_bloq"
+    t.boolean  "admin"
   end
 
   create_table "videos", :force => true do |t|

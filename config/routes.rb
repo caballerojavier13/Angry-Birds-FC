@@ -78,7 +78,7 @@ FanClub::Application.routes.draw do
   
   match 'personas/:id' => 'personas#update', :via => :put
   
-  match 'personas/:id/delete' => 'personas#destroy', :via => :get
+  match 'personas/:id/delete' => 'personas#destroy', :via => :delete
   
   
   
@@ -113,7 +113,10 @@ FanClub::Application.routes.draw do
   
   match 'start' => 'inicio#start', :as => :start, :via => :get
   
-  match 'admin' => 'admin#index', :as => :dmin, :via => :get
+  match 'admin' => 'admin#index', :as => :admin, :via => :get
+  match 'admin/usuarios' => 'admin#user', :as => :admin, :via => :get
+  match 'admin/usuarios/:id' => 'admin#user_edit', :as => :admin, :via => :get
+  match 'admin/usuarios/:id/change_atributo' => 'admin#change_atributo', :as => :admin, :via => :put
 
 
 

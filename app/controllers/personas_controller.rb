@@ -1,7 +1,5 @@
 #coding: utf-8
 class PersonasController < MasterSecurityController
-  before_filter :only_admin, only: [ :destroy]
-
   # GET /personas
   # GET /personas.json
   
@@ -33,6 +31,8 @@ class PersonasController < MasterSecurityController
     
     @persona.codigo= Persona.generate_activation_code
     @persona.activo=false
+    @persona.bloqueado=false
+    @persona.admin=false
     
     respond_to do |format|
       if @persona.save
@@ -90,17 +90,75 @@ class PersonasController < MasterSecurityController
     @persona = Persona.find(params[:id])
     params[:id]= nil
   end
-  
+
+  #PUT /persona/1
+
+  def update
+    @persona = Persona.find(params[:id])
+    respond_to do |format|
+      if @persona.update_attributes(params[:persona])
+        format.html { redirect_to "/" }
+        format.json { head :no_content }
+      else
+        format.html { redirect_to "/" }
+        format.json { head :no_content }
+      end
+    end
+  end
+
+
+
+
   # DELETE /personas/1
   # DELETE /personas/1.json
   def destroy
-	 
-    @persona = Persona.find(params[:id])
-    @persona.destroy
+    @administrador = Persona.find(session[:usuario_id])
+    if @administrador.admin
+      @persona = Persona.find(params[:id])
 
-    respond_to do |format|
-      format.html { redirect_to personas_url }
-      format.json { head :no_content }
+      @noticias = Noticium.find_all_by_persona_id(params[:id])
+      @videos = Video.find_all_by_persona_id(params[:id])
+      @imagenes = Imagen.find_all_by_persona_id(params[:id])
+      @comentarios = Comment.find_all_by_persona_id(params[:id])
+      @notificaciones = Notification.find_all_by_persona_id(params[:id])
+
+      unless @noticias.nil?
+        @noticias.each do |n|
+          n.destroy
+        end
+      end
+
+      unless @videos.nil?
+          @videos.each do |v|
+            v.destroy
+          end
+      end
+
+      unless @imagenes.nil?
+          @imagenes.each do |i|
+            i.destroy
+          end
+      end
+
+      unless @comentarios.nil?
+          @comentarios.each do |c|
+            c.destroy
+          end
+      end
+
+      unless @notificaciones.nil?
+          @notificaciones.each do |n|
+            n.destroy
+          end
+      end
+
+
+      @persona.destroy
+
+      respond_to do |format|
+        format.json { head :no_content }
+      end
     end
+
   end
 end

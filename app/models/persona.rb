@@ -1,9 +1,11 @@
 #coding: utf-8
 
 class Persona < ActiveRecord::Base
-  attr_accessible :apellido, :email, :fechaNacimiento, :genero, :hashed_password, :nombre, :salt, :username,:password, :password_confirmation, :activo, :codigo, :personas, :cant_cont_bloq, :bloqueado
+  attr_accessible :apellido, :email, :fechaNacimiento, :genero, :hashed_password, :nombre, :salt, :username,:password, :password_confirmation, :activo, :codigo, :bloqueado, :admin
   
   scope :activo, -> { where activo: true }
+  scope :bloqueado, -> { where bloqueado: true }
+  scope :admin, -> { where admin: true }
   
   has_many :imagens
   has_many :noticia
@@ -100,6 +102,7 @@ class Persona < ActiveRecord::Base
   end
   def password_confirmation_equal
 	if self.password.present?
+
 	     errors.add(" ", "Las contraseñas ingresadas no coinciden.") unless self.password == self.password_confirmation
 	end
   end
@@ -118,11 +121,26 @@ class Persona < ActiveRecord::Base
     end
     return edad
   end
+  def count_Noticia
+    return Noticium.find_all_by_persona_id(self.id).count
+  end
+
+  def count_Imagen
+    return Imagen.find_all_by_persona_id(self.id).count
+  end
+
+  def count_Video
+    return Video.find_all_by_persona_id(self.id).count
+  end
   def cambiar_pass pass
      self.update_attribute(:hashed_password, Persona.encrypt_password(pass, self.salt))
   end
   def activate!
     self.update_attribute(:activo, true)
+  end
+
+  def change_data_account(atributo,valor)
+    self.update_attribute(atributo, valor)
   end
 
   def Persona.generate_activation_code
