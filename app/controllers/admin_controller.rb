@@ -85,7 +85,36 @@ class AdminController < MasterSecurityController
   end
 
   def user
-    @usuarios = Persona.order('id ASC').paginate(:page => params[:page], :per_page => 2)
+
+
+      if params[:act].to_s == "true"
+        act = TRUE
+      else
+        act = FALSE
+      end
+
+      if params[:bloq].to_s == "true"
+        bloq = TRUE
+      else
+        bloq = FALSE
+      end
+
+      if params[:admin].to_s == "true"
+        admin = TRUE
+      else
+        admin = FALSE
+      end
+
+
+      if params[:act].nil?
+          @usuarios = Persona.order('id ASC').paginate(:page => params[:page], :per_page => 10)
+      else
+        @usuarios = Persona.where(
+            'lower("nombre") LIKE :nom AND lower("apellido") LIKE :ape AND lower("username") LIKE :user AND lower("email") LIKE :mail AND activo = :act AND bloqueado = :bloq AND admin = :admin',
+            nom: '%'+params[:nom].to_s.downcase+'%', ape: '%'+params[:ape].to_s.downcase+'%', user: '%'+params[:user].to_s.downcase+'%', mail: '%'+params[:mail].to_s.downcase+'%', act: act, bloq: bloq, admin: admin
+        ).order('id ASC').paginate(:page => params[:page], :per_page => 10)
+      end
+
   end
 
   def user_edit
