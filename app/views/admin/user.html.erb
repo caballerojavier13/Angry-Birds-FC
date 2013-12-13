@@ -31,16 +31,18 @@
       <p>Administrador</p>
       <ul>
         <a href="/admin">
-        <li>
-          Resumen
-        </li>
+            <li>
+              Resumen
+            </li>
         </a>
         <li class="seleccionado">
           Usuarios
         </li>
-        <li>
-          Noticias
-        </li>
+        <a href="/admin/noticias">
+            <li>
+              Noticias
+            </li>
+        </a>
         <li>
           Imagenes
         </li>
@@ -102,7 +104,7 @@
           <% @usuarios.each do |usu| %>
               <div class="limitador"></div>
               <div class="itemUsuario">
-                <h1 style="font-size: 40px; position: absolute; width: 100%; top:0px;"><%= usu.nombre%> <%= usu.apellido %> <span style="font-size: 20px">(<%= usu.username%>)</span></h1>
+                <h1 class="titulo" style="font-size: 40px; position: absolute; width: 100%; top:0px;"><%= usu.nombre%> <%= usu.apellido %> <span style="font-size: 20px">(<%= usu.username%>)</span></h1>
                 <p class="edad">Edad: <%= usu.getEdad %> años</p>
 
                 <br/>

@@ -121,6 +121,55 @@ class AdminController < MasterSecurityController
     @usuario = Persona.find params[:id]
     @year_fin = Date.today.year
     @year_inicio = @year_fin - 100
+    @etiqueta = (0..12).to_a
+    @etiqueta.to_a.reverse!
+
+    @Progreso_not = Array.new(12)
+
+    (0..12).to_a.each do |i|
+      @Progreso_not[i] = Noticium.where(
+          'created_at >= :inicio AND created_at < :fin AND persona_id = :persona_id',
+          inicio: i.month.ago, fin: (i-1).month.ago, persona_id: @usuario.id
+      ).count
+    end
+    @Progreso_not.delete_at 0
+    @Progreso_not.reverse!
+
+    @Progreso_img = Array.new(12)
+
+    (0..12).to_a.each do |i|
+      @Progreso_img[i] = Imagen.where(
+          'created_at >= :inicio AND created_at < :fin AND persona_id = :persona_id',
+          inicio: i.month.ago, fin: (i-1).month.ago, persona_id: @usuario.id
+      ).count
+    end
+    @Progreso_img.delete_at 0
+    @Progreso_img.reverse!
+
+    @Progreso_vid = Array.new(12)
+
+    (0..12).to_a.each do |i|
+      @Progreso_vid[i] = Video.where(
+          'created_at >= :inicio AND created_at < :fin AND persona_id = :persona_id',
+          inicio: i.month.ago, fin: (i-1).month.ago, persona_id: @usuario.id
+      ).count
+    end
+    @Progreso_vid.delete_at 0
+    @Progreso_vid.reverse!
+
+
+    @total_n = Noticium.where(
+        'persona_id = :persona_id',
+        persona_id: @usuario.id
+    ).count
+    @total_i = Imagen.where(
+        'persona_id = :persona_id',
+        persona_id: @usuario.id
+    ).count
+    @total_v = Video.where(
+        'persona_id = :persona_id',
+        persona_id: @usuario.id
+    ).count
   end
 
 
@@ -130,5 +179,8 @@ class AdminController < MasterSecurityController
   end
 
 
+  def notice
+    @noticias = Noticium.order('id ASC').paginate(:page => params[:page], :per_page => 10)
+  end
 end
 

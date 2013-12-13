@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Angry Birds Fan Club</title>
+  <link rel="shortcut icon" href="/favicon1.ico" />
+  <link rel="stylesheet" href="/css/stylesheetAll.css">
+  <link rel="stylesheet" type="text/css" href="/css/stylesheetNoScript.css" />
+  <link rel="stylesheet" type="text/css" href="/css/stylesheetLoad.css" />
+  <link rel="stylesheet" type="text/css" href="/css/stylesheetadmin.css" />
+</head>
+<body>
+<div id="loading">
+  <div id="background"></div>
+  <div id="midground"></div>
+  <div id="foreground"></div>
+  <div id="tapa"></div>
+  <div class="bokeh">
+    <img id="bokeh1" src="/picture/space/ice.png" height="100px" >
+    <img id="bokeh2" src="/picture/space/bomb.png" height="100px">
+    <img id="bokeh3" src="/picture/space/green.png" height="100px">
+    <img id="bokeh4" src="/picture/space/laser.png" height="100px">
+    <div id="circulo"></div>
+  </div>
+  <div id="bokehText">
+    <p>Cargando...</p>
+  </div>
+</div>
+<div id="page">
+  <div id="body">
+    <div id="header">
+      <p>Administrador</p>
+      <ul>
+        <a href="/admin">
+          <li>
+            Resumen
+          </li>
+        </a>
+        <a href="/admin/usuarios">
+            <li>
+              Usuarios
+            </li>
+          </a>
+        <li class="seleccionado">
+          Noticias
+        </li>
+        <li>
+          Imagenes
+        </li>
+        <li>
+          Videos
+        </li>
+      </ul>
+    </div>
+    <div id="main">
+      <div id="filtro_busq">
+        <h1 style="position: relative;text-align: center;margin:20px auto;border: none">Filtro de búsqueda</h1>
+        <div class="limitador3"></div>
+        <label>Nombre:</label>
+        <input class="txtInput" type="text" name="nombre" id="persona_nombre">
+        <br/>
+        <div class="limitador3"></div>
+        <label>Apellido:</label>
+        <input class="txtInput" type="text" name="apellido" id="persona_apellido">
+        <br/>
+        <div class="limitador3"></div>
+        <ul>
+          <li>
+            <label>Activo:</label>
+            <div class="squaredThree">
+              <input type="checkbox" id="activo-check" name="check" checked />
+              <label for="activo-check" style="width: 100%"></label>
+            </div>
+          </li>
+          <li>
+            <label>Bloqueado:</label>
+            <div class="squaredThree">
+              <input type="checkbox" id="bloqueado-check" name="check" checked/>
+              <label for="bloqueado-check" style="width: 100%"></label>
+            </div>
+          </li>
+          <li>
+            <label>Administrador:</label>
+            <div class="squaredThree">
+              <input type="checkbox" id="admin-check" name="check" checked/>
+              <label for="admin-check" style="width: 100%"></label>
+            </div>
+          </li>
+        </ul>
+        <div class="limitador3" style="margin-top: -30px"></div>
+        <input type="button" value="Listar Todos" id="boton_all">
+        <input type="button" value="Buscar" id="boton_buscar">
+
+      </div>
+      <div id="filtro_busq_boton" class="filtro_busq_boton_show">Mostrar Filtros</div>
+      <div id="listadoUsuario">
+        <% @noticias.each do |noti| %>
+            <div id="noti_<%=noti.id%>">
+                <div class="limitador"></div>
+                <div class="itemNoticia">
+                  <h1><%= noti.titulo %></h1>
+
+                  <%if noti.cuerpo.size < 200 %>
+                      <%=simple_format noti.cuerpo%>
+                  <%else%>
+                      <%=simple_format noti.cuerpo.at(0..197) +"..."%>
+                  <%end%>
+                  <%unless noti.imagen.nil?%>
+                      <img src="<%=noti.imagen.url%>" >
+                  <%end%>
+                  <div class="limitador3"></div>
+                  <p style="margin: 0 auto; color: #000000; text-align: center; margin-top: -20px; margin-bottom: -20px;text-shadow: none; font-weight: normal; font-size: 20px">(Publicado por: <a style="text-decoration: none;color: #000000; text-shadow: 0 0 2px white" href="/admin/usuarios/<%=noti.persona.id%>"><%= noti.persona.username%></a>)</p>
+                  <div class="limitador3"></div>
+                  <a href="/noticias/<%=noti.id%>" style="text-decoration: none; position: relative" ><div class="boton">Ver</div></a>
+                  <a href="/noticias/<%=noti.id%>/edit" style="text-decoration: none; position: relative; margin: 0 20px 0 20px" ><div class="boton">Editar</div></a>
+                  <input type="button" id="elim_<" value="Eliminar" class="boton" onclick="function(){ alert('hola') }">
+
+                </div>
+                <div class="limitador"></div>
+            </div>
+        <%end%>
+        <%= will_paginate @noticias, :previous_label => t("< anterior"), :next_label => t("siguiente >"), :page_gap => "...", :outer_window   => '1', :inner_window => '1', :link_separator => ' - ' %>
+      </div>
+    </div>
+  </div>
+  <div id="footer"></div>
+</div>
+
+</body>
+<script src= '/js/scriptLoad.js' > </script>
+<script language="javascript">
+    window.onload = inicio;
+</script>
+<noscript><div id="noscript"><br/>Javascript deshabilitado: para poder apreciar la pagina web por favor activa javascript en tu navegador</div></noscript>
+<script src="/js/jquery-1.7.1.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="/js/jquery-ui-1.10.3.custom.min.js" ></script>
+<script src="/js/jquery.backgroundPosition.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(function(){
+
+        $('#midground').css({backgroundPosition: '0px 0px'});
+        $('#foreground').css({backgroundPosition: '0px 0px'});
+        $('#background').css({backgroundPosition: '0px 0px'});
+
+        $('#midground').animate({
+            backgroundPosition:"(-10000px -2000px)"
+        }, 240000, 'linear');
+
+        $('#foreground').animate({
+            backgroundPosition:"(-10000px -2000px)"
+        }, 120000, 'linear');
+
+        $('#background').animate({
+            backgroundPosition:"(-10000px -2000px)"
+        }, 480000, 'linear');
+
+    });
+</script>
+<script>
+    $(function() {
+        if ($.browser.opera || $.browser.msie ) {
+            alert( "Por favor no uses este navegador. Usa firefox o Chrome. Si no los tienes instalalos." );
+        }
+    });
+</script>
+<script>
+    (function($) {
+        $.get = function(key)   {
+            key = key.replace(/[\[]/, '\\[');
+            key = key.replace(/[\]]/, '\\]');
+            var pattern = "[\\?&]" + key + "=([^&#]*)";
+            var regex = new RegExp(pattern);
+            var url = unescape(window.location.href);
+            var results = regex.exec(url);
+            if (results === null) {
+                return null;
+            } else {
+                return results[1];
+            }
+        }
+    })(jQuery);
+
+    function to_bolean(string){
+        if(string == "true"){
+            return true;
+        }else{
+            return false;
+        }
+
+    }
+</script>
+<script>
+    $(function(){
+        $("#persona_nombre").val($.get("nom"));
+        $("#persona_apellido").val($.get("ape"));
+        $("#persona_username").val($.get("user"));
+        $("#persona_mail").val($.get("mail"));
+        $("#activo-check").prop('checked', to_bolean($.get("act")));
+        $("#bloqueado-check").prop('checked', to_bolean($.get("bloq")));
+        $("#admin-check").prop('checked',to_bolean($.get("admin")));
+    });
+</script>
+<script>
+    $("#filtro_busq_boton").click(function(){
+        $("#filtro_busq").toggle("blind");
+        $("#filtro_busq_boton").toggleClass("filtro_busq_boton_hide");
+        $("#filtro_busq_boton").toggleClass("filtro_busq_boton_show");
+        var texto = $("#filtro_busq_boton").html();
+        if(texto == "Mostrar Filtros"){
+            $("#filtro_busq_boton").html("Ocultar Filtros");
+        }else{
+            $("#filtro_busq_boton").html("Mostrar Filtros");
+        }
+    });
+    $("#boton_buscar").click(function(){
+        var nom = $("#persona_titulo").val();
+        var ape = $("#persona_cuerpo").val();
+        var act = $("#activo-check").prop('checked');
+        var bloq = $("#bloqueado-check").prop('checked');
+        var admin = $("#admin-check").prop('checked');
+        var url = "/admin/usuarios?nom="+nom+"&ape="+ape+"&user="+user+"&mail="+mail+"&act="+act+"&bloq="+bloq+"&admin="+admin ;
+        //$(location).attr('href',url)
+    });
+    $("#boton_all").click(function(){
+        $(location).attr('href',"/admin/noticias")
+    });
+</script>
+</html>

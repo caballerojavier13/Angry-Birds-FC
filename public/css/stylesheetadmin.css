@@ -170,7 +170,7 @@ a{
 #main div{
     background-color:#6dd4bc;
 }
-#main div h1{
+#main .titulo{
     text-align: left;line-height: 30px;
     font-size: 30px;
     font-family: "AngryBirds";
@@ -307,7 +307,7 @@ a{
 
 .boton{
     position: relative;
-    margin: 0 auto;
+    margin: 0 20px 20px 0 auto;
     height: 50px;
     width: 200px;
     border: solid 1px #d7d901;
@@ -315,11 +315,13 @@ a{
     box-shadow: 0 5px 5px grey;
     text-decoration: none;
     font-family: "AngryBirds";
+    background: #6DD4BC;
     color: #6DD4BC;
     text-shadow: 0 0 2px white;
     line-height: 50px;
     font-size: 30px;
     transition: linear all 0.5s;
+    display: inline-block;
 }
 .boton:hover{
     box-shadow: 0 3px 3px grey;
@@ -613,6 +615,10 @@ a{
     margin:0 auto;
     width: 100%;
     text-align: left;
+    font-family: Tahoma;
+    text-shadow: 0 0 3px white;
+    line-height: 35px;
+    font-size: 20px;
 }
 
 #boton_delete{
@@ -1056,10 +1062,10 @@ select{
 #link_back{
     position: relative;
     margin: auto;
-    top: 50px;
+    top: 30px;
 
     line-height: 100px;
-    font-size: 60px;
+    font-size: 40px;
     font-family: "angrybirds";
     text-decoration: none;
     color: white;
@@ -1185,7 +1191,7 @@ input[type=checkbox] {
     background: #6dd4bc;
     border: solid 2px #2a5f58;
     border-radius: 5px;
-
+    cursor: pointer;
     box-shadow: inset 0 0 10px grey, 0 0 5px black;
 }
 #boton_buscar:hover{
@@ -1202,7 +1208,7 @@ input[type=checkbox] {
     margin-right: 20px;
     margin-bottom: 20px;
     color: #ffffff;
-
+    cursor: pointer;
     text-decoration: none;
 
     font-family: "angrybirds";
@@ -1222,6 +1228,7 @@ input[type=checkbox] {
 #boton_all:active{
     box-shadow: none;
 }
+
 
 #filtro_busq_boton{
     position: relative;
@@ -1251,4 +1258,63 @@ input[type=checkbox] {
 }
 .filtro_busq_boton_show{
     border-radius: 10px;
+}
+
+#pub p{
+    color: black;
+    font-weight: bold;
+    text-shadow: 0 0 1px white;
+    line-height: 30px;
+    font-size: 20px;
+
+}
+
+
+
+
+.itemNoticia{
+    position: relative;
+    min-height: 100px;
+    height: 100%;
+    margin: 0 auto;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    z-index: 1;
+}
+.itemNoticia h1{
+    text-align: center;
+    font-family: "angrybirds";
+    color: #ffffff;
+    text-shadow: 0 0 10px black, 0 0 2px black;
+}
+.itemNoticia p{
+    position: relative;
+    display: block;
+    overflow: hidden;
+    color: #eeee00;
+    text-shadow: 0 0 2px black;
+    text-align: justify;
+    padding: 20px;
+    font-size:25px;
+    line-height: 29px;
+    font-weight: bold;
+    -moz-hyphens:auto;
+    -ms-hyphens:auto;
+    -webkit-hyphens:auto;
+    -o-hyphens:auto;
+    hyphens:auto;
+    word-wrap:break-word;
+}
+.itemNoticia img{
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    padding: 1%;
+    background: #6DD4BC;
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.6);
+    border-radius: 5px;
+    max-width: 50%;
+    max-height: 200px;
 }

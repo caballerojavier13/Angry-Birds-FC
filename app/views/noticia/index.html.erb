@@ -113,11 +113,11 @@
                 </div>
                 <div id="contenedor_mensaje">
                     <% if flash[:alert] %>
-                    <div id="mensajes" "onclick= hide('mensajes')">
+                    <div id="mensajes" "onclick= $('#mensajes').hide();">
                         <p>
                             <%= flash[:alert]%>
                         </p>
-                        <button type="button" class="close" data-dismiss="alert" style="position: absolute; top: 0; right: 10px; color: white; opacity: 0.5" onclick="hide('mensajes')">
+                        <button type="button" class="close" data-dismiss="alert" style="position: absolute; top: 0; right: 10px; color: white; opacity: 0.5" onclick="$('#mensajes').hide();">
                             &times;
                         </button>
                     </div>

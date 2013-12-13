@@ -77,7 +77,8 @@ class NoticiaController < SecurityController
   def edit
     @notificaciones = Notification.where("read = ? AND persona_id = ?", false, session[:usuario_id])
     @noticium = Noticium.find(params[:id])
-    if @noticium.persona.id == session[:usuario_id]
+    @persona = Persona.find(session[:usuario_id])
+    if @persona.admin || @noticium.persona.id == @persona.id
       params[:titulo] = @noticium.titulo
     else
       redirect_to "/noticias", :alert => 'Solo el dueño de la noticia puede editarla.'
@@ -151,7 +152,8 @@ class NoticiaController < SecurityController
   # DELETE /noticia/1.json
   def destroy
     @noticium = Noticium.find(params[:id])
-    if @noticium.persona_id.to_s == session[:usuario_id].to_s
+    @persona = Persona.find(session[:usuario_id])
+    if @persona.admin || @noticium.persona_id.to_s == session[:usuario_id].to_s
       imagen = @noticium.imagen
       unless imagen.nil?
         @noticium.imagen = nil

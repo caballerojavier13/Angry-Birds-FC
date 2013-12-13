@@ -62,9 +62,11 @@
         <li class="seleccionado">
           Usuarios
         </li>
-        <li>
-          Noticias
-        </li>
+        <a href="/admin/noticias">
+          <li>
+            Noticias
+          </li>
+        </a>
         <li>
           Imagenes
         </li>
@@ -129,8 +131,22 @@
             </ul>
           <%end%>
         </div>
-        <div id="pub" style="display: none" class="contenido">
-            Resumen de Pubicaciones
+        <div id="pub" style="display: none; padding-bottom: 20px" class="contenido">
+
+          <h1 class="titulo" style="margin: 20px auto;position: relative;width: 80%;">Noticias</h1>
+          <p><%=@total_n > 1 ? 'Publicó un total de ' + @total_v.to_s + 'noticias' : (@total_n > 0 ? 'Publicó una noticia' : 'No publicó ninguna noticia')%></p>
+          <div id="grafico_progreso_noticia" style="height: 400px; position: relative; margin: 0 auto; margin-top: 20px;margin-bottom: 20px; width: 800px;"></div>
+          <a style="padding: 0 10px 0 10px" href="#" class="boton">Ver detalles</a>
+
+          <h1 class="titulo" style="margin: 20px auto;position: relative;width: 80%;">imagenes</h1>
+          <p><%=@total_i > 1 ? 'Publicó un total de ' + @total_v.to_s + 'imagenes' : (@total_i > 0 ? 'Publicó una imagen' : 'No publicó ninguna imagen')%></p>
+          <div id="grafico_progreso_imagen" style="height: 400px; position: relative; margin: 0 auto; margin-top: 20px;margin-bottom: 20px; width: 800px;"></div>
+          <a style="padding: 0 10px 0 10px" href="#" class="boton">Ver detalles</a>
+
+          <h1 class="titulo" style="margin: 20px auto;position: relative;width: 80%;">Videos</h1>
+          <p><%=@total_v > 1 ? 'Publicó un total de ' + @total_v.to_s + 'videos' : (@total_v > 0 ? 'Publicó un video' : 'No publicó ningun video')%></p>
+          <div id="grafico_progreso_video" style="height: 400px; position: relative; margin: 0 auto; margin-top: 20px;margin-bottom: 20px; width: 800px;"></div>
+          <a style="padding: 0 10px 0 10px" href="#" class="boton">Ver detalles</a>
         </div>
         <div id="admin" style="display: none" class="contenido">
 
@@ -201,7 +217,7 @@
         </div>
       </div>
 
-       <a id="link_back" href="/admin/usuarios"><-Atrás</a>
+       <a id="link_back" href="/admin/usuarios"><-Volver al Listado de Usuarios</a>
     </div>
 
   </div>
@@ -215,8 +231,11 @@
 </script>
 <noscript><div id="noscript"><br/>Javascript deshabilitado: para poder apreciar la pagina web por favor activa javascript en tu navegador</div></noscript>
 <script src="/js/jquery-1.7.1.min.js" type="text/javascript"></script>
-
 <script src="/js/jquery.backgroundPosition.js" type="text/javascript"></script>
+<script src="/js/morris.min.js" type="text/javascript"></script>
+<script src="/js/raphael-min.js" type="text/javascript"></script>
+<script src="/js/highcharts.js" type="text/javascript"></script>
+
 
 
 <script type="text/javascript">
@@ -434,5 +453,122 @@
             $("#espera").hide();
         });
     });
+</script>
+<script>
+    $(function () {
+        $('#grafico_progreso_noticia').highcharts({
+            chart: {
+                type: "column",
+                zoomType: 'x',
+                spacingRight: 20
+            },
+            tooltip: {
+                headerFormat: '<span style="font-size:10px">Cantidad de Noticias Publicadas: <span style="color:{series.color};padding:0"><strong>{point.y}</strong></span></span>',
+                pointFormat: '',
+                shared: true,
+                useHTML: true
+            },
+            title: {
+                text: ''
+            },
+            legend: {
+                enabled: false
+            },
+            yAxis: {
+                gridLineWidth: 1,
+                gridLineColor: "yellow",
+                title: {
+                    text: ''
+                }
+            },
+            xAxis: {
+
+                lineColor: "#6dd4bc",
+                categories: Etiquetas()
+            },
+            colors:
+                    ["#6dd4bc"],
+            series: [{
+                data: <%= @Progreso_not %>
+            }]
+        });
+        $('#grafico_progreso_imagen').highcharts({
+            chart: {
+                type: "column",
+                zoomType: 'x',
+                spacingRight: 20
+            },
+            tooltip: {
+                headerFormat: '<span style="font-size:10px">Cantidad de Imagenes Publicadas: <span style="color:{series.color};padding:0"><strong>{point.y}</strong></span></span>',
+                pointFormat: '',
+                shared: true,
+                useHTML: true
+            },
+            title: {
+                text: ''
+            },
+            legend: {
+                enabled: false
+            },
+            yAxis: {
+                gridLineWidth: 1,
+                gridLineColor: "yellow",
+                title: {
+                    text: ''
+                }
+            },
+            xAxis: {
+
+                lineColor: "#6dd4bc",
+                categories: Etiquetas()
+            },
+            colors:
+                    ["#6dd4bc"],
+            series: [{
+                data: <%= @Progreso_img %>
+            }]
+        });
+        $('#grafico_progreso_video').highcharts({
+            chart: {
+                type: "column",
+                zoomType: 'x',
+                spacingRight: 20
+            },
+            tooltip: {
+                headerFormat: '<span style="font-size:10px">Cantidad de Videos Publicadas: <span style="color:{series.color};padding:0"><strong>{point.y}</strong></span></span>',
+                pointFormat: '',
+                shared: true,
+                useHTML: true
+            },
+            title: {
+                text: ''
+            },
+            legend: {
+                enabled: false
+            },
+            yAxis: {
+                gridLineWidth: 1,
+                gridLineColor: "yellow",
+                title: {
+                    text: ''
+                }
+            },
+            xAxis: {
+
+                lineColor: "#6dd4bc",
+                categories: Etiquetas()
+            },
+            colors:
+                    ["#6dd4bc"],
+            series: [{
+                data: <%= @Progreso_vid %>
+            }]
+        });
+    });
+</script>
+<script>
+  function Etiquetas(){
+      return ['11 meses atás','10 meses atás','9 meses atás','8 meses atás','7 meses atás','6 meses atás','5 meses atás','4 meses atás','3 meses atás','2 meses atás','1 mes atás','Este mes'];
+  }
 </script>
 </html>

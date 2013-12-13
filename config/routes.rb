@@ -117,7 +117,7 @@ FanClub::Application.routes.draw do
   match 'admin/usuarios' => 'admin#user', :as => :admin, :via => :get
   match 'admin/usuarios/:id' => 'admin#user_edit', :as => :admin, :via => :get
   match 'admin/usuarios/:id/change_atributo' => 'admin#change_atributo', :as => :admin, :via => :put
-
+  match 'admin/noticias' => 'admin#notice', :as => :admin, :via => :get
 
 
   root :to => 'inicio#start'

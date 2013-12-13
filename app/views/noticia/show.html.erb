@@ -2,6 +2,7 @@
 <html>
 <head>
     <link rel="shortcut icon" href="/favicon1.ico" />
+    <title>Angry Birds Fan Club</title>
     <link rel="stylesheet" href="/css/stylesheetNoticia.css">
     <link rel="stylesheet" href="/css/stylesheetAll.css">
     <link rel="stylesheet" type="text/css" href="/css/stylesheetNoScript.css" />
@@ -9,13 +10,15 @@
     <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
     <div id="fb-root"></div>
+
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
   js = d.createElement(s); js.id = id;
   js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=221467778006567";
   fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+}(document, 'script', 'facebook-jssdk'));
+</script>
     <%= csrf_meta_tag %>
 </head>
 <body onkeydown="tecla(event);">
@@ -125,11 +128,11 @@
                 <img src="<%= @noticium.imagen.url%>" onclick="pantallaCompleta()" />
             <%end%>
             <%= simple_format @noticium.cuerpo %>
-            <%if session[:usuario_id] == @noticium.persona.id %>
-            <div id="acciones_noticia">
-                <%= link_to 'Editar', edit_noticium_path(@noticium) %>
-                <a id="eliminar"> Eliminar </a>
-            </div>
+            <%if Persona.find(session[:usuario_id]).admin || session[:usuario_id] == @noticium.persona.id %>
+                <div id="acciones_noticia">
+                    <%= link_to 'Editar', edit_noticium_path(@noticium) %>
+                    <a id="eliminar"> Eliminar </a>
+                </div>
             <%end%>            
         </div>
 	<div id="ranking">
@@ -305,7 +308,7 @@
                 url = "/nuevas_notificaciones"
                 $.get(url, null,
                     function(data){
-                        if(parseInt($("#notif_min").html()) == 0){
+                        if(parseInt($("#notif_min").html()) == '0'){
                             $("#notificacion").hide();      
                         }else{
                                $("#notificacion").show();
