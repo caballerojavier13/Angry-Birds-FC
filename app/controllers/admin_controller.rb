@@ -161,15 +161,15 @@ class AdminController < MasterSecurityController
     @total_n = Noticium.where(
         'persona_id = :persona_id',
         persona_id: @usuario.id
-    ).count
+    ).count.to_s
     @total_i = Imagen.where(
         'persona_id = :persona_id',
         persona_id: @usuario.id
-    ).count
+    ).count.to_s
     @total_v = Video.where(
         'persona_id = :persona_id',
         persona_id: @usuario.id
-    ).count
+    ).count.to_s
   end
 
 
@@ -180,7 +180,141 @@ class AdminController < MasterSecurityController
 
 
   def notice
-    @noticias = Noticium.order('id ASC').paginate(:page => params[:page], :per_page => 10)
+
+    case params[:est].to_s
+      when '0'
+
+        @noticias = Noticium.where(
+            'lower(titulo) LIKE :tit AND lower(cuerpo) LIKE :cue',
+            tit: '%'+params[:tit].to_s.downcase+'%',cue: '%'+params[:cue].to_s.downcase+'%'
+        ).order('id ASC').paginate(:page => params[:page], :per_page => 10)
+
+      when '1'
+
+        calificacions = Arel::Table.new(:calificacions)
+        noticia = Arel::Table.new(:noticia)
+        resultado = calificacions
+        .join(noticia)
+        .on(calificacions[:noticia_id]
+            .eq(noticia[:id]))
+        .project(Arel.sql('cast(cast((sum(public.calificacions.valor)) as float)/count(*)as float) promedio, noticia_id id'))
+        .group(calificacions[:noticia_id])
+        consulta = calificacions.from(Arel.sql("(#{resultado.to_sql}) as consulta")).where(Arel.sql('consulta.promedio < 1.5')).project(Arel.sql('consulta.id'))
+
+        @noticias = Noticium.where(
+            "lower(titulo) LIKE :tit AND lower(cuerpo) LIKE :cue AND id in (#{consulta.to_sql})",
+            tit: '%'+params[:tit].to_s.downcase+'%',cue: '%'+params[:cue].to_s.downcase+'%'
+        ).order('id ASC').paginate(:page => params[:page], :per_page => 10)
+
+      when '2'
+
+        calificacions = Arel::Table.new(:calificacions)
+        noticia = Arel::Table.new(:noticia)
+        resultado = calificacions
+        .join(noticia)
+        .on(calificacions[:noticia_id]
+            .eq(noticia[:id]))
+        .project(Arel.sql('cast(cast((sum(public.calificacions.valor)) as float)/count(*)as float) promedio, noticia_id id'))
+        .group(calificacions[:noticia_id])
+        consulta = calificacions.from(Arel.sql("(#{resultado.to_sql}) as consulta")).where(Arel.sql('consulta.promedio >= 1.5 and consulta.promedio < 2.5')).project(Arel.sql('consulta.id'))
+
+        @noticias = Noticium.where(
+            "lower(titulo) LIKE :tit AND lower(cuerpo) LIKE :cue AND id in (#{consulta.to_sql})",
+            tit: '%'+params[:tit].to_s.downcase+'%',cue: '%'+params[:cue].to_s.downcase+'%'
+        ).order('id ASC').paginate(:page => params[:page], :per_page => 10)
+
+      when '3'
+
+        calificacions = Arel::Table.new(:calificacions)
+        noticia = Arel::Table.new(:noticia)
+        resultado = calificacions
+        .join(noticia)
+        .on(calificacions[:noticia_id]
+            .eq(noticia[:id]))
+        .project(Arel.sql('cast(cast((sum(public.calificacions.valor)) as float)/count(*)as float) promedio, noticia_id id'))
+        .group(calificacions[:noticia_id])
+        consulta = calificacions.from(Arel.sql("(#{resultado.to_sql}) as consulta")).where(Arel.sql('consulta.promedio >= 2.5')).project(Arel.sql('consulta.id'))
+
+        @noticias = Noticium.where(
+            "lower(titulo) LIKE :tit AND lower(cuerpo) LIKE :cue AND id in (#{consulta.to_sql})",
+            tit: '%'+params[:tit].to_s.downcase+'%',cue: '%'+params[:cue].to_s.downcase+'%'
+        ).order('id ASC').paginate(:page => params[:page], :per_page => 10)
+
+      else
+        @noticias = Noticium.order('id ASC').paginate(:page => params[:page], :per_page => 10)
+
+    end
+
+
+
+  end
+
+  def notice_user
+
+    case params[:est].to_s
+      when '0'
+
+        @noticias = Noticium.where(
+            "persona_id = :persona_id AND lower(titulo) LIKE :tit AND lower(cuerpo) LIKE :cue",
+            persona_id: params[:id],tit: '%'+params[:tit].to_s.downcase+'%',cue: '%'+params[:cue].to_s.downcase+'%'
+        ).order('id ASC').paginate(:page => params[:page], :per_page => 10)
+
+      when '1'
+
+        calificacions = Arel::Table.new(:calificacions)
+        noticia = Arel::Table.new(:noticia)
+        resultado = calificacions
+        .join(noticia)
+        .on(calificacions[:noticia_id]
+            .eq(noticia[:id]))
+        .project(Arel.sql('cast(cast((sum(public.calificacions.valor)) as float)/count(*)as float) promedio, noticia_id id'))
+        .group(calificacions[:noticia_id])
+        consulta = calificacions.from(Arel.sql("(#{resultado.to_sql}) as consulta")).where(Arel.sql('consulta.promedio < 1.5')).project(Arel.sql('consulta.id'))
+
+        @noticias = Noticium.where(
+            "persona_id = :persona_id AND lower(titulo) LIKE :tit AND lower(cuerpo) LIKE :cue AND id in (#{consulta.to_sql})",
+            persona_id: params[:id],tit: '%'+params[:tit].to_s.downcase+'%',cue: '%'+params[:cue].to_s.downcase+'%'
+        ).order('id ASC').paginate(:page => params[:page], :per_page => 10)
+
+      when '2'
+
+        calificacions = Arel::Table.new(:calificacions)
+        noticia = Arel::Table.new(:noticia)
+        resultado = calificacions
+        .join(noticia)
+        .on(calificacions[:noticia_id]
+            .eq(noticia[:id]))
+        .project(Arel.sql('cast(cast((sum(public.calificacions.valor)) as float)/count(*)as float) promedio, noticia_id id'))
+        .group(calificacions[:noticia_id])
+        consulta = calificacions.from(Arel.sql("(#{resultado.to_sql}) as consulta")).where(Arel.sql('consulta.promedio >= 1.5 and consulta.promedio < 2.5')).project(Arel.sql('consulta.id'))
+
+        @noticias = Noticium.where(
+            "persona_id = :persona_id AND lower(titulo) LIKE :tit AND lower(cuerpo) LIKE :cue AND id in (#{consulta.to_sql})",
+            persona_id: params[:id],tit: '%'+params[:tit].to_s.downcase+'%',cue: '%'+params[:cue].to_s.downcase+'%'
+        ).order('id ASC').paginate(:page => params[:page], :per_page => 10)
+
+      when '3'
+
+        calificacions = Arel::Table.new(:calificacions)
+        noticia = Arel::Table.new(:noticia)
+        resultado = calificacions
+        .join(noticia)
+        .on(calificacions[:noticia_id]
+            .eq(noticia[:id]))
+        .project(Arel.sql('cast(cast((sum(public.calificacions.valor)) as float)/count(*)as float) promedio, noticia_id id'))
+        .group(calificacions[:noticia_id])
+        consulta = calificacions.from(Arel.sql("(#{resultado.to_sql}) as consulta")).where(Arel.sql('consulta.promedio >= 2.5')).project(Arel.sql('consulta.id'))
+
+        @noticias = Noticium.where(
+            "persona_id = :persona_id AND lower(titulo) LIKE :tit AND lower(cuerpo) LIKE :cue AND id in (#{consulta.to_sql})",
+            persona_id: params[:id],tit: '%'+params[:tit].to_s.downcase+'%',cue: '%'+params[:cue].to_s.downcase+'%'
+        ).order('id ASC').paginate(:page => params[:page], :per_page => 10)
+
+      else
+        @noticias = Noticium.where('persona_id = :persona_id', persona_id: params[:id]).order('id ASC').paginate(:page => params[:page], :per_page => 10)
+
+    end
+
   end
 end
 

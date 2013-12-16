@@ -26,6 +26,23 @@
   </div>
 </div>
 <div id="page">
+  <div id="espera">
+    <div id="espera_img">
+      <img src="/picture/gif_loading/5.gif"/>
+      <div id="followingBallsG">
+        <div id="followingBallsG_1" class="followingBallsG">
+        </div>
+        <div id="followingBallsG_2" class="followingBallsG">
+        </div>
+        <div id="followingBallsG_3" class="followingBallsG">
+        </div>
+        <div id="followingBallsG_4" class="followingBallsG">
+        </div>
+      </div>
+    </div>
+
+  </div>
+
   <div id="body">
     <div id="header">
       <p>Administrador</p>
@@ -55,39 +72,26 @@
       <div id="filtro_busq">
         <h1 style="position: relative;text-align: center;margin:20px auto;border: none">Filtro de búsqueda</h1>
         <div class="limitador3"></div>
-        <label>Nombre:</label>
-        <input class="txtInput" type="text" name="nombre" id="persona_nombre">
+        <label>Titulo:</label>
+        <input class="txtInput" type="text" id="noticia_titulo">
         <br/>
         <div class="limitador3"></div>
-        <label>Apellido:</label>
-        <input class="txtInput" type="text" name="apellido" id="persona_apellido">
+        <label>Contenido:</label>
+        <input class="txtInput" type="text" id="noticia_cuerpo">
         <br/>
         <div class="limitador3"></div>
-        <ul>
-          <li>
-            <label>Activo:</label>
-            <div class="squaredThree">
-              <input type="checkbox" id="activo-check" name="check" checked />
-              <label for="activo-check" style="width: 100%"></label>
-            </div>
-          </li>
-          <li>
-            <label>Bloqueado:</label>
-            <div class="squaredThree">
-              <input type="checkbox" id="bloqueado-check" name="check" checked/>
-              <label for="bloqueado-check" style="width: 100%"></label>
-            </div>
-          </li>
-          <li>
-            <label>Administrador:</label>
-            <div class="squaredThree">
-              <input type="checkbox" id="admin-check" name="check" checked/>
-              <label for="admin-check" style="width: 100%"></label>
-            </div>
-          </li>
-        </ul>
-        <div class="limitador3" style="margin-top: -30px"></div>
-        <input type="button" value="Listar Todos" id="boton_all">
+        <label>Estrellas:</label>
+        <div style="width: 40%;position: relative;display: inline-block; padding: 0 10px 0 10px;">
+            <select id="noticia_estrella" style="text-align: center">
+              <option value="0" >Cualquiera</option>
+              <option value="1">1 estrella</option>
+              <option value="2">2 estrellas</option>
+              <option value="3">3 estrellas</option>
+            </select>
+        </div>
+        <br/>
+        <div class="limitador3"></div>
+        <input type="button" value="Listar Todas" id="boton_all">
         <input type="button" value="Buscar" id="boton_buscar">
 
       </div>
@@ -112,7 +116,7 @@
                   <div class="limitador3"></div>
                   <a href="/noticias/<%=noti.id%>" style="text-decoration: none; position: relative" ><div class="boton">Ver</div></a>
                   <a href="/noticias/<%=noti.id%>/edit" style="text-decoration: none; position: relative; margin: 0 20px 0 20px" ><div class="boton">Editar</div></a>
-                  <input type="button" id="elim_<" value="Eliminar" class="boton" onclick="function(){ alert('hola') }">
+                  <input type="button" value="Eliminar" class="boton" onclick="eliminar(<%=noti.id%>)">
 
                 </div>
                 <div class="limitador"></div>
@@ -190,13 +194,9 @@
 </script>
 <script>
     $(function(){
-        $("#persona_nombre").val($.get("nom"));
-        $("#persona_apellido").val($.get("ape"));
-        $("#persona_username").val($.get("user"));
-        $("#persona_mail").val($.get("mail"));
-        $("#activo-check").prop('checked', to_bolean($.get("act")));
-        $("#bloqueado-check").prop('checked', to_bolean($.get("bloq")));
-        $("#admin-check").prop('checked',to_bolean($.get("admin")));
+        $("#noticia_titulo").val($.get("tit"));
+        $("#noticia_cuerpo").val($.get("cue"));
+        $("#noticia_estrella").val($.get("est"));
     });
 </script>
 <script>
@@ -212,16 +212,33 @@
         }
     });
     $("#boton_buscar").click(function(){
-        var nom = $("#persona_titulo").val();
-        var ape = $("#persona_cuerpo").val();
-        var act = $("#activo-check").prop('checked');
-        var bloq = $("#bloqueado-check").prop('checked');
-        var admin = $("#admin-check").prop('checked');
-        var url = "/admin/usuarios?nom="+nom+"&ape="+ape+"&user="+user+"&mail="+mail+"&act="+act+"&bloq="+bloq+"&admin="+admin ;
-        //$(location).attr('href',url)
+        var tit = $("#noticia_titulo").val();
+        var cue = $("#noticia_cuerpo").val();
+        var est = $("#noticia_estrella").val();
+        var url = "/admin/noticias?tit="+tit+"&cue="+cue+"&est="+est;
+        $(location).attr('href',url)
     });
     $("#boton_all").click(function(){
         $(location).attr('href',"/admin/noticias")
     });
+</script>
+<script>
+  function eliminar(id){
+    var id_noticia = "#noti_"+id;
+    var url = "/noticia/"+id+"/delete";
+      $("#espera").show();
+      var request = $.ajax({
+          type: "GET",
+          url: url
+      });
+
+      request.done(function(  ) {
+          $("#espera").hide();
+          $(id_noticia).hide("blind",2000);
+      });
+      request.fail(function(){
+          $("#espera").hide();
+      });
+  }
 </script>
 </html>
