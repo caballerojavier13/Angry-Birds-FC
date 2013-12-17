@@ -3,12 +3,11 @@ class AdminController < MasterSecurityController
 
   def index
     @all_personas = Persona.all
-    @usu_gen_f = Persona.activo.where("genero = ?", false).count.to_s
-    @usu_gen_m = Persona.activo.where("genero = ?", true).count.to_s
+
+    @usu_gen_f = Persona.where("genero = ?", false).count.to_s
+    @usu_gen_m = Persona.where("genero = ?", true).count.to_s
     @usu_gen_t = @usu_gen_f.to_i + @usu_gen_m.to_i
-    
-    @usu_act_bloq = Persona.activo.where("bloqueado = ?", false).count.to_s
-    @usu_act_no_bloq = (Persona.activo.count - @usu_bloq.to_i).to_s
+
 
     @usu_act_bloq = Persona.bloqueado.count.to_s
     @usu_act_no_bloq = (@all_personas.count.to_i - @usu_act_bloq.to_i).to_s
@@ -77,6 +76,72 @@ class AdminController < MasterSecurityController
       @Progreso_usu[i] += @Progreso_usu[i+1].to_i
     end
     @Progreso_usu.reverse!
+
+
+
+    calificacions = Arel::Table.new(:calificacions)
+    noticia = Arel::Table.new(:noticia)
+    resultado = calificacions
+    .join(noticia)
+    .on(calificacions[:noticia_id]
+        .eq(noticia[:id]))
+    .project(Arel.sql('cast(cast((sum(public.calificacions.valor)) as float)/count(*)as float) promedio, noticia_id id'))
+    .group(calificacions[:noticia_id])
+    @estrella1 = calificacions.from(Arel.sql("(#{resultado.to_sql}) as consulta")).where(Arel.sql('consulta.promedio < 1.5')).project(Arel.sql('consulta.id'))
+    @estrella2 = calificacions.from(Arel.sql("(#{resultado.to_sql}) as consulta")).where(Arel.sql('consulta.promedio >= 1.5 and consulta.promedio < 2.5')).project(Arel.sql('consulta.id'))
+    @estrella3 = calificacions.from(Arel.sql("(#{resultado.to_sql}) as consulta")).where(Arel.sql('consulta.promedio >= 2.5')).project(Arel.sql('consulta.id'))
+
+
+
+
+
+
+    @Progreso_not = Array.new(12)
+
+    (0..12).to_a.each do |i|
+      @Progreso_not[i] = Noticium.where(
+          'created_at >= :inicio AND created_at < :fin',
+          inicio: i.month.ago, fin: (i-1).month.ago
+      ).count
+    end
+    @Progreso_not.delete_at 0
+
+    (0..11).to_a.reverse!.each do |i|
+      @Progreso_not[i] += @Progreso_not[i+1].to_i
+    end
+    @Progreso_not.reverse!
+
+
+    @Progreso_img = Array.new(12)
+
+    (0..12).to_a.each do |i|
+      @Progreso_img[i] = Imagen.where(
+          'created_at >= :inicio AND created_at < :fin',
+          inicio: i.month.ago, fin: (i-1).month.ago
+      ).count
+    end
+    @Progreso_img.delete_at 0
+
+    (0..11).to_a.reverse!.each do |i|
+      @Progreso_img[i] += @Progreso_img[i+1].to_i
+    end
+    @Progreso_img.reverse!
+
+
+    @Progreso_vid = Array.new(12)
+
+    (0..12).to_a.each do |i|
+      @Progreso_vid[i] = Video.where(
+          'created_at >= :inicio AND created_at < :fin',
+          inicio: i.month.ago, fin: (i-1).month.ago
+      ).count
+    end
+    @Progreso_vid.delete_at 0
+
+    (0..11).to_a.reverse!.each do |i|
+      @Progreso_vid[i] += @Progreso_vid[i+1].to_i
+    end
+    @Progreso_vid.reverse!
 
     respond_to do |format|
       format.html # index.html.erb
@@ -315,6 +380,32 @@ class AdminController < MasterSecurityController
 
     end
 
+  end
+
+  def picture
+
+    @imagenes = Imagen.order('id ASC').paginate(:page => params[:page], :per_page => 10)
+
+  end
+
+  def picture_user
+
+    @imagenes = Imagen.where('persona_id = :persona_id', persona_id: params[:id]).order('id ASC').paginate(:page => params[:page], :per_page => 10)
+
+  end
+
+  def video
+    @videos = Video.where(
+        'lower("titulo") LIKE :tit',
+        tit: '%'+params[:tit].to_s.downcase+'%'
+    ).order('id ASC').paginate(:page => params[:page], :per_page => 10)
+  end
+
+  def video_user
+    @videos = Video.where(
+        'lower("titulo") LIKE :tit AND persona_id = :persona_id',
+        tit: '%'+params[:tit].to_s.downcase+'%', persona_id: params[:id]
+    ).order('id ASC').paginate(:page => params[:page], :per_page => 10)
   end
 end
 

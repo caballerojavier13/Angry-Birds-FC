@@ -114,11 +114,24 @@ FanClub::Application.routes.draw do
   match 'start' => 'inicio#start', :as => :start, :via => :get
   
   match 'admin' => 'admin#index', :as => :admin, :via => :get
+
   match 'admin/usuarios' => 'admin#user', :as => :admin, :via => :get
+
   match 'admin/usuarios/:id' => 'admin#user_edit', :as => :admin, :via => :get
+
   match 'admin/usuarios/:id/noticias' => 'admin#notice_user', :as => :admin, :via => :get
+
+  match 'admin/usuarios/:id/imagenes' => 'admin#picture_user', :as => :admin, :via => :get
+
+  match 'admin/usuarios/:id/videos' => 'admin#video_user', :as => :admin, :via => :get
+
   match 'admin/usuarios/:id/change_atributo' => 'admin#change_atributo', :as => :admin, :via => :put
+
   match 'admin/noticias' => 'admin#notice', :as => :admin, :via => :get
+
+  match 'admin/imagenes' => 'admin#picture', :as => :admin, :via => :get
+
+  match 'admin/videos' => 'admin#video', :as => :admin, :via => :get
 
 
   root :to => 'inicio#start'

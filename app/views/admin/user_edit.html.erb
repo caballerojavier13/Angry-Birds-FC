@@ -67,12 +67,16 @@
             Noticias
           </li>
         </a>
-        <li>
-          Imagenes
-        </li>
-        <li>
-          Videos
-        </li>
+        <a href="/admin/imagenes">
+          <li>
+            Imagenes
+          </li>
+        </a>
+        <a href="/admin/videos">
+          <li>
+            Videos
+          </li>
+        </a>
       </ul>
     </div>
     <div id="main">
@@ -141,12 +145,12 @@
           <h1 class="titulo" style="margin: 20px auto;position: relative;width: 80%;">imagenes</h1>
           <p><%=@total_i.to_i > 1 ? 'Publicó un total de ' + @total_i.to_s + ' imagenes' : (@total_i.to_i > 0 ? 'Publicó una imagen' : 'No publicó ninguna imagen')%></p>
           <div id="grafico_progreso_imagen" style="height: 400px; position: relative; margin: 0 auto; margin-top: 20px;margin-bottom: 20px; width: 800px;"></div>
-          <a style="padding: 0 10px 0 10px" href="#" class="boton">Ver detalles</a>
+          <a style="padding: 0 10px 0 10px" href="/admin/usuarios/<%=params[:id]%>/imagenes" class="boton">Ver detalles</a>
 
           <h1 class="titulo" style="margin: 20px auto;position: relative;width: 80%;">Videos</h1>
           <p><%=@total_v.to_i > 1 ? 'Publicó un total de ' + @total_v.to_s + ' videos' : (@total_v.to_i > 0 ? 'Publicó un video' : 'No publicó ningun video')%></p>
           <div id="grafico_progreso_video" style="height: 400px; position: relative; margin: 0 auto; margin-top: 20px;margin-bottom: 20px; width: 800px;"></div>
-          <a style="padding: 0 10px 0 10px" href="#" class="boton">Ver detalles</a>
+          <a style="padding: 0 10px 0 10px" href="/admin/usuarios/<%=params[:id]%>/videos" class="boton">Ver detalles</a>
         </div>
         <div id="admin" style="display: none" class="contenido">
 

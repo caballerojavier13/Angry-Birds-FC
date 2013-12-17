@@ -60,12 +60,16 @@
         <li class="seleccionado">
           Noticias
         </li>
-        <li>
-          Imagenes
-        </li>
-        <li>
-          Videos
-        </li>
+        <a href="/admin/imagenes">
+          <li>
+            Imagenes
+          </li>
+        </a>
+        <a href="/admin/videos">
+          <li>
+            Videos
+          </li>
+        </a>
       </ul>
     </div>
     <div id="main">
@@ -96,7 +100,7 @@
 
       </div>
       <div id="filtro_busq_boton" class="filtro_busq_boton_show">Mostrar Filtros</div>
-      <div id="listadoUsuario">
+      <div id="listadoNoticia">
         <% @noticias.each do |noti| %>
             <div id="noti_<%=noti.id%>">
                 <div class="limitador"></div>
@@ -116,7 +120,7 @@
                   <div class="limitador3"></div>
                   <a href="/noticias/<%=noti.id%>" style="text-decoration: none; position: relative" ><div class="boton">Ver</div></a>
                   <a href="/noticias/<%=noti.id%>/edit" style="text-decoration: none; position: relative; margin: 0 20px 0 20px" ><div class="boton">Editar</div></a>
-                  <input type="button" value="Eliminar" class="boton" onclick="eliminar(<%=noti.id%>)">
+                  <input type="button" style="cursor: pointer" value="Eliminar" class="boton" onclick="eliminar(<%=noti.id%>)">
 
                 </div>
                 <div class="limitador"></div>
