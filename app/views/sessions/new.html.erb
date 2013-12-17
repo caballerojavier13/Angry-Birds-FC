@@ -53,6 +53,7 @@
     						<div id="form">
                   
     						    <%= form_tag do %>
+                                  <%= hidden_field_tag :redirect_to, params[:redirect_to], :value=>params[:redirect_to].to_s %>
     							<div>
     							    <br/>
     							    <%= text_field_tag :username, params[:username] , :placeholder=> 'Usuario',:class => 'txtInput'%>

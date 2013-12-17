@@ -4,10 +4,10 @@ class MasterSecurityController < ApplicationController
   def authorize
     unless session[:usuario_id].nil?
       unless Persona.find_by_id(session[:usuario_id]).admin
-        redirect_to "/"
+        redirect_to '/'
       end
     else
-      redirect_to "/login"
+      redirect_to '/puto'
     end
   end
 end

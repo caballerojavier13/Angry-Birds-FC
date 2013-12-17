@@ -144,6 +144,11 @@
             <a href="/logout"  >
                 <img src="/picture/exit1.png" style=" margin-top: 30px; margin-left: 20px;">
             </a>
+          <% if Persona.find(session[:usuario_id]).admin %>
+              <a href="/admin/imagenes" style="position: absolute; right: 20px; bottom: 20px;">
+                <img src="/picture/icon/eagle1.png" height="80px" />
+              </a>
+          <% end %>
         </div>      
     </div>
       

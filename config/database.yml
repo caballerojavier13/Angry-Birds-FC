@@ -19,7 +19,7 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: angrybirds_production
+  database: angrybirds_development
   pool: 5
   username: javier
   password: javier
