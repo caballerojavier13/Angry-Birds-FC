@@ -19,7 +19,7 @@
     <data-source source="LOCAL" name="Rails Angry Birds: production" product="PostgreSQL" version="9.1.9" jdbc-version="3.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.1 JDBC3 (build 901)" uuid="16c3df6f-3470-47f7-84b9-6fa48a62cbac">
       <identifier-quote-string>&quot;</identifier-quote-string>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql:angrybirds_production</jdbc-url>
+      <jdbc-url>jdbc:postgresql:angrybirds_development</jdbc-url>
       <user-name>javier</user-name>
       <user-password>dfc0dfcbdfdcdfc3dfcfdfd8</user-password>
       <libraries>

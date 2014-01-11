@@ -14542,3 +14542,489 @@ Started GET "/css/stylesheetNoticiaSlider.css" for 127.0.0.1 at 2013-12-17 15:19
 [Rollbar] Reporting exception: No route matches [GET] "/css/stylesheetNoticiaSlider.css"
 [Rollbar] Scheduling payload
 [Rollbar] Sending payload
+Connecting to database specified by database.yml
+Started GET "/" for 127.0.0.1 at 2013-12-18 23:09:19 -0300
+Processing by InicioController#start as HTML
+  Rendered collection (0.0ms)
+  Rendered inicio/_nada_noticia.html.erb (0.8ms)
+  Rendered inicio/_nada_imagen.html.erb (10.9ms)
+  Rendered inicio/_nada_video.html.erb (1.8ms)
+  Rendered inicio/start.html.erb (63.6ms)
+Completed 200 OK in 652ms (Views: 131.5ms | ActiveRecord: 380.3ms)
+Started GET "/css/stylesheetAll.css" for 127.0.0.1 at 2013-12-18 23:09:20 -0300
+[Rollbar] Reporting exception: No route matches [GET] "/css/stylesheetAll.css"
+[Rollbar] Scheduling payload
+[Rollbar] Sending payload
+[Rollbar] Got unexpected status code from Rollbar api: 401
+[Rollbar] Response: {
+  "err": 1,
+  "message": "unauthorized"
+}
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=ffa37b3d-4327-4e05-895d-9e4faa5c403a (only available if report was successful)
+
+ActionController::RoutingError (No route matches [GET] "/css/stylesheetAll.css"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  rollbar (0.9.13) lib/rollbar/middleware/rails/show_exceptions.rb:13:in `call_with_rollbar'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+[Rollbar] Reporting exception: No route matches [GET] "/css/stylesheetAll.css"
+[Rollbar] Scheduling payload
+[Rollbar] Sending payload
+[Rollbar] Got unexpected status code from Rollbar api: 401
+[Rollbar] Response: {
+  "err": 1,
+  "message": "unauthorized"
+}
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=4ad37a62-aded-4a5a-9f47-b3d008b72158 (only available if report was successful)
+Started GET "/picture/icon/eagle1.png" for 127.0.0.1 at 2013-12-18 23:09:25 -0300
+[Rollbar] Reporting exception: No route matches [GET] "/picture/icon/eagle1.png"
+[Rollbar] Scheduling payload
+[Rollbar] Sending payload
+[Rollbar] Got unexpected status code from Rollbar api: 401
+[Rollbar] Response: {
+  "err": 1,
+  "message": "unauthorized"
+}
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=92ace4b9-3aa0-4b20-bb2d-e6c23cf9469e (only available if report was successful)
+
+ActionController::RoutingError (No route matches [GET] "/picture/icon/eagle1.png"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  rollbar (0.9.13) lib/rollbar/middleware/rails/show_exceptions.rb:13:in `call_with_rollbar'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+[Rollbar] Reporting exception: No route matches [GET] "/picture/icon/eagle1.png"
+[Rollbar] Scheduling payload
+[Rollbar] Sending payload
+[Rollbar] Got unexpected status code from Rollbar api: 401
+[Rollbar] Response: {
+  "err": 1,
+  "message": "unauthorized"
+}
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=9b1b2e28-e7ec-45b9-909a-84266f1924e4 (only available if report was successful)
+Started GET "/nuevas_notificaciones" for 127.0.0.1 at 2013-12-18 23:09:55 -0300
+Processing by NotificationsController#nuevas_notificaciones as */*
+  Rendered collection (0.0ms)
+  Rendered notifications/nuevas_notificaciones.js.erb (3.3ms)
+Completed 200 OK in 34ms (Views: 30.5ms | ActiveRecord: 1.8ms)
+Started GET "/nuevas_notificaciones" for 127.0.0.1 at 2013-12-18 23:10:25 -0300
+Processing by NotificationsController#nuevas_notificaciones as */*
+  Rendered collection (0.0ms)
+  Rendered notifications/nuevas_notificaciones.js.erb (2.2ms)
+Completed 200 OK in 5ms (Views: 2.0ms | ActiveRecord: 1.4ms)
+Started GET "/nuevas_notificaciones" for 127.0.0.1 at 2013-12-18 23:10:55 -0300
+Processing by NotificationsController#nuevas_notificaciones as */*
+  Rendered collection (0.0ms)
+  Rendered notifications/nuevas_notificaciones.js.erb (3.4ms)
+Completed 200 OK in 8ms (Views: 3.0ms | ActiveRecord: 2.3ms)
+Started GET "/nuevas_notificaciones" for 127.0.0.1 at 2013-12-18 23:11:25 -0300
+Processing by NotificationsController#nuevas_notificaciones as */*
+  Rendered collection (0.0ms)
+  Rendered notifications/nuevas_notificaciones.js.erb (1.8ms)
+Completed 200 OK in 4ms (Views: 1.5ms | ActiveRecord: 1.3ms)
+Started GET "/noticias" for 127.0.0.1 at 2013-12-18 23:11:53 -0300
+Processing by NoticiaController#index as HTML
+  Rendered collection (0.0ms)
+  Rendered noticia/_listado.html.erb (186.5ms)
+  Rendered noticia/index.html.erb (199.7ms)
+Completed 200 OK in 214ms (Views: 167.5ms | ActiveRecord: 44.3ms)
+Started GET "/css/stylesheetAll.css" for 127.0.0.1 at 2013-12-18 23:11:53 -0300
+[Rollbar] Reporting exception: No route matches [GET] "/css/stylesheetAll.css"
+[Rollbar] Scheduling payload
+[Rollbar] Sending payload
+[Rollbar] Got unexpected status code from Rollbar api: 401
+[Rollbar] Response: {
+  "err": 1,
+  "message": "unauthorized"
+}
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=1992ccbf-2a77-4b91-81df-84997ab01ac9 (only available if report was successful)
+
+ActionController::RoutingError (No route matches [GET] "/css/stylesheetAll.css"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  rollbar (0.9.13) lib/rollbar/middleware/rails/show_exceptions.rb:13:in `call_with_rollbar'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+[Rollbar] Reporting exception: No route matches [GET] "/css/stylesheetAll.css"
+[Rollbar] Scheduling payload
+[Rollbar] Sending payload
+[Rollbar] Got unexpected status code from Rollbar api: 401
+[Rollbar] Response: {
+  "err": 1,
+  "message": "unauthorized"
+}
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=ab391531-2def-42d1-aaed-1da5cfe9620c (only available if report was successful)
+Started GET "/picture/icon/eagle1.png" for 127.0.0.1 at 2013-12-18 23:11:59 -0300
+[Rollbar] Reporting exception: No route matches [GET] "/picture/icon/eagle1.png"
+[Rollbar] Scheduling payload
+[Rollbar] Sending payload
+[Rollbar] Got unexpected status code from Rollbar api: 401
+[Rollbar] Response: {
+  "err": 1,
+  "message": "unauthorized"
+}
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=acf807d3-8652-418e-88f8-e15751ac202c (only available if report was successful)
+
+ActionController::RoutingError (No route matches [GET] "/picture/icon/eagle1.png"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  rollbar (0.9.13) lib/rollbar/middleware/rails/show_exceptions.rb:13:in `call_with_rollbar'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+[Rollbar] Reporting exception: No route matches [GET] "/picture/icon/eagle1.png"
+[Rollbar] Scheduling payload
+[Rollbar] Sending payload
+[Rollbar] Got unexpected status code from Rollbar api: 401
+[Rollbar] Response: {
+  "err": 1,
+  "message": "unauthorized"
+}
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=d538eaeb-0957-4223-8b69-0398f0b6f411 (only available if report was successful)
+Started GET "/nuevas_notificaciones" for 127.0.0.1 at 2013-12-18 23:12:30 -0300
+Processing by NotificationsController#nuevas_notificaciones as */*
+  Rendered collection (0.0ms)
+  Rendered notifications/nuevas_notificaciones.js.erb (2.1ms)
+Completed 200 OK in 5ms (Views: 2.0ms | ActiveRecord: 1.4ms)
+Started GET "/nuevas_notificaciones" for 127.0.0.1 at 2013-12-18 23:13:00 -0300
+Processing by NotificationsController#nuevas_notificaciones as */*
+  Rendered collection (0.0ms)
+  Rendered notifications/nuevas_notificaciones.js.erb (1.7ms)
+Completed 200 OK in 4ms (Views: 1.4ms | ActiveRecord: 1.3ms)
+Started GET "/picture/icon/eagle1.png" for 127.0.0.1 at 2013-12-18 23:13:00 -0300
+[Rollbar] Reporting exception: No route matches [GET] "/picture/icon/eagle1.png"
+[Rollbar] Scheduling payload
+[Rollbar] Sending payload
+[Rollbar] Got unexpected status code from Rollbar api: 401
+[Rollbar] Response: {
+  "err": 1,
+  "message": "unauthorized"
+}
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=f31bf6d3-078f-43cd-88e5-9b3dd524b49c (only available if report was successful)
+
+ActionController::RoutingError (No route matches [GET] "/picture/icon/eagle1.png"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  rollbar (0.9.13) lib/rollbar/middleware/rails/show_exceptions.rb:13:in `call_with_rollbar'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+[Rollbar] Reporting exception: No route matches [GET] "/picture/icon/eagle1.png"
+[Rollbar] Scheduling payload
+[Rollbar] Sending payload
+[Rollbar] Got unexpected status code from Rollbar api: 401
+[Rollbar] Response: {
+  "err": 1,
+  "message": "unauthorized"
+}
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=e07e3351-38ed-4470-9025-dd25c6369b3f (only available if report was successful)
+Started GET "/css/stylesheet404.css" for 127.0.0.1 at 2013-12-18 23:13:04 -0300
+[Rollbar] Reporting exception: No route matches [GET] "/css/stylesheet404.css"
+[Rollbar] Scheduling payload
+[Rollbar] Sending payload
+[Rollbar] Got unexpected status code from Rollbar api: 401
+[Rollbar] Response: {
+  "err": 1,
+  "message": "unauthorized"
+}
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=aec66cb6-a30a-4f98-bc5f-6e3fbd7c64e6 (only available if report was successful)
+
+ActionController::RoutingError (No route matches [GET] "/css/stylesheet404.css"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  rollbar (0.9.13) lib/rollbar/middleware/rails/show_exceptions.rb:13:in `call_with_rollbar'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+[Rollbar] Reporting exception: No route matches [GET] "/css/stylesheet404.css"
+[Rollbar] Scheduling payload
+[Rollbar] Sending payload
+[Rollbar] Got unexpected status code from Rollbar api: 401
+[Rollbar] Response: {
+  "err": 1,
+  "message": "unauthorized"
+}
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=bf8f96a1-e048-4ec9-88f4-fb4ee9dddeb5 (only available if report was successful)
+Started GET "/picture/error404.jpg" for 127.0.0.1 at 2013-12-18 23:13:12 -0300
+[Rollbar] Reporting exception: No route matches [GET] "/picture/error404.jpg"
+[Rollbar] Scheduling payload
+[Rollbar] Sending payload
+[Rollbar] Got unexpected status code from Rollbar api: 401
+[Rollbar] Response: {
+  "err": 1,
+  "message": "unauthorized"
+}
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=7a085262-7129-45dc-b539-1ed4cc29d761 (only available if report was successful)
+
+ActionController::RoutingError (No route matches [GET] "/picture/error404.jpg"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  rollbar (0.9.13) lib/rollbar/middleware/rails/show_exceptions.rb:13:in `call_with_rollbar'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+[Rollbar] Reporting exception: No route matches [GET] "/picture/error404.jpg"
+[Rollbar] Scheduling payload
+[Rollbar] Sending payload
+[Rollbar] Got unexpected status code from Rollbar api: 401
+[Rollbar] Response: {
+  "err": 1,
+  "message": "unauthorized"
+}
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=15ada6cb-662e-4e17-bd15-f90bb5727c07 (only available if report was successful)
+Started GET "/nuevas_notificaciones" for 127.0.0.1 at 2013-12-18 23:13:30 -0300
+Processing by NotificationsController#nuevas_notificaciones as */*
+  Rendered collection (0.0ms)
+  Rendered notifications/nuevas_notificaciones.js.erb (2.2ms)
+Completed 200 OK in 6ms (Views: 2.3ms | ActiveRecord: 1.4ms)
+Started GET "/nuevas_notificaciones" for 127.0.0.1 at 2013-12-18 23:14:00 -0300
+Processing by NotificationsController#nuevas_notificaciones as */*
+  Rendered collection (0.0ms)
+  Rendered notifications/nuevas_notificaciones.js.erb (2.2ms)
+Completed 200 OK in 5ms (Views: 1.8ms | ActiveRecord: 1.5ms)
+Started GET "/nuevas_notificaciones" for 127.0.0.1 at 2013-12-18 23:14:30 -0300
+Processing by NotificationsController#nuevas_notificaciones as */*
+  Rendered collection (0.0ms)
+  Rendered notifications/nuevas_notificaciones.js.erb (2.5ms)
+Completed 200 OK in 5ms (Views: 2.1ms | ActiveRecord: 1.7ms)
+Started GET "/noticias/3" for 127.0.0.1 at 2013-12-18 23:14:48 -0300
+Processing by NoticiaController#show as HTML
+  Parameters: {"id"=>"3"}
+  Rendered collection (0.0ms)
+  Rendered noticia/show.html.erb (31.0ms)
+Completed 200 OK in 85ms (Views: 32.1ms | ActiveRecord: 31.6ms)
+Started GET "/css/stylesheetAll.css" for 127.0.0.1 at 2013-12-18 23:14:48 -0300
+[Rollbar] Reporting exception: No route matches [GET] "/css/stylesheetAll.css"
+[Rollbar] Scheduling payload
+[Rollbar] Sending payload
+[Rollbar] Got unexpected status code from Rollbar api: 401
+[Rollbar] Response: {
+  "err": 1,
+  "message": "unauthorized"
+}
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=8f9e7c88-c273-422e-8445-adae1b83ff64 (only available if report was successful)
+
+ActionController::RoutingError (No route matches [GET] "/css/stylesheetAll.css"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  rollbar (0.9.13) lib/rollbar/middleware/rails/show_exceptions.rb:13:in `call_with_rollbar'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  rack-cache (1.2) lib/rack/cache/context.rb:136:in `forward'
+  rack-cache (1.2) lib/rack/cache/context.rb:245:in `fetch'
+  rack-cache (1.2) lib/rack/cache/context.rb:185:in `lookup'
+  rack-cache (1.2) lib/rack/cache/context.rb:66:in `call!'
+  rack-cache (1.2) lib/rack/cache/context.rb:51:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+[Rollbar] Reporting exception: No route matches [GET] "/css/stylesheetAll.css"
+[Rollbar] Scheduling payload
+[Rollbar] Sending payload
+[Rollbar] Got unexpected status code from Rollbar api: 401
+[Rollbar] Response: {
+  "err": 1,
+  "message": "unauthorized"
+}
+[Rollbar] Details: https://rollbar.com/instance/uuid?uuid=9f00f419-549a-477e-a69e-5a911cb52d9a (only available if report was successful)
+Connecting to database specified by database.yml
+Compiled jquery.js  (7ms)  (pid 30278)
+Compiled jquery_ujs.js  (0ms)  (pid 30278)
+Compiled calificacions.js  (188ms)  (pid 30278)
+Compiled comments.js  (1ms)  (pid 30278)
+Compiled funcionalidads.js  (0ms)  (pid 30278)
+Compiled imagens.js  (0ms)  (pid 30278)
+Compiled inicio.js  (1ms)  (pid 30278)
+Compiled noticia.js  (0ms)  (pid 30278)
+Compiled notifications.js  (0ms)  (pid 30278)
+Compiled password.js  (1ms)  (pid 30278)
+Compiled personas.js  (1ms)  (pid 30278)
+Compiled reset_password.js  (0ms)  (pid 30278)
+Compiled tipo_usuario_funcionalidads.js  (1ms)  (pid 30278)
+Compiled tipo_usuarios.js  (0ms)  (pid 30278)
+Compiled videos.js  (0ms)  (pid 30278)
+Compiled application.js  (303ms)  (pid 30278)
+Compiled application.css  (0ms)  (pid 30278)
+Connecting to database specified by database.yml
+Compiled jquery.js  (8ms)  (pid 30278)
+Compiled jquery_ujs.js  (0ms)  (pid 30278)
+Compiled calificacions.js  (313ms)  (pid 30278)
+Compiled comments.js  (1ms)  (pid 30278)
+Compiled funcionalidads.js  (1ms)  (pid 30278)
+Compiled imagens.js  (1ms)  (pid 30278)
+Compiled inicio.js  (1ms)  (pid 30278)
+Compiled noticia.js  (1ms)  (pid 30278)
+Compiled notifications.js  (1ms)  (pid 30278)
+Compiled password.js  (1ms)  (pid 30278)
+Compiled personas.js  (1ms)  (pid 30278)
+Compiled reset_password.js  (1ms)  (pid 30278)
+Compiled tipo_usuario_funcionalidads.js  (0ms)  (pid 30278)
+Compiled tipo_usuarios.js  (1ms)  (pid 30278)
+Compiled videos.js  (1ms)  (pid 30278)
+Compiled application.js  (413ms)  (pid 30278)
+Compiled application.css  (0ms)  (pid 30278)
