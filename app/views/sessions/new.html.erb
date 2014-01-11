@@ -25,7 +25,21 @@
 		<p>Cargando...</p>
 	    </div>	
     </div>      
-     <div id="page">	
+     <div id="page">
+       <ul id="social_page">
+         <li class="social_page">
+           <div class="fb-like" data-href="https://www.facebook.com/angrybirdsfc" data-layout="standard" data-action="like" data-show-faces="false" data-share="false"></div>
+         </li>
+         <li class="social_page">
+           <div style="position: relative;margin: 0 auto;">
+             <a href="https://twitter.com/angribirdsfc" class="twitter-follow-button" data-show-count="true" data-lang="es" data-width="350px">Seguir a @angribirdsfc</a>
+           </div>
+         </li>
+         <li class="social_page">
+           <div class="g-follow" data-annotation="bubble" data-height="20" data-href="//plus.google.com/118187301946574138543" data-rel="publisher"></div>
+         </li>
+
+       </ul>
        <div id="body">
     
     	  	<embed src="/music/tema.mp3" loop="1" width="0" height="0">
@@ -34,8 +48,9 @@
       			<div id="imagen">
       				<img  src="/picture/logo2.png"  height="150" >
       			</div>
+
       		</div>
-    
+
       			<img class="nube" id="nube1" src="/picture/nube1.png" >
     			<img class="nube" id="nube2" src="/picture/nube2.png" >
     			<img class="nube" id="nube3" src="/picture/nube3.png" >
@@ -86,6 +101,7 @@
        	
        </div>
        <div id="footer">
+
          <a href="https://plus.google.com/118187301946574138543" rel="publisher" style="color:transparent; cursor: default">Google+</a>
             <div id="contenedor">
                 <div id="list_opc">
@@ -105,18 +121,35 @@
        <div id="tooltip2">Olvidé mi Contraseña</div>
        <div id="fondoMensaje" >
 	   <div id="mensaje" >
-    				<%= form_tag do %>
-                        <label id="labelRecPass">Recuperar Contraseña</label>
-                        <div style="margin-top: 0px; margin-bottom: 10px;">
-		                <%= text_field_tag :mail, session[:mail] , :placeholder=> 'E-mail/usuario',:class => 'txtInput', :id => 'inputMail'%>
-                		</div>
-                        <div style="display: inline;">
-				        <%= submit_tag "", :class => 'boton1' %>
-        			        <img src="/picture/btn_cancel1.png" width="80" class="btn-mail" id="btn_email2" onclick="hide('fondoMensaje')">
-                        </div>
-    				<% end %>
-    			</div>
-    		</div>
+                <%= form_tag do %>
+                    <label id="labelRecPass">Recuperar Contraseña</label>
+                    <div style="margin-top: 0px; margin-bottom: 10px;">
+                    <%= text_field_tag :mail, session[:mail] , :placeholder=> 'E-mail/usuario',:class => 'txtInput', :id => 'inputMail'%>
+                    </div>
+                    <div style="display: inline;">
+                    <%= submit_tag "", :class => 'boton1' %>
+                        <img src="/picture/btn_cancel1.png" width="80" class="btn-mail" id="btn_email2" onclick="hide('fondoMensaje')">
+                    </div>
+                <% end %>
+            </div>
+        </div>
+       <div id="fb-root"></div>
+       <script>(function(d, s, id) {
+           var js, fjs = d.getElementsByTagName(s)[0];
+           if (d.getElementById(id)) return;
+           js = d.createElement(s); js.id = id;
+           js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=221467778006567";
+           fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));</script>
+       <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+       <script type="text/javascript">
+           (function() {
+               var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+               po.src = 'https://apis.google.com/js/platform.js';
+               var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+           })();
+       </script>
      </div>
 	<script src= '/js/script1.js' > </script>
 	<script src= '/js/scriptLoad.js' > </script>
@@ -154,6 +187,7 @@
 	     }
           });
 	</script>
+
   </body>
 
 <html>

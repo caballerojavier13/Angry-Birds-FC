@@ -530,3 +530,24 @@ button.close {
   -webkit-appearance: none;
 }
 
+#social_page{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    list-style: none;
+    width: 500px;
+    overflow: none;
+}
+.social_page{
+    width: 350px;
+}
+
+.uiGrid{
+    width: 350px;
+}
+.pluginConnectButtonLayoutRoot{
+    width: 350px;
+}
+#g-follow{
+    float: left;
+}
