@@ -536,7 +536,7 @@ button.close {
     left: 10px;
     list-style: none;
     width: 500px;
-    overflow: none;
+    z-index: 1000;
 }
 .social_page{
     width: 350px;
