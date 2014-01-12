@@ -2,21 +2,20 @@
 <html>
 <head>
     <link rel="shortcut icon" href="/favicon1.ico" />
-    <title>Angry Birds Fan Club</title>
+    <title><%=@noticium.titulo + ' - Angry Birds Fan Club'%></title>
     <link rel="stylesheet" href="/css/stylesheetNoticia.css">
     <link rel="stylesheet" href="/css/stylesheetAll.css">
     <link rel="stylesheet" type="text/css" href="/css/stylesheetNoScript.css" />
     <link rel="stylesheet" type="text/css" href="/css/stylesheetLoad.css" />
-  <!-- Update your html tag to include the itemscope and itemtype attributes. -->
-  <html itemscope itemtype="http://schema.org/Article">
 
-  <!-- Add the following three tags inside head. -->
-  <meta itemprop="name" content="<%=@noticium.titulo%>">
-  <%if @noticium.cuerpo.size < 200 %>
-      <meta itemprop="description" content="<%= @noticium.cuerpo %>">
-  <%else%>
-      <meta itemprop="description" content="<%= @noticium.cuerpo.at(0..197) +"..."%>">
-  <%end%>
+    <html itemscope itemtype="http://schema.org/Article">
+
+
+    <%if @noticium.cuerpo.size < 200 %>
+      <meta name="description" content="<%= @noticium.cuerpo %>">
+    <%else%>
+      <meta name="description" content="<%= @noticium.cuerpo.at(0..197) +"..."%>">
+    <%end%>
   <%unless @noticium.imagen.nil?%>
       <meta itemprop="image" content="<%=@noticium.imagen.url%>">
   <%else%>
