@@ -7,7 +7,7 @@ class MasterSecurityController < ApplicationController
         redirect_to '/'
       end
     else
-      redirect_to '/puto'
+      redirect_to '/login'
     end
   end
 end

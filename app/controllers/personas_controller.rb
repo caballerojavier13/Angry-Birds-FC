@@ -1,16 +1,16 @@
 #coding: utf-8
-class PersonasController < MasterSecurityController
-  # GET /personas
-  # GET /personas.json
-  
-  def index
-    @personas = Persona.all
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @personas }
+class PersonasController < ApplicationController
+
+  before_filter :authorize, :only => [:destroy]
+  def authorize
+    unless session[:usuario_id].nil?
+      unless Persona.find_by_id(session[:usuario_id]).admin
+        redirect_to '/'
+      end
+    else
+      redirect_to '/login'
     end
   end
-
 
   # GET /personas/new
   # GET /personas/new.json

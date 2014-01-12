@@ -66,8 +66,6 @@ FanClub::Application.routes.draw do
   
 
 
-  match 'personas' => 'personas#index', :as => :personas, :via => :get
-  
   match 'registro' => 'personas#new', :as => :registro, :via => :get
   
   match 'personas' => 'personas#create', :via => :post
