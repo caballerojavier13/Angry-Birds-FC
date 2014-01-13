@@ -36,7 +36,7 @@
   </script>
   <script>
         $(function(){
-            $("meta[property=og:url]").attr("content", $.get("redirect_to"));
+            $("meta[property=og:url]").attr("content", decodeURIComponent($.get("redirect_to")));
         });
 
   </script>
