@@ -1,4 +1,4 @@
-
+<%require 'open-uri'%>
 
   <!DOCTYPE html>
 <html>
@@ -15,31 +15,8 @@
   <meta property="fb:app_id" content="221467778006567" />
 
   <meta property="og:image" content="https://fbcdn-sphotos-b-a.akamaihd.net/hphotos-ak-prn1/t1/q71/1554567_131139587056403_513464977_n.jpg" />
-  <meta property="og:url" content="" />
+  <meta property="og:url" content="<%=URI.unescape(params[:redirect_to])%>" />
 
-  <script>
-      (function($) {
-          $.get = function(key)   {
-              key = key.replace(/[\[]/, '\\[');
-              key = key.replace(/[\]]/, '\\]');
-              var pattern = "[\\?&]" + key + "=([^&#]*)";
-              var regex = new RegExp(pattern);
-              var url = unescape(window.location.href);
-              var results = regex.exec(url);
-              if (results === null) {
-                  return null;
-              } else {
-                  return results[1];
-              }
-          }
-      })(jQuery);
-  </script>
-  <script>
-        $(function(){
-            $("meta[property=og:url]").attr("content", decodeURIComponent($.get("redirect_to")));
-        });
-
-  </script>
 
 </head>
   <body>

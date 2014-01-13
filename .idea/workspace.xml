@@ -42,7 +42,7 @@
     <file path="/video.html.erb" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1387334250269" ignored="false" />
     <file path="/video_user.html.erb" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1387334131903" ignored="false" />
     <file path="/a.dummy" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1389492639997" ignored="false" />
-    <file path="/new.html.erb" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1389575389064" ignored="false" />
+    <file path="/new.html.erb" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1389576164437" ignored="false" />
     <file path="/_comment.html.erb" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1387333527658" ignored="false" />
     <file path="/picture_user.html.erb" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1387334171130" ignored="false" />
     <file path="/stylesheetLogin.css" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1389475951302" ignored="false" />
@@ -73,7 +73,7 @@
       <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/noticia/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="184" column="104" selection-start="8106" selection-end="8106" vertical-scroll-proportion="-17.5">
+            <state line="184" column="80" selection-start="8082" selection-end="8087" vertical-scroll-proportion="-17.5">
               <folding />
             </state>
           </provider>
@@ -82,7 +82,7 @@
       <file leaf-file-name="new.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/sessions/new.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="96" selection-start="1537" selection-end="1537" vertical-scroll-proportion="0.82173175">
+            <state line="13" column="37" selection-start="605" selection-end="625" vertical-scroll-proportion="0.33106962">
               <folding>
                 <element signature="n#style#0;n#img#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#li#1;n#ul#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -964,11 +964,6 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/sessions_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/tipo_usuarios_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
@@ -998,6 +993,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/sessions_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="6" selection-start="56" selection-end="56" vertical-scroll-proportion="0.047923323">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/noticia/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="184" column="80" selection-start="8082" selection-end="8087" vertical-scroll-proportion="-17.5">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/admin/user.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="219" column="52" selection-start="7764" selection-end="7764" vertical-scroll-proportion="-5.7916665">
@@ -1005,16 +1014,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/noticia/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="184" column="104" selection-start="8106" selection-end="8106" vertical-scroll-proportion="-17.5">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/sessions/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="96" selection-start="1537" selection-end="1537" vertical-scroll-proportion="0.82173175">
+        <state line="13" column="37" selection-start="605" selection-end="625" vertical-scroll-proportion="0.33106962">
           <folding>
             <element signature="n#style#0;n#img#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#li#1;n#ul#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
