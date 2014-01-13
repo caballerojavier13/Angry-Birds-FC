@@ -9,7 +9,7 @@
     <meta name="Description" content="Angry Birds Fan Club es una página creada por fanes para fanes sin fines de lucro, con el fin de intercambiar información sobre lo que más nos gusta: Angry Birds y todos sus productos.">
 
 
-  <meta property="og:title" content="Angry Birds Fan Club" />
+  <meta property="og:title" content="<%= params[:redirect_to].sub!(/[?]title=(.*)/i, '') %>" />
   <meta property="fb:app_id" content="221467778006567" />
 
   <meta property="og:image" content="http://angrybirdsfanclub.com.ar/picture/new%20user.png" />
