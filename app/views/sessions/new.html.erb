@@ -10,13 +10,33 @@
 
 
   <% if params[:redirect_to].nil? %>
-  <meta property="og:title" content="Angry Birds Fan Club" />
+      <meta property="og:title" content="Angry Birds Fan Club" />
+      <meta name="Description" content="Angry Birds Fan Club es una página creada por fanes para fanes sin fines de lucro, con el fin de intercambiar información sobre lo que más nos gusta: Angry Birds y todos sus productos.">
+      <meta property="og:image" content="http://angrybirdsfanclub.com.ar/picture/new%20user.png" />
   <%else%>
-    <meta property="og:title" content="<%=Noticium.find(params[:redirect_to].gsub!(/\D/, '').to_i).titulo%>" />
+      <% begin %>
+          <% noticia = Noticium.find(params[:redirect_to].gsub!(/\D/, '').to_i) %>
+          <meta property="og:title" content="<%=noticia.titulo%>" />
+
+          <% if noticia.cuerpo.size < 200 %>
+             <meta name="Description" content="<%= noticia.cuerpo %>">
+          <% else %>
+             <meta name="Description" content="<%= noticia.cuerpo.at(0..197) +'...' %>">
+          <% end %>
+
+          <% if noticia.imagen.nil? %>
+              <meta property="og:image" content="http://angrybirdsfanclub.com.ar/picture/new%20user.png" />
+          <% else %>
+              <meta property="og:image" content="<%= noticia.imagen.url %>" />
+          <% end %>
+
+      <% rescue %>
+          <meta property="og:title" content="Angry Birds Fan Club" />
+          <meta name="Description" content="Angry Birds Fan Club es una página creada por fanes para fanes sin fines de lucro, con el fin de intercambiar información sobre lo que más nos gusta: Angry Birds y todos sus productos.">
+      <% end %>
   <% end %>
   <meta property="fb:app_id" content="221467778006567" />
-  <meta name="Description" content="Angry Birds Fan Club es una página creada por fanes para fanes sin fines de lucro, con el fin de intercambiar información sobre lo que más nos gusta: Angry Birds y todos sus productos.">
-  <meta property="og:image" content="http://angrybirdsfanclub.com.ar/picture/new%20user.png" />
+
 
 </head>
   <body>

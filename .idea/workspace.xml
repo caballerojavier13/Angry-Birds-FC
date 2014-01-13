@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7a837322-c6a4-4023-9153-58d412bae53d" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/noticia/_listado.html.erb" afterPath="$PROJECT_DIR$/app/views/noticia/_listado.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/sessions/new.html.erb" afterPath="$PROJECT_DIR$/app/views/sessions/new.html.erb" />
     </list>
     <ignored path="Angry Birds.iws" />
@@ -42,7 +44,7 @@
     <file path="/video.html.erb" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1387334250269" ignored="false" />
     <file path="/video_user.html.erb" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1387334131903" ignored="false" />
     <file path="/a.dummy" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1389492639997" ignored="false" />
-    <file path="/new.html.erb" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1389586393759" ignored="false" />
+    <file path="/new.html.erb" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1389587519962" ignored="false" />
     <file path="/_comment.html.erb" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1387333527658" ignored="false" />
     <file path="/picture_user.html.erb" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1387334171130" ignored="false" />
     <file path="/stylesheetLogin.css" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1389475951302" ignored="false" />
@@ -94,7 +96,7 @@
       <file leaf-file-name="new.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/sessions/new.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="0" selection-start="447" selection-end="447" vertical-scroll-proportion="0.35775128">
+            <state line="27" column="107" selection-start="1342" selection-end="1342" vertical-scroll-proportion="0.6899489">
               <folding>
                 <element signature="n#style#0;n#img#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#li#1;n#ul#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -103,6 +105,15 @@
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#0;n#div#4;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_listado.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/noticia/_listado.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="65" selection-start="523" selection-end="523" vertical-scroll-proportion="-7.5">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -130,7 +141,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/admin/picture_user.html.erb" />
         <option value="$PROJECT_DIR$/app/views/admin/user.html.erb" />
         <option value="$PROJECT_DIR$/app/views/admin/user_edit.html.erb" />
         <option value="$PROJECT_DIR$/app/views/admin/video.html.erb" />
@@ -145,6 +155,7 @@
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/public/css/stylesheetNoticia.css" />
         <option value="$PROJECT_DIR$/app/views/noticia/show.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/noticia/_listado.html.erb" />
         <option value="$PROJECT_DIR$/app/views/sessions/new.html.erb" />
       </list>
     </option>
@@ -869,7 +880,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32822084" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25850892" sideWeight="0.56288344" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24959481" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.410859" sideWeight="0.56153846" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.410859" sideWeight="0.56153846" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.43846154" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -1024,13 +1035,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/noticia/_listado.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="32" selection-start="684" selection-end="684" vertical-scroll-proportion="-10.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/css/stylesheetNoticia.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1273" column="16" selection-start="26107" selection-end="26107" vertical-scroll-proportion="-9.76">
@@ -1048,9 +1052,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/noticia/_listado.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="65" selection-start="523" selection-end="523" vertical-scroll-proportion="-7.5">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/sessions/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="0" selection-start="447" selection-end="447" vertical-scroll-proportion="0.35775128">
+        <state line="27" column="107" selection-start="1342" selection-end="1342" vertical-scroll-proportion="0.6899489">
           <folding>
             <element signature="n#style#0;n#img#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#li#1;n#ul#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />

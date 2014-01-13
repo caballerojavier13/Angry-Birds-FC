@@ -10,7 +10,7 @@
                     <%if app.cuerpo.size < 200 %>
                         <%=simple_format app.cuerpo%>
                     <%else%>
-                        <%=simple_format app.cuerpo.at(0..197) +"..."%>
+                        <%=simple_format app.cuerpo.at(0..197) +'...'%>
                     <%end%>
                     <div id="covertor">
                         <%= link_to 'Ver más', app %>
