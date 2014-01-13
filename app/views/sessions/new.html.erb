@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="/css/stylesheetLogin.css">
 	<link rel="stylesheet" href="/css/stylesheetNoScript.css">
 	<link rel="stylesheet" type="text/css" href="/css/stylesheetLoad.css" />
-    <meta name="Description" content="Angry Birds Fan Club es una página creada por fanes para fanes sin fines de lucro, con el fin de intercambiar información sobre lo que más nos gusta: Angry Birds y todos sus productos.">
+
 
   <% if params[:redirect_to].nil? %>
   <meta property="og:title" content="Angry Birds Fan Club" />
@@ -16,7 +16,34 @@
   <% end %>
   <meta property="fb:app_id" content="221467778006567" />
 
-  <meta property="og:image" content="http://angrybirdsfanclub.com.ar/picture/new%20user.png" />
+  <% if params[:redirect_to].nil? %>
+      <meta name="Description" content="Angry Birds Fan Club es una página creada por fanes para fanes sin fines de lucro, con el fin de intercambiar información sobre lo que más nos gusta: Angry Birds y todos sus productos.">
+  <%else%>
+      <%if Noticium.find(params[:redirect_to].gsub!(/\D/, '').to_i)cuerpo.size < 200 %>
+          <meta name="Description" content="<%=Noticium.find(params[:redirect_to].gsub!(/\D/, '').to_i).cuerpo%>"/>
+      <%else%>
+          <meta name="Description" content="<%=Noticium.find(params[:redirect_to].gsub!(/\D/, '').to_i).cuerpo.at(0..197) +'...'%> "/>
+      <%end%>
+
+  <% end %>
+
+
+  <% if params[:redirect_to].nil? %>
+      <meta property="og:image" content="http://angrybirdsfanclub.com.ar/picture/new%20user.png" />
+  <%else%>
+      <% if Noticium.find(params[:redirect_to].gsub!(/\D/, '').to_i).imagen.nil? %>
+        <meta property="og:image" content="http://angrybirdsfanclub.com.ar/picture/new%20user.png" />
+      <% else %>
+        <meta property="og:image" content="<%=Noticium.find(params[:redirect_to].gsub!(/\D/, '').to_i).imagen.url%>" />
+      <% end %>
+  <% end %>
+
+
+
+
+
+
+
 
 
 </head>
