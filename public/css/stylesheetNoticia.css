@@ -1273,6 +1273,7 @@ button.close {
 }
 .fb-share-button{
     margin-right: 40px;
+    top: -4px;
 }
 #search{
     position: fixed;
