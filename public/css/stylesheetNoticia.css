@@ -1271,6 +1271,9 @@ button.close {
 .fb-like{
     margin-right: 40px;
 }
+.fb-share-button{
+    margin-right: 40px;
+}
 #search{
     position: fixed;
     top:20px;
