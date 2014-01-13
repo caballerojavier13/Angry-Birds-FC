@@ -3,9 +3,9 @@ ActionMailer::Base.smtp_settings = {
   :port                 => 587,
   :domain               => "gmail.com",
   :user_name            => "angrybirdfanclub",
-  :password             => "36416999",
+  :password             => "Javier13",
   :authentication       => "plain",
   :enable_starttls_auto => true
 }
 
-ActionMailer::Base.default_url_options[:host] = "localhost:3000"
+ActionMailer::Base.default_url_options[:host] = "http://www.angrybirdsfanclub.com.ar/"
