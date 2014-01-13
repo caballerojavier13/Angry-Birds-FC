@@ -8,27 +8,19 @@
     <link rel="stylesheet" type="text/css" href="/css/stylesheetNoScript.css" />
     <link rel="stylesheet" type="text/css" href="/css/stylesheetLoad.css" />
 
-    <html itemscope itemtype="http://schema.org/Article">
-
-
-    <%if @noticium.cuerpo.size < 200 %>
-      <meta name="description" content="<%= @noticium.cuerpo %>">
-    <%else%>
-      <meta name="description" content="<%= @noticium.cuerpo.at(0..197) +"..."%>">
-    <%end%>
-  <%unless @noticium.imagen.nil?%>
-      <meta itemprop="image" content="<%=@noticium.imagen.url%>">
-  <%else%>
-      <meta itemprop="image" content="http://angrybirdsfanclub.com.ar/picture/new%20user.png">
-  <%end%>
-
     <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
 
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
   <div id="fb-root"></div>
+  <script type="text/javascript">
+      var dir = window.document.URL;
+      var dir2 = encodeURIComponent(dir);
+      var tit = window.document.title;
+      var tit2 = encodeURIComponent(tit);
+  </script>
 
-    <script>(function(d, s, id) {
+  <script>(function(d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
       if (d.getElementById(id)) return;
       js = d.createElement(s); js.id = id;
