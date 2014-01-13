@@ -11,10 +11,33 @@
     <meta name="Description" content="Angry Birds Fan Club es una página creada por fanes para fanes sin fines de lucro, con el fin de intercambiar información sobre lo que más nos gusta: Angry Birds y todos sus productos.">
 
 
-  <meta property="og:title" content="Javier Caballero" />
+  <meta property="og:title" content="Angry Birds Fan Club" />
   <meta property="fb:app_id" content="221467778006567" />
-  <meta property="og:type" content="text/html" />
-  <meta property="og:image" content="http://angrybirdsfanclub.com.ar/picture/new%20user.png" />
+  <meta property="og:type" content="Article" />
+  <meta property="og:image" content="https://fbcdn-sphotos-b-a.akamaihd.net/hphotos-ak-prn1/t1/q71/1554567_131139587056403_513464977_n.jpg" />
+  <meta property="og:url" content="" />
+
+  <script>
+      (function($) {
+          $.get = function(key)   {
+              key = key.replace(/[\[]/, '\\[');
+              key = key.replace(/[\]]/, '\\]');
+              var pattern = "[\\?&]" + key + "=([^&#]*)";
+              var regex = new RegExp(pattern);
+              var url = unescape(window.location.href);
+              var results = regex.exec(url);
+              if (results === null) {
+                  return null;
+              } else {
+                  return results[1];
+              }
+          }
+      })(jQuery);
+  </script>
+  <script>
+
+      $("meta[property=og:url]").attr("content", $.get("redirect_to"));
+  </script>
 
 </head>
   <body>
