@@ -19,7 +19,7 @@
   <% if params[:redirect_to].nil? %>
       <meta name="Description" content="Angry Birds Fan Club es una página creada por fanes para fanes sin fines de lucro, con el fin de intercambiar información sobre lo que más nos gusta: Angry Birds y todos sus productos.">
   <%else%>
-      <%if Noticium.find(params[:redirect_to].gsub!(/\D/, '').to_i)cuerpo.size < 200 %>
+      <%if Noticium.find(params[:redirect_to].gsub!(/\D/, '').to_i).cuerpo.size < 200 %>
           <meta name="Description" content="<%=Noticium.find(params[:redirect_to].gsub!(/\D/, '').to_i).cuerpo%>"/>
       <%else%>
           <meta name="Description" content="<%=Noticium.find(params[:redirect_to].gsub!(/\D/, '').to_i).cuerpo.at(0..197) +'...'%> "/>
