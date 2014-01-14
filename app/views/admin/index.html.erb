@@ -174,17 +174,29 @@
                               <tr>
                                 <td>Una Estrella:</td>
                                 <td><%=@estrella1.to_a.size%></td>
-                                <td><%=(( @estrella1.to_a.size.to_f / (@estrella1.to_a.size + @estrella2.to_a.size + @estrella3.to_a.size).to_f )*100).to_i%>%</td>
+                                <% begin %>
+                                    <td><%=(( @estrella1.to_a.size.to_f / (@estrella1.to_a.size + @estrella2.to_a.size + @estrella3.to_a.size).to_f )*100).to_i%>%</td>
+                                <% rescue %>
+                                    <td>0</td>
+                                <% end %>
                               </tr>
                               <tr>
                                 <td>Dos Estrellas:</td>
                                 <td><%=@estrella2.to_a.size%></td>
-                                <td><%=(( @estrella2.to_a.size.to_f / (@estrella1.to_a.size + @estrella2.to_a.size + @estrella3.to_a.size).to_f )*100).to_i%>%</td>
+                                <% begin %>
+                                    <td><%=(( @estrella2.to_a.size.to_f / (@estrella1.to_a.size + @estrella2.to_a.size + @estrella3.to_a.size).to_f )*100).to_i%>%</td>
+                                <% rescue %>
+                                    <td>0</td>
+                                <% end %>
                               </tr>
                               <tr>
                                 <td>Tres Estrellas:</td>
                                 <td><%=@estrella3.to_a.size%></td>
-                                <td><%=(( @estrella3.to_a.size.to_f / (@estrella1.to_a.size + @estrella2.to_a.size + @estrella3.to_a.size).to_f)*100).to_i%>%</td>
+                                <% begin %>
+                                    <td><%=(( @estrella3.to_a.size.to_f / (@estrella1.to_a.size + @estrella2.to_a.size + @estrella3.to_a.size).to_f)*100).to_i%>%</td>
+                                <% rescue %>
+                                    <td>0</td>
+                                <% end %>
                               </tr>
                               <tr>
                                 <td>Total:</td>
