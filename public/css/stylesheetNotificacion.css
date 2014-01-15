@@ -225,12 +225,14 @@ a{
 #list_container li a{
     color: yellow;
     text-shadow: 0 0 2px black;
-    
-    font-size: 40px;   
+
+    font-size: 30px;
     text-align: left; 
 }
 #list_container li a p{
     margin: 20px;
+    font-size: 30px;
+    margin-right: 40px;
 }
 #list_container .unread a{
     color: white;
@@ -241,9 +243,10 @@ a{
 }
 #list_container li a .mark{
     position: absolute;
-    right: 0;
-    top: 0%;
-    width: 10%;
+    right: 10px;
+    top: 50%;
+    margin-top: -20px;
+    width: 40px;
     height: 100%;
 }
 #list_container li a .mark img{

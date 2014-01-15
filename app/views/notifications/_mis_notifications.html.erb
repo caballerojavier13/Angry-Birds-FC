@@ -1,4 +1,5 @@
 <% @notificaciones.each do |noti| %>
+    <% unless Noticium.find_by_id(noti.noticia_id).nil? %>
     <li class = "<%= "unread" if noti.read?%>" >
       <a href="/noticias/<%=noti.noticia_id%>">
         <p>
@@ -24,5 +25,6 @@
        </a>
        
     </li>
+    <% end %>
 <% end %>
 <%= will_paginate @notificaciones, :previous_label => t("< anterior"), :next_label => t("siguiente >"), :page_gap => "...", :outer_window   => '1', :inner_window => '1', :link_separator => ' - ' %>
