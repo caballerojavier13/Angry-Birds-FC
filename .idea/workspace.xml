@@ -8,7 +8,7 @@
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1389891243158" ignored="false" />
     <file path="/a.rxml" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1380475719658" ignored="false" />
-    <file path="/show.html.erb" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1389896783068" ignored="false" />
+    <file path="/show.html.erb" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1389906857956" ignored="false" />
     <file path="/stylesheetNoticia.css" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1385864310739" ignored="false" />
     <file path="/noticia_controller.rb" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1386900565048" ignored="false" />
     <file path="/comments_controller.rb" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1385866744385" ignored="false" />
@@ -79,7 +79,7 @@
       <file leaf-file-name="show.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/noticia/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="262" column="0" selection-start="10871" selection-end="10871" vertical-scroll-proportion="0.18505943">
+            <state line="264" column="0" selection-start="10961" selection-end="11506" vertical-scroll-proportion="0.41426146">
               <folding>
                 <element signature="n#style#0;n#button#0;n#div#0;n#div#3;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#div#5;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1066,7 +1066,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/noticia/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="262" column="0" selection-start="10871" selection-end="10871" vertical-scroll-proportion="0.18505943">
+        <state line="264" column="0" selection-start="10961" selection-end="11506" vertical-scroll-proportion="0.41426146">
           <folding>
             <element signature="n#style#0;n#button#0;n#div#0;n#div#3;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#div#5;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
