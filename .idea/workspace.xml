@@ -51,7 +51,7 @@
     <file path="/registration_confirmation.html.erb" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1389622271405" ignored="false" />
     <file path="/stylesheetNotificacion.css" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1389825054444" ignored="false" />
     <file path="/_mis_notifications.html.erb" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1389825248280" ignored="false" />
-    <file path="/inicio_controller.rb" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1389894871745" ignored="false" />
+    <file path="/inicio_controller.rb" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1389895317007" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +97,7 @@
       <file leaf-file-name="inicio_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/inicio_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="24" selection-start="211" selection-end="211" vertical-scroll-proportion="0.14376996">
+            <state line="6" column="38" selection-start="225" selection-end="225" vertical-scroll-proportion="0.14376996">
               <folding />
             </state>
           </provider>
@@ -1098,7 +1098,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/inicio_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="24" selection-start="211" selection-end="211" vertical-scroll-proportion="0.14376996">
+        <state line="6" column="38" selection-start="225" selection-end="225" vertical-scroll-proportion="0.14376996">
           <folding />
         </state>
       </provider>
