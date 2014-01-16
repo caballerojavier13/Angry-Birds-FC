@@ -254,8 +254,6 @@
             $("#comment_loading").show();
               url = $("#form_comment").attr( 'action' );//obtiene el url declarado en el form en la propiedad action
 
-
-              alert(serializedForm);
               $.post(url, {text_area_comment: serializedForm},
                       function(data){
                           $("#form_comment").show();
