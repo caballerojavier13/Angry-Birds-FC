@@ -182,7 +182,7 @@
         <div id = "new_comment">
             <%= form_tag({controller: "comments", action: "create", noticia:  @noticium.id.to_s, usuario: @usuario_id.to_s} , 'data-type' => 'json', :id=> "form_comment", :remote => "true")  do |f|  %>
                 <div id="text_comment">
-                    <%= text_area_tag :text_area_comment %>
+                    <%= text_area_tag :text_area_comment (:id=>'body_comment') %>
                 </div>
                 <div id="botonera_comment">
                     <%= submit_tag 'Comentar', :id=> 'boton_comment'%>
@@ -251,7 +251,7 @@
             $("#form_comment").hide();
             $("#comment_loading").show();
 
-              var serializedForm = $("#form_comment textarea").val();
+              var serializedForm = $("#body_comment").val();
               serializedForm = 'text_area_comment=' + serializedForm;
               alert(serializedForm);
           });
