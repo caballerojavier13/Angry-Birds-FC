@@ -177,7 +177,6 @@ class NoticiaController < SecurityController
     
     @comment.cuerpo = params[:text_area_comment]
     @comment.save
-    url = "/noticias/" + params[:noticia].to_s + "/comentarios"
       respond_to do |format|
 	    format.js
       end

@@ -182,7 +182,7 @@
         <div id = "new_comment">
             <%= form_tag({controller: "comments", action: "create", noticia:  @noticium.id.to_s, usuario: @usuario_id.to_s} , 'data-type' => 'json', :id=> "form_comment", :remote => "true")  do |f|  %>
                 <div id="text_comment">
-                    <%= text_area_tag :text_area_comment (:id=>'body_comment') %>
+                    <%= text_area_tag(:text_area_comment) %>
                 </div>
                 <div id="botonera_comment">
                     <%= submit_tag 'Comentar', :id=> 'boton_comment'%>
@@ -246,14 +246,22 @@
       });
 	</script>
 	<script>
-          $("form").submit(function () {
+          $("form").submit(function (e) {
+              e.preventDefault();
+              var serializedForm = $("#text_area_comment").val();//Obtienes los campos del formulario
             $("#form_comment textarea").val('');
             $("#form_comment").hide();
             $("#comment_loading").show();
+              url = $("#form_comment").attr( 'action' );//obtiene el url declarado en el form en la propiedad action
 
-              var serializedForm = $("#body_comment").val();
-              serializedForm = 'text_area_comment=' + serializedForm;
+
               alert(serializedForm);
+              $.post(url, {text_area_comment: serializedForm},
+                      function(data){
+                          $("#form_comment").show();
+                          $("#comment_loading").hide();
+                      });
+              return false;
           });
     </script>
 	<script type="text/javascript">
