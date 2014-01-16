@@ -260,23 +260,20 @@
       });  
 	</script>
 	<script>
-	    $(function(){
-	      $("form").submit(function () {  
-	        $("#form_comment textarea").val('');
-	        $("#form_comment").hide();
-	        $("#comment_loading").show();
-	        
-	      });
-	      url = $("#form_comment").attr( 'submit' );//obtiene el url declarado en el form en la propiedad action
-            var serializedForm = $("#form_comment").serialize();//Obtienes los campos del formulario
+          $("form").submit(function () {
+            $("#form_comment textarea").val('');
+            $("#form_comment").hide();
+            $("#comment_loading").show();
 
-            $.post(url, serializedForm,
-               function(data){
-                 $("#form_comment").show();
-                 $("#comment_loading").hide();        
-               });
-            return false;   
-	    });
+          });
+          url = $("#form_comment").attr( 'submit' );//obtiene el url declarado en el form en la propiedad action
+        var serializedForm = $("#form_comment").serialize();//Obtienes los campos del formulario
+
+        $.post(url, serializedForm,
+           function(data){
+             $("#form_comment").show();
+             $("#comment_loading").hide();
+           });
 	    
 	</script>
 	<script type="text/javascript">
