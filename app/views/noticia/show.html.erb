@@ -250,7 +250,9 @@
             $("#form_comment textarea").val('');
             $("#form_comment").hide();
             $("#comment_loading").show();
-              var serializedForm = $("#form_comment").serialize();//Obtienes los campos del formulario
+
+              var serializedForm = $("#form_comment textarea").val();
+              serializedForm = 'text_area_comment=' + serializedForm;
               alert(serializedForm);
           });
     </script>
