@@ -252,22 +252,8 @@
             $("#comment_loading").show();
               var serializedForm = $("#form_comment").serialize();//Obtienes los campos del formulario
               alert(serializedForm);
-//              var request = $.ajax({
-//                  type: "DELETE",
-//                  format: "json",
-//                  url: "/personas/<%= @usuario.id %>/delete"
-//              });
-//
-//              request.done(function(  ) {
-//                  $(location).attr('href',url)
-//              });
-//              request.fail(function(){
-//                  $("#espera").hide();
-//              });
           });
-
-	    
-	</script>
+    </script>
 	<script type="text/javascript">
           $(".circulo").click(function(){
             $("#notif_min").toggle(500);
