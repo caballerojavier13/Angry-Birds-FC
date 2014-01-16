@@ -338,39 +338,36 @@
     </script>
     <%unless @califico%>
 	<script>
-      $(function(){
-
-          $("#star1").hover(
-                  function () {
-                      $("#star1").attr("src", "/picture/icon/star.png");
-                  },
-                  function () {
-                      $("#star1").attr("src", "/picture/icon/star2.png");
-                  }
-          );
-          $("#star2").hover(
-                  function () {
-                      $("#star1").attr("src", "/picture/icon/star.png");
-                      $("#star2").attr("src", "/picture/icon/star.png");
-                  },
-                  function () {
-                      $("#star1").attr("src", "/picture/icon/star2.png");
-                      $("#star2").attr("src", "/picture/icon/star2.png");
-                  }
-          );
-          $("#star3").hover(
-                  function () {
-                      $("#star1").attr("src", "/picture/icon/star.png");
-                      $("#star2").attr("src", "/picture/icon/star.png");
-                      $("#star3").attr("src", "/picture/icon/star.png");
-                  },
-                  function () {
-                      $("#star1").attr("src", "/picture/icon/star2.png");
-                      $("#star2").attr("src", "/picture/icon/star2.png");
-                      $("#star3").attr("src", "/picture/icon/star2.png");
-                  }
-          );
-      });
+      $("#star1").hover(
+              function () {
+                  $("#star1").attr("src", "/picture/icon/star.png");
+              },
+              function () {
+                  $("#star1").attr("src", "/picture/icon/star2.png");
+              }
+      );
+      $("#star2").hover(
+              function () {
+                  $("#star1").attr("src", "/picture/icon/star.png");
+                  $("#star2").attr("src", "/picture/icon/star.png");
+              },
+              function () {
+                  $("#star1").attr("src", "/picture/icon/star2.png");
+                  $("#star2").attr("src", "/picture/icon/star2.png");
+              }
+      );
+      $("#star3").hover(
+              function () {
+                  $("#star1").attr("src", "/picture/icon/star.png");
+                  $("#star2").attr("src", "/picture/icon/star.png");
+                  $("#star3").attr("src", "/picture/icon/star.png");
+              },
+              function () {
+                  $("#star1").attr("src", "/picture/icon/star2.png");
+                  $("#star2").attr("src", "/picture/icon/star2.png");
+                  $("#star3").attr("src", "/picture/icon/star2.png");
+              }
+      );
 	</script>
 	<script>
 	  $("#star1").click(function(){
