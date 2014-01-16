@@ -250,9 +250,8 @@
             $("#form_comment textarea").val('');
             $("#form_comment").hide();
             $("#comment_loading").show();
-              url = $("#form_comment").attr( 'submit' );//obtiene el url declarado en el form en la propiedad action
               var serializedForm = $("#form_comment").serialize();//Obtienes los campos del formulario
-              $.post(url, serializedForm,
+              $.post('/comments?noticia=<%@noticium.id %>&usuario=<% session[:usuario_id] %>', serializedForm,
                       function(data){
                           $("#form_comment").show();
                           $("#comment_loading").hide();
