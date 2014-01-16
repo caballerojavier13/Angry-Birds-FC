@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7a837322-c6a4-4023-9153-58d412bae53d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/inicio_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/inicio_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Angry Birds.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -99,7 +97,7 @@
       <file leaf-file-name="inicio_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/inicio_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="35" selection-start="352" selection-end="352" vertical-scroll-proportion="0.23961662">
+            <state line="6" column="24" selection-start="211" selection-end="211" vertical-scroll-proportion="0.14376996">
               <folding />
             </state>
           </provider>
@@ -1100,7 +1098,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/inicio_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="35" selection-start="352" selection-end="352" vertical-scroll-proportion="0.23961662">
+        <state line="6" column="24" selection-start="211" selection-end="211" vertical-scroll-proportion="0.14376996">
           <folding />
         </state>
       </provider>
