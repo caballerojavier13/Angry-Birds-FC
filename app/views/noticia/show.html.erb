@@ -252,7 +252,6 @@
             $("#comment_loading").show();
               url = $("#form_comment").attr( 'submit' );//obtiene el url declarado en el form en la propiedad action
               var serializedForm = $("#form_comment").serialize();//Obtienes los campos del formulario
-              alert(url);
               $.post(url, serializedForm,
                       function(data){
                           $("#form_comment").show();
