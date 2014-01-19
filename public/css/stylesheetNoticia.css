@@ -689,9 +689,8 @@ a{
     -o-hyphens:auto; hyphens:auto;
     word-wrap:break-word;    
 }
-#noticia {
-    color: #eeee00;
-    text-shadow: 0 0 2px black;
+#noticia p{
+    color: rgba(12,12,12,0.8);
     text-align: justify;
     text-indent: 30px;
     font-size:25px; 
