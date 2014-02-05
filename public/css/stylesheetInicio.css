@@ -644,14 +644,15 @@ button.close {
 #left_door{
     position: absolute;
     height: 100%;
-    width: 50%;
+    width: 398px;
+    border-right: solid 2px;
     left: 0;
     top:0;
     background-image:  url("../picture/piedra1.png");
 }
 #left_door img{
     position: absolute;
-    right: -50px;
+    right: -52px;
     top:50%;
     height: 50px;
     width: 100px;
@@ -663,14 +664,15 @@ button.close {
 #right_door{
     position: absolute;
     height: 400px;
-    width: 400px;
+    border-left: solid 2px;
+    width: 398px;
     left: 400px;
     top:0;
     background-image:  url("../picture/piedra1.png");
 }
 #right_door img{
     position: absolute;
-    left: -50px;
+    left: -52px;
     top:50%;
     height: 50px;
     width: 100px;
