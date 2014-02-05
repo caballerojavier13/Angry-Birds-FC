@@ -1,5 +1,13 @@
 FanClub::Application.routes.draw do
 
+  match 'admin/novedades' => 'novelties#index', :via => :get
+
+  match 'admin/novedad' => 'novelties#create', :via => :post
+
+  match 'admin/novedad/:id' => 'novelties#destroy', :via => :delete
+
+  match 'admin/novedad/:id' => 'novelties#update', :via => :put
+
   resources :notifications
   
   match 'calificacion/:noticia/nueva' => 'calificacions#create', :via => :post
@@ -77,7 +85,8 @@ FanClub::Application.routes.draw do
   match 'personas/:id' => 'personas#update', :via => :put
   
   match 'personas/:id/delete' => 'personas#destroy', :via => :delete
-  
+
+  match 'persona/:id/change_username' => 'personas#change_username', :as => :admin, :via => :put
   
   
     
@@ -90,6 +99,10 @@ FanClub::Application.routes.draw do
   match 'invalid_code' => 'personas#invalid_code', :as => :invalid_code, :via => :get
 
   match 'change_password' => 'personas#change_password', :as => :change_password, :via => :get
+
+  match 'mi_pajaro/:username' => 'personas#show', :as => :show, :via => :get
+
+  match 'persona/:id/change_atributo' => 'personas#change_atributo', :as => :change_atributo, :via => :put
   
   
   

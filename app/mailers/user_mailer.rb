@@ -10,4 +10,8 @@ class UserMailer < ActionMailer::Base
     @persona = persona
     mail(:to => "#{persona.nombre} <#{persona.email}>", :subject => "Reset Password")
   end
+  def change_username(persona)
+    @persona = persona
+    mail(:to => "#{persona.nombre} <#{persona.email}>", :subject => "Cambio de usuario")
+  end
 end

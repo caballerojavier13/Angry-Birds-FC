@@ -13,6 +13,7 @@ class Persona < ActiveRecord::Base
   has_many :calificaciones
   has_many :comments
   has_many :notificaciones
+  has_many :usr_novelties
 
   has_one :tipo_usuario
 
@@ -40,24 +41,16 @@ class Persona < ActiveRecord::Base
 
 #funciones de comprobacion de errores
   def nombre_must_be_present
-    palabra = ""
-    self.nombre.scan(/\w+/) do |a|
-        palabra = palabra + " " + a.capitalize 
-    end
-    self.nombre = palabra 
 	self.nombre.gsub! /\s+/, ' '
 	self.nombre.split(' ').join(' ')
+  self.nombre.capitalize
 	errors.add(" ", "El Nombre no puede estar en blanco.") unless nombre.present?
   end
 
   def apellido_must_be_present
-    palabra = ""
-    self.apellido.scan(/\w+/) do |a|
-        palabra = palabra + " " + a.capitalize 
-    end
-    self.apellido = palabra 
 	self.apellido.gsub! /\s+/, ' '
 	self.apellido.split(' ').join(' ')
+  self.apellido.capitalize
   errors.add(" ", "El Apellido no puede estar en blanco.") unless apellido.present?
   end
 

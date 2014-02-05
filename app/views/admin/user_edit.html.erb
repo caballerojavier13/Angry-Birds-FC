@@ -45,7 +45,7 @@
   </div>
   <div id="fondo_eliminar">
     <div>
-      ¿Desea Eliminar este usuario?
+      ¿Desea eliminar este usuario?
       <a href="#" id="cancel_eliminar">Cancelar </a>
       <a href="#" id="confirm_eliminar">Eliminar </a>
     </div>
@@ -77,10 +77,15 @@
             Videos
           </li>
         </a>
+        <a href="/admin/novedades">
+          <li>
+            Novedades
+          </li>
+        </a>
       </ul>
     </div>
     <div id="main">
-      <h1 id="titulo"><%= @usuario.nombre + @usuario.apellido%></h1>
+      <h1 id="titulo"><%= @usuario.nombre + ' ' + @usuario.apellido%></h1>
       <ul id="pestaña">
         <li class="pestaña_select" data-link="#info" >Información</li>
         <li class="pestaña_no_select"data-link="#pub">Resumen Publicaciones</li>

@@ -9,7 +9,7 @@
 *:focus  {
       outline: none;  
 }
-html, body {#coding: utf-8
+html, body {
     height: 100%;
 }
 a{
@@ -606,8 +606,16 @@ button.close {
     height: 100%;
     top:0;
     left:0;
-    background: rgba(0,0,0,0.6);
     z-index: 1000;
+    display: none;
+    background: rgba(179,250,255,1);
+    background: -moz-linear-gradient(top, rgba(179,250,255,1) 0%, rgba(219,245,255,0.08) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(179,250,255,1)), color-stop(100%, rgba(219,245,255,0.08)));
+    background: -webkit-linear-gradient(top, rgba(179,250,255,1) 0%, rgba(219,245,255,0.08) 100%);
+    background: -o-linear-gradient(top, rgba(179,250,255,1) 0%, rgba(219,245,255,0.08) 100%);
+    background: -ms-linear-gradient(top, rgba(179,250,255,1) 0%, rgba(219,245,255,0.08) 100%);
+    background: linear-gradient(to bottom, rgba(179,250,255,1) 0%, rgba(219,245,255,0.08) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3faff', endColorstr='#dbf5ff', GradientType=0 );
 }
 #novedades{
     position: absolute;
@@ -622,7 +630,7 @@ button.close {
     background-color:#6dd4bc;
     border: yellow solid 2px;
     border-radius: 5px;
-    box-shadow: inset 0 0 10px black;
+    box-shadow: inset 0 0 10px rgba(50,50,50,0.8), 0 0 10px black;
 
 }
 #contenedorNovedades{
@@ -633,14 +641,6 @@ button.close {
     width: 100%;
     height: 100%;
 }
-#close_novedades{
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    right: -10px;
-    top: -10px;
-    z-index: 1001;
-}
 #left_door{
     position: absolute;
     height: 100%;
@@ -649,6 +649,17 @@ button.close {
     top:0;
     background-image:  url("../picture/piedra1.png");
 }
+#left_door img{
+    position: absolute;
+    right: -50px;
+    top:50%;
+    height: 50px;
+    width: 100px;
+    margin-top: -50px;
+    z-index: 2000;
+    -webkit-transform-origin: 50% 100%;
+    transition: linear all 1s;
+}
 #right_door{
     position: absolute;
     height: 400px;
@@ -656,4 +667,100 @@ button.close {
     left: 400px;
     top:0;
     background-image:  url("../picture/piedra1.png");
+}
+#right_door img{
+    position: absolute;
+    left: -50px;
+    top:50%;
+    height: 50px;
+    width: 100px;
+    z-index: 2000;
+    -webkit-transform-origin: 50% 0%;
+    transition: linear all 1s;
+}
+
+#contenedorNovedades h2{
+    position: relative;
+    margin: 0 auto;
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+    font-family: angrybirds;
+    font-size: 40px;
+    color: yellow;
+    text-shadow: 0 0 2px black, 0 0 10px white;
+
+}
+#contenedorNovedades ul{
+    position: relative;
+    margin: 0 auto;
+    width: 80%;
+    list-style: none;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 270px;
+}
+
+#contenedorNovedades ul li{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#contenedorNovedades ul li p{
+    margin: 0 10px 0 10px;
+}
+#contenedorNovedades button{
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    margin-left: -62.5px;
+    height: 50px;
+    width: 115px;
+    background: none;
+    color: #ffffff;
+    text-shadow: 0 0 1px black;
+    font-family: angrybirds;
+    cursor: pointer;
+    font-size: 30px;
+    border: rgba(50,50,50,0.5) solid;
+    padding: 0 5px 0 5px;
+    border-radius: 5px;
+}
+#contenedorNovedades button:hover{
+    text-shadow: 0 0 2px black, 0 0 1px yellow;
+    border: rgba(50,50,50,0.7) solid;
+    background: rgba(100,100,100,0.2);
+}
+#contenedorNovedades button:active{
+    color: lightgray;
+}
+
+
+.limitador3{
+    position: relative;
+    box-shadow: 0 0 10px black;
+    border: solid 1px transparent;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.rota_L{
+    -webkit-transform: rotate(-90deg);
+    transition: linear all 1s;
+}
+.rota_R{
+    -webkit-transform: rotate(-90deg);
+    transition: linear all 1s;
+}
+.neon{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -50px 0 0 -50px;
+    height: 100px;
+    width: 100px;
+    box-shadow: 0 0 200px red;
+    border-radius: 50%;
+    z-index: 1500;
 }

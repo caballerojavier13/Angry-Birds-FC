@@ -101,7 +101,8 @@
                                 </ul>
                                 
                     </nav>
-                    <img src=<%= session[:genero] ? ("/picture/hombre.png") : ("/picture/mujer.png") %> src="" id="fotoPerfil" >
+                  <%= @persona = Persona.find(session[:usuario_id]) %>
+                  <a href="mi_pajaro/<%= @persona.username %>"><img src=<%= @persona.genero ? '/picture/hombre.png' : '/picture/mujer.png' %> src="" id="fotoPerfil" ></a>
                 </div>
                 <div id="titulo" class="borde">
                     Mis Noticias

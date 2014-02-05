@@ -1,0 +1,256 @@
+#coding: utf-8
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Angry Birds Fan Club</title>
+  <link rel="shortcut icon" href="/favicon1.ico" />
+  <link rel="stylesheet" href="/css/stylesheetAll.css">
+
+  <link rel="stylesheet" type="text/css" href="/css/stylesheetNoScript.css" />
+  <link rel="stylesheet" type="text/css" href="/css/stylesheetLoad.css" />
+  <link rel="stylesheet" type="text/css" href="/css/stylesheetadmin.css" />
+
+</head>
+<body>
+<div id="loading">
+  <div id="background"></div>
+  <div id="midground"></div>
+  <div id="foreground"></div>
+  <div id="tapa"></div>
+  <div class="bokeh">
+    <img id="bokeh1" src="/picture/space/ice.png" height="100px" >
+    <img id="bokeh2" src="/picture/space/bomb.png" height="100px">
+    <img id="bokeh3" src="/picture/space/green.png" height="100px">
+    <img id="bokeh4" src="/picture/space/laser.png" height="100px">
+    <div id="circulo"></div>
+  </div>
+  <div id="bokehText">
+    <p>Cargando...</p>
+  </div>
+</div>
+<div id="page">
+  <div id="fondo_eliminar">
+    <div>
+      ¿Desea eliminar esta novedad?
+      <a href="#" id="cancel_eliminar">Cancelar </a>
+      <a href="#" id="confirm_eliminar" data-id="" >Eliminar </a>
+    </div>
+  </div>
+  <div id="fondo_editar">
+
+    <div>
+      <img src="/picture/icon/close-icon.png" />
+        <form>
+          <textarea></textarea>
+          <button type="submit">Editar</button>
+        </form>
+
+    </div>
+  </div>
+   <div id="body">
+    <div id="header">
+      <p>Administrador</p>
+      <ul>
+        <a href="/admin">
+          <li>
+            Resumen
+          </li>
+        </a>
+        <a href="/admin/usuarios">
+          <li>
+            Usuarios
+          </li>
+        </a>
+        <a href="/admin/noticias">
+          <li>
+            Noticias
+          </li>
+        </a>
+        <a href="/admin/imagenes">
+          <li>
+            Imagenes
+          </li>
+        </a>
+        <a href="/admin/videos">
+          <li>
+            Videos
+          </li>
+        </a>
+        <li class="seleccionado">
+            Novedades
+        </li>
+      </ul>
+    </div>
+    <div id="main">
+      <h1 id="titulo" style="margin-top: -40px; margin-bottom: 30px;">Novedades</h1>
+
+      <%= render 'listado' %>
+
+      <div id="new_novelty" >
+        <img src="/picture/gif_loading/6.png"/>
+        <form>
+          <textarea name="message"></textarea>
+          <button type="submit">Agregar Novedad</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div id="footer">
+    <a href="/" style="position: absolute; right: 20px; bottom: 15px;">
+      <img src="/picture/icon/to_normal.png" height="80px" />
+    </a>
+    <a href="/logout" style="position: absolute; left:20px; bottom: 0px;">
+      <img src="/picture/exit1.png" style=" margin-top: 30px; margin-left: 20px;">
+
+    </a>
+  </div>
+
+
+
+<script src= '/js/scriptLoad.js' > </script>
+<script language="javascript">
+    window.onload = inicio;
+</script>
+<noscript><div id="noscript"><br/>Javascript deshabilitado: para poder apreciar la pagina web por favor activa javascript en tu navegador</div></noscript>
+<script src="/js/jquery-1.7.1.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="/js/jquery-ui-1.10.3.custom.min.js" ></script>
+<script src="/js/jquery.backgroundPosition.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(function(){
+
+        $('#midground').css({backgroundPosition: '0px 0px'});
+        $('#foreground').css({backgroundPosition: '0px 0px'});
+        $('#background').css({backgroundPosition: '0px 0px'});
+
+        $('#midground').animate({
+            backgroundPosition:"(-10000px -2000px)"
+        }, 240000, 'linear');
+
+        $('#foreground').animate({
+            backgroundPosition:"(-10000px -2000px)"
+        }, 120000, 'linear');
+
+        $('#background').animate({
+            backgroundPosition:"(-10000px -2000px)"
+        }, 480000, 'linear');
+
+    });
+</script>
+<script>
+    $(function() {
+        if ($.browser.opera || $.browser.msie ) {
+            alert( "Por favor no uses este navegador. Usa firefox o Chrome. Si no los tienes instalalos." );
+        }
+    });
+</script>
+  <script>
+    function eliminar(id){
+        $("#confirm_eliminar").attr("data-id" , id);
+        $("#fondo_eliminar").show();
+    }
+    function editar(id){
+        $("#fondo_editar textarea").val($("#novedad_" + id + " p").html());
+        $("#fondo_editar form").attr("data-id" , id);
+        $("#fondo_editar").show();
+    }
+  </script>
+  <script>
+      $(".delete").click(function(e){
+          e.preventDefault();
+          $("#confirm_eliminar").attr("data-id" , $(this).attr("data-id"));
+          $("#fondo_eliminar").show();
+      });
+      $(".edit").click(function(){
+          $("#fondo_editar textarea").val($("#novedad_" + $(this).attr("data-id") + " p").html());
+          $("#fondo_editar form").attr("data-id" , $(this).attr("data-id"));
+          $("#fondo_editar").show();
+      });
+      $("#cancel_eliminar").click(function(){
+          $("#fondo_eliminar").hide("blind",1000);
+      });
+
+      $("#confirm_eliminar").click(function(){
+          $("#fondo_eliminar").fadeOut();
+          var id = $(this).attr("data-id");
+          var request = $.ajax({
+              url: "/admin/novedad/" + id,
+              type: "DELETE"
+          });
+
+          request.done(function( msg ) {
+              $("#novedad_" + id).hide("blind", 2000);
+
+          });
+      });
+      $("#fondo_editar img").click(function(){
+          $("#fondo_editar").hide();
+      });
+  </script>
+  <script>
+      $("#fondo_editar form").submit(function(e){
+          e.preventDefault();
+          var serializedForm = $("#fondo_editar textarea").val();//Obtienes los campos del formulario
+          var elemento = "#novedad_" + $("#fondo_editar form").attr("data-id") + " p";
+
+          var url = "/admin/novedad/" + $("#fondo_editar form").attr("data-id");
+          $.ajax({
+              type: "PUT",
+              url: url,
+              data: { message: serializedForm}
+          })
+                  .done(function( msg ) {
+                      $(elemento).html(serializedForm);
+                      $("#fondo_editar").hide();
+                  });
+          return false;
+      });
+      $(function(){
+          $("#fondo_editar button").prop('disabled', true);
+          $("#fondo_editar textarea").bind('input propertychange', function() {
+              if($('#fondo_editar textarea').val().length > 0){
+                  $("#fondo_editar form button").prop('disabled', false);
+              }else{
+                  $("#fondo_editar form button").prop('disabled', true);
+              }
+          });
+      });
+  </script>
+  <script>
+      $("#new_novelty form").submit(function (e) {
+          e.preventDefault();
+          var serializedForm = $("#new_novelty textarea").val();//Obtienes los campos del formulario
+          $("#new_novelty textarea").val('');
+          $("#new_novelty form").hide("blind",1000);
+
+          setTimeout(function(){
+              $("#new_novelty img").show();
+              $("#new_novelty img").animate( { opacity: "1" }, 2000, "linear" );
+              url = "/admin/novedad"
+              $.post(url, {message: serializedForm},
+                      function(data){
+                          $("#new_novelty button").prop('disabled', true);
+                          $("#new_novelty img").animate( { opacity: "0" }, 2000, "linear" );
+                          $("#new_novelty img").hide();
+                          $("#new_novelty form").show("blind",1000);
+                      }
+              );
+          },2000);
+
+
+          return false;
+      });
+      $(function(){
+          $("#new_novelty button").prop('disabled', true);
+          $("#new_novelty textarea").bind('input propertychange', function() {
+              if($('#new_novelty textarea').val().length > 0){
+                  $("#new_novelty button").prop('disabled', false);
+              }else{
+                  $("#new_novelty button").prop('disabled', true);
+              }
+          });
+      });
+  </script>
+</div>
+</body>
+</html>
+

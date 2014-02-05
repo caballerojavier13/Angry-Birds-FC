@@ -1,0 +1,2 @@
+#coding: utf-8
+$('#listado_novedades').prepend('<li id="<%= 'novedad_' + @novelty.id.to_s %>"><div class="limitador3" style="width: 100%"></div><img class="delete" onclick="eliminar(<%= @novelty.id %>)" src="/picture/delete.png" data-id="<%= @novelty.id %>" /><img class="edit" onclick="editar(<%= @novelty.id %>)" src="/picture/edit.png" data-id="<%= @novelty.id %>" /><p><%= @novelty.message%></p></li>');

@@ -240,7 +240,19 @@ class AdminController < MasterSecurityController
 
   def change_atributo
     @persona = Persona.find params[:id]
-    @persona.change_data_account(params[:atributo],params[:valor])
+
+    if params[:atributo] == 'genero'
+      session[:genero] = params[:valor]
+      cookies[:genero] = { :value =>params[:valor], :expires => 1.week.from_now }
+      if params[:valor] == 'true'
+        @persona.change_data_account(params[:atributo],true)
+      else
+        @persona.change_data_account(params[:atributo],false)
+      end
+    else
+      @persona.change_data_account(params[:atributo],params[:valor])
+    end
+
   end
 
 

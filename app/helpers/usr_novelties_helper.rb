@@ -1,0 +1,2 @@
+module UsrNoveltiesHelper
+end

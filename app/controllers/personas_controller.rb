@@ -33,6 +33,8 @@ class PersonasController < ApplicationController
     @persona.activo=false
     @persona.bloqueado=false
     @persona.admin=false
+
+
     
     respond_to do |format|
       if @persona.save
@@ -54,6 +56,15 @@ class PersonasController < ApplicationController
   		if @persona.codigo == params[:codigo]
   			@persona.activate! 
   			session[:usuario_id] = @persona.id
+        @novelties = Novelty.all
+
+        @novelties.each do|n|
+          usr_novelty = UsrNovelty.new
+          usr_novelty.persona = @persona
+          usr_novelty.novelty = n
+          usr_novelty.viewed = false
+          usr_novelty.save
+        end
   			redirect_to "/start"
   		else
   			redirect_to "/error_activation"
@@ -161,4 +172,60 @@ class PersonasController < ApplicationController
     end
 
   end
+
+  def show
+    @usuario = Persona.find_by_username(params[:username])
+    if session[:usuario_id].to_s != @usuario.id.to_s
+        redirect_to '/'
+    end
+    @year_fin = Date.today.year
+    @year_inicio = @year_fin - 100
+  end
+
+
+  def change_atributo
+    @persona = Persona.find params[:id]
+    if session[:usuario_id].to_s != @persona.id.to_s
+      redirect_to '/'
+    end
+    if params[:atributo] == 'genero'
+
+      if params[:valor] == 'true'
+        @persona.change_data_account(params[:atributo],true)
+        session[:genero] = true
+        cookies[:genero] = { :value =>true, :expires => 1.week.from_now }
+      else
+        @persona.change_data_account(params[:atributo],false)
+        session[:genero] = false
+        cookies[:genero] = { :value =>false, :expires => 1.week.from_now }
+      end
+    else
+      @persona.change_data_account(params[:atributo],params[:valor])
+    end
+
+  end
+
+  def change_username
+    @persona = Persona.find params[:id]
+    if session[:usuario_id].to_s == @persona.id.to_s
+      unless @persona.username == params[:valor]
+        if params[:valor].size > 3
+          if Persona.find_all_by_username(params[:valor]).at(0).nil?
+            @persona.change_data_account('username',params[:valor])
+            UserMailer.change_username(@persona).deliver
+            @error = false
+          else
+            @mensaje = 'El usuario ya existe'
+            @error = true
+          end
+        else
+          @error = true
+          @mensaje = 'El usuario tiene un formato incorrecto'
+        end
+
+      end
+    end
+
+  end
+
 end
