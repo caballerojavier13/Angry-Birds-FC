@@ -27,7 +27,7 @@ html, body {
     width: 50px;
     height: 50px;
     left: 50px;
-    top: 50%;
+    top: 50%;                  entonces una tia
     margin-top: -25px;
     opacity:0.3;
     cursor: pointer;
@@ -176,9 +176,10 @@ html, body {
      text-shadow: 3px 3px 4px rgba(0,0,0,0.6); 
 }
 #fotoPerfil{
-    position: relative;
-    left: 95%;
-    top: -40px;
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    width: 40px;
 }
 .borde{
     margin: 0 auto;
