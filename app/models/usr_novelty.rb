@@ -8,4 +8,8 @@ class UsrNovelty < ActiveRecord::Base
 
   scope :no_vista, -> { where :viewed => false }
 
+  def visto!
+    self.update_attribute(:viewed, true)
+  end
+
 end

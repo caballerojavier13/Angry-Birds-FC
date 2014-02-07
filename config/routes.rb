@@ -8,6 +8,8 @@ FanClub::Application.routes.draw do
 
   match 'admin/novedad/:id' => 'novelties#update', :via => :put
 
+  match 'admin/novedad/mark_read/:id' => 'novelties#mark_read', :via => :put
+
   resources :notifications
   
   match 'calificacion/:noticia/nueva' => 'calificacions#create', :via => :post

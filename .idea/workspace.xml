@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7a837322-c6a4-4023-9153-58d412bae53d" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/novelties/mark_read.js.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/imagens/index.html.erb" afterPath="$PROJECT_DIR$/app/views/imagens/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/imagens/mis_imagenes.html.erb" afterPath="$PROJECT_DIR$/app/views/imagens/mis_imagenes.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/stylesheetImagen.css" afterPath="$PROJECT_DIR$/public/css/stylesheetImagen.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/novelties_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/novelties_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/inicio/start.html.erb" afterPath="$PROJECT_DIR$/app/views/inicio/start.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/usr_novelty.rb" afterPath="$PROJECT_DIR$/app/models/usr_novelty.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Angry Birds.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,7 +34,7 @@
     <file path="/20131209020043_add_column_admin.rb" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1386554470292" ignored="false" />
     <file path="/seeds.rb" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1386555226596" ignored="false" />
     <file path="/master_security_controller.rb" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1389492672917" ignored="false" />
-    <file path="/start.html.erb" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1391560147585" ignored="false" />
+    <file path="/start.html.erb" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1391731419929" ignored="false" />
     <file path="/security_controller.rb" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1387304086615" ignored="false" />
     <file path="/sessions_controller.rb" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1387304160823" ignored="false" />
     <file path="/stylesheetAll.css" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1386621265473" ignored="false" />
@@ -62,10 +65,10 @@
     <file path="/20140124200310_create_usr_novelties.rb" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1390594008342" ignored="false" />
     <file path="/20140124200815_create_novelties.rb" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1390594386254" ignored="false" />
     <file path="/_listado.erb" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1390928571639" ignored="false" />
-    <file path="/novelties_controller.rb" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1391558983887" ignored="false" />
+    <file path="/novelties_controller.rb" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1391731546240" ignored="false" />
     <file path="/create.js.erb" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1391091291923" ignored="false" />
     <file path="/novelty.rb" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1391089648012" ignored="false" />
-    <file path="/usr_novelty.rb" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1391559084018" ignored="false" />
+    <file path="/usr_novelty.rb" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1391731016070" ignored="false" />
     <file path="/destroy.js.erb" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1391090719538" ignored="false" />
     <file path="/change_username.js.erb" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1391231904121" ignored="false" />
     <file path="/change_username.erb" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1391230133947" ignored="false" />
@@ -95,28 +98,55 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="novelties_controller.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controllers/novelties_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="101" column="49" selection-start="2058" selection-end="2058" vertical-scroll-proportion="0.496875">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routes.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/routes.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="78" selection-start="371" selection-end="371" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="start.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/inicio/start.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="245" column="22" selection-start="8536" selection-end="8536" vertical-scroll-proportion="-15.375">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/imagens/index.html.erb">
+        <entry file="file://$PROJECT_DIR$/app/views/novelties/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="76" selection-start="404" selection-end="404" vertical-scroll-proportion="-5.0">
+            <state line="194" column="10" selection-start="5805" selection-end="6005" vertical-scroll-proportion="-3.5">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mis_imagenes.html.erb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/imagens/mis_imagenes.html.erb">
+      <file leaf-file-name="persona.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/persona.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="76" selection-start="400" selection-end="400" vertical-scroll-proportion="0.39344263">
+            <state line="132" column="7" selection-start="3618" selection-end="3678" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="stylesheetImagen.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/css/stylesheetImagen.css">
+      <file leaf-file-name="usr_novelty.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/usr_novelty.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="181" column="16" selection-start="4029" selection-end="4029" vertical-scroll-proportion="-6.44">
+            <state line="11" column="33" selection-start="248" selection-end="248" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -148,10 +178,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/models/novelty.rb" />
-        <option value="$PROJECT_DIR$/app/models/persona.rb" />
-        <option value="$PROJECT_DIR$/public/css/stylesheetInicio.css" />
-        <option value="$PROJECT_DIR$/app/views/inicio/start.html.erb" />
         <option value="$PROJECT_DIR$/app/views/noticia/show.html.erb" />
         <option value="$PROJECT_DIR$/app/views/noticia/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/noticia/mis_noticias.html.erb" />
@@ -164,6 +190,10 @@
         <option value="$PROJECT_DIR$/public/css/stylesheetImagen.css" />
         <option value="$PROJECT_DIR$/app/views/imagens/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/imagens/mis_imagenes.html.erb" />
+        <option value="$PROJECT_DIR$/app/models/usr_novelty.rb" />
+        <option value="$PROJECT_DIR$/config/routes.rb" />
+        <option value="$PROJECT_DIR$/app/views/inicio/start.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/novelties_controller.rb" />
       </list>
     </option>
   </component>
@@ -308,7 +338,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="imagens" />
+              <option name="myItemId" value="novelties" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -323,6 +353,64 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="inicio" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Angry Birds" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Angry Birds" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Angry Birds" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Angry Birds" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Angry Birds" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Angry Birds" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -628,7 +716,9 @@
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="ENVIRONMENT_TYPE" VALUE="development" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="BROWSER_URL" VALUE="http://0.0.0.0:3000" />
       <RAILS_SERVER_CONFIG_SETTINGS_ID NAME="LAUNCH_JS" VALUE="true" />
+      <RunnerSettings RunnerId="RubyDebugRunner" />
       <RunnerSettings RunnerId="RubyRunner" />
+      <ConfigurationWrapper RunnerId="RubyDebugRunner" />
       <ConfigurationWrapper RunnerId="RubyRunner" />
       <method />
     </configuration>
@@ -731,13 +821,13 @@
       <method />
     </configuration>
     <list size="7">
-      <item index="0" class="java.lang.String" itemvalue="Rake.db:migrate" />
-      <item index="1" class="java.lang.String" itemvalue="Rails.Production: Angry Birds" />
-      <item index="2" class="java.lang.String" itemvalue="Rails.Development: Angry Birds" />
-      <item index="3" class="java.lang.String" itemvalue="Rake.test" />
-      <item index="4" class="java.lang.String" itemvalue="Rake.spec" />
-      <item index="5" class="java.lang.String" itemvalue="Rake.assets:precompile" />
-      <item index="6" class="java.lang.String" itemvalue="Gem Command.Unnamed" />
+      <item index="0" class="java.lang.String" itemvalue="Rails.Production: Angry Birds" />
+      <item index="1" class="java.lang.String" itemvalue="Rails.Development: Angry Birds" />
+      <item index="2" class="java.lang.String" itemvalue="Rake.test" />
+      <item index="3" class="java.lang.String" itemvalue="Rake.spec" />
+      <item index="4" class="java.lang.String" itemvalue="Rake.assets:precompile" />
+      <item index="5" class="java.lang.String" itemvalue="Gem Command.Unnamed" />
+      <item index="6" class="java.lang.String" itemvalue="Rake.db:migrate" />
     </list>
     <recent_temporary>
       <list size="1">
@@ -802,19 +892,19 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32822084" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32615384" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25777414" sideWeight="0.56318253" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24959481" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33577237" sideWeight="0.5661538" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33577237" sideWeight="0.56635803" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4353846" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.43384615" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.43364197" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32854864" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32615384" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3276923" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -883,46 +973,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/noticia/_listado.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/noticia/_nada.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/inicio/start.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="14" selection-start="985" selection-end="985" vertical-scroll-proportion="0.025553662" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/stylesheetInicio.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="674" column="13" selection-start="15097" selection-end="15097" vertical-scroll-proportion="0.024549918" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/noticia/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="20" selection-start="3487" selection-end="3487" vertical-scroll-proportion="0.80035335" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/noticia/new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="22" selection-start="3007" selection-end="3007" vertical-scroll-proportion="0.47189096" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/noticia/mis_noticias.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="103" column="20" selection-start="4141" selection-end="4141" vertical-scroll-proportion="0.52640545" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/noticia/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="97" column="20" selection-start="3838" selection-end="3838" vertical-scroll-proportion="0.3475298" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/noticia/edit.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="79" column="20" selection-start="3031" selection-end="3031" vertical-scroll-proportion="0.025553662" />
@@ -948,13 +998,6 @@
         <state line="76" column="20" selection-start="2998" selection-end="2998" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/stylesheetImagen.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="181" column="16" selection-start="4029" selection-end="4029" vertical-scroll-proportion="-6.44">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/imagens/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="76" selection-start="404" selection-end="404" vertical-scroll-proportion="-5.0">
@@ -965,6 +1008,69 @@
     <entry file="file://$PROJECT_DIR$/app/views/imagens/mis_imagenes.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="76" selection-start="400" selection-end="400" vertical-scroll-proportion="0.39344263">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/stylesheetImagen.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="181" column="16" selection-start="4029" selection-end="4029" vertical-scroll-proportion="0.52960527">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/novelties/mark_read.js.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/persona.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="132" column="7" selection-start="3618" selection-end="3678" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/inicio_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="32" selection-start="343" selection-end="749" vertical-scroll-proportion="0.44334975">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/usr_novelty.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="33" selection-start="248" selection-end="248" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="78" selection-start="371" selection-end="371" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/novelties/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="194" column="10" selection-start="5805" selection-end="6005" vertical-scroll-proportion="-3.5">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/inicio/start.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="245" column="22" selection-start="8536" selection-end="8536" vertical-scroll-proportion="-15.375">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/novelties_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="101" column="49" selection-start="2058" selection-end="2058" vertical-scroll-proportion="0.496875">
           <folding />
         </state>
       </provider>

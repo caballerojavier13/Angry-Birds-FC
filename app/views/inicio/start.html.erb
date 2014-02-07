@@ -240,6 +240,11 @@
     </script>
     <script>
       $("#contenedorNovedades button").click(function(){
+          var url = "/admin/novedad/mark_read/<%= @persona.id %>";
+          $.ajax({
+              type: "PUT",
+              url: url
+          })
           $("#right_door").animate( { left: "400px" }, 2000, "easeOutBounce" );
           $("#left_door").animate( { left: "0px" }, 2000, "easeOutBounce" );
           setTimeout(

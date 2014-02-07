@@ -98,4 +98,10 @@ class NoveltiesController < MasterSecurityController
       end
     end
   end
+  def mark_read
+    @usr_novelties = UsrNovelty.no_vista.find_all_by_persona_id( params[:id])
+    @usr_novelties.each do |u|
+      u.visto!
+    end
+  end
 end
