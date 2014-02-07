@@ -102,7 +102,7 @@ FanClub::Application.routes.draw do
 
   match 'change_password' => 'personas#change_password', :as => :change_password, :via => :get
 
-  match 'mi_pajaro/:username' => 'personas#show', :as => :show, :via => :get
+  match 'mi_pajaro/:id' => 'personas#show', :as => :show, :via => :get
 
   match 'persona/:id/change_atributo' => 'personas#change_atributo', :as => :change_atributo, :via => :put
   

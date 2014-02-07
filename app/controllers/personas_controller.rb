@@ -174,7 +174,7 @@ class PersonasController < ApplicationController
   end
 
   def show
-    @usuario = Persona.find_by_username(params[:username])
+    @usuario = Persona.find(params[:id])
     if session[:usuario_id].to_s != @usuario.id.to_s
         redirect_to '/'
     end

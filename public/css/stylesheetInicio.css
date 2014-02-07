@@ -709,6 +709,8 @@ button.close {
 }
 #contenedorNovedades ul li p{
     margin: 0 10px 0 10px;
+    font-size: 20px;
+    font-weight: bold;
 }
 #contenedorNovedades button{
     position: absolute;
