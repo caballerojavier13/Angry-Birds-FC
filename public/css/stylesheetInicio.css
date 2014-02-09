@@ -266,16 +266,19 @@ a{
 #imagen{
     text-align: center;
 }
-@media all and (max-width: 1024px){
+@media all and (min-width: 1280px){
     #visorNoticia{
-        width: 710px;
+        width: 80%;
+        min-width: 600px;
+        max-width: 1100px;
         position: relative;
         height: 400px;
         margin-top: 60px;
         background-color:#6dd4bc;
     }
     #visorImagen{
-        width: 710px;
+        width: 80%;
+        min-width: 600px;
         position: relative;
         height: 410px;
         margin-top: 60px;
@@ -283,7 +286,8 @@ a{
         background-color:#6dd4bc;
     }
     #visorVideo{
-        width: 710px;
+        width: 80%;
+        min-width: 600px;
         position: relative;
         margin-top: 60px;
         background-color:#6dd4bc;
@@ -314,19 +318,16 @@ a{
         max-width: 1100px;
     }
 }
-@media all and (min-width: 1280px){
+@media all and (max-width: 1024px){
     #visorNoticia{
-        width: 80%;
-        min-width: 600px;
-        max-width: 1100px;
+        width: 710px;
         position: relative;
         height: 400px;
         margin-top: 60px;
         background-color:#6dd4bc;
     }
     #visorImagen{
-        width: 80%;
-        min-width: 600px;
+        width: 710px;
         position: relative;
         height: 410px;
         margin-top: 60px;
@@ -334,14 +335,15 @@ a{
         background-color:#6dd4bc;
     }
     #visorVideo{
-        width: 80%;
-        min-width: 600px;
+        width: 710px;
         position: relative;
         margin-top: 60px;
         background-color:#6dd4bc;
         max-width: 1100px;
     }
 }
+
+
 #visorNoticia #icono{
     position: absolute;
     top: -50px;
