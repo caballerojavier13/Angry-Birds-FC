@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7a837322-c6a4-4023-9153-58d412bae53d" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/stylesheetInicio.css" afterPath="$PROJECT_DIR$/public/css/stylesheetInicio.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/stylesheetNoticiaSlider.css" afterPath="$PROJECT_DIR$/public/css/stylesheetNoticiaSlider.css" />
     </list>
     <ignored path="Angry Birds.iws" />
@@ -52,7 +53,7 @@
     <file path="/stylesheetNotificacion.css" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1389825054444" ignored="false" />
     <file path="/_mis_notifications.html.erb" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1389825248280" ignored="false" />
     <file path="/inicio_controller.rb" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1391560341202" ignored="false" />
-    <file path="/stylesheetInicio.css" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1391949851790" ignored="false" />
+    <file path="/stylesheetInicio.css" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1391952047582" ignored="false" />
     <file path="/animate_pure.js" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1389930075774" ignored="false" />
     <file path="/show.erb" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1390601734421" ignored="false" />
     <file path="/stylesheetPersona.css" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1391232089650" ignored="false" />
@@ -68,7 +69,7 @@
     <file path="/change_username.erb" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1391230133947" ignored="false" />
     <file path="/user_mailer.rb" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1391230224733" ignored="false" />
     <file path="/stylesheetImagen.css" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1391729729450" ignored="false" />
-    <file path="/stylesheetNoticiaSlider.css" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1391951289734" ignored="false" />
+    <file path="/stylesheetNoticiaSlider.css" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1391951913890" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,19 +103,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="stylesheetNoticiaSlider.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="stylesheetNoticiaSlider.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/css/stylesheetNoticiaSlider.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="103" column="23" selection-start="2306" selection-end="2306" vertical-scroll-proportion="0.8557692">
+            <state line="73" column="0" selection-start="1560" selection-end="1595" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="stylesheetInicio.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="stylesheetInicio.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/css/stylesheetInicio.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="134" column="4" selection-start="3014" selection-end="3014" vertical-scroll-proportion="0.0">
+            <state line="270" column="8" selection-start="5365" selection-end="5365" vertical-scroll-proportion="0.38625205">
               <folding />
             </state>
           </provider>
@@ -160,8 +161,8 @@
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/controllers/personas_controller.rb" />
         <option value="$PROJECT_DIR$/public/css/stylesheet500.css" />
-        <option value="$PROJECT_DIR$/public/css/stylesheetInicio.css" />
         <option value="$PROJECT_DIR$/public/css/stylesheetNoticiaSlider.css" />
+        <option value="$PROJECT_DIR$/public/css/stylesheetInicio.css" />
       </list>
     </option>
   </component>
@@ -908,13 +909,6 @@
         <state line="176" column="27" selection-start="4216" selection-end="4216" vertical-scroll-proportion="0.7829582" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/stylesheetInicio.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="134" column="4" selection-start="3014" selection-end="3014" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/css/stylesheet500.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="40" column="0" selection-start="866" selection-end="925" vertical-scroll-proportion="0.0">
@@ -924,7 +918,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/css/stylesheetNoticiaSlider.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="103" column="23" selection-start="2306" selection-end="2306" vertical-scroll-proportion="0.8557692">
+        <state line="73" column="0" selection-start="1560" selection-end="1595" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/stylesheetInicio.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="270" column="8" selection-start="5365" selection-end="5365" vertical-scroll-proportion="0.38625205">
           <folding />
         </state>
       </provider>
