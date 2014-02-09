@@ -9,64 +9,120 @@
      position: relative; 
 }
 
-.slide { 
-    padding: 40px 30px; 
-    width: 900px; 
-    float: left; 
-    position: relative; 
+
+@media all and (min-width: 1024px){
+    .slide {
+        padding: 40px 30px;
+        width: 900px;
+        float: left;
+        position: relative;
+    }
+    .slide h1 {
+        position: absolute;
+        width:90%;
+        top: 0px;
+        text-align: center;
+        padding: 10px;
+        font-family: "AngryBirds";
+        font-size:50px;
+        line-height: 55px;
+        color: white;
+
+        text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+        font-weight: 700;
+        text-shadow: 3px 3px 4px rgba(0,0,0,0.6);
+
+        -moz-hyphens:auto;
+        -ms-hyphens:auto;
+        -webkit-hyphens:auto;
+        -o-hyphens:auto; hyphens:auto;
+        word-wrap:break-word;
+    }
+    .slide p {
+        position: absolute;
+        top: 120px;
+        width: 500px;
+
+        overflow: hidden;
+        color: #eeee00;
+        text-shadow: 0 0 2px black;
+        text-align: justify;
+        padding: 20px;
+        font-size:25px;
+        line-height: 29px;
+        font-weight: bold;
+        -moz-hyphens:auto;
+        -ms-hyphens:auto;
+        -webkit-hyphens:auto;
+        -o-hyphens:auto;
+        hyphens:auto;
+        word-wrap:break-word;
+
+    }
+    .slide img {
+        position: absolute;
+        top: 140px;
+        right: 60px;
+        padding: 2px;
+        background: #6DD4BC;
+        box-shadow: inset 0 0 20px rgba(0,0,0,0.6);
+        border-radius: 5px;
+        max-width: 200px;
+        max-height: 200px;
+    }
 }
-.slide h1 { 
-    position: absolute;
-    width:90%;
-    top: 0px;
-    text-align: center;
-    padding: 10px;
-    font-family: "AngryBirds";
-    font-size:50px; 
-    line-height: 55px;
-    color: white;
-    
-    text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
-    font-weight: 700;
-    text-shadow: 3px 3px 4px rgba(0,0,0,0.6);
-    
-    -moz-hyphens:auto;
-    -ms-hyphens:auto;
-    -webkit-hyphens:auto;
-    -o-hyphens:auto; hyphens:auto;
-    word-wrap:break-word;  
-}
-.slide p { 
-    position: absolute;
-    top: 120px;
-    width: 500px; 
-    
-    overflow: hidden;
-    color: #eeee00;
-    text-shadow: 0 0 2px black;
-    text-align: justify;
-    padding: 20px;
-    font-size:25px; 
-    line-height: 29px;
-    font-weight: bold;
-    -moz-hyphens:auto; 
-    -ms-hyphens:auto; 
-    -webkit-hyphens:auto; 
-    -o-hyphens:auto; 
-    hyphens:auto; 
-    word-wrap:break-word;
-    
-}
-.slide img { 
-    position: absolute; 
-    top: 140px; 
-    right: 60px;
-    padding: 2px;
-    background: #6DD4BC; 
-    box-shadow: inset 0 0 20px rgba(0,0,0,0.6);
-    border-radius: 5px;
-    max-width: 200px;
-    max-height: 200px;
+@media all and (max-width: 1024px){
+    .slide {
+        padding: 40px 30px;
+        width: 100%;
+        float: left;
+        position: relative;
+    }
+    .slide h1 {
+        position: absolute;
+        width:90%;
+        top: 0px;
+        text-align: center;
+        padding: 10px;
+        font-family: "AngryBirds";
+        font-size:50px;
+        line-height: 55px;
+        color: white;
+
+        text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+        font-weight: 700;
+        text-shadow: 3px 3px 4px rgba(0,0,0,0.6);
+
+        -moz-hyphens:auto;
+        -ms-hyphens:auto;
+        -webkit-hyphens:auto;
+        -o-hyphens:auto; hyphens:auto;
+        word-wrap:break-word;
+    }
+    .slide p {
+        position: absolute;
+        top: 120px;
+        width: 500px;
+
+        overflow: hidden;
+        color: #eeee00;
+        text-shadow: 0 0 2px black;
+        text-align: justify;
+        padding: 20px;
+        font-size:25px;
+        line-height: 29px;
+        font-weight: bold;
+        -moz-hyphens:auto;
+        -ms-hyphens:auto;
+        -webkit-hyphens:auto;
+        -o-hyphens:auto;
+        hyphens:auto;
+        word-wrap:break-word;
+
+    }
+    .slide img {
+        display: none;
+    }
 }
 
 #slider-stopper{
