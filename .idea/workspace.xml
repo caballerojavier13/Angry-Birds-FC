@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7a837322-c6a4-4023-9153-58d412bae53d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/stylesheetInicio.css" afterPath="$PROJECT_DIR$/public/css/stylesheetInicio.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/stylesheetNoticiaSlider.css" afterPath="$PROJECT_DIR$/public/css/stylesheetNoticiaSlider.css" />
     </list>
     <ignored path="Angry Birds.iws" />
@@ -106,7 +105,7 @@
       <file leaf-file-name="stylesheetNoticiaSlider.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/css/stylesheetNoticiaSlider.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="115" column="18" selection-start="2611" selection-end="2611" vertical-scroll-proportion="0.5192308">
+            <state line="109" column="28" selection-start="2464" selection-end="2464" vertical-scroll-proportion="0.3028846">
               <folding />
             </state>
           </provider>
@@ -925,7 +924,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/css/stylesheetNoticiaSlider.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="115" column="18" selection-start="2611" selection-end="2611" vertical-scroll-proportion="0.5192308">
+        <state line="109" column="28" selection-start="2464" selection-end="2464" vertical-scroll-proportion="0.3028846">
           <folding />
         </state>
       </provider>
