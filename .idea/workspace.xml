@@ -68,7 +68,7 @@
     <file path="/change_username.erb" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1391230133947" ignored="false" />
     <file path="/user_mailer.rb" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1391230224733" ignored="false" />
     <file path="/stylesheetImagen.css" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1391729729450" ignored="false" />
-    <file path="/stylesheetNoticiaSlider.css" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1391952645067" ignored="false" />
+    <file path="/stylesheetNoticiaSlider.css" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1391953715221" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +105,7 @@
       <file leaf-file-name="stylesheetNoticiaSlider.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/css/stylesheetNoticiaSlider.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="109" column="28" selection-start="2464" selection-end="2464" vertical-scroll-proportion="0.3028846">
+            <state line="103" column="17" selection-start="2324" selection-end="2324" vertical-scroll-proportion="0.23076923">
               <folding />
             </state>
           </provider>
@@ -924,7 +924,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/css/stylesheetNoticiaSlider.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="109" column="28" selection-start="2464" selection-end="2464" vertical-scroll-proportion="0.3028846">
+        <state line="103" column="17" selection-start="2324" selection-end="2324" vertical-scroll-proportion="0.23076923">
           <folding />
         </state>
       </provider>
