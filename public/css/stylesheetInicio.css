@@ -268,7 +268,7 @@ a{
 }
 @media all and (max-width: 1024px){
     #visorNoticia{
-        width: 600px;
+        width: 800px;
         position: relative;
         height: 400px;
         margin-top: 60px;
