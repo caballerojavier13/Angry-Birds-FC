@@ -17,7 +17,7 @@ function doMove(panelWidth, tooFar) {
 				"left": 0
 			}, function() {
 				$(".slide img").animate({
-					"top": 180
+					"top": 160
 				});
 			});
 		});
@@ -30,7 +30,7 @@ function doMove(panelWidth, tooFar) {
 				"left": movement
 			}, function() {
 				$(".slide img").animate({
-					"top": 180
+					"top": 160
 				});
 			});
 		});
