@@ -101,8 +101,8 @@
     }
     .slide p {
         position: absolute;
-        top: 120px;
-        width: 500px;
+        bottom: -230px;
+        width: 600px;
 
         overflow: hidden;
         color: #eeee00;
