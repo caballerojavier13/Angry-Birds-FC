@@ -44,7 +44,8 @@ body{
         text-align: center;
         top: 50px;
         margin: 0 auto;
-        margin-bottom: 25px;
+
+        margin-bottom: 70px;
         font-family: "AngryBirds"; 
         font-size:60px;    
         color: white;
@@ -52,7 +53,6 @@ body{
     }
     #img1{
         position: relative;
-        
         max-height: 402px;
         max-width: 631px;
         width: 70%;
