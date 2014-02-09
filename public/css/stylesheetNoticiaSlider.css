@@ -122,7 +122,7 @@
     .slide img {
         position: absolute;
         top: 210px;
-        right: 60px;
+        right: 120px;
         padding: 2px;
         background: #6DD4BC;
         box-shadow: inset 0 0 20px rgba(0,0,0,0.6);

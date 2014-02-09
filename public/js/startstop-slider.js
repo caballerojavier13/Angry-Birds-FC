@@ -1,5 +1,5 @@
 // SET THIS VARIABLE FOR DELAY, 1000 = 1 SECOND
-var delayLength = 10000;
+var delayLength = 20000;
 	
 function doMove(panelWidth, tooFar) {
 	var leftValue = $("#mover").css("left");
@@ -17,7 +17,7 @@ function doMove(panelWidth, tooFar) {
 				"left": 0
 			}, function() {
 				$(".slide img").animate({
-					"top": 140
+					"top": 210
 				});
 			});
 		});
@@ -30,7 +30,7 @@ function doMove(panelWidth, tooFar) {
 				"left": movement
 			}, function() {
 				$(".slide img").animate({
-					"top": 140
+					"top": 210
 				});
 			});
 		});
