@@ -132,12 +132,24 @@
       <a href="mi_pajaro/<%= @persona.id %>"><img src=<%= Persona.find(session[:usuario_id]).genero ? '/picture/hombre.png' : '/picture/mujer.png' %> src=""
         id="fotoPerfil" ></a>
     </div>
-    <div id="bienvenida" class="borde">
-      <img src="/picture/bienvenida2.png">
 
-      <h1><%= session[:genero] ? "Bienvenido" : "Bienvenida" %> <%= @persona.nombre %> <%= @persona.apellido %></h1>
+      <% if @persona.is_cumple %>
+        <div class="borde" id="bienvenida" style="height: 400px; box-shadow: inset 0 0 10 black">
+          <img src="/picture/Happy-Birdday.jpg" height="100%" width="100%" >
+          <h1 id="bienvenida_cumple">Feliz cumpleaños
+            <br/>
+            <br/>
+            <%=@persona.nombre %> !!!</h1>
+        </div>
+      <%else %>
+        <div id="bienvenida" class="borde" style="height: 250px">
+          <img src="/picture/bienvenida2.png" height="100%" width="100%">
+          <h1 id="bienvenida_h1"><%= session[:genero] ? "Bienvenido" : "Bienvenida" %> <%= @persona.nombre %> <%= @persona.apellido %></h1>
+        </div>
+      <% end %>
 
-    </div>
+
+
 
     <% if @noticias.size > 3 %>
         <%= render 'noticias' %>

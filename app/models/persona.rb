@@ -136,6 +136,17 @@ class Persona < ActiveRecord::Base
     self.update_attribute(atributo, valor)
   end
 
+  def is_cumple
+    if self.fechaNacimiento.month == Date.today.month
+      if self.fechaNacimiento.day == Date.today.day
+        return true
+      else
+        return false
+      end
+    else
+      return false
+    end
+  end
   def Persona.generate_activation_code
     size=10
     charset = %w{2 3 4 6 7 9 a b g k l m o r w z A C D E F G H J K M N P Q R T V W X Y Z}
