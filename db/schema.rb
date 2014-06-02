@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140124200815) do
+ActiveRecord::Schema.define(:version => 20140602023658) do
 
   create_table "calificacions", :force => true do |t|
     t.integer  "valor"
@@ -27,6 +27,10 @@ ActiveRecord::Schema.define(:version => 20140124200815) do
     t.text     "cuerpo"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "function", :force => true do |t|
+    t.string "name"
   end
 
   create_table "imagens", :force => true do |t|
@@ -62,6 +66,11 @@ ActiveRecord::Schema.define(:version => 20140124200815) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "permission", :force => true do |t|
+    t.integer "role_id"
+    t.integer "function_id"
+  end
+
   create_table "personas", :force => true do |t|
     t.string   "nombre"
     t.string   "apellido"
@@ -77,6 +86,10 @@ ActiveRecord::Schema.define(:version => 20140124200815) do
     t.string   "codigo"
     t.boolean  "bloqueado"
     t.boolean  "admin"
+  end
+
+  create_table "role", :force => true do |t|
+    t.string "name"
   end
 
   create_table "usr_novelties", :force => true do |t|
