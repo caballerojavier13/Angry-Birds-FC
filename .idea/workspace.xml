@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7a837322-c6a4-4023-9153-58d412bae53d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20140606031156_persona_con_rol.rb" afterPath="$PROJECT_DIR$/db/migrate/20140606031156_persona_con_rol.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20140602023658_permission.rb" afterPath="$PROJECT_DIR$/db/migrate/20140602023658_permission.rb" />
     </list>
     <ignored path="Angry Birds.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -74,7 +72,7 @@
     <file path="/_imagenes.html.erb" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1391954549561" ignored="false" />
     <file path="/20140602023401_roles.rb" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1401758550936" ignored="false" />
     <file path="/20140602023505_function.rb" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1401758556221" ignored="false" />
-    <file path="/20140602023658_permission.rb" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1401758561857" ignored="false" />
+    <file path="/20140602023658_permission.rb" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1402090922901" ignored="false" />
     <file path="/database.yml" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1401676996809" ignored="false" />
     <file path="/roles_controller.rb" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1401843632730" ignored="false" />
     <file path="/permissions.rb" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1402024260720" ignored="false" />
@@ -112,10 +110,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="20140606031156_persona_con_rol.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="20140606031156_persona_con_rol.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db/migrate/20140606031156_persona_con_rol.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="5" selection-start="60" selection-end="60" vertical-scroll-proportion="0.0872093">
+            <state line="2" column="5" selection-start="60" selection-end="60" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="20140602023658_permission.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/db/migrate/20140602023658_permission.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="27" selection-start="196" selection-end="196" vertical-scroll-proportion="0.39244187">
               <folding />
             </state>
           </provider>
@@ -155,7 +162,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/controllers/permissions_controller.rb" />
         <option value="$PROJECT_DIR$/public/css/stylesheetadmin.css" />
         <option value="$PROJECT_DIR$/app/views/permissions/index.html.erb" />
         <option value="$PROJECT_DIR$/public/js/script4.js" />
@@ -171,6 +177,7 @@
         <option value="$PROJECT_DIR$/app/models/permissions.rb" />
         <option value="$PROJECT_DIR$/app/models/role.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20140606031156_persona_con_rol.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20140602023658_permission.rb" />
       </list>
     </option>
   </component>
@@ -1174,13 +1181,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20140602023658_permission.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/admin_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="186" column="31" selection-start="5252" selection-end="5252" vertical-scroll-proportion="0.04531722">
@@ -1218,7 +1218,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20140606031156_persona_con_rol.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="5" selection-start="60" selection-end="60" vertical-scroll-proportion="0.0872093">
+        <state line="2" column="5" selection-start="60" selection-end="60" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20140602023658_permission.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="27" selection-start="196" selection-end="196" vertical-scroll-proportion="0.39244187">
           <folding />
         </state>
       </provider>
