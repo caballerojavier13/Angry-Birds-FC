@@ -72,7 +72,7 @@
     <file path="/_imagenes.html.erb" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1391954549561" ignored="false" />
     <file path="/20140602023401_roles.rb" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1401758550936" ignored="false" />
     <file path="/20140602023505_function.rb" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1401758556221" ignored="false" />
-    <file path="/20140602023658_permission.rb" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1402090922901" ignored="false" />
+    <file path="/20140602023658_permission.rb" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1402093127152" ignored="false" />
     <file path="/database.yml" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1401676996809" ignored="false" />
     <file path="/roles_controller.rb" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1401843632730" ignored="false" />
     <file path="/permissions.rb" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1402024260720" ignored="false" />
@@ -122,7 +122,7 @@
       <file leaf-file-name="20140602023658_permission.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/db/migrate/20140602023658_permission.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="27" selection-start="79" selection-end="79" vertical-scroll-proportion="0.0872093">
+            <state line="5" column="5" selection-start="151" selection-end="151" vertical-scroll-proportion="0.21802326">
               <folding />
             </state>
           </provider>
@@ -1225,7 +1225,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20140602023658_permission.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="27" selection-start="79" selection-end="79" vertical-scroll-proportion="0.0872093">
+        <state line="5" column="5" selection-start="151" selection-end="151" vertical-scroll-proportion="0.21802326">
           <folding />
         </state>
       </provider>
