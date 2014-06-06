@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7a837322-c6a4-4023-9153-58d412bae53d" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20140602023658_permission.rb" afterPath="$PROJECT_DIR$/db/migrate/20140602023658_permission.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20140606031156_persona_con_rol.rb" afterPath="$PROJECT_DIR$/db/migrate/20140606031156_persona_con_rol.rb" />
     </list>
     <ignored path="Angry Birds.iws" />
@@ -83,7 +84,7 @@
     <file path="/_no_funciones.html.erb" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1401999948605" ignored="false" />
     <file path="/script4.js" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1402022185129" ignored="false" />
     <file path="/_change_rol.js.erb" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1402010561991" ignored="false" />
-    <file path="/20140606031156_persona_con_rol.rb" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1402090594647" ignored="false" />
+    <file path="/20140606031156_persona_con_rol.rb" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1402093334204" ignored="false" />
     <file path="/Ruby Console" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1402024648447" ignored="false" />
     <file path="/role.rb" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1402087721478" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -113,16 +114,7 @@
       <file leaf-file-name="20140606031156_persona_con_rol.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/db/migrate/20140606031156_persona_con_rol.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="4" selection-start="59" selection-end="59" vertical-scroll-proportion="0.0872093">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="20140602023658_permission.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/migrate/20140602023658_permission.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="5" selection-start="151" selection-end="151" vertical-scroll-proportion="0.0">
+            <state line="2" column="5" selection-start="60" selection-end="60" vertical-scroll-proportion="0.0872093">
               <folding />
             </state>
           </provider>
@@ -1218,14 +1210,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20140602023658_permission.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="5" selection-start="151" selection-end="151" vertical-scroll-proportion="0.0">
+        <state line="5" column="4" selection-start="147" selection-end="147" vertical-scroll-proportion="0.21802326">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20140606031156_persona_con_rol.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="4" selection-start="59" selection-end="59" vertical-scroll-proportion="0.0872093">
+        <state line="2" column="5" selection-start="60" selection-end="60" vertical-scroll-proportion="0.0872093">
           <folding />
         </state>
       </provider>
