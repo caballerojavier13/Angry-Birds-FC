@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7a837322-c6a4-4023-9153-58d412bae53d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20140602023658_permission.rb" afterPath="$PROJECT_DIR$/db/migrate/20140602023658_permission.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20140606031156_persona_con_rol.rb" afterPath="$PROJECT_DIR$/db/migrate/20140606031156_persona_con_rol.rb" />
     </list>
     <ignored path="Angry Birds.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -110,19 +110,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="20140606031156_persona_con_rol.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="20140606031156_persona_con_rol.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/db/migrate/20140606031156_persona_con_rol.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="5" selection-start="60" selection-end="60" vertical-scroll-proportion="0.0">
+            <state line="2" column="4" selection-start="59" selection-end="59" vertical-scroll-proportion="0.0872093">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="20140602023658_permission.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="20140602023658_permission.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db/migrate/20140602023658_permission.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="5" selection-start="151" selection-end="151" vertical-scroll-proportion="0.21802326">
+            <state line="5" column="5" selection-start="151" selection-end="151" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -176,8 +176,8 @@
         <option value="$PROJECT_DIR$/app/models/persona.rb" />
         <option value="$PROJECT_DIR$/app/models/permissions.rb" />
         <option value="$PROJECT_DIR$/app/models/role.rb" />
-        <option value="$PROJECT_DIR$/db/migrate/20140606031156_persona_con_rol.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20140602023658_permission.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20140606031156_persona_con_rol.rb" />
       </list>
     </option>
   </component>
@@ -1216,16 +1216,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20140606031156_persona_con_rol.rb">
+    <entry file="file://$PROJECT_DIR$/db/migrate/20140602023658_permission.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="5" selection-start="60" selection-end="60" vertical-scroll-proportion="0.0">
+        <state line="5" column="5" selection-start="151" selection-end="151" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20140602023658_permission.rb">
+    <entry file="file://$PROJECT_DIR$/db/migrate/20140606031156_persona_con_rol.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="5" selection-start="151" selection-end="151" vertical-scroll-proportion="0.21802326">
+        <state line="2" column="4" selection-start="59" selection-end="59" vertical-scroll-proportion="0.0872093">
           <folding />
         </state>
       </provider>
