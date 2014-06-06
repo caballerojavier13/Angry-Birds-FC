@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7a837322-c6a4-4023-9153-58d412bae53d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20140602023658_permission.rb" afterPath="$PROJECT_DIR$/db/migrate/20140602023658_permission.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20140606031156_persona_con_rol.rb" afterPath="$PROJECT_DIR$/db/migrate/20140606031156_persona_con_rol.rb" />
     </list>
     <ignored path="Angry Birds.iws" />
@@ -114,7 +113,7 @@
       <file leaf-file-name="20140606031156_persona_con_rol.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/db/migrate/20140606031156_persona_con_rol.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="5" selection-start="60" selection-end="60" vertical-scroll-proportion="0.0872093">
+            <state line="3" column="68" selection-start="169" selection-end="169" vertical-scroll-proportion="0.13081396">
               <folding />
             </state>
           </provider>
@@ -1217,7 +1216,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20140606031156_persona_con_rol.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="5" selection-start="60" selection-end="60" vertical-scroll-proportion="0.0872093">
+        <state line="3" column="68" selection-start="169" selection-end="169" vertical-scroll-proportion="0.13081396">
           <folding />
         </state>
       </provider>
