@@ -1,5 +1,6 @@
 class Permission < ActiveRecord::Migration
   def up
+    drop_table :permissions
     create_table :permissions do |t|
       t.integer :role_id
       t.integer :function_id
@@ -7,6 +8,6 @@ class Permission < ActiveRecord::Migration
   end
 
   def down
-    drop_table :permissions
+
   end
 end
