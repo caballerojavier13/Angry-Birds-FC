@@ -1,0 +1,168 @@
+#coding: utf-8
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Angry Birds Fan Club</title>
+  <link rel="shortcut icon" href="/favicon1.ico" />
+  <link rel="stylesheet" href="/css/stylesheetAll.css">
+
+  <link rel="stylesheet" type="text/css" href="/css/stylesheetNoScript.css" />
+  <link rel="stylesheet" type="text/css" href="/css/stylesheetLoad.css" />
+  <link rel="stylesheet" type="text/css" href="/css/stylesheetadmin.css" />
+
+</head>
+<body>
+<div id="loading">
+  <div id="background"></div>
+  <div id="midground"></div>
+  <div id="foreground"></div>
+  <div id="tapa"></div>
+  <div class="bokeh">
+    <img id="bokeh1" src="/picture/space/ice.png" height="100px" >
+    <img id="bokeh2" src="/picture/space/bomb.png" height="100px">
+    <img id="bokeh3" src="/picture/space/green.png" height="100px">
+    <img id="bokeh4" src="/picture/space/laser.png" height="100px">
+    <div id="circulo"></div>
+  </div>
+  <div id="bokehText">
+    <p>Cargando...</p>
+  </div>
+</div>
+<div id="page">
+
+<div id="body">
+  <div id="header">
+    <p>Administrador</p>
+    <ul>
+      <a href="/admin">
+        <li>
+          Resumen
+        </li>
+      </a>
+      <a href="/admin/usuarios">
+        <li>
+          Usuarios
+        </li>
+      </a>
+      <a href="/admin/noticias">
+        <li>
+          Noticias
+        </li>
+      </a>
+      <a href="/admin/imagenes">
+        <li>
+          Imagenes
+        </li>
+      </a>
+      <a href="/admin/videos">
+        <li>
+          Videos
+        </li>
+      </a>
+      <a href="/admin/novedades">
+        <li>
+          Novedades
+        </li>
+      </a>
+      <li class="seleccionado">
+        Permisos
+      </li>
+    </ul>
+  </div>
+  <div id="main">
+    <h1 id="titulo" style="margin-top: -40px; margin-bottom: 30px;">Permisos</h1>
+
+    <div class="borde">
+      <div style="padding-top: 60px;padding-bottom: 40px; margin-left: 10%; margin-top: -20px">
+        <select id="rol" style="width: 40%; float: left; font-size: 25px; height: 40px; margin-top: -10px">
+          <%= render 'roles' %>
+        </select>
+        <a href="/admin/roles" class="boton" style="width: 250px; float: right; margin-right: 15%; margin-top: -20px; color: #f5f5f5">Administrar Roles</a>
+      </div>
+        <div class="limitador3"></div>
+        <div>
+          <ul class="columna selecion c1" style="float: left; margin-left: 5%" >
+            <%= render 'si_funciones' %>
+          </ul>
+          <ul class="columna selecion c2" style="float: right; margin-right: 5%">
+            <%= render 'no_funciones' %>
+          </ul>
+          <ul class="botonera">
+            <li>
+              <button class="b1"><<</button>
+            </li>
+            <li>
+              <button class="b2"><</button>
+            </li>
+            <li>
+              <button class="b3">></button>
+            </li>
+            <li>
+              <button class="b4">>></button>
+            </li>
+          </ul>
+          <div class="loader" style="position: absolute; top: 50%; margin-top: -200px; left: 50%; margin-left: -200px; display: none">Cargando</div>
+          <a href="/admin/funciones" class="boton" style="width: 350px;margin-top: 25px; color: #f5f5f5">Administrar Funciones</a>
+        </div>
+
+    </div>
+  </div>
+</div>
+<div id="footer">
+  <a href="/" style="position: absolute; right: 20px; bottom: 15px;">
+    <img src="/picture/icon/to_normal.png" height="80px" />
+  </a>
+  <a href="/logout" style="position: absolute; left:20px; bottom: 0px;">
+    <img src="/picture/exit1.png" style=" margin-top: 30px; margin-left: 20px;">
+
+  </a>
+</div>
+
+
+
+<script src= '/js/scriptLoad.js' > </script>
+<script language="javascript">
+    window.onload = inicio;
+</script>
+<noscript><div id="noscript"><br/>Javascript deshabilitado: para poder apreciar la pagina web por favor activa javascript en tu navegador</div></noscript>
+<script src="/js/jquery-1.7.1.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="/js/jquery-ui-1.10.3.custom.min.js" ></script>
+<script src="/js/jquery.backgroundPosition.js" type="text/javascript"></script>
+  <script src="/js/script4.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(function(){
+
+        $('#midground').css({backgroundPosition: '0px 0px'});
+        $('#foreground').css({backgroundPosition: '0px 0px'});
+        $('#background').css({backgroundPosition: '0px 0px'});
+
+        $('#midground').animate({
+            backgroundPosition:"(-10000px -2000px)"
+        }, 240000, 'linear');
+
+        $('#foreground').animate({
+            backgroundPosition:"(-10000px -2000px)"
+        }, 120000, 'linear');
+
+        $('#background').animate({
+            backgroundPosition:"(-10000px -2000px)"
+        }, 480000, 'linear');
+
+    });
+</script>
+<script>
+    $(function() {
+        if ($.browser.opera || $.browser.msie ) {
+            alert( "Por favor no uses este navegador. Usa firefox o Chrome. Si no los tienes instalalos." );
+        }
+    });
+</script>
+<script>
+  $(function(){
+      $( ".columna" ).selectable();
+  });
+</script>
+</div>
+</body>
+</html>
+

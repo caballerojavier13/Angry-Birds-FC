@@ -203,17 +203,15 @@
                   <ul>
                     <li>
                       <div class="checkbox-label">
-                        <h3>Administrador:</h3>
+                        <h3>Rol:</h3>
                       </div>
                     </li>
-                    <li>
-                      <div class="onoffswitch">
-                        <%= f.check_box :admin, :class=>"onoffswitch-checkbox", :id=>"admin-checkbox"  %>
-                        <label class="onoffswitch-label" for="admin-checkbox">
-                          <div class="onoffswitch-inner"></div>
-                          <div class="onoffswitch-switch"></div>
-                        </label>
-                      </div>
+                    <li style="top: -7px;position: relative;left: 50%;margin-left: -100px;">
+                      <select style="font-size: 24px;padding-left: 10px;position: relative;margin: 0 auto;">
+                         <% @roles.each do |r|%>
+                            <option value="<%= r.id %>" <%=(r.id == @usuario.role_id)? "selected": ""  %> ><%= r.name %></option>
+                         <% end %>
+                      </select>
                     </li>
                     <div class="limitador2"></div>
                     <li style="width: 100%; display: inline-block; position: relative">
@@ -584,7 +582,7 @@
 </script>
 <script>
   function Etiquetas(){
-      return ['11 meses atás','10 meses atás','9 meses atás','8 meses atás','7 meses atás','6 meses atás','5 meses atás','4 meses atás','3 meses atás','2 meses atás','1 mes atás','Este mes'];
+      return ['11 meses atrás','10 meses atrás','9 meses atrás','8 meses atrás','7 meses atrás','6 meses atrás','5 meses atrás','4 meses atrás','3 meses atrás','2 meses atrás','1 mes atrás','Este mes'];
   }
 </script>
 </body>

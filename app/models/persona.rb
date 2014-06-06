@@ -1,7 +1,7 @@
 #coding: utf-8
 
 class Persona < ActiveRecord::Base
-  attr_accessible :apellido, :email, :fechaNacimiento, :genero, :hashed_password, :nombre, :salt, :username,:password, :password_confirmation, :activo, :codigo, :bloqueado, :admin
+  attr_accessible :apellido, :email, :fechaNacimiento, :genero, :hashed_password, :nombre, :salt, :username,:password, :password_confirmation, :activo, :codigo, :bloqueado, :admin, :role_id
   
   scope :activo, -> { where activo: true }
   scope :bloqueado, -> { where bloqueado: true }
@@ -15,7 +15,7 @@ class Persona < ActiveRecord::Base
   has_many :notificaciones
   has_many :usr_novelties
 
-  has_one :tipo_usuario
+  belongs_to:role
 
   validate :nombre_must_be_present
 

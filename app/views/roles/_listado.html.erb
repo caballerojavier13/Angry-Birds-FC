@@ -1,0 +1,13 @@
+<ul class="listado2">
+  <div class="limitador3"></div>
+<% @roles.each do |rol| %>
+    <li id="<%= 'rol_' + rol.id.to_s %>">
+      <img class="delete" src="/picture/delete.png" data-id="<%= rol.id %>" />
+      <img class="edit" src="/picture/edit.png" data-id="<%= rol.id %>" />
+      <p><%= rol.name%></p>
+      <div class="limitador3" style="width: 100%"></div>
+    </li>
+<% end %>
+</ul>
+
+<%= will_paginate @roles, :previous_label => t("< anterior"), :next_label => t("siguiente >"), :page_gap => "...", :outer_window   => '1', :inner_window => '1', :link_separator => ' - ' %>

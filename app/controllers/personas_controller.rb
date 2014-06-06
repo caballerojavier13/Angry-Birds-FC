@@ -33,6 +33,7 @@ class PersonasController < ApplicationController
     @persona.activo=false
     @persona.bloqueado=false
     @persona.admin=false
+    @persona.role = Role.find_by_name 'Usuario Comun'
 
 
     

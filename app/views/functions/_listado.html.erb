@@ -1,0 +1,13 @@
+<ul class="listado2">
+  <div class="limitador3"></div>
+<% @functions.each do |fun| %>
+    <li id="<%= 'fun_' + fun.id.to_s %>">
+      <img class="delete" src="/picture/delete.png" data-id="<%= fun.id %>" />
+      <img class="edit" src="/picture/edit.png" data-id="<%= fun.id %>" />
+      <p><%= fun.name%></p>
+      <div class="limitador3" style="width: 100%"></div>
+    </li>
+<% end %>
+</ul>
+
+<%= will_paginate @functions, :previous_label => t("< anterior"), :next_label => t("siguiente >"), :page_gap => "...", :outer_window   => '1', :inner_window => '1', :link_separator => ' - ' %>

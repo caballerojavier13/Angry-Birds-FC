@@ -184,6 +184,7 @@ class AdminController < MasterSecurityController
 
   def user_edit
     @usuario = Persona.find params[:id]
+    @roles = Role.order('name ASC')
     @year_fin = Date.today.year
     @year_inicio = @year_fin - 100
     @etiqueta = (0..12).to_a

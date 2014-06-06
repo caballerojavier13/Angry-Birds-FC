@@ -1,6 +1,6 @@
 class Roles < ActiveRecord::Migration
   def up
-    create_table :role do |t|
+    create_table :roles do |t|
       t.string :name
     end
   end

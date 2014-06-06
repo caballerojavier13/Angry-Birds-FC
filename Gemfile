@@ -19,7 +19,7 @@ gem 'launchy'
 
 gem 'mail'
 
-gem 'rollbar'
+# gem 'rollbar'
 
 group :development do
   gem 'better_errors'

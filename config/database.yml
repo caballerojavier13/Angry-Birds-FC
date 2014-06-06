@@ -11,7 +11,7 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: angrybirds_development
+  database: angrybirds_test
   pool: 5
   username: javier
   password: javier
@@ -19,7 +19,7 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: angrybirds_development
+  database: angrybirds_production
   pool: 5
   username: javier
   password: javier

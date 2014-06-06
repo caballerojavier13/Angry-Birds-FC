@@ -1,6 +1,6 @@
 class Function < ActiveRecord::Migration
   def up
-    create_table :function do |t|
+    create_table :functions do |t|
       t.string :name
     end
   end

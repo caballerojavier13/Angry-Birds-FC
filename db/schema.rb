@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140602023658) do
+ActiveRecord::Schema.define(:version => 20140606031156) do
 
   create_table "calificacions", :force => true do |t|
     t.integer  "valor"
@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(:version => 20140602023658) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "function", :force => true do |t|
+  create_table "functions", :force => true do |t|
     t.string "name"
   end
 
@@ -66,7 +66,7 @@ ActiveRecord::Schema.define(:version => 20140602023658) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "permission", :force => true do |t|
+  create_table "permissions", :force => true do |t|
     t.integer "role_id"
     t.integer "function_id"
   end
@@ -86,9 +86,10 @@ ActiveRecord::Schema.define(:version => 20140602023658) do
     t.string   "codigo"
     t.boolean  "bloqueado"
     t.boolean  "admin"
+    t.integer  "role_id"
   end
 
-  create_table "role", :force => true do |t|
+  create_table "roles", :force => true do |t|
     t.string "name"
   end
 

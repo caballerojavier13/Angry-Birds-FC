@@ -1,0 +1,2 @@
+#coding: utf-8
+$('.listado2').append('<li id="<%= 'rol_' + @role.id.to_s %>"><img class="delete" onclick="eliminar(<%= @role.id %>)" src="/picture/delete.png" data-id="<%= @role.id %>" /><img class="edit" onclick="editar(<%= @role.id %>)" src="/picture/edit.png" data-id="<%= @role.id %>" /><p><%= @role.name%></p><div class="limitador3" style="width: 100%"></div></li>');

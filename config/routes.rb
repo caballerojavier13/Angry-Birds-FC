@@ -1,5 +1,19 @@
 FanClub::Application.routes.draw do
 
+  match 'admin/permisos' => 'permissions#index', :via => :get
+  match 'admin/permisos/add_one_function' => 'permissions#add_one_function', :via => :get
+  match 'admin/permisos/add_all_function' => 'permissions#add_all_function', :via => :get
+  match 'admin/permisos/remove_one_function' => 'permissions#remove_one_function', :via => :get
+  match 'admin/permisos/remove_all_function' => 'permissions#remove_all_function', :via => :get
+  match 'admin/permisos/change_rol' => 'permissions#change_rol', :via => :get
+
+  resources :functions
+  match 'admin/funciones' => 'functions#index', :via => :get
+
+  resources :roles
+  match 'admin/roles' => 'roles#index', :via => :get
+
+
   match 'admin/novedades' => 'novelties#index', :via => :get
 
   match 'admin/novedad' => 'novelties#create', :via => :post

@@ -1,12 +1,12 @@
 ::-webkit-scrollbar {
-background: white;
-box-shadow: inset 0 0 20px rgba(0,0,0,0.7);
-border-radius: 6px;
-width:20px;
+    background: white;
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.7);
+    border-radius: 4px;
+    width:15px;
 }
 ::-webkit-scrollbar-thumb {
-    border-radius: 6px;
-    box-shadow: inset 0 0 10px rgba(0,0,0,1),inset 5px 0 20px rgba(255,255,255,0.7),inset -5px 0 20px rgba(255,255,255,0.7);
+    border-radius: 4px;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.6),inset 5px 0 20px rgba(255,255,255,0.2),inset -5px 0 20px rgba(255,255,255,0.7);
     background: #6DD4BC;
     
 }
@@ -14,24 +14,24 @@ width:20px;
 }
 
 ::-moz-scrollbar {
-background: transparent;
-width:10px;
+    background: transparent;
+    width:10px;
 }
 ::-moz-scrollbar-thumb {
--moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
-background-image: -moz-linear-gradient(top, #6dd4bc 10%,#6dd4bc 51%);
+    -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+    background-image: -moz-linear-gradient(top, #6dd4bc 10%,#6dd4bc 51%);
 }
 ::-moz-scrollbar-track {
 }
-::-moz-scrollbar {
+::-o-scrollbar {
 background: transparent;
 width:10px;
 }
-::-moz-scrollbar-thumb {
--moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
-background-image: -moz-linear-gradient(top, #6dd4bc 10%,#6dd4bc 51%);
+::-o-scrollbar-thumb {
+    -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+    background-image: -o-linear-gradient(top, #6dd4bc 10%,#6dd4bc 51%);
 }
-::-moz-scrollbar-track {
+::-o-scrollbar-track {
 }
 
 
