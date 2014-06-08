@@ -6,8 +6,10 @@ class PermissionsController < ApplicationController
     functions = Arel::Table.new(:functions)
     permisos = Arel::Table.new(:permissions)
 
+
     @si_funciones = functions.where(functions[:id].in(permisos.where(permisos[:role_id].eq(@roles.first.id)).project(Arel.sql('function_id')))).order('name ASC').project(Arel.sql('*'))
     @no_funciones = functions.where(functions[:id].not_in(permisos.where(permisos[:role_id].eq(@roles.first.id)).project(Arel.sql('function_id')))).order('name ASC').project(Arel.sql('*'))
+
 
   end
   def add_all_function

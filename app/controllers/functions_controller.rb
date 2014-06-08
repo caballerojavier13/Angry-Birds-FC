@@ -2,7 +2,7 @@ class FunctionsController < ApplicationController
   # GET /functions
   # GET /functions.json
   def index
-    @functions = Functions.order('name ASC').paginate(:page => params[:page], :per_page => 20)
+    @functions = Functions.order('name ASC').paginate(:page => params[:page], :per_page => 10)
 
     respond_to do |format|
       format.html # index.html.erb
