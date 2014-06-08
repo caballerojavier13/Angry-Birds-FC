@@ -1889,6 +1889,7 @@ select[multiple]{
     text-shadow: 0 0 1px black;
     color: #ffffff;
     font-size: 27px;
+    cursor: pointer;
 }
 .selecion .ui-selected{
     color: yellow;
