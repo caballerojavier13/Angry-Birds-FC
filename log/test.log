@@ -556,3 +556,1568 @@ Processing by InicioController#start as HTML
   Rendered inicio/_nada_video.html.erb (0.0ms)
   Rendered inicio/start.html.erb (3.8ms)
 Completed 200 OK in 12ms (Views: 3.8ms | ActiveRecord: 3.3ms)
+Connecting to database specified by database.yml
+Started GET "/admin/permisos" for 127.0.0.1 at 2014-06-22 18:08:13 -0300
+Processing by PermissionsController#index as HTML
+PG::UndefinedTable: ERROR:  relation "roles" does not exist
+LINE 5:              WHERE a.attrelid = '"roles"'::regclass
+                                        ^
+:             SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+              FROM pg_attribute a LEFT JOIN pg_attrdef d
+                ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+             WHERE a.attrelid = '"roles"'::regclass
+               AND a.attnum > 0 AND NOT a.attisdropped
+             ORDER BY a.attnum
+
+Completed 500 Internal Server Error in 140ms
+Started GET "/favicon.ico" for 127.0.0.1 at 2014-06-22 18:08:14 -0300
+Started GET "/" for 127.0.0.1 at 2014-06-22 18:08:21 -0300
+Processing by InicioController#start as HTML
+  [1m[36mPersona Load (45.5ms)[0m  [1mSELECT "personas".* FROM "personas" WHERE "personas"."id" = 1 LIMIT 1[0m
+  [1m[35mPersona Load (4.8ms)[0m  SELECT "personas".* FROM "personas" WHERE "personas"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mVideo Load (0.9ms)[0m  [1mSELECT "videos".* FROM "videos" [0m
+  [1m[35mImagen Load (0.6ms)[0m  SELECT "imagens".* FROM "imagens" 
+  [1m[36mNoticium Load (0.9ms)[0m  [1mSELECT "noticia".* FROM "noticia" ORDER BY id ASC[0m
+  [1m[35mAREL (1.1ms)[0m  SELECT novelties.id, novelties.message, novelties.created_at FROM "novelties" INNER JOIN "usr_novelties" ON "usr_novelties"."novelty_id" = "novelties"."id" WHERE usr_novelties.viewed = false AND usr_novelties.persona_id = 1
+  [1m[36m (0.8ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE (read = 'f' AND persona_id = 1)[0m
+  [1m[35mNotification Load (0.5ms)[0m  SELECT "notifications".* FROM "notifications" WHERE (read = 'f' AND persona_id = 1)
+  Rendered collection (0.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "personas".* FROM "personas" WHERE "personas"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered inicio/_nada_noticia.html.erb (0.5ms)
+  Rendered inicio/_nada_imagen.html.erb (0.5ms)
+  Rendered inicio/_nada_video.html.erb (0.5ms)
+  Rendered inicio/start.html.erb (21.5ms)
+Completed 200 OK in 736ms (Views: 41.5ms | ActiveRecord: 653.5ms)
+Started GET "/admin" for 127.0.0.1 at 2014-06-22 18:08:27 -0300
+Processing by AdminController#index as HTML
+  [1m[35mPersona Load (0.7ms)[0m  SELECT "personas".* FROM "personas" WHERE "personas"."id" = 1 LIMIT 1
+  [1m[36mPersona Load (0.5ms)[0m  [1mSELECT "personas".* FROM "personas" [0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "personas" WHERE (genero = 'f')
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "personas" WHERE (genero = 't')[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "personas" WHERE "personas"."bloqueado" = 't'
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "personas" WHERE "personas"."activo" = 't'[0m
+  [1m[35m (1.1ms)[0m  SELECT COUNT(*) FROM "personas" WHERE "personas"."activo" = 't' AND (created_at >= '2014-06-22 21:08:27.070026' AND created_at < '2014-07-22 21:08:27.071522')
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "personas" WHERE "personas"."activo" = 't' AND (created_at >= '2014-05-22 21:08:27.074570' AND created_at < '2014-06-22 21:08:27.074755')[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "personas" WHERE "personas"."activo" = 't' AND (created_at >= '2014-04-22 21:08:27.076762' AND created_at < '2014-05-22 21:08:27.076967')
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "personas" WHERE "personas"."activo" = 't' AND (created_at >= '2014-03-22 21:08:27.079168' AND created_at < '2014-04-22 21:08:27.079372')[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "personas" WHERE "personas"."activo" = 't' AND (created_at >= '2014-02-22 21:08:27.081708' AND created_at < '2014-03-22 21:08:27.081907')
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "personas" WHERE "personas"."activo" = 't' AND (created_at >= '2014-01-22 21:08:27.083676' AND created_at < '2014-02-22 21:08:27.083835')[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "personas" WHERE "personas"."activo" = 't' AND (created_at >= '2013-12-22 21:08:27.085708' AND created_at < '2014-01-22 21:08:27.085856')
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "personas" WHERE "personas"."activo" = 't' AND (created_at >= '2013-11-22 21:08:27.087374' AND created_at < '2013-12-22 21:08:27.087512')[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "personas" WHERE "personas"."activo" = 't' AND (created_at >= '2013-10-22 21:08:27.088944' AND created_at < '2013-11-22 21:08:27.089078')
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "personas" WHERE "personas"."activo" = 't' AND (created_at >= '2013-09-22 21:08:27.090572' AND created_at < '2013-10-22 21:08:27.090706')[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "personas" WHERE "personas"."activo" = 't' AND (created_at >= '2013-08-22 21:08:27.092211' AND created_at < '2013-09-22 21:08:27.092393')
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "personas" WHERE "personas"."activo" = 't' AND (created_at >= '2013-07-22 21:08:27.094481' AND created_at < '2013-08-22 21:08:27.094679')[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "personas" WHERE "personas"."activo" = 't' AND (created_at >= '2013-06-22 21:08:27.096399' AND created_at < '2013-07-22 21:08:27.096569')
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "noticia" WHERE (created_at >= '2014-06-22 21:08:27.101633' AND created_at < '2014-07-22 21:08:27.101852')[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "noticia" WHERE (created_at >= '2014-05-22 21:08:27.104010' AND created_at < '2014-06-22 21:08:27.104185')
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "noticia" WHERE (created_at >= '2014-04-22 21:08:27.105531' AND created_at < '2014-05-22 21:08:27.105785')[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "noticia" WHERE (created_at >= '2014-03-22 21:08:27.107267' AND created_at < '2014-04-22 21:08:27.107440')
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "noticia" WHERE (created_at >= '2014-02-22 21:08:27.108997' AND created_at < '2014-03-22 21:08:27.109187')[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "noticia" WHERE (created_at >= '2014-01-22 21:08:27.111108' AND created_at < '2014-02-22 21:08:27.111300')
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "noticia" WHERE (created_at >= '2013-12-22 21:08:27.113080' AND created_at < '2014-01-22 21:08:27.113304')[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "noticia" WHERE (created_at >= '2013-11-22 21:08:27.114936' AND created_at < '2013-12-22 21:08:27.115111')
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "noticia" WHERE (created_at >= '2013-10-22 21:08:27.116401' AND created_at < '2013-11-22 21:08:27.116545')[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "noticia" WHERE (created_at >= '2013-09-22 21:08:27.117793' AND created_at < '2013-10-22 21:08:27.117966')
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "noticia" WHERE (created_at >= '2013-08-22 21:08:27.119521' AND created_at < '2013-09-22 21:08:27.119767')[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "noticia" WHERE (created_at >= '2013-07-22 21:08:27.121281' AND created_at < '2013-08-22 21:08:27.121440')
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "noticia" WHERE (created_at >= '2013-06-22 21:08:27.122650' AND created_at < '2013-07-22 21:08:27.122789')[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "imagens" WHERE (created_at >= '2014-06-22 21:08:27.123996' AND created_at < '2014-07-22 21:08:27.124144')
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "imagens" WHERE (created_at >= '2014-05-22 21:08:27.125633' AND created_at < '2014-06-22 21:08:27.125817')[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "imagens" WHERE (created_at >= '2014-04-22 21:08:27.127609' AND created_at < '2014-05-22 21:08:27.127782')
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "imagens" WHERE (created_at >= '2014-03-22 21:08:27.129111' AND created_at < '2014-04-22 21:08:27.129267')[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "imagens" WHERE (created_at >= '2014-02-22 21:08:27.130497' AND created_at < '2014-03-22 21:08:27.130648')
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "imagens" WHERE (created_at >= '2014-01-22 21:08:27.131876' AND created_at < '2014-02-22 21:08:27.132033')[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "imagens" WHERE (created_at >= '2013-12-22 21:08:27.133514' AND created_at < '2014-01-22 21:08:27.133694')
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "imagens" WHERE (created_at >= '2013-11-22 21:08:27.135083' AND created_at < '2013-12-22 21:08:27.135239')[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "imagens" WHERE (created_at >= '2013-10-22 21:08:27.136512' AND created_at < '2013-11-22 21:08:27.136665')
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "imagens" WHERE (created_at >= '2013-09-22 21:08:27.138444' AND created_at < '2013-10-22 21:08:27.138658')[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "imagens" WHERE (created_at >= '2013-08-22 21:08:27.140888' AND created_at < '2013-09-22 21:08:27.141117')
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "imagens" WHERE (created_at >= '2013-07-22 21:08:27.145483' AND created_at < '2013-08-22 21:08:27.145741')[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "imagens" WHERE (created_at >= '2013-06-22 21:08:27.148606' AND created_at < '2013-07-22 21:08:27.148861')
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "videos" WHERE (created_at >= '2014-06-22 21:08:27.150909' AND created_at < '2014-07-22 21:08:27.151147')[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "videos" WHERE (created_at >= '2014-05-22 21:08:27.153196' AND created_at < '2014-06-22 21:08:27.153403')
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "videos" WHERE (created_at >= '2014-04-22 21:08:27.155107' AND created_at < '2014-05-22 21:08:27.155301')[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "videos" WHERE (created_at >= '2014-03-22 21:08:27.156994' AND created_at < '2014-04-22 21:08:27.157189')
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "videos" WHERE (created_at >= '2014-02-22 21:08:27.159185' AND created_at < '2014-03-22 21:08:27.159445')[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "videos" WHERE (created_at >= '2014-01-22 21:08:27.161849' AND created_at < '2014-02-22 21:08:27.162120')
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "videos" WHERE (created_at >= '2013-12-22 21:08:27.164159' AND created_at < '2014-01-22 21:08:27.164388')[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "videos" WHERE (created_at >= '2013-11-22 21:08:27.166233' AND created_at < '2013-12-22 21:08:27.166443')
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "videos" WHERE (created_at >= '2013-10-22 21:08:27.168200' AND created_at < '2013-11-22 21:08:27.168433')[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "videos" WHERE (created_at >= '2013-09-22 21:08:27.170408' AND created_at < '2013-10-22 21:08:27.170625')
+  [1m[36m (1.7ms)[0m  [1mSELECT COUNT(*) FROM "videos" WHERE (created_at >= '2013-08-22 21:08:27.172520' AND created_at < '2013-09-22 21:08:27.172754')[0m
+  [1m[35m (0.9ms)[0m  SELECT COUNT(*) FROM "videos" WHERE (created_at >= '2013-07-22 21:08:27.175751' AND created_at < '2013-08-22 21:08:27.176042')
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "videos" WHERE (created_at >= '2013-06-22 21:08:27.182615' AND created_at < '2013-07-22 21:08:27.182797')[0m
+  [1m[35mAREL (32.3ms)[0m  SELECT consulta.id FROM (SELECT cast(cast((sum(public.calificacions.valor)) as float)/count(*)as float) promedio, noticia_id id FROM "calificacions" INNER JOIN "noticia" ON "calificacions"."noticia_id" = "noticia"."id" GROUP BY "calificacions"."noticia_id") as consulta WHERE consulta.promedio < 1.5
+  [1m[36mAREL (0.9ms)[0m  [1mSELECT consulta.id FROM (SELECT cast(cast((sum(public.calificacions.valor)) as float)/count(*)as float) promedio, noticia_id id FROM "calificacions" INNER JOIN "noticia" ON "calificacions"."noticia_id" = "noticia"."id" GROUP BY "calificacions"."noticia_id") as consulta WHERE consulta.promedio < 1.5[0m
+  [1m[35mAREL (0.9ms)[0m  SELECT consulta.id FROM (SELECT cast(cast((sum(public.calificacions.valor)) as float)/count(*)as float) promedio, noticia_id id FROM "calificacions" INNER JOIN "noticia" ON "calificacions"."noticia_id" = "noticia"."id" GROUP BY "calificacions"."noticia_id") as consulta WHERE consulta.promedio < 1.5
+  [1m[36mAREL (4.1ms)[0m  [1mSELECT consulta.id FROM (SELECT cast(cast((sum(public.calificacions.valor)) as float)/count(*)as float) promedio, noticia_id id FROM "calificacions" INNER JOIN "noticia" ON "calificacions"."noticia_id" = "noticia"."id" GROUP BY "calificacions"."noticia_id") as consulta WHERE consulta.promedio >= 1.5 and consulta.promedio < 2.5[0m
+  [1m[35mAREL (0.8ms)[0m  SELECT consulta.id FROM (SELECT cast(cast((sum(public.calificacions.valor)) as float)/count(*)as float) promedio, noticia_id id FROM "calificacions" INNER JOIN "noticia" ON "calificacions"."noticia_id" = "noticia"."id" GROUP BY "calificacions"."noticia_id") as consulta WHERE consulta.promedio >= 2.5
+  [1m[36mAREL (0.8ms)[0m  [1mSELECT consulta.id FROM (SELECT cast(cast((sum(public.calificacions.valor)) as float)/count(*)as float) promedio, noticia_id id FROM "calificacions" INNER JOIN "noticia" ON "calificacions"."noticia_id" = "noticia"."id" GROUP BY "calificacions"."noticia_id") as consulta WHERE consulta.promedio >= 1.5 and consulta.promedio < 2.5[0m
+  [1m[35mAREL (0.7ms)[0m  SELECT consulta.id FROM (SELECT cast(cast((sum(public.calificacions.valor)) as float)/count(*)as float) promedio, noticia_id id FROM "calificacions" INNER JOIN "noticia" ON "calificacions"."noticia_id" = "noticia"."id" GROUP BY "calificacions"."noticia_id") as consulta WHERE consulta.promedio >= 1.5 and consulta.promedio < 2.5
+  [1m[36mAREL (0.7ms)[0m  [1mSELECT consulta.id FROM (SELECT cast(cast((sum(public.calificacions.valor)) as float)/count(*)as float) promedio, noticia_id id FROM "calificacions" INNER JOIN "noticia" ON "calificacions"."noticia_id" = "noticia"."id" GROUP BY "calificacions"."noticia_id") as consulta WHERE consulta.promedio < 1.5[0m
+  [1m[35mAREL (0.6ms)[0m  SELECT consulta.id FROM (SELECT cast(cast((sum(public.calificacions.valor)) as float)/count(*)as float) promedio, noticia_id id FROM "calificacions" INNER JOIN "noticia" ON "calificacions"."noticia_id" = "noticia"."id" GROUP BY "calificacions"."noticia_id") as consulta WHERE consulta.promedio >= 1.5 and consulta.promedio < 2.5
+  [1m[36mAREL (0.6ms)[0m  [1mSELECT consulta.id FROM (SELECT cast(cast((sum(public.calificacions.valor)) as float)/count(*)as float) promedio, noticia_id id FROM "calificacions" INNER JOIN "noticia" ON "calificacions"."noticia_id" = "noticia"."id" GROUP BY "calificacions"."noticia_id") as consulta WHERE consulta.promedio >= 2.5[0m
+  [1m[35mAREL (0.6ms)[0m  SELECT consulta.id FROM (SELECT cast(cast((sum(public.calificacions.valor)) as float)/count(*)as float) promedio, noticia_id id FROM "calificacions" INNER JOIN "noticia" ON "calificacions"."noticia_id" = "noticia"."id" GROUP BY "calificacions"."noticia_id") as consulta WHERE consulta.promedio >= 2.5
+  [1m[36mAREL (0.8ms)[0m  [1mSELECT consulta.id FROM (SELECT cast(cast((sum(public.calificacions.valor)) as float)/count(*)as float) promedio, noticia_id id FROM "calificacions" INNER JOIN "noticia" ON "calificacions"."noticia_id" = "noticia"."id" GROUP BY "calificacions"."noticia_id") as consulta WHERE consulta.promedio >= 2.5[0m
+  [1m[35mAREL (0.9ms)[0m  SELECT consulta.id FROM (SELECT cast(cast((sum(public.calificacions.valor)) as float)/count(*)as float) promedio, noticia_id id FROM "calificacions" INNER JOIN "noticia" ON "calificacions"."noticia_id" = "noticia"."id" GROUP BY "calificacions"."noticia_id") as consulta WHERE consulta.promedio < 1.5
+  [1m[36mAREL (0.9ms)[0m  [1mSELECT consulta.id FROM (SELECT cast(cast((sum(public.calificacions.valor)) as float)/count(*)as float) promedio, noticia_id id FROM "calificacions" INNER JOIN "noticia" ON "calificacions"."noticia_id" = "noticia"."id" GROUP BY "calificacions"."noticia_id") as consulta WHERE consulta.promedio >= 1.5 and consulta.promedio < 2.5[0m
+  [1m[35mAREL (0.8ms)[0m  SELECT consulta.id FROM (SELECT cast(cast((sum(public.calificacions.valor)) as float)/count(*)as float) promedio, noticia_id id FROM "calificacions" INNER JOIN "noticia" ON "calificacions"."noticia_id" = "noticia"."id" GROUP BY "calificacions"."noticia_id") as consulta WHERE consulta.promedio >= 2.5
+  [1m[36mAREL (0.8ms)[0m  [1mSELECT consulta.id FROM (SELECT cast(cast((sum(public.calificacions.valor)) as float)/count(*)as float) promedio, noticia_id id FROM "calificacions" INNER JOIN "noticia" ON "calificacions"."noticia_id" = "noticia"."id" GROUP BY "calificacions"."noticia_id") as consulta WHERE consulta.promedio < 1.5[0m
+  [1m[35mAREL (0.8ms)[0m  SELECT consulta.id FROM (SELECT cast(cast((sum(public.calificacions.valor)) as float)/count(*)as float) promedio, noticia_id id FROM "calificacions" INNER JOIN "noticia" ON "calificacions"."noticia_id" = "noticia"."id" GROUP BY "calificacions"."noticia_id") as consulta WHERE consulta.promedio >= 1.5 and consulta.promedio < 2.5
+  [1m[36mAREL (0.7ms)[0m  [1mSELECT consulta.id FROM (SELECT cast(cast((sum(public.calificacions.valor)) as float)/count(*)as float) promedio, noticia_id id FROM "calificacions" INNER JOIN "noticia" ON "calificacions"."noticia_id" = "noticia"."id" GROUP BY "calificacions"."noticia_id") as consulta WHERE consulta.promedio >= 2.5[0m
+  [1m[35mAREL (0.8ms)[0m  SELECT consulta.id FROM (SELECT cast(cast((sum(public.calificacions.valor)) as float)/count(*)as float) promedio, noticia_id id FROM "calificacions" INNER JOIN "noticia" ON "calificacions"."noticia_id" = "noticia"."id" GROUP BY "calificacions"."noticia_id") as consulta WHERE consulta.promedio < 1.5
+  [1m[36mAREL (0.7ms)[0m  [1mSELECT consulta.id FROM (SELECT cast(cast((sum(public.calificacions.valor)) as float)/count(*)as float) promedio, noticia_id id FROM "calificacions" INNER JOIN "noticia" ON "calificacions"."noticia_id" = "noticia"."id" GROUP BY "calificacions"."noticia_id") as consulta WHERE consulta.promedio >= 1.5 and consulta.promedio < 2.5[0m
+  [1m[35mAREL (0.6ms)[0m  SELECT consulta.id FROM (SELECT cast(cast((sum(public.calificacions.valor)) as float)/count(*)as float) promedio, noticia_id id FROM "calificacions" INNER JOIN "noticia" ON "calificacions"."noticia_id" = "noticia"."id" GROUP BY "calificacions"."noticia_id") as consulta WHERE consulta.promedio >= 2.5
+  Rendered admin/index.html.erb (137.3ms)
+Completed 200 OK in 264ms (Views: 89.0ms | ActiveRecord: 83.5ms)
+Started GET "/admin/permisos" for 127.0.0.1 at 2014-06-22 18:08:31 -0300
+Processing by PermissionsController#index as HTML
+PG::UndefinedTable: ERROR:  relation "roles" does not exist
+LINE 5:              WHERE a.attrelid = '"roles"'::regclass
+                                        ^
+:             SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+              FROM pg_attribute a LEFT JOIN pg_attrdef d
+                ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+             WHERE a.attrelid = '"roles"'::regclass
+               AND a.attnum > 0 AND NOT a.attisdropped
+             ORDER BY a.attnum
+
+Completed 500 Internal Server Error in 1ms
+Connecting to database specified by database.yml
+  [1m[36m (8.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (0.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreatePersonas (20130512114831)
+Migrating to CreateVideos (20130512115117)
+Migrating to CreateImagens (20130512115209)
+Migrating to CreateNoticia (20130512115327)
+Migrating to CreateCalificacions (20130512115426)
+Migrating to CreateFuncionalidads (20130512115621)
+Migrating to CreateTipoUsuarios (20130512115645)
+Migrating to CreateTipoUsuarioFuncionalidads (20130512115817)
+Migrating to AddRelacionPersonaTipoUsuario (20130512122112)
+Migrating to AddColumnsPersona (20130519204247)
+Migrating to AddColumnIdPicasaPicture (20130709114906)
+Migrating to CreateComments (20130802035314)
+Migrating to CreateNotifications (20130802035440)
+Migrating to AddColumnUsuariosToNotifications (20130805051728)
+Migrating to CambiarNombreColumnasUsuario (20130805084959)
+Migrating to EliminarTablasInnecesarias (20130813145800)
+Migrating to AddColumnBloqueado (20130818024452)
+Migrating to AddColumnAdmin (20131209020043)
+Migrating to CreateUsrNovelties (20140124200310)
+Migrating to CreateNovelties (20140124200815)
+Migrating to Roles (20140602023401)
+Migrating to Function (20140602023505)
+Migrating to Permission (20140602023658)
+Migrating to PersonaConRol (20140606031156)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (76.9ms)[0m  [1mALTER TABLE "personas" ADD COLUMN "role_id" integer[0m
+PG::UndefinedTable: ERROR:  relation "roles" does not exist
+LINE 5:              WHERE a.attrelid = '"roles"'::regclass
+                                        ^
+:             SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+              FROM pg_attribute a LEFT JOIN pg_attrdef d
+                ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+             WHERE a.attrelid = '"roles"'::regclass
+               AND a.attnum > 0 AND NOT a.attisdropped
+             ORDER BY a.attnum
+
+  [1m[35m (0.2ms)[0m  ROLLBACK
+Connecting to database specified by database.yml
+  [1m[36m (23.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+PG::InvalidSchemaName: ERROR:  no schema has been selected to create in
+: CREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) 
+Started GET "/" for 127.0.0.1 at 2014-06-22 18:14:10 -0300
+Processing by InicioController#start as HTML
+  [1m[36mPersona Load (0.6ms)[0m  [1mSELECT "personas".* FROM "personas" WHERE "personas"."id" = 1 LIMIT 1[0m
+PG::UndefinedTable: ERROR:  relation "personas" does not exist
+LINE 1: SELECT  "personas".* FROM "personas"  WHERE "personas"."id" ...
+                                  ^
+: SELECT  "personas".* FROM "personas"  WHERE "personas"."id" = 1 LIMIT 1
+Completed 500 Internal Server Error in 2ms
+Connecting to database specified by database.yml
+  [1m[36m (51.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (65.8ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.7ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreatePersonas (20130512114831)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (116.1ms)[0m  [1mCREATE TABLE "personas" ("id" serial primary key, "nombre" character varying(255), "apellido" character varying(255), "username" character varying(255), "salt" character varying(255), "hashed_password" character varying(255), "email" character varying(255), "genero" boolean, "fechaNacimiento" date, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (0.9ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130512114831')
+  [1m[36m (6.6ms)[0m  [1mCOMMIT[0m
+Migrating to CreateVideos (20130512115117)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (97.3ms)[0m  [1mCREATE TABLE "videos" ("id" serial primary key, "titulo" character varying(255), "url" character varying(255), "updated_at" timestamp NOT NULL, "persona_id" integer, "created_at" timestamp NOT NULL) [0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130512115117')
+  [1m[36m (8.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateImagens (20130512115209)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (43.4ms)[0m  [1mCREATE TABLE "imagens" ("id" serial primary key, "url" character varying(255), "updated_at" timestamp NOT NULL, "persona_id" integer, "created_at" timestamp NOT NULL) [0m
+  [1m[35m (1.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130512115209')
+  [1m[36m (16.3ms)[0m  [1mCOMMIT[0m
+Migrating to CreateNoticia (20130512115327)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (76.3ms)[0m  [1mCREATE TABLE "noticia" ("id" serial primary key, "titulo" character varying(255), "cuerpo" text, "updated_at" timestamp NOT NULL, "persona_id" integer, "imagen_id" integer, "created_at" timestamp NOT NULL) [0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130512115327')
+  [1m[36m (6.7ms)[0m  [1mCOMMIT[0m
+Migrating to CreateCalificacions (20130512115426)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (75.2ms)[0m  [1mCREATE TABLE "calificacions" ("id" serial primary key, "valor" integer, "persona_id" integer, "noticia_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130512115426')
+  [1m[36m (42.7ms)[0m  [1mCOMMIT[0m
+Migrating to CreateFuncionalidads (20130512115621)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (171.3ms)[0m  [1mCREATE TABLE "funcionalidads" ("id" serial primary key, "nombre" character varying(255), "descripcion" character varying(255), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130512115621')
+  [1m[36m (9.3ms)[0m  [1mCOMMIT[0m
+Migrating to CreateTipoUsuarios (20130512115645)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (92.7ms)[0m  [1mCREATE TABLE "tipo_usuarios" ("id" serial primary key, "nombre" character varying(255), "descripcion" character varying(255), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130512115645')
+  [1m[36m (14.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateTipoUsuarioFuncionalidads (20130512115817)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (37.2ms)[0m  [1mCREATE TABLE "tipo_usuario_funcionalidads" ("id" serial primary key, "tipoUsuario_id" integer, "funcionalidad" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130512115817')
+  [1m[36m (25.1ms)[0m  [1mCOMMIT[0m
+Migrating to AddRelacionPersonaTipoUsuario (20130512122112)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (1.0ms)[0m  [1mALTER TABLE "personas" ADD COLUMN "tipo_usuario_id" integer[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130512122112')
+  [1m[36m (3.9ms)[0m  [1mCOMMIT[0m
+Migrating to AddColumnsPersona (20130519204247)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (1.3ms)[0m  [1mALTER TABLE "personas" ADD COLUMN "activo" boolean[0m
+  [1m[35m (0.9ms)[0m  ALTER TABLE "personas" ADD COLUMN "codigo" character varying(255)
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130519204247')[0m
+  [1m[35m (11.7ms)[0m  COMMIT
+Migrating to AddColumnIdPicasaPicture (20130709114906)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (40.4ms)[0m  ALTER TABLE "imagens" ADD COLUMN "picasa_id" character varying(255)
+  [1m[36m (0.6ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130709114906')[0m
+  [1m[35m (9.8ms)[0m  COMMIT
+Migrating to CreateComments (20130802035314)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (73.5ms)[0m  CREATE TABLE "comments" ("id" serial primary key, "usuario_id" integer, "noticia_id" integer, "cuerpo" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130802035314')[0m
+  [1m[35m (10.5ms)[0m  COMMIT
+Migrating to CreateNotifications (20130802035440)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (54.0ms)[0m  CREATE TABLE "notifications" ("id" serial primary key, "usuario_id" integer, "noticia_id" integer, "read" boolean, "mensaje" character varying(255), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130802035440')[0m
+  [1m[35m (8.8ms)[0m  COMMIT
+Migrating to AddColumnUsuariosToNotifications (20130805051728)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (42.4ms)[0m  ALTER TABLE "notifications" ADD COLUMN "usuarios" character varying(255)
+  [1m[36m (3.7ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130805051728')[0m
+  [1m[35m (15.0ms)[0m  COMMIT
+Migrating to CambiarNombreColumnasUsuario (20130805084959)
+  [1m[36m (0.9ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "comments" RENAME COLUMN "usuario_id" TO "persona_id"
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "notifications" RENAME COLUMN "usuario_id" TO "persona_id"[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130805084959')
+  [1m[36m (15.1ms)[0m  [1mCOMMIT[0m
+Migrating to EliminarTablasInnecesarias (20130813145800)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (2.6ms)[0m  [1mDROP TABLE "tipo_usuario_funcionalidads"[0m
+  [1m[35m (2.3ms)[0m  DROP TABLE "tipo_usuarios"
+  [1m[36m (2.3ms)[0m  [1mDROP TABLE "funcionalidads"[0m
+  [1m[35m (0.8ms)[0m  ALTER TABLE "personas" DROP "tipo_usuario_id"
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130813145800')[0m
+  [1m[35m (11.7ms)[0m  COMMIT
+Migrating to AddColumnBloqueado (20130818024452)
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "personas" ADD COLUMN "bloqueado" boolean
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130818024452')[0m
+  [1m[35m (18.9ms)[0m  COMMIT
+Migrating to AddColumnAdmin (20131209020043)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "personas" ADD COLUMN "admin" boolean
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20131209020043')[0m
+  [1m[35m (10.0ms)[0m  COMMIT
+Migrating to CreateUsrNovelties (20140124200310)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (40.4ms)[0m  CREATE TABLE "usr_novelties" ("id" serial primary key, "viewed" boolean, "persona_id" integer, "novelty_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (0.6ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20140124200310')[0m
+  [1m[35m (7.2ms)[0m  COMMIT
+Migrating to CreateNovelties (20140124200815)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (60.7ms)[0m  CREATE TABLE "novelties" ("id" serial primary key, "message" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20140124200815')[0m
+  [1m[35m (7.8ms)[0m  COMMIT
+Migrating to Roles (20140602023401)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (33.1ms)[0m  CREATE TABLE "roles" ("id" serial primary key, "name" character varying(255)) 
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20140602023401')[0m
+  [1m[35m (7.3ms)[0m  COMMIT
+Migrating to Function (20140602023505)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (34.1ms)[0m  CREATE TABLE "functions" ("id" serial primary key, "name" character varying(255)) 
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20140602023505')[0m
+  [1m[35m (17.0ms)[0m  COMMIT
+Migrating to Permission (20140602023658)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (37.5ms)[0m  CREATE TABLE "permissions" ("id" serial primary key, "role_id" integer, "function_id" integer) 
+  [1m[36m (0.6ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20140602023658')[0m
+  [1m[35m (16.1ms)[0m  COMMIT
+Migrating to PersonaConRol (20140606031156)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.7ms)[0m  ALTER TABLE "personas" ADD COLUMN "role_id" integer
+  [1m[36m (0.8ms)[0m  [1mSELECT COUNT(*) FROM "roles" WHERE (name = 'Usuario Comun')[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE "personas" SET "role_id" = NULL
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20140606031156')[0m
+  [1m[35m (7.0ms)[0m  COMMIT
+  [1m[36m (0.5ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (0.5ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mPersona Load (1.3ms)[0m  [1mSELECT "personas".* FROM "personas" WHERE "personas"."username" = 'admin'[0m
+  [1m[35mPersona Load (0.4ms)[0m  SELECT "personas".* FROM "personas" WHERE "personas"."email" = 'admin@angrybirdsfanclub.com'
+  [1m[36mSQL (6.1ms)[0m  [1mINSERT INTO "personas" ("activo", "admin", "apellido", "bloqueado", "codigo", "created_at", "email", "fechaNacimiento", "genero", "hashed_password", "nombre", "role_id", "salt", "updated_at", "username") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"[0m  [["activo", true], ["admin", true], ["apellido", "Del Sistema"], ["bloqueado", false], ["codigo", ""], ["created_at", Sun, 22 Jun 2014 21:17:48 UTC +00:00], ["email", "admin@angrybirdsfanclub.com"], ["fechaNacimiento", Sun, 22 Jun 2014], ["genero", true], ["hashed_password", "ce592d370dfc4795eac4b0d52eed664488adac1b3ce978819e166c8015267fe5"], ["nombre", "Administrado"], ["role_id", nil], ["salt", "-5895026380.05568777174848394"], ["updated_at", Sun, 22 Jun 2014 21:17:48 UTC +00:00], ["username", "admin"]]
+  [1m[35m (8.1ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.8ms)[0m  INSERT INTO "functions" ("name") VALUES ($1) RETURNING "id"  [["name", "Admin Resumen"]]
+  [1m[36m (12.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "functions" ("name") VALUES ($1) RETURNING "id"[0m  [["name", "Admin Personas"]]
+  [1m[35m (5.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "functions" ("name") VALUES ($1) RETURNING "id"  [["name", "Admin Persona Edit"]]
+  [1m[36m (7.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "functions" ("name") VALUES ($1) RETURNING "id"[0m  [["name", "Admin Noticias"]]
+  [1m[35m (7.7ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "functions" ("name") VALUES ($1) RETURNING "id"  [["name", "Admin Imagenes"]]
+  [1m[36m (7.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "functions" ("name") VALUES ($1) RETURNING "id"[0m  [["name", "Admin Videos"]]
+  [1m[35m (8.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "functions" ("name") VALUES ($1) RETURNING "id"  [["name", "Admin Funciones"]]
+  [1m[36m (8.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "functions" ("name") VALUES ($1) RETURNING "id"[0m  [["name", "Admin Roles"]]
+  [1m[35m (8.4ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "functions" ("name") VALUES ($1) RETURNING "id"  [["name", "Admin Permisos"]]
+  [1m[36m (8.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "functions" ("name") VALUES ($1) RETURNING "id"[0m  [["name", "Admin Novedades"]]
+  [1m[35m (9.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "functions" ("name") VALUES ($1) RETURNING "id"  [["name", "Eliminar Noticias"]]
+  [1m[36m (6.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "functions" ("name") VALUES ($1) RETURNING "id"[0m  [["name", "Editar Noticias"]]
+  [1m[35m (9.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "functions" ("name") VALUES ($1) RETURNING "id"  [["name", "Agregar Noticias"]]
+  [1m[36m (8.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "functions" ("name") VALUES ($1) RETURNING "id"[0m  [["name", "Agregar Comentario"]]
+  [1m[35m (8.1ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "functions" ("name") VALUES ($1) RETURNING "id"  [["name", "Editar Comentario"]]
+  [1m[36m (8.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "functions" ("name") VALUES ($1) RETURNING "id"[0m  [["name", "Eliminar Comentario"]]
+  [1m[35m (7.8ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "functions" ("name") VALUES ($1) RETURNING "id"  [["name", "Agregar Imagenes"]]
+  [1m[36m (8.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "functions" ("name") VALUES ($1) RETURNING "id"[0m  [["name", "Eliminar Imagenes"]]
+  [1m[35m (7.8ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "functions" ("name") VALUES ($1) RETURNING "id"  [["name", "Agregar Videos"]]
+  [1m[36m (8.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "functions" ("name") VALUES ($1) RETURNING "id"[0m  [["name", "Editar Videos"]]
+  [1m[35m (8.1ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "functions" ("name") VALUES ($1) RETURNING "id"  [["name", "Eliminar Videos"]]
+  [1m[36m (8.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "functions" ("name") VALUES ($1) RETURNING "id"[0m  [["name", "Eliminar Usuarios"]]
+  [1m[35m (8.1ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "functions" ("name") VALUES ($1) RETURNING "id"  [["name", "Bloquear Usuarios"]]
+  [1m[36m (8.4ms)[0m  [1mCOMMIT[0m
+Connecting to database specified by database.yml
+Started GET "/" for 127.0.0.1 at 2014-06-22 18:18:14 -0300
+Processing by InicioController#start as HTML
+  [1m[36mPersona Load (1.0ms)[0m  [1mSELECT "personas".* FROM "personas" WHERE "personas"."id" = 1 LIMIT 1[0m
+  [1m[35mPersona Load (4.7ms)[0m  SELECT "personas".* FROM "personas" WHERE "personas"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mVideo Load (0.6ms)[0m  [1mSELECT "videos".* FROM "videos" [0m
+  [1m[35mImagen Load (0.5ms)[0m  SELECT "imagens".* FROM "imagens" 
+  [1m[36mNoticium Load (1.1ms)[0m  [1mSELECT "noticia".* FROM "noticia" ORDER BY id ASC[0m
+  [1m[35mAREL (0.9ms)[0m  SELECT novelties.id, novelties.message, novelties.created_at FROM "novelties" INNER JOIN "usr_novelties" ON "usr_novelties"."novelty_id" = "novelties"."id" WHERE usr_novelties.viewed = false AND usr_novelties.persona_id = 1
+  [1m[36m (0.8ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE (read = 'f' AND persona_id = 1)[0m
+  [1m[35mNotification Load (0.6ms)[0m  SELECT "notifications".* FROM "notifications" WHERE (read = 'f' AND persona_id = 1)
+  Rendered collection (0.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "personas".* FROM "personas" WHERE "personas"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered inicio/_nada_noticia.html.erb (0.6ms)
+  Rendered inicio/_nada_imagen.html.erb (0.4ms)
+  Rendered inicio/_nada_video.html.erb (0.4ms)
+  Rendered inicio/start.html.erb (22.4ms)
+Completed 200 OK in 166ms (Views: 27.4ms | ActiveRecord: 33.0ms)
+Started GET "/admin" for 127.0.0.1 at 2014-06-22 18:18:27 -0300
+Processing by AdminController#index as HTML
+  [1m[35mPersona Load (1.3ms)[0m  SELECT "personas".* FROM "personas" WHERE "personas"."id" = 1 LIMIT 1
+  [1m[36mPersona Load (0.8ms)[0m  [1mSELECT "personas".* FROM "personas" [0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "personas" WHERE (genero = 'f')
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "personas" WHERE (genero = 't')[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "personas" WHERE "personas"."bloqueado" = 't'
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "personas" WHERE "personas"."activo" = 't'[0m
+  [1m[35m (2.0ms)[0m  SELECT COUNT(*) FROM "personas" WHERE "personas"."activo" = 't' AND (created_at >= '2014-06-22 21:18:27.407427' AND created_at < '2014-07-22 21:18:27.410490')
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "personas" WHERE "personas"."activo" = 't' AND (created_at >= '2014-05-22 21:18:27.415540' AND created_at < '2014-06-22 21:18:27.415733')[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "personas" WHERE "personas"."activo" = 't' AND (created_at >= '2014-04-22 21:18:27.417839' AND created_at < '2014-05-22 21:18:27.418042')
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "personas" WHERE "personas"."activo" = 't' AND (created_at >= '2014-03-22 21:18:27.420073' AND created_at < '2014-04-22 21:18:27.420272')[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "personas" WHERE "personas"."activo" = 't' AND (created_at >= '2014-02-22 21:18:27.422494' AND created_at < '2014-03-22 21:18:27.422671')
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "personas" WHERE "personas"."activo" = 't' AND (created_at >= '2014-01-22 21:18:27.424409' AND created_at < '2014-02-22 21:18:27.424567')[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "personas" WHERE "personas"."activo" = 't' AND (created_at >= '2013-12-22 21:18:27.426113' AND created_at < '2014-01-22 21:18:27.426249')
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "personas" WHERE "personas"."activo" = 't' AND (created_at >= '2013-11-22 21:18:27.427697' AND created_at < '2013-12-22 21:18:27.427832')[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "personas" WHERE "personas"."activo" = 't' AND (created_at >= '2013-10-22 21:18:27.429345' AND created_at < '2013-11-22 21:18:27.429512')
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "personas" WHERE "personas"."activo" = 't' AND (created_at >= '2013-09-22 21:18:27.431452' AND created_at < '2013-10-22 21:18:27.431662')[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "personas" WHERE "personas"."activo" = 't' AND (created_at >= '2013-08-22 21:18:27.433493' AND created_at < '2013-09-22 21:18:27.433648')
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "personas" WHERE "personas"."activo" = 't' AND (created_at >= '2013-07-22 21:18:27.435416' AND created_at < '2013-08-22 21:18:27.435632')[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "personas" WHERE "personas"."activo" = 't' AND (created_at >= '2013-06-22 21:18:27.437911' AND created_at < '2013-07-22 21:18:27.438118')
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "noticia" WHERE (created_at >= '2014-06-22 21:18:27.443335' AND created_at < '2014-07-22 21:18:27.443542')[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "noticia" WHERE (created_at >= '2014-05-22 21:18:27.446250' AND created_at < '2014-06-22 21:18:27.446429')
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "noticia" WHERE (created_at >= '2014-04-22 21:18:27.448119' AND created_at < '2014-05-22 21:18:27.448432')[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "noticia" WHERE (created_at >= '2014-03-22 21:18:27.450470' AND created_at < '2014-04-22 21:18:27.450658')
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "noticia" WHERE (created_at >= '2014-02-22 21:18:27.452100' AND created_at < '2014-03-22 21:18:27.452260')[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "noticia" WHERE (created_at >= '2014-01-22 21:18:27.453520' AND created_at < '2014-02-22 21:18:27.453659')
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "noticia" WHERE (created_at >= '2013-12-22 21:18:27.454873' AND created_at < '2014-01-22 21:18:27.455012')[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "noticia" WHERE (created_at >= '2013-11-22 21:18:27.456348' AND created_at < '2013-12-22 21:18:27.456491')
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "noticia" WHERE (created_at >= '2013-10-22 21:18:27.457706' AND created_at < '2013-11-22 21:18:27.457842')[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "noticia" WHERE (created_at >= '2013-09-22 21:18:27.459081' AND created_at < '2013-10-22 21:18:27.459219')
+  [1m[36m (1.7ms)[0m  [1mSELECT COUNT(*) FROM "noticia" WHERE (created_at >= '2013-08-22 21:18:27.460353' AND created_at < '2013-09-22 21:18:27.460488')[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "noticia" WHERE (created_at >= '2013-07-22 21:18:27.525496' AND created_at < '2013-08-22 21:18:27.525672')
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "noticia" WHERE (created_at >= '2013-06-22 21:18:27.527242' AND created_at < '2013-07-22 21:18:27.527435')[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "imagens" WHERE (created_at >= '2014-06-22 21:18:27.529189' AND created_at < '2014-07-22 21:18:27.529377')
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "imagens" WHERE (created_at >= '2014-05-22 21:18:27.530914' AND created_at < '2014-06-22 21:18:27.531112')[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "imagens" WHERE (created_at >= '2014-04-22 21:18:27.532787' AND created_at < '2014-05-22 21:18:27.532996')
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "imagens" WHERE (created_at >= '2014-03-22 21:18:27.534516' AND created_at < '2014-04-22 21:18:27.534674')[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "imagens" WHERE (created_at >= '2014-02-22 21:18:27.536001' AND created_at < '2014-03-22 21:18:27.536156')
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "imagens" WHERE (created_at >= '2014-01-22 21:18:27.537442' AND created_at < '2014-02-22 21:18:27.537615')[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "imagens" WHERE (created_at >= '2013-12-22 21:18:27.539007' AND created_at < '2014-01-22 21:18:27.539163')
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "imagens" WHERE (created_at >= '2013-11-22 21:18:27.540519' AND created_at < '2013-12-22 21:18:27.540680')[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "imagens" WHERE (created_at >= '2013-10-22 21:18:27.541948' AND created_at < '2013-11-22 21:18:27.542102')
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "imagens" WHERE (created_at >= '2013-09-22 21:18:27.543356' AND created_at < '2013-10-22 21:18:27.543512')[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "imagens" WHERE (created_at >= '2013-08-22 21:18:27.545629' AND created_at < '2013-09-22 21:18:27.545830')
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "imagens" WHERE (created_at >= '2013-07-22 21:18:27.548254' AND created_at < '2013-08-22 21:18:27.548483')[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "imagens" WHERE (created_at >= '2013-06-22 21:18:27.550157' AND created_at < '2013-07-22 21:18:27.550329')
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "videos" WHERE (created_at >= '2014-06-22 21:18:27.551742' AND created_at < '2014-07-22 21:18:27.551907')[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "videos" WHERE (created_at >= '2014-05-22 21:18:27.553515' AND created_at < '2014-06-22 21:18:27.553691')
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "videos" WHERE (created_at >= '2014-04-22 21:18:27.554874' AND created_at < '2014-05-22 21:18:27.555096')[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "videos" WHERE (created_at >= '2014-03-22 21:18:27.556272' AND created_at < '2014-04-22 21:18:27.556412')
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "videos" WHERE (created_at >= '2014-02-22 21:18:27.557727' AND created_at < '2014-03-22 21:18:27.557910')[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "videos" WHERE (created_at >= '2014-01-22 21:18:27.559970' AND created_at < '2014-02-22 21:18:27.560156')
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "videos" WHERE (created_at >= '2013-12-22 21:18:27.561674' AND created_at < '2014-01-22 21:18:27.561827')[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "videos" WHERE (created_at >= '2013-11-22 21:18:27.563025' AND created_at < '2013-12-22 21:18:27.563164')
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "videos" WHERE (created_at >= '2013-10-22 21:18:27.564514' AND created_at < '2013-11-22 21:18:27.564697')[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "videos" WHERE (created_at >= '2013-09-22 21:18:27.566265' AND created_at < '2013-10-22 21:18:27.566428')
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "videos" WHERE (created_at >= '2013-08-22 21:18:27.567800' AND created_at < '2013-09-22 21:18:27.567965')[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "videos" WHERE (created_at >= '2013-07-22 21:18:27.569276' AND created_at < '2013-08-22 21:18:27.569431')
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "videos" WHERE (created_at >= '2013-06-22 21:18:27.570708' AND created_at < '2013-07-22 21:18:27.570864')[0m
+  [1m[35mAREL (22.8ms)[0m  SELECT consulta.id FROM (SELECT cast(cast((sum(public.calificacions.valor)) as float)/count(*)as float) promedio, noticia_id id FROM "calificacions" INNER JOIN "noticia" ON "calificacions"."noticia_id" = "noticia"."id" GROUP BY "calificacions"."noticia_id") as consulta WHERE consulta.promedio < 1.5
+  [1m[36mAREL (0.8ms)[0m  [1mSELECT consulta.id FROM (SELECT cast(cast((sum(public.calificacions.valor)) as float)/count(*)as float) promedio, noticia_id id FROM "calificacions" INNER JOIN "noticia" ON "calificacions"."noticia_id" = "noticia"."id" GROUP BY "calificacions"."noticia_id") as consulta WHERE consulta.promedio < 1.5[0m
+  [1m[35mAREL (0.7ms)[0m  SELECT consulta.id FROM (SELECT cast(cast((sum(public.calificacions.valor)) as float)/count(*)as float) promedio, noticia_id id FROM "calificacions" INNER JOIN "noticia" ON "calificacions"."noticia_id" = "noticia"."id" GROUP BY "calificacions"."noticia_id") as consulta WHERE consulta.promedio < 1.5
+  [1m[36mAREL (1.2ms)[0m  [1mSELECT consulta.id FROM (SELECT cast(cast((sum(public.calificacions.valor)) as float)/count(*)as float) promedio, noticia_id id FROM "calificacions" INNER JOIN "noticia" ON "calificacions"."noticia_id" = "noticia"."id" GROUP BY "calificacions"."noticia_id") as consulta WHERE consulta.promedio >= 1.5 and consulta.promedio < 2.5[0m
+  [1m[35mAREL (1.7ms)[0m  SELECT consulta.id FROM (SELECT cast(cast((sum(public.calificacions.valor)) as float)/count(*)as float) promedio, noticia_id id FROM "calificacions" INNER JOIN "noticia" ON "calificacions"."noticia_id" = "noticia"."id" GROUP BY "calificacions"."noticia_id") as consulta WHERE consulta.promedio >= 2.5
+  [1m[36mAREL (1.3ms)[0m  [1mSELECT consulta.id FROM (SELECT cast(cast((sum(public.calificacions.valor)) as float)/count(*)as float) promedio, noticia_id id FROM "calificacions" INNER JOIN "noticia" ON "calificacions"."noticia_id" = "noticia"."id" GROUP BY "calificacions"."noticia_id") as consulta WHERE consulta.promedio >= 1.5 and consulta.promedio < 2.5[0m
+  [1m[35mAREL (0.8ms)[0m  SELECT consulta.id FROM (SELECT cast(cast((sum(public.calificacions.valor)) as float)/count(*)as float) promedio, noticia_id id FROM "calificacions" INNER JOIN "noticia" ON "calificacions"."noticia_id" = "noticia"."id" GROUP BY "calificacions"."noticia_id") as consulta WHERE consulta.promedio >= 1.5 and consulta.promedio < 2.5
+  [1m[36mAREL (0.9ms)[0m  [1mSELECT consulta.id FROM (SELECT cast(cast((sum(public.calificacions.valor)) as float)/count(*)as float) promedio, noticia_id id FROM "calificacions" INNER JOIN "noticia" ON "calificacions"."noticia_id" = "noticia"."id" GROUP BY "calificacions"."noticia_id") as consulta WHERE consulta.promedio < 1.5[0m
+  [1m[35mAREL (0.9ms)[0m  SELECT consulta.id FROM (SELECT cast(cast((sum(public.calificacions.valor)) as float)/count(*)as float) promedio, noticia_id id FROM "calificacions" INNER JOIN "noticia" ON "calificacions"."noticia_id" = "noticia"."id" GROUP BY "calificacions"."noticia_id") as consulta WHERE consulta.promedio >= 1.5 and consulta.promedio < 2.5
+  [1m[36mAREL (0.9ms)[0m  [1mSELECT consulta.id FROM (SELECT cast(cast((sum(public.calificacions.valor)) as float)/count(*)as float) promedio, noticia_id id FROM "calificacions" INNER JOIN "noticia" ON "calificacions"."noticia_id" = "noticia"."id" GROUP BY "calificacions"."noticia_id") as consulta WHERE consulta.promedio >= 2.5[0m
+  [1m[35mAREL (0.9ms)[0m  SELECT consulta.id FROM (SELECT cast(cast((sum(public.calificacions.valor)) as float)/count(*)as float) promedio, noticia_id id FROM "calificacions" INNER JOIN "noticia" ON "calificacions"."noticia_id" = "noticia"."id" GROUP BY "calificacions"."noticia_id") as consulta WHERE consulta.promedio >= 2.5
+  [1m[36mAREL (1.4ms)[0m  [1mSELECT consulta.id FROM (SELECT cast(cast((sum(public.calificacions.valor)) as float)/count(*)as float) promedio, noticia_id id FROM "calificacions" INNER JOIN "noticia" ON "calificacions"."noticia_id" = "noticia"."id" GROUP BY "calificacions"."noticia_id") as consulta WHERE consulta.promedio >= 2.5[0m
+  [1m[35mAREL (0.7ms)[0m  SELECT consulta.id FROM (SELECT cast(cast((sum(public.calificacions.valor)) as float)/count(*)as float) promedio, noticia_id id FROM "calificacions" INNER JOIN "noticia" ON "calificacions"."noticia_id" = "noticia"."id" GROUP BY "calificacions"."noticia_id") as consulta WHERE consulta.promedio < 1.5
+  [1m[36mAREL (0.7ms)[0m  [1mSELECT consulta.id FROM (SELECT cast(cast((sum(public.calificacions.valor)) as float)/count(*)as float) promedio, noticia_id id FROM "calificacions" INNER JOIN "noticia" ON "calificacions"."noticia_id" = "noticia"."id" GROUP BY "calificacions"."noticia_id") as consulta WHERE consulta.promedio >= 1.5 and consulta.promedio < 2.5[0m
+  [1m[35mAREL (0.6ms)[0m  SELECT consulta.id FROM (SELECT cast(cast((sum(public.calificacions.valor)) as float)/count(*)as float) promedio, noticia_id id FROM "calificacions" INNER JOIN "noticia" ON "calificacions"."noticia_id" = "noticia"."id" GROUP BY "calificacions"."noticia_id") as consulta WHERE consulta.promedio >= 2.5
+  [1m[36mAREL (0.6ms)[0m  [1mSELECT consulta.id FROM (SELECT cast(cast((sum(public.calificacions.valor)) as float)/count(*)as float) promedio, noticia_id id FROM "calificacions" INNER JOIN "noticia" ON "calificacions"."noticia_id" = "noticia"."id" GROUP BY "calificacions"."noticia_id") as consulta WHERE consulta.promedio < 1.5[0m
+  [1m[35mAREL (0.6ms)[0m  SELECT consulta.id FROM (SELECT cast(cast((sum(public.calificacions.valor)) as float)/count(*)as float) promedio, noticia_id id FROM "calificacions" INNER JOIN "noticia" ON "calificacions"."noticia_id" = "noticia"."id" GROUP BY "calificacions"."noticia_id") as consulta WHERE consulta.promedio >= 1.5 and consulta.promedio < 2.5
+  [1m[36mAREL (1.8ms)[0m  [1mSELECT consulta.id FROM (SELECT cast(cast((sum(public.calificacions.valor)) as float)/count(*)as float) promedio, noticia_id id FROM "calificacions" INNER JOIN "noticia" ON "calificacions"."noticia_id" = "noticia"."id" GROUP BY "calificacions"."noticia_id") as consulta WHERE consulta.promedio >= 2.5[0m
+  [1m[35mAREL (0.8ms)[0m  SELECT consulta.id FROM (SELECT cast(cast((sum(public.calificacions.valor)) as float)/count(*)as float) promedio, noticia_id id FROM "calificacions" INNER JOIN "noticia" ON "calificacions"."noticia_id" = "noticia"."id" GROUP BY "calificacions"."noticia_id") as consulta WHERE consulta.promedio < 1.5
+  [1m[36mAREL (0.7ms)[0m  [1mSELECT consulta.id FROM (SELECT cast(cast((sum(public.calificacions.valor)) as float)/count(*)as float) promedio, noticia_id id FROM "calificacions" INNER JOIN "noticia" ON "calificacions"."noticia_id" = "noticia"."id" GROUP BY "calificacions"."noticia_id") as consulta WHERE consulta.promedio >= 1.5 and consulta.promedio < 2.5[0m
+  [1m[35mAREL (0.6ms)[0m  SELECT consulta.id FROM (SELECT cast(cast((sum(public.calificacions.valor)) as float)/count(*)as float) promedio, noticia_id id FROM "calificacions" INNER JOIN "noticia" ON "calificacions"."noticia_id" = "noticia"."id" GROUP BY "calificacions"."noticia_id") as consulta WHERE consulta.promedio >= 2.5
+  Rendered admin/index.html.erb (62.1ms)
+Completed 200 OK in 250ms (Views: 23.2ms | ActiveRecord: 74.6ms)
+Started GET "/admin/permisos" for 127.0.0.1 at 2014-06-22 18:18:44 -0300
+Processing by PermissionsController#index as HTML
+  [1m[36mRole Load (1.2ms)[0m  [1mSELECT "roles".* FROM "roles" ORDER BY name ASC LIMIT 1[0m
+Completed 500 Internal Server Error in 12ms
+Started GET "/favicon.ico" for 127.0.0.1 at 2014-06-22 18:18:44 -0300
+Started GET "/admin/permisos" for 127.0.0.1 at 2014-06-22 18:19:00 -0300
+Processing by PermissionsController#index as HTML
+  [1m[35mRole Load (0.8ms)[0m  SELECT "roles".* FROM "roles" ORDER BY name ASC LIMIT 1
+Completed 500 Internal Server Error in 2ms
+Started GET "/favicon.ico" for 127.0.0.1 at 2014-06-22 18:19:00 -0300
+Connecting to database specified by database.yml
+  [1m[36m (15.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (78.7ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.7ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreatePersonas (20130512114831)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (115.9ms)[0m  [1mCREATE TABLE "personas" ("id" serial primary key, "nombre" character varying(255), "apellido" character varying(255), "username" character varying(255), "salt" character varying(255), "hashed_password" character varying(255), "email" character varying(255), "genero" boolean, "fechaNacimiento" date, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130512114831')
+  [1m[36m (9.7ms)[0m  [1mCOMMIT[0m
+Migrating to CreateVideos (20130512115117)
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36m (107.5ms)[0m  [1mCREATE TABLE "videos" ("id" serial primary key, "titulo" character varying(255), "url" character varying(255), "updated_at" timestamp NOT NULL, "persona_id" integer, "created_at" timestamp NOT NULL) [0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130512115117')
+  [1m[36m (9.2ms)[0m  [1mCOMMIT[0m
+Migrating to CreateImagens (20130512115209)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (54.1ms)[0m  [1mCREATE TABLE "imagens" ("id" serial primary key, "url" character varying(255), "updated_at" timestamp NOT NULL, "persona_id" integer, "created_at" timestamp NOT NULL) [0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130512115209')
+  [1m[36m (9.0ms)[0m  [1mCOMMIT[0m
+Migrating to CreateNoticia (20130512115327)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (77.9ms)[0m  [1mCREATE TABLE "noticia" ("id" serial primary key, "titulo" character varying(255), "cuerpo" text, "updated_at" timestamp NOT NULL, "persona_id" integer, "imagen_id" integer, "created_at" timestamp NOT NULL) [0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130512115327')
+  [1m[36m (6.7ms)[0m  [1mCOMMIT[0m
+Migrating to CreateCalificacions (20130512115426)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (45.9ms)[0m  [1mCREATE TABLE "calificacions" ("id" serial primary key, "valor" integer, "persona_id" integer, "noticia_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130512115426')
+  [1m[36m (16.2ms)[0m  [1mCOMMIT[0m
+Migrating to CreateFuncionalidads (20130512115621)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (90.9ms)[0m  [1mCREATE TABLE "funcionalidads" ("id" serial primary key, "nombre" character varying(255), "descripcion" character varying(255), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130512115621')
+  [1m[36m (16.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateTipoUsuarios (20130512115645)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (80.0ms)[0m  [1mCREATE TABLE "tipo_usuarios" ("id" serial primary key, "nombre" character varying(255), "descripcion" character varying(255), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130512115645')
+  [1m[36m (14.3ms)[0m  [1mCOMMIT[0m
+Migrating to CreateTipoUsuarioFuncionalidads (20130512115817)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (47.7ms)[0m  [1mCREATE TABLE "tipo_usuario_funcionalidads" ("id" serial primary key, "tipoUsuario_id" integer, "funcionalidad" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130512115817')
+  [1m[36m (12.8ms)[0m  [1mCOMMIT[0m
+Migrating to AddRelacionPersonaTipoUsuario (20130512122112)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "personas" ADD COLUMN "tipo_usuario_id" integer[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130512122112')
+  [1m[36m (6.9ms)[0m  [1mCOMMIT[0m
+Migrating to AddColumnsPersona (20130519204247)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "personas" ADD COLUMN "activo" boolean[0m
+  [1m[35m (0.4ms)[0m  ALTER TABLE "personas" ADD COLUMN "codigo" character varying(255)
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130519204247')[0m
+  [1m[35m (5.4ms)[0m  COMMIT
+Migrating to AddColumnIdPicasaPicture (20130709114906)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (48.6ms)[0m  ALTER TABLE "imagens" ADD COLUMN "picasa_id" character varying(255)
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130709114906')[0m
+  [1m[35m (14.3ms)[0m  COMMIT
+Migrating to CreateComments (20130802035314)
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (81.4ms)[0m  CREATE TABLE "comments" ("id" serial primary key, "usuario_id" integer, "noticia_id" integer, "cuerpo" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130802035314')[0m
+  [1m[35m (13.0ms)[0m  COMMIT
+Migrating to CreateNotifications (20130802035440)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (49.9ms)[0m  CREATE TABLE "notifications" ("id" serial primary key, "usuario_id" integer, "noticia_id" integer, "read" boolean, "mensaje" character varying(255), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130802035440')[0m
+  [1m[35m (12.3ms)[0m  COMMIT
+Migrating to AddColumnUsuariosToNotifications (20130805051728)
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35m (39.5ms)[0m  ALTER TABLE "notifications" ADD COLUMN "usuarios" character varying(255)
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130805051728')[0m
+  [1m[35m (10.8ms)[0m  COMMIT
+Migrating to CambiarNombreColumnasUsuario (20130805084959)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (12.4ms)[0m  ALTER TABLE "comments" RENAME COLUMN "usuario_id" TO "persona_id"
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "notifications" RENAME COLUMN "usuario_id" TO "persona_id"[0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130805084959')
+  [1m[36m (39.7ms)[0m  [1mCOMMIT[0m
+Migrating to EliminarTablasInnecesarias (20130813145800)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (1.5ms)[0m  [1mDROP TABLE "tipo_usuario_funcionalidads"[0m
+  [1m[35m (1.5ms)[0m  DROP TABLE "tipo_usuarios"
+  [1m[36m (1.6ms)[0m  [1mDROP TABLE "funcionalidads"[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "personas" DROP "tipo_usuario_id"
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130813145800')[0m
+  [1m[35m (29.3ms)[0m  COMMIT
+Migrating to AddColumnBloqueado (20130818024452)
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "personas" ADD COLUMN "bloqueado" boolean
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130818024452')[0m
+  [1m[35m (33.1ms)[0m  COMMIT
+Migrating to AddColumnAdmin (20131209020043)
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (1.0ms)[0m  ALTER TABLE "personas" ADD COLUMN "admin" boolean
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20131209020043')[0m
+  [1m[35m (4.5ms)[0m  COMMIT
+Migrating to CreateUsrNovelties (20140124200310)
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35m (50.1ms)[0m  CREATE TABLE "usr_novelties" ("id" serial primary key, "viewed" boolean, "persona_id" integer, "novelty_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20140124200310')[0m
+  [1m[35m (11.3ms)[0m  COMMIT
+Migrating to CreateNovelties (20140124200815)
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (95.2ms)[0m  CREATE TABLE "novelties" ("id" serial primary key, "message" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20140124200815')[0m
+  [1m[35m (21.4ms)[0m  COMMIT
+Migrating to Roles (20140602023401)
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (42.5ms)[0m  CREATE TABLE "roles" ("id" serial primary key, "name" character varying(255)) 
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20140602023401')[0m
+  [1m[35m (7.9ms)[0m  COMMIT
+Migrating to Function (20140602023505)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (33.0ms)[0m  CREATE TABLE "functions" ("id" serial primary key, "name" character varying(255)) 
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20140602023505')[0m
+  [1m[35m (7.7ms)[0m  COMMIT
+Migrating to Permission (20140602023658)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (44.3ms)[0m  CREATE TABLE "permissions" ("id" serial primary key, "role_id" integer, "function_id" integer) 
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20140602023658')[0m
+  [1m[35m (6.1ms)[0m  COMMIT
+Migrating to PersonaConRol (20140606031156)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.5ms)[0m  ALTER TABLE "personas" ADD COLUMN "role_id" integer
+  [1m[36m (0.9ms)[0m  [1mSELECT COUNT(*) FROM "roles" WHERE (name = 'Usuario Comun')[0m
+  [1m[35mSQL (0.9ms)[0m  UPDATE "personas" SET "role_id" = NULL
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20140606031156')[0m
+  [1m[35m (7.9ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (0.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mPersona Load (1.3ms)[0m  [1mSELECT "personas".* FROM "personas" WHERE "personas"."username" = 'admin'[0m
+  [1m[35mPersona Load (0.4ms)[0m  SELECT "personas".* FROM "personas" WHERE "personas"."email" = 'admin@angrybirdsfanclub.com'
+  [1m[36mSQL (6.4ms)[0m  [1mINSERT INTO "personas" ("activo", "admin", "apellido", "bloqueado", "codigo", "created_at", "email", "fechaNacimiento", "genero", "hashed_password", "nombre", "role_id", "salt", "updated_at", "username") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"[0m  [["activo", true], ["admin", true], ["apellido", "Del Sistema"], ["bloqueado", false], ["codigo", ""], ["created_at", Sun, 22 Jun 2014 21:23:38 UTC +00:00], ["email", "admin@angrybirdsfanclub.com"], ["fechaNacimiento", Sun, 22 Jun 2014], ["genero", true], ["hashed_password", "bd21d98c6dda01b58c4e5ccb11cf6d7eb184caa5c8767430bd0667406a3610d8"], ["nombre", "Administrado"], ["role_id", nil], ["salt", "-5861851180.8159714310870514"], ["updated_at", Sun, 22 Jun 2014 21:23:38 UTC +00:00], ["username", "admin"]]
+  [1m[35m (20.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "roles" ("name") VALUES ($1) RETURNING "id"  [["name", "Administrador"]]
+  [1m[36m (12.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "roles" ("name") VALUES ($1) RETURNING "id"[0m  [["name", "Usuario Comun"]]
+  [1m[35m (6.4ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.7ms)[0m  INSERT INTO "functions" ("name") VALUES ($1) RETURNING "id"  [["name", "Admin Resumen"]]
+  [1m[36m (7.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "functions" ("name") VALUES ($1) RETURNING "id"[0m  [["name", "Admin Personas"]]
+  [1m[35m (5.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "functions" ("name") VALUES ($1) RETURNING "id"  [["name", "Admin Persona Edit"]]
+  [1m[36m (8.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "functions" ("name") VALUES ($1) RETURNING "id"[0m  [["name", "Admin Noticias"]]
+  [1m[35m (2.9ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "functions" ("name") VALUES ($1) RETURNING "id"  [["name", "Admin Imagenes"]]
+  [1m[36m (9.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "functions" ("name") VALUES ($1) RETURNING "id"[0m  [["name", "Admin Videos"]]
+  [1m[35m (7.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "functions" ("name") VALUES ($1) RETURNING "id"  [["name", "Admin Funciones"]]
+  [1m[36m (7.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "functions" ("name") VALUES ($1) RETURNING "id"[0m  [["name", "Admin Roles"]]
+  [1m[35m (7.8ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "functions" ("name") VALUES ($1) RETURNING "id"  [["name", "Admin Permisos"]]
+  [1m[36m (7.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "functions" ("name") VALUES ($1) RETURNING "id"[0m  [["name", "Admin Novedades"]]
+  [1m[35m (7.8ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "functions" ("name") VALUES ($1) RETURNING "id"  [["name", "Eliminar Noticias"]]
+  [1m[36m (8.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "functions" ("name") VALUES ($1) RETURNING "id"[0m  [["name", "Editar Noticias"]]
+  [1m[35m (7.4ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "functions" ("name") VALUES ($1) RETURNING "id"  [["name", "Agregar Noticias"]]
+  [1m[36m (7.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "functions" ("name") VALUES ($1) RETURNING "id"[0m  [["name", "Agregar Comentario"]]
+  [1m[35m (8.1ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "functions" ("name") VALUES ($1) RETURNING "id"  [["name", "Editar Comentario"]]
+  [1m[36m (8.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "functions" ("name") VALUES ($1) RETURNING "id"[0m  [["name", "Eliminar Comentario"]]
+  [1m[35m (7.8ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "functions" ("name") VALUES ($1) RETURNING "id"  [["name", "Agregar Imagenes"]]
+  [1m[36m (7.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "functions" ("name") VALUES ($1) RETURNING "id"[0m  [["name", "Eliminar Imagenes"]]
+  [1m[35m (7.8ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "functions" ("name") VALUES ($1) RETURNING "id"  [["name", "Agregar Videos"]]
+  [1m[36m (8.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "functions" ("name") VALUES ($1) RETURNING "id"[0m  [["name", "Editar Videos"]]
+  [1m[35m (8.1ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "functions" ("name") VALUES ($1) RETURNING "id"  [["name", "Eliminar Videos"]]
+  [1m[36m (7.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "functions" ("name") VALUES ($1) RETURNING "id"[0m  [["name", "Eliminar Usuarios"]]
+  [1m[35m (7.3ms)[0m  COMMIT
+  [1m[36m (0.8ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "functions" ("name") VALUES ($1) RETURNING "id"  [["name", "Bloquear Usuarios"]]
+  [1m[36m (48.3ms)[0m  [1mCOMMIT[0m
+Connecting to database specified by database.yml
+Started GET "/admin/permisos" for 127.0.0.1 at 2014-06-22 18:23:59 -0300
+Processing by PermissionsController#index as HTML
+  [1m[36mRole Load (1.1ms)[0m  [1mSELECT "roles".* FROM "roles" ORDER BY name ASC LIMIT 1[0m
+  [1m[35mRole Load (0.4ms)[0m  SELECT "roles".* FROM "roles" ORDER BY name ASC
+  Rendered permissions/_roles.html.erb (2.9ms)
+  [1m[36mAREL (0.9ms)[0m  [1mSELECT * FROM "functions" WHERE "functions"."id" IN (SELECT function_id FROM "permissions" WHERE "permissions"."role_id" = 1) ORDER BY name ASC[0m
+  Rendered permissions/_si_funciones.html.erb (6.8ms)
+  [1m[35mAREL (0.7ms)[0m  SELECT * FROM "functions" WHERE "functions"."id" NOT IN (SELECT function_id FROM "permissions" WHERE "permissions"."role_id" = 1) ORDER BY name ASC
+  Rendered permissions/_no_funciones.html.erb (3.6ms)
+  Rendered permissions/index.html.erb (23.1ms)
+Completed 200 OK in 51ms (Views: 26.2ms | ActiveRecord: 15.7ms)
+Started GET "/admin/permisos/change_rol?role=2" for 127.0.0.1 at 2014-06-22 18:24:22 -0300
+Processing by PermissionsController#change_rol as */*
+  Parameters: {"role"=>"2"}
+  [1m[36mAREL (0.8ms)[0m  [1mSELECT * FROM "functions" WHERE "functions"."id" IN (SELECT function_id FROM "permissions" WHERE "permissions"."role_id" = 2) ORDER BY name ASC[0m
+  Rendered permissions/_si_funciones.html.erb (2.9ms)
+  [1m[35mAREL (0.9ms)[0m  SELECT * FROM "functions" WHERE "functions"."id" NOT IN (SELECT function_id FROM "permissions" WHERE "permissions"."role_id" = 2) ORDER BY name ASC
+  Rendered permissions/_no_funciones.html.erb (3.3ms)
+  Rendered permissions/change_rol.js.erb (9.8ms)
+Completed 200 OK in 14ms (Views: 11.5ms | ActiveRecord: 1.8ms)
+Connecting to database specified by database.yml
+  [1m[36m (0.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (5009.6ms)[0m  DROP DATABASE IF EXISTS "angrybirds_test"
+PG::ObjectInUse: ERROR:  database "angrybirds_test" is being accessed by other users
+DETAIL:  There are 2 other session(s) using the database.
+: DROP DATABASE IF EXISTS "angrybirds_test"
+Connecting to database specified by database.yml
+Unable to load funcionalidad, underlying cause No such file to load -- funcionalidad 
+
+ /home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activesupport-3.2.13/lib/active_support/dependencies.rb:317:in `rescue in depend_on'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activesupport-3.2.13/lib/active_support/dependencies.rb:312:in `depend_on'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activesupport-3.2.13/lib/active_support/dependencies.rb:225:in `require_dependency'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activerecord-3.2.13/lib/active_record/fixtures.rb:767:in `try_to_load_dependency'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activerecord-3.2.13/lib/active_record/fixtures.rb:782:in `block in require_fixture_classes'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activerecord-3.2.13/lib/active_record/fixtures.rb:779:in `each'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activerecord-3.2.13/lib/active_record/fixtures.rb:779:in `require_fixture_classes'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activerecord-3.2.13/lib/active_record/fixtures.rb:762:in `fixtures'
+/home/javier/Proyectos/Angry Birds/test/test_helper.rb:10:in `<class:TestCase>'
+/home/javier/Proyectos/Angry Birds/test/test_helper.rb:5:in `<top (required)>'
+/home/javier/Proyectos/Angry Birds/test/functional/calificacions_controller_test.rb:1:in `require'
+/home/javier/Proyectos/Angry Birds/test/functional/calificacions_controller_test.rb:1:in `<top (required)>'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/rake-10.1.1/lib/rake/rake_test_loader.rb:10:in `require'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/rake-10.1.1/lib/rake/rake_test_loader.rb:10:in `block (2 levels) in <main>'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/rake-10.1.1/lib/rake/rake_test_loader.rb:9:in `each'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/rake-10.1.1/lib/rake/rake_test_loader.rb:9:in `block in <main>'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/rake-10.1.1/lib/rake/rake_test_loader.rb:4:in `select'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/rake-10.1.1/lib/rake/rake_test_loader.rb:4:in `<main>'
+Unable to load function, underlying cause No such file to load -- function 
+
+ /home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activesupport-3.2.13/lib/active_support/dependencies.rb:317:in `rescue in depend_on'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activesupport-3.2.13/lib/active_support/dependencies.rb:312:in `depend_on'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activesupport-3.2.13/lib/active_support/dependencies.rb:225:in `require_dependency'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activerecord-3.2.13/lib/active_record/fixtures.rb:767:in `try_to_load_dependency'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activerecord-3.2.13/lib/active_record/fixtures.rb:782:in `block in require_fixture_classes'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activerecord-3.2.13/lib/active_record/fixtures.rb:779:in `each'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activerecord-3.2.13/lib/active_record/fixtures.rb:779:in `require_fixture_classes'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activerecord-3.2.13/lib/active_record/fixtures.rb:762:in `fixtures'
+/home/javier/Proyectos/Angry Birds/test/test_helper.rb:10:in `<class:TestCase>'
+/home/javier/Proyectos/Angry Birds/test/test_helper.rb:5:in `<top (required)>'
+/home/javier/Proyectos/Angry Birds/test/functional/calificacions_controller_test.rb:1:in `require'
+/home/javier/Proyectos/Angry Birds/test/functional/calificacions_controller_test.rb:1:in `<top (required)>'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/rake-10.1.1/lib/rake/rake_test_loader.rb:10:in `require'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/rake-10.1.1/lib/rake/rake_test_loader.rb:10:in `block (2 levels) in <main>'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/rake-10.1.1/lib/rake/rake_test_loader.rb:9:in `each'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/rake-10.1.1/lib/rake/rake_test_loader.rb:9:in `block in <main>'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/rake-10.1.1/lib/rake/rake_test_loader.rb:4:in `select'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/rake-10.1.1/lib/rake/rake_test_loader.rb:4:in `<main>'
+Unable to load permission, underlying cause No such file to load -- permission 
+
+ /home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activesupport-3.2.13/lib/active_support/dependencies.rb:317:in `rescue in depend_on'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activesupport-3.2.13/lib/active_support/dependencies.rb:312:in `depend_on'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activesupport-3.2.13/lib/active_support/dependencies.rb:225:in `require_dependency'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activerecord-3.2.13/lib/active_record/fixtures.rb:767:in `try_to_load_dependency'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activerecord-3.2.13/lib/active_record/fixtures.rb:782:in `block in require_fixture_classes'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activerecord-3.2.13/lib/active_record/fixtures.rb:779:in `each'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activerecord-3.2.13/lib/active_record/fixtures.rb:779:in `require_fixture_classes'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activerecord-3.2.13/lib/active_record/fixtures.rb:762:in `fixtures'
+/home/javier/Proyectos/Angry Birds/test/test_helper.rb:10:in `<class:TestCase>'
+/home/javier/Proyectos/Angry Birds/test/test_helper.rb:5:in `<top (required)>'
+/home/javier/Proyectos/Angry Birds/test/functional/calificacions_controller_test.rb:1:in `require'
+/home/javier/Proyectos/Angry Birds/test/functional/calificacions_controller_test.rb:1:in `<top (required)>'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/rake-10.1.1/lib/rake/rake_test_loader.rb:10:in `require'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/rake-10.1.1/lib/rake/rake_test_loader.rb:10:in `block (2 levels) in <main>'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/rake-10.1.1/lib/rake/rake_test_loader.rb:9:in `each'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/rake-10.1.1/lib/rake/rake_test_loader.rb:9:in `block in <main>'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/rake-10.1.1/lib/rake/rake_test_loader.rb:4:in `select'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/rake-10.1.1/lib/rake/rake_test_loader.rb:4:in `<main>'
+Started GET "/admin/permisos" for 127.0.0.1 at 2014-06-22 18:28:51 -0300
+Processing by PermissionsController#index as HTML
+  [1m[36mRole Load (0.8ms)[0m  [1mSELECT "roles".* FROM "roles" ORDER BY name ASC LIMIT 1[0m
+  [1m[35mRole Load (0.8ms)[0m  SELECT "roles".* FROM "roles" ORDER BY name ASC
+  Rendered permissions/_roles.html.erb (1.7ms)
+  [1m[36mAREL (0.7ms)[0m  [1mSELECT * FROM "functions" WHERE "functions"."id" IN (SELECT function_id FROM "permissions" WHERE "permissions"."role_id" = 1) ORDER BY name ASC[0m
+  Rendered permissions/_si_funciones.html.erb (1.6ms)
+  [1m[35mAREL (1.0ms)[0m  SELECT * FROM "functions" WHERE "functions"."id" NOT IN (SELECT function_id FROM "permissions" WHERE "permissions"."role_id" = 1) ORDER BY name ASC
+  Rendered permissions/_no_funciones.html.erb (11.6ms)
+  Rendered permissions/index.html.erb (17.0ms)
+Completed 200 OK in 21ms (Views: 15.4ms | ActiveRecord: 3.4ms)
+Started GET "/admin/usuarios" for 127.0.0.1 at 2014-06-22 18:28:58 -0300
+Processing by AdminController#user as HTML
+  [1m[36mPersona Load (0.8ms)[0m  [1mSELECT "personas".* FROM "personas" WHERE "personas"."id" = 1 LIMIT 1[0m
+  [1m[35mPersona Load (0.9ms)[0m  SELECT "personas".* FROM "personas" ORDER BY id ASC LIMIT 10 OFFSET 0
+  [1m[36mNoticium Load (1.0ms)[0m  [1mSELECT "noticia".* FROM "noticia" WHERE "noticia"."persona_id" = 1[0m
+  [1m[35mImagen Load (0.6ms)[0m  SELECT "imagens".* FROM "imagens" WHERE "imagens"."persona_id" = 1
+  [1m[36mVideo Load (0.6ms)[0m  [1mSELECT "videos".* FROM "videos" WHERE "videos"."persona_id" = 1[0m
+  Rendered admin/user.html.erb (130.4ms)
+Completed 500 Internal Server Error in 229ms
+Started GET "/favicon.ico" for 127.0.0.1 at 2014-06-22 18:28:59 -0300
+Started GET "/admin/usuarios" for 127.0.0.1 at 2014-06-22 18:29:56 -0300
+Processing by AdminController#user as HTML
+  [1m[35mPersona Load (0.8ms)[0m  SELECT "personas".* FROM "personas" WHERE "personas"."id" = 1 LIMIT 1
+  [1m[36mPersona Load (0.6ms)[0m  [1mSELECT "personas".* FROM "personas" ORDER BY id ASC LIMIT 10 OFFSET 0[0m
+  [1m[35mNoticium Load (0.4ms)[0m  SELECT "noticia".* FROM "noticia" WHERE "noticia"."persona_id" = 1
+  [1m[36mImagen Load (0.4ms)[0m  [1mSELECT "imagens".* FROM "imagens" WHERE "imagens"."persona_id" = 1[0m
+  [1m[35mVideo Load (0.4ms)[0m  SELECT "videos".* FROM "videos" WHERE "videos"."persona_id" = 1
+  Rendered admin/user.html.erb (8.5ms)
+Completed 500 Internal Server Error in 13ms
+Started GET "/favicon.ico" for 127.0.0.1 at 2014-06-22 18:29:57 -0300
+Started GET "/admin/usuarios" for 127.0.0.1 at 2014-06-22 18:30:01 -0300
+Processing by AdminController#user as HTML
+  [1m[36mPersona Load (1.2ms)[0m  [1mSELECT "personas".* FROM "personas" WHERE "personas"."id" = 1 LIMIT 1[0m
+  [1m[35mPersona Load (2.7ms)[0m  SELECT "personas".* FROM "personas" ORDER BY id ASC LIMIT 10 OFFSET 0
+  [1m[36mNoticium Load (0.6ms)[0m  [1mSELECT "noticia".* FROM "noticia" WHERE "noticia"."persona_id" = 1[0m
+  [1m[35mImagen Load (0.6ms)[0m  SELECT "imagens".* FROM "imagens" WHERE "imagens"."persona_id" = 1
+  [1m[36mVideo Load (3.3ms)[0m  [1mSELECT "videos".* FROM "videos" WHERE "videos"."persona_id" = 1[0m
+  Rendered admin/user.html.erb (17.1ms)
+Completed 500 Internal Server Error in 25ms
+Started GET "/favicon.ico" for 127.0.0.1 at 2014-06-22 18:30:01 -0300
+Started GET "/admin/usuarios" for 127.0.0.1 at 2014-06-22 18:30:12 -0300
+Processing by AdminController#user as HTML
+  [1m[35mPersona Load (0.7ms)[0m  SELECT "personas".* FROM "personas" WHERE "personas"."id" = 1 LIMIT 1
+  [1m[36mPersona Load (0.6ms)[0m  [1mSELECT "personas".* FROM "personas" ORDER BY id ASC LIMIT 10 OFFSET 0[0m
+  [1m[35mNoticium Load (0.5ms)[0m  SELECT "noticia".* FROM "noticia" WHERE "noticia"."persona_id" = 1
+  [1m[36mImagen Load (0.4ms)[0m  [1mSELECT "imagens".* FROM "imagens" WHERE "imagens"."persona_id" = 1[0m
+  [1m[35mVideo Load (0.6ms)[0m  SELECT "videos".* FROM "videos" WHERE "videos"."persona_id" = 1
+  [1m[36mRole Load (0.5ms)[0m  [1mSELECT "roles".* FROM "roles" WHERE "roles"."id" = 1 LIMIT 1[0m
+  Rendered admin/user.html.erb (46.9ms)
+Completed 200 OK in 50ms (Views: 45.3ms | ActiveRecord: 3.3ms)
+Started GET "/admin/usuarios" for 127.0.0.1 at 2014-06-22 18:30:48 -0300
+Processing by AdminController#user as HTML
+  [1m[35mPersona Load (1.0ms)[0m  SELECT "personas".* FROM "personas" WHERE "personas"."id" = 1 LIMIT 1
+  [1m[36mPersona Load (0.6ms)[0m  [1mSELECT "personas".* FROM "personas" ORDER BY id ASC LIMIT 10 OFFSET 0[0m
+  [1m[35mNoticium Load (0.4ms)[0m  SELECT "noticia".* FROM "noticia" WHERE "noticia"."persona_id" = 1
+  [1m[36mImagen Load (0.3ms)[0m  [1mSELECT "imagens".* FROM "imagens" WHERE "imagens"."persona_id" = 1[0m
+  [1m[35mVideo Load (0.5ms)[0m  SELECT "videos".* FROM "videos" WHERE "videos"."persona_id" = 1
+  [1m[36mRole Load (0.4ms)[0m  [1mSELECT "roles".* FROM "roles" WHERE "roles"."id" = 1 LIMIT 1[0m
+  Rendered admin/user.html.erb (8.9ms)
+Completed 200 OK in 15ms (Views: 9.4ms | ActiveRecord: 3.2ms)
+Started GET "/admin/permisos" for 127.0.0.1 at 2014-06-22 18:30:50 -0300
+Processing by PermissionsController#index as HTML
+  [1m[35mRole Load (0.4ms)[0m  SELECT "roles".* FROM "roles" ORDER BY name ASC LIMIT 1
+  [1m[36mRole Load (0.5ms)[0m  [1mSELECT "roles".* FROM "roles" ORDER BY name ASC[0m
+  Rendered permissions/_roles.html.erb (1.4ms)
+  [1m[35mAREL (0.7ms)[0m  SELECT * FROM "functions" WHERE "functions"."id" IN (SELECT function_id FROM "permissions" WHERE "permissions"."role_id" = 1) ORDER BY name ASC
+  Rendered permissions/_si_funciones.html.erb (1.5ms)
+  [1m[36mAREL (0.6ms)[0m  [1mSELECT * FROM "functions" WHERE "functions"."id" NOT IN (SELECT function_id FROM "permissions" WHERE "permissions"."role_id" = 1) ORDER BY name ASC[0m
+  Rendered permissions/_no_funciones.html.erb (1.8ms)
+  Rendered permissions/index.html.erb (5.7ms)
+Completed 200 OK in 9ms (Views: 4.7ms | ActiveRecord: 2.2ms)
+Connecting to database specified by database.yml
+Unable to load funcionalidad, underlying cause No such file to load -- funcionalidad 
+
+ /home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activesupport-3.2.13/lib/active_support/dependencies.rb:317:in `rescue in depend_on'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activesupport-3.2.13/lib/active_support/dependencies.rb:312:in `depend_on'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activesupport-3.2.13/lib/active_support/dependencies.rb:225:in `require_dependency'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activerecord-3.2.13/lib/active_record/fixtures.rb:767:in `try_to_load_dependency'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activerecord-3.2.13/lib/active_record/fixtures.rb:782:in `block in require_fixture_classes'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activerecord-3.2.13/lib/active_record/fixtures.rb:779:in `each'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activerecord-3.2.13/lib/active_record/fixtures.rb:779:in `require_fixture_classes'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activerecord-3.2.13/lib/active_record/fixtures.rb:762:in `fixtures'
+/home/javier/Proyectos/Angry Birds/test/test_helper.rb:10:in `<class:TestCase>'
+/home/javier/Proyectos/Angry Birds/test/test_helper.rb:5:in `<top (required)>'
+/home/javier/Proyectos/Angry Birds/test/unit/persona_test.rb:1:in `require'
+/home/javier/Proyectos/Angry Birds/test/unit/persona_test.rb:1:in `<top (required)>'
+-e:1:in `load'
+-e:1:in `<main>'
+Unable to load function, underlying cause No such file to load -- function 
+
+ /home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activesupport-3.2.13/lib/active_support/dependencies.rb:317:in `rescue in depend_on'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activesupport-3.2.13/lib/active_support/dependencies.rb:312:in `depend_on'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activesupport-3.2.13/lib/active_support/dependencies.rb:225:in `require_dependency'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activerecord-3.2.13/lib/active_record/fixtures.rb:767:in `try_to_load_dependency'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activerecord-3.2.13/lib/active_record/fixtures.rb:782:in `block in require_fixture_classes'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activerecord-3.2.13/lib/active_record/fixtures.rb:779:in `each'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activerecord-3.2.13/lib/active_record/fixtures.rb:779:in `require_fixture_classes'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activerecord-3.2.13/lib/active_record/fixtures.rb:762:in `fixtures'
+/home/javier/Proyectos/Angry Birds/test/test_helper.rb:10:in `<class:TestCase>'
+/home/javier/Proyectos/Angry Birds/test/test_helper.rb:5:in `<top (required)>'
+/home/javier/Proyectos/Angry Birds/test/unit/persona_test.rb:1:in `require'
+/home/javier/Proyectos/Angry Birds/test/unit/persona_test.rb:1:in `<top (required)>'
+-e:1:in `load'
+-e:1:in `<main>'
+Unable to load permission, underlying cause No such file to load -- permission 
+
+ /home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activesupport-3.2.13/lib/active_support/dependencies.rb:317:in `rescue in depend_on'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activesupport-3.2.13/lib/active_support/dependencies.rb:312:in `depend_on'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activesupport-3.2.13/lib/active_support/dependencies.rb:225:in `require_dependency'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activerecord-3.2.13/lib/active_record/fixtures.rb:767:in `try_to_load_dependency'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activerecord-3.2.13/lib/active_record/fixtures.rb:782:in `block in require_fixture_classes'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activerecord-3.2.13/lib/active_record/fixtures.rb:779:in `each'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activerecord-3.2.13/lib/active_record/fixtures.rb:779:in `require_fixture_classes'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activerecord-3.2.13/lib/active_record/fixtures.rb:762:in `fixtures'
+/home/javier/Proyectos/Angry Birds/test/test_helper.rb:10:in `<class:TestCase>'
+/home/javier/Proyectos/Angry Birds/test/test_helper.rb:5:in `<top (required)>'
+/home/javier/Proyectos/Angry Birds/test/unit/persona_test.rb:1:in `require'
+/home/javier/Proyectos/Angry Birds/test/unit/persona_test.rb:1:in `<top (required)>'
+-e:1:in `load'
+-e:1:in `<main>'
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mPersona Load (1.3ms)[0m  SELECT "personas".* FROM "personas" WHERE "personas"."username" = 'usuario-activo-bloqueado'
+  [1m[36mPersona Load (0.6ms)[0m  [1mSELECT "personas".* FROM "personas" WHERE "personas"."email" = 'usuario-activo-bloqueado@angrybirdsfanclub.com'[0m
+  [1m[35mSQL (6.8ms)[0m  INSERT INTO "personas" ("activo", "admin", "apellido", "bloqueado", "codigo", "created_at", "email", "fechaNacimiento", "genero", "hashed_password", "nombre", "role_id", "salt", "updated_at", "username") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"  [["activo", true], ["admin", false], ["apellido", "Test"], ["bloqueado", true], ["codigo", ""], ["created_at", Sun, 22 Jun 2014 21:32:47 UTC +00:00], ["email", "usuario-activo-bloqueado@angrybirdsfanclub.com"], ["fechaNacimiento", Sun, 22 Jun 2014], ["genero", true], ["hashed_password", "f30aa41ee952f6cf43a235c6869d46c4b62d95aa1a2f537ba910949029942fb0"], ["nombre", "usuario-activo-bloqueado"], ["role_id", nil], ["salt", "-5987533280.49808586642184804"], ["updated_at", Sun, 22 Jun 2014 21:32:47 UTC +00:00], ["username", "usuario-activo-bloqueado"]]
+PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "personas_pkey"
+DETAIL:  Key (id)=(2) already exists.
+: INSERT INTO "personas" ("activo", "admin", "apellido", "bloqueado", "codigo", "created_at", "email", "fechaNacimiento", "genero", "hashed_password", "nombre", "role_id", "salt", "updated_at", "username") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+Connecting to database specified by database.yml
+Unable to load funcionalidad, underlying cause No such file to load -- funcionalidad 
+
+ /home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activesupport-3.2.13/lib/active_support/dependencies.rb:317:in `rescue in depend_on'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activesupport-3.2.13/lib/active_support/dependencies.rb:312:in `depend_on'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activesupport-3.2.13/lib/active_support/dependencies.rb:225:in `require_dependency'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activerecord-3.2.13/lib/active_record/fixtures.rb:767:in `try_to_load_dependency'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activerecord-3.2.13/lib/active_record/fixtures.rb:782:in `block in require_fixture_classes'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activerecord-3.2.13/lib/active_record/fixtures.rb:779:in `each'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activerecord-3.2.13/lib/active_record/fixtures.rb:779:in `require_fixture_classes'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activerecord-3.2.13/lib/active_record/fixtures.rb:762:in `fixtures'
+/home/javier/Proyectos/Angry Birds/test/test_helper.rb:10:in `<class:TestCase>'
+/home/javier/Proyectos/Angry Birds/test/test_helper.rb:5:in `<top (required)>'
+/home/javier/Proyectos/Angry Birds/test/unit/persona_test.rb:1:in `require'
+/home/javier/Proyectos/Angry Birds/test/unit/persona_test.rb:1:in `<top (required)>'
+-e:1:in `load'
+-e:1:in `<main>'
+Unable to load function, underlying cause No such file to load -- function 
+
+ /home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activesupport-3.2.13/lib/active_support/dependencies.rb:317:in `rescue in depend_on'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activesupport-3.2.13/lib/active_support/dependencies.rb:312:in `depend_on'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activesupport-3.2.13/lib/active_support/dependencies.rb:225:in `require_dependency'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activerecord-3.2.13/lib/active_record/fixtures.rb:767:in `try_to_load_dependency'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activerecord-3.2.13/lib/active_record/fixtures.rb:782:in `block in require_fixture_classes'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activerecord-3.2.13/lib/active_record/fixtures.rb:779:in `each'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activerecord-3.2.13/lib/active_record/fixtures.rb:779:in `require_fixture_classes'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activerecord-3.2.13/lib/active_record/fixtures.rb:762:in `fixtures'
+/home/javier/Proyectos/Angry Birds/test/test_helper.rb:10:in `<class:TestCase>'
+/home/javier/Proyectos/Angry Birds/test/test_helper.rb:5:in `<top (required)>'
+/home/javier/Proyectos/Angry Birds/test/unit/persona_test.rb:1:in `require'
+/home/javier/Proyectos/Angry Birds/test/unit/persona_test.rb:1:in `<top (required)>'
+-e:1:in `load'
+-e:1:in `<main>'
+Unable to load permission, underlying cause No such file to load -- permission 
+
+ /home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activesupport-3.2.13/lib/active_support/dependencies.rb:317:in `rescue in depend_on'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activesupport-3.2.13/lib/active_support/dependencies.rb:312:in `depend_on'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activesupport-3.2.13/lib/active_support/dependencies.rb:225:in `require_dependency'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activerecord-3.2.13/lib/active_record/fixtures.rb:767:in `try_to_load_dependency'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activerecord-3.2.13/lib/active_record/fixtures.rb:782:in `block in require_fixture_classes'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activerecord-3.2.13/lib/active_record/fixtures.rb:779:in `each'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activerecord-3.2.13/lib/active_record/fixtures.rb:779:in `require_fixture_classes'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activerecord-3.2.13/lib/active_record/fixtures.rb:762:in `fixtures'
+/home/javier/Proyectos/Angry Birds/test/test_helper.rb:10:in `<class:TestCase>'
+/home/javier/Proyectos/Angry Birds/test/test_helper.rb:5:in `<top (required)>'
+/home/javier/Proyectos/Angry Birds/test/unit/persona_test.rb:1:in `require'
+/home/javier/Proyectos/Angry Birds/test/unit/persona_test.rb:1:in `<top (required)>'
+-e:1:in `load'
+-e:1:in `<main>'
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mPersona Load (1.4ms)[0m  SELECT "personas".* FROM "personas" WHERE "personas"."username" = 'usuario-activo-bloqueado'
+  [1m[36mPersona Load (0.5ms)[0m  [1mSELECT "personas".* FROM "personas" WHERE "personas"."email" = 'usuario-activo-bloqueado@angrybirdsfanclub.com'[0m
+  [1m[35mSQL (8.2ms)[0m  INSERT INTO "personas" ("activo", "admin", "apellido", "bloqueado", "codigo", "created_at", "email", "fechaNacimiento", "genero", "hashed_password", "nombre", "role_id", "salt", "updated_at", "username") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"  [["activo", true], ["admin", false], ["apellido", "Test"], ["bloqueado", true], ["codigo", ""], ["created_at", Sun, 22 Jun 2014 21:33:27 UTC +00:00], ["email", "usuario-activo-bloqueado@angrybirdsfanclub.com"], ["fechaNacimiento", Sun, 22 Jun 2014], ["genero", true], ["hashed_password", "225fe2645dd44f7521a7d27a96cec1dfeecbf8e26d383bc9b443318a197aeef4"], ["nombre", "usuario-activo-bloqueado"], ["role_id", nil], ["salt", "-5801248980.4518485459871412"], ["updated_at", Sun, 22 Jun 2014 21:33:27 UTC +00:00], ["username", "usuario-activo-bloqueado"]]
+  [1m[36m (7.9ms)[0m  [1mCOMMIT[0m
+Started GET "/admin/usuarios" for 127.0.0.1 at 2014-06-22 18:33:41 -0300
+Processing by AdminController#user as HTML
+  [1m[35mPersona Load (0.6ms)[0m  SELECT "personas".* FROM "personas" WHERE "personas"."id" = 1 LIMIT 1
+  [1m[36mPersona Load (0.7ms)[0m  [1mSELECT "personas".* FROM "personas" ORDER BY id ASC LIMIT 10 OFFSET 0[0m
+  [1m[35mNoticium Load (0.5ms)[0m  SELECT "noticia".* FROM "noticia" WHERE "noticia"."persona_id" = 1
+  [1m[36mImagen Load (0.3ms)[0m  [1mSELECT "imagens".* FROM "imagens" WHERE "imagens"."persona_id" = 1[0m
+  [1m[35mVideo Load (0.4ms)[0m  SELECT "videos".* FROM "videos" WHERE "videos"."persona_id" = 1
+  [1m[36mRole Load (0.6ms)[0m  [1mSELECT "roles".* FROM "roles" WHERE "roles"."id" = 1 LIMIT 1[0m
+  [1m[35mNoticium Load (0.4ms)[0m  SELECT "noticia".* FROM "noticia" WHERE "noticia"."persona_id" = 3
+  [1m[36mImagen Load (0.4ms)[0m  [1mSELECT "imagens".* FROM "imagens" WHERE "imagens"."persona_id" = 3[0m
+  [1m[35mVideo Load (0.3ms)[0m  SELECT "videos".* FROM "videos" WHERE "videos"."persona_id" = 3
+  Rendered admin/user.html.erb (15.0ms)
+Completed 500 Internal Server Error in 18ms
+Started GET "/favicon.ico" for 127.0.0.1 at 2014-06-22 18:33:41 -0300
+Started GET "/admin/usuarios" for 127.0.0.1 at 2014-06-22 18:33:49 -0300
+Processing by AdminController#user as HTML
+  [1m[36mPersona Load (0.9ms)[0m  [1mSELECT "personas".* FROM "personas" WHERE "personas"."id" = 1 LIMIT 1[0m
+  [1m[35mPersona Load (0.7ms)[0m  SELECT "personas".* FROM "personas" ORDER BY id ASC LIMIT 10 OFFSET 0
+  [1m[36mNoticium Load (0.4ms)[0m  [1mSELECT "noticia".* FROM "noticia" WHERE "noticia"."persona_id" = 1[0m
+  [1m[35mImagen Load (0.4ms)[0m  SELECT "imagens".* FROM "imagens" WHERE "imagens"."persona_id" = 1
+  [1m[36mVideo Load (0.4ms)[0m  [1mSELECT "videos".* FROM "videos" WHERE "videos"."persona_id" = 1[0m
+  [1m[35mRole Load (0.6ms)[0m  SELECT "roles".* FROM "roles" WHERE "roles"."id" = 1 LIMIT 1
+  [1m[36mNoticium Load (0.5ms)[0m  [1mSELECT "noticia".* FROM "noticia" WHERE "noticia"."persona_id" = 3[0m
+  [1m[35mImagen Load (0.4ms)[0m  SELECT "imagens".* FROM "imagens" WHERE "imagens"."persona_id" = 3
+  [1m[36mVideo Load (0.3ms)[0m  [1mSELECT "videos".* FROM "videos" WHERE "videos"."persona_id" = 3[0m
+  [1m[35mRole Load (0.7ms)[0m  SELECT "roles".* FROM "roles" WHERE "roles"."id" = 2 LIMIT 1
+  Rendered admin/user.html.erb (17.6ms)
+Completed 200 OK in 22ms (Views: 14.2ms | ActiveRecord: 5.4ms)
+Started GET "/" for 127.0.0.1 at 2014-06-22 18:34:17 -0300
+Processing by InicioController#start as HTML
+  [1m[36mPersona Load (0.6ms)[0m  [1mSELECT "personas".* FROM "personas" WHERE "personas"."id" = 1 LIMIT 1[0m
+  [1m[35mPersona Load (4.5ms)[0m  SELECT "personas".* FROM "personas" WHERE "personas"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mVideo Load (0.3ms)[0m  [1mSELECT "videos".* FROM "videos" [0m
+  [1m[35mImagen Load (0.3ms)[0m  SELECT "imagens".* FROM "imagens" 
+  [1m[36mNoticium Load (0.3ms)[0m  [1mSELECT "noticia".* FROM "noticia" ORDER BY id ASC[0m
+  [1m[35mAREL (1.2ms)[0m  SELECT novelties.id, novelties.message, novelties.created_at FROM "novelties" INNER JOIN "usr_novelties" ON "usr_novelties"."novelty_id" = "novelties"."id" WHERE usr_novelties.viewed = false AND usr_novelties.persona_id = 1
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE (read = 'f' AND persona_id = 1)[0m
+  [1m[35mNotification Load (0.4ms)[0m  SELECT "notifications".* FROM "notifications" WHERE (read = 'f' AND persona_id = 1)
+  Rendered collection (0.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "personas".* FROM "personas" WHERE "personas"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered inicio/_nada_noticia.html.erb (0.5ms)
+  Rendered inicio/_nada_imagen.html.erb (0.5ms)
+  Rendered inicio/_nada_video.html.erb (0.4ms)
+  Rendered inicio/start.html.erb (16.2ms)
+Completed 200 OK in 39ms (Views: 14.5ms | ActiveRecord: 15.2ms)
+Started GET "/logout" for 127.0.0.1 at 2014-06-22 18:34:21 -0300
+Processing by SessionsController#destroy as HTML
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2014-06-22 18:34:21 -0300
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb (6.1ms)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2014-06-22 18:36:55 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "redirect_to"=>"", "username"=>"usuario-activo-bloqueado", "password"=>"[FILTERED]", "commit"=>"Iniciar Sesion"}
+  [1m[35mPersona Load (1.2ms)[0m  SELECT "personas".* FROM "personas" WHERE "personas"."username" = 'usuario-activo-bloqueado'
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 18ms (ActiveRecord: 1.2ms)
+Started GET "/login" for 127.0.0.1 at 2014-06-22 18:36:56 -0300
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb (2.5ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms)
+Started GET "/login" for 127.0.0.1 at 2014-06-22 18:37:20 -0300
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb (1.6ms)
+Completed 200 OK in 4ms (Views: 4.2ms | ActiveRecord: 0.0ms)
+Started POST "/login" for 127.0.0.1 at 2014-06-22 18:37:53 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "redirect_to"=>"", "username"=>"usuario-activo-bloqueado", "password"=>"[FILTERED]", "commit"=>"Iniciar Sesion"}
+  [1m[36mPersona Load (1.3ms)[0m  [1mSELECT "personas".* FROM "personas" WHERE "personas"."username" = 'usuario-activo-bloqueado'[0m
+Redirected to http://0.0.0.0:3000/login
+Completed 302 Found in 4ms (ActiveRecord: 1.3ms)
+Started GET "/login" for 127.0.0.1 at 2014-06-22 18:37:53 -0300
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb (2.2ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+Connecting to database specified by database.yml
+Unable to load funcionalidad, underlying cause No such file to load -- funcionalidad 
+
+ /home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activesupport-3.2.13/lib/active_support/dependencies.rb:317:in `rescue in depend_on'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activesupport-3.2.13/lib/active_support/dependencies.rb:312:in `depend_on'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activesupport-3.2.13/lib/active_support/dependencies.rb:225:in `require_dependency'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activerecord-3.2.13/lib/active_record/fixtures.rb:767:in `try_to_load_dependency'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activerecord-3.2.13/lib/active_record/fixtures.rb:782:in `block in require_fixture_classes'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activerecord-3.2.13/lib/active_record/fixtures.rb:779:in `each'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activerecord-3.2.13/lib/active_record/fixtures.rb:779:in `require_fixture_classes'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activerecord-3.2.13/lib/active_record/fixtures.rb:762:in `fixtures'
+/home/javier/Proyectos/Angry Birds/test/test_helper.rb:10:in `<class:TestCase>'
+/home/javier/Proyectos/Angry Birds/test/test_helper.rb:5:in `<top (required)>'
+/home/javier/Proyectos/Angry Birds/test/integration/test_integration.rb:1:in `require'
+/home/javier/Proyectos/Angry Birds/test/integration/test_integration.rb:1:in `<top (required)>'
+-e:1:in `load'
+-e:1:in `<main>'
+Unable to load function, underlying cause No such file to load -- function 
+
+ /home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activesupport-3.2.13/lib/active_support/dependencies.rb:317:in `rescue in depend_on'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activesupport-3.2.13/lib/active_support/dependencies.rb:312:in `depend_on'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activesupport-3.2.13/lib/active_support/dependencies.rb:225:in `require_dependency'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activerecord-3.2.13/lib/active_record/fixtures.rb:767:in `try_to_load_dependency'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activerecord-3.2.13/lib/active_record/fixtures.rb:782:in `block in require_fixture_classes'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activerecord-3.2.13/lib/active_record/fixtures.rb:779:in `each'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activerecord-3.2.13/lib/active_record/fixtures.rb:779:in `require_fixture_classes'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activerecord-3.2.13/lib/active_record/fixtures.rb:762:in `fixtures'
+/home/javier/Proyectos/Angry Birds/test/test_helper.rb:10:in `<class:TestCase>'
+/home/javier/Proyectos/Angry Birds/test/test_helper.rb:5:in `<top (required)>'
+/home/javier/Proyectos/Angry Birds/test/integration/test_integration.rb:1:in `require'
+/home/javier/Proyectos/Angry Birds/test/integration/test_integration.rb:1:in `<top (required)>'
+-e:1:in `load'
+-e:1:in `<main>'
+Unable to load permission, underlying cause No such file to load -- permission 
+
+ /home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activesupport-3.2.13/lib/active_support/dependencies.rb:317:in `rescue in depend_on'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activesupport-3.2.13/lib/active_support/dependencies.rb:312:in `depend_on'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activesupport-3.2.13/lib/active_support/dependencies.rb:225:in `require_dependency'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activerecord-3.2.13/lib/active_record/fixtures.rb:767:in `try_to_load_dependency'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activerecord-3.2.13/lib/active_record/fixtures.rb:782:in `block in require_fixture_classes'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activerecord-3.2.13/lib/active_record/fixtures.rb:779:in `each'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activerecord-3.2.13/lib/active_record/fixtures.rb:779:in `require_fixture_classes'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activerecord-3.2.13/lib/active_record/fixtures.rb:762:in `fixtures'
+/home/javier/Proyectos/Angry Birds/test/test_helper.rb:10:in `<class:TestCase>'
+/home/javier/Proyectos/Angry Birds/test/test_helper.rb:5:in `<top (required)>'
+/home/javier/Proyectos/Angry Birds/test/integration/test_integration.rb:1:in `require'
+/home/javier/Proyectos/Angry Birds/test/integration/test_integration.rb:1:in `<top (required)>'
+-e:1:in `load'
+-e:1:in `<main>'
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mPersona Load (1.3ms)[0m  SELECT "personas".* FROM "personas" WHERE "personas"."username" = 'usuario-test-comun'
+  [1m[36mPersona Load (0.5ms)[0m  [1mSELECT "personas".* FROM "personas" WHERE "personas"."email" = 'usuario-test-comun@angrybirdsfanclub.com'[0m
+  [1m[35mSQL (81.0ms)[0m  INSERT INTO "personas" ("activo", "admin", "apellido", "bloqueado", "codigo", "created_at", "email", "fechaNacimiento", "genero", "hashed_password", "nombre", "role_id", "salt", "updated_at", "username") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"  [["activo", true], ["admin", false], ["apellido", "Test"], ["bloqueado", false], ["codigo", ""], ["created_at", Sun, 22 Jun 2014 22:01:23 UTC +00:00], ["email", "usuario-test-comun@angrybirdsfanclub.com"], ["fechaNacimiento", Sun, 22 Jun 2014], ["genero", true], ["hashed_password", "ee19b6295be5102aa1cd5f515c4fd053aaacd95d3d53b88f2d82ba5098a01011"], ["nombre", "usuario-test-común"], ["role_id", 2], ["salt", "-5745431980.05282377157396101"], ["updated_at", Sun, 22 Jun 2014 22:01:23 UTC +00:00], ["username", "usuario-test-comun"]]
+  [1m[36m (17.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mNoticium Load (0.7ms)[0m  [1mSELECT "noticia".* FROM "noticia" WHERE "noticia"."titulo" = 'Noticia de prueba'[0m
+  [1m[35mSQL (9.7ms)[0m  INSERT INTO "noticia" ("created_at", "cuerpo", "imagen_id", "persona_id", "titulo", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["created_at", Sun, 22 Jun 2014 22:01:23 UTC +00:00], ["cuerpo", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus laoreet orci nec neque ultrices, non vestibulum nulla tempus. Etiam interdum condimentum risus sed elementum. Mauris fermentum pellentesque elit ac tempor. Maecenas bibendum congue varius. Quisque in ullamcorper lectus, id suscipit quam. Mauris nec ligula cursus, interdum ligula ac, euismod dolor. Morbi ligula felis, condimentum id tristique at, ullamcorper eu urna. In non purus purus. Donec ac tempus odio, eu iaculis dolor. Fusce aliquet porta turpis vitae suscipit. Pellentesque pretium tincidunt urna, sed blandit massa scelerisque vel. Nam vehicula quam sit amet metus scelerisque bibendum. Nulla consectetur faucibus felis, porta mollis ante consequat id. Nunc ac lectus vitae nisl tristique fermentum a eget quam. Nulla facilisi.\n\nVivamus ultrices convallis ante vel blandit. Nulla adipiscing velit vitae lacus mollis, sit amet porta lacus pharetra. Vivamus tincidunt nisl libero, ac mollis velit placerat aliquam. Vivamus placerat diam et sapien rhoncus, vel convallis ipsum volutpat. In varius, nisl quis tincidunt accumsan, tellus eros elementum enim, et pretium ligula libero nec nibh. Phasellus euismod elit sit amet pulvinar vehicula. Nullam id dolor et odio imperdiet commodo at eget ligula. Suspendisse odio eros, lobortis nec sagittis at, feugiat at risus. Vivamus a quam ullamcorper, viverra arcu."], ["imagen_id", nil], ["persona_id", 4], ["titulo", "Noticia de prueba"], ["updated_at", Sun, 22 Jun 2014 22:01:23 UTC +00:00]]
+  [1m[36m (12.8ms)[0m  [1mCOMMIT[0m
+Started POST "/login" for 127.0.0.1 at 2014-06-22 19:01:35 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "redirect_to"=>"", "username"=>"usuario-test-comun", "password"=>"[FILTERED]", "commit"=>"Iniciar Sesion"}
+  [1m[35mPersona Load (0.7ms)[0m  SELECT "personas".* FROM "personas" WHERE "personas"."username" = 'usuario-test-comun'
+Redirected to http://0.0.0.0:3000
+Completed 302 Found in 4ms (ActiveRecord: 0.7ms)
+Started GET "/" for 127.0.0.1 at 2014-06-22 19:01:35 -0300
+Processing by InicioController#start as HTML
+  [1m[36mPersona Load (0.8ms)[0m  [1mSELECT "personas".* FROM "personas" WHERE "personas"."id" = 4 LIMIT 1[0m
+  [1m[35mPersona Load (0.6ms)[0m  SELECT "personas".* FROM "personas" WHERE "personas"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mVideo Load (0.4ms)[0m  [1mSELECT "videos".* FROM "videos" [0m
+  [1m[35mImagen Load (0.3ms)[0m  SELECT "imagens".* FROM "imagens" 
+  [1m[36mNoticium Load (0.5ms)[0m  [1mSELECT "noticia".* FROM "noticia" ORDER BY id ASC[0m
+  [1m[35mAREL (0.6ms)[0m  SELECT novelties.id, novelties.message, novelties.created_at FROM "novelties" INNER JOIN "usr_novelties" ON "usr_novelties"."novelty_id" = "novelties"."id" WHERE usr_novelties.viewed = false AND usr_novelties.persona_id = 4
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE (read = 'f' AND persona_id = 4)[0m
+  [1m[35mNotification Load (0.6ms)[0m  SELECT "notifications".* FROM "notifications" WHERE (read = 'f' AND persona_id = 4)
+  Rendered collection (0.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "personas".* FROM "personas" WHERE "personas"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  Rendered inicio/_nada_noticia.html.erb (0.1ms)
+  Rendered inicio/_nada_imagen.html.erb (2.5ms)
+  Rendered inicio/_nada_video.html.erb (0.3ms)
+  Rendered inicio/start.html.erb (11.1ms)
+Completed 200 OK in 140ms (Views: 11.0ms | ActiveRecord: 4.3ms)
+Started GET "/noticias" for 127.0.0.1 at 2014-06-22 19:01:41 -0300
+Processing by NoticiaController#index as HTML
+  [1m[35mPersona Load (0.6ms)[0m  SELECT "personas".* FROM "personas" WHERE "personas"."id" = 4 LIMIT 1
+  [1m[36m (0.8ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE (read = 'f' AND persona_id = 4)[0m
+  [1m[35mNotification Load (0.4ms)[0m  SELECT "notifications".* FROM "notifications" WHERE (read = 'f' AND persona_id = 4)
+  Rendered collection (0.0ms)
+  [1m[36mPersona Load (0.4ms)[0m  [1mSELECT "personas".* FROM "personas" WHERE "personas"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "noticia" 
+  [1m[36mNoticium Load (0.6ms)[0m  [1mSELECT "noticia".* FROM "noticia" ORDER BY id DESC LIMIT 8 OFFSET 0[0m
+  Rendered noticia/_listado.html.erb (34.7ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "personas".* FROM "personas" WHERE "personas"."id" = $1 LIMIT 1  [["id", 4]]
+  Rendered noticia/index.html.erb (54.1ms)
+Completed 200 OK in 74ms (Views: 67.7ms | ActiveRecord: 3.2ms)
+Started GET "/noticias/1" for 127.0.0.1 at 2014-06-22 19:01:43 -0300
+Processing by NoticiaController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPersona Load (0.6ms)[0m  [1mSELECT "personas".* FROM "personas" WHERE "personas"."id" = 4 LIMIT 1[0m
+  [1m[35mNoticium Load (0.7ms)[0m  SELECT "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mNotification Load (0.7ms)[0m  [1mSELECT "notifications".* FROM "notifications" WHERE (read = 'f' AND persona_id = 4 AND noticia_id = '1')[0m
+  [1m[35mCalificacion Load (25.1ms)[0m  SELECT "calificacions".* FROM "calificacions" WHERE (noticia_id = '1')
+  [1m[36m (0.8ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE (read = 'f' AND persona_id = 4)[0m
+  [1m[35mNotification Load (0.4ms)[0m  SELECT "notifications".* FROM "notifications" WHERE (read = 'f' AND persona_id = 4)
+  Rendered collection (0.0ms)
+  [1m[36mPersona Load (0.4ms)[0m  [1mSELECT "personas".* FROM "personas" WHERE "personas"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "personas".* FROM "personas" WHERE "personas"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "personas".* FROM "personas" WHERE "personas"."id" = 4 LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "comments" WHERE "comments"."noticia_id" = 1
+  Rendered noticia/show.html.erb (29.2ms)
+Completed 200 OK in 80ms (Views: 37.1ms | ActiveRecord: 35.3ms)
+Started GET "/start" for 127.0.0.1 at 2014-06-22 19:02:07 -0300
+Processing by InicioController#start as HTML
+  [1m[36mPersona Load (0.7ms)[0m  [1mSELECT "personas".* FROM "personas" WHERE "personas"."id" = 4 LIMIT 1[0m
+  [1m[35mPersona Load (0.7ms)[0m  SELECT "personas".* FROM "personas" WHERE "personas"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mVideo Load (0.3ms)[0m  [1mSELECT "videos".* FROM "videos" [0m
+  [1m[35mImagen Load (0.4ms)[0m  SELECT "imagens".* FROM "imagens" 
+  [1m[36mNoticium Load (0.4ms)[0m  [1mSELECT "noticia".* FROM "noticia" ORDER BY id ASC[0m
+  [1m[35mAREL (0.5ms)[0m  SELECT novelties.id, novelties.message, novelties.created_at FROM "novelties" INNER JOIN "usr_novelties" ON "usr_novelties"."novelty_id" = "novelties"."id" WHERE usr_novelties.viewed = false AND usr_novelties.persona_id = 4
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE (read = 'f' AND persona_id = 4)[0m
+  [1m[35mNotification Load (0.3ms)[0m  SELECT "notifications".* FROM "notifications" WHERE (read = 'f' AND persona_id = 4)
+  Rendered collection (0.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "personas".* FROM "personas" WHERE "personas"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  Rendered inicio/_nada_noticia.html.erb (0.0ms)
+  Rendered inicio/_nada_imagen.html.erb (0.0ms)
+  Rendered inicio/_nada_video.html.erb (0.0ms)
+  Rendered inicio/start.html.erb (3.6ms)
+Completed 200 OK in 14ms (Views: 3.7ms | ActiveRecord: 3.6ms)
+Started GET "/admin" for 127.0.0.1 at 2014-06-22 19:02:36 -0300
+Processing by AdminController#index as HTML
+  [1m[35mPersona Load (0.7ms)[0m  SELECT "personas".* FROM "personas" WHERE "personas"."id" = 4 LIMIT 1
+Redirected to http://0.0.0.0:3000/
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.7ms)
+Started GET "/" for 127.0.0.1 at 2014-06-22 19:02:36 -0300
+Processing by InicioController#start as HTML
+  [1m[36mPersona Load (0.6ms)[0m  [1mSELECT "personas".* FROM "personas" WHERE "personas"."id" = 4 LIMIT 1[0m
+  [1m[35mPersona Load (0.4ms)[0m  SELECT "personas".* FROM "personas" WHERE "personas"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mVideo Load (0.3ms)[0m  [1mSELECT "videos".* FROM "videos" [0m
+  [1m[35mImagen Load (0.3ms)[0m  SELECT "imagens".* FROM "imagens" 
+  [1m[36mNoticium Load (0.4ms)[0m  [1mSELECT "noticia".* FROM "noticia" ORDER BY id ASC[0m
+  [1m[35mAREL (0.5ms)[0m  SELECT novelties.id, novelties.message, novelties.created_at FROM "novelties" INNER JOIN "usr_novelties" ON "usr_novelties"."novelty_id" = "novelties"."id" WHERE usr_novelties.viewed = false AND usr_novelties.persona_id = 4
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE (read = 'f' AND persona_id = 4)[0m
+  [1m[35mNotification Load (0.3ms)[0m  SELECT "notifications".* FROM "notifications" WHERE (read = 'f' AND persona_id = 4)
+  Rendered collection (0.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "personas".* FROM "personas" WHERE "personas"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  Rendered inicio/_nada_noticia.html.erb (0.1ms)
+  Rendered inicio/_nada_imagen.html.erb (0.0ms)
+  Rendered inicio/_nada_video.html.erb (0.0ms)
+  Rendered inicio/start.html.erb (5.1ms)
+Completed 200 OK in 14ms (Views: 5.0ms | ActiveRecord: 3.2ms)
+Started GET "/nuevas_notificaciones" for 127.0.0.1 at 2014-06-22 19:03:06 -0300
+Processing by NotificationsController#nuevas_notificaciones as */*
+  [1m[35mPersona Load (0.5ms)[0m  SELECT "personas".* FROM "personas" WHERE "personas"."id" = 4 LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE (read = 'f' AND persona_id = 4)[0m
+  [1m[35mNotification Load (0.5ms)[0m  SELECT "notifications".* FROM "notifications" WHERE (read = 'f' AND persona_id = 4) ORDER BY id DESC
+  Rendered collection (0.0ms)
+  Rendered notifications/nuevas_notificaciones.js.erb (3.5ms)
+Completed 200 OK in 22ms (Views: 17.9ms | ActiveRecord: 1.5ms)
+Started GET "/nuevas_notificaciones" for 127.0.0.1 at 2014-06-22 19:03:36 -0300
+Processing by NotificationsController#nuevas_notificaciones as */*
+  [1m[36mPersona Load (0.5ms)[0m  [1mSELECT "personas".* FROM "personas" WHERE "personas"."id" = 4 LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE (read = 'f' AND persona_id = 4)
+  [1m[36mNotification Load (0.4ms)[0m  [1mSELECT "notifications".* FROM "notifications" WHERE (read = 'f' AND persona_id = 4) ORDER BY id DESC[0m
+  Rendered collection (0.0ms)
+  Rendered notifications/nuevas_notificaciones.js.erb (2.0ms)
+Completed 200 OK in 5ms (Views: 1.8ms | ActiveRecord: 1.3ms)
+Started GET "/nuevas_notificaciones" for 127.0.0.1 at 2014-06-22 19:04:06 -0300
+Processing by NotificationsController#nuevas_notificaciones as */*
+  [1m[35mPersona Load (1.0ms)[0m  SELECT "personas".* FROM "personas" WHERE "personas"."id" = 4 LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE (read = 'f' AND persona_id = 4)[0m
+  [1m[35mNotification Load (0.3ms)[0m  SELECT "notifications".* FROM "notifications" WHERE (read = 'f' AND persona_id = 4) ORDER BY id DESC
+  Rendered collection (0.0ms)
+  Rendered notifications/nuevas_notificaciones.js.erb (2.2ms)
+Completed 200 OK in 7ms (Views: 2.9ms | ActiveRecord: 1.8ms)
+Started GET "/nuevas_notificaciones" for 127.0.0.1 at 2014-06-22 19:04:36 -0300
+Processing by NotificationsController#nuevas_notificaciones as */*
+  [1m[36mPersona Load (1.0ms)[0m  [1mSELECT "personas".* FROM "personas" WHERE "personas"."id" = 4 LIMIT 1[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE (read = 'f' AND persona_id = 4)
+  [1m[36mNotification Load (0.7ms)[0m  [1mSELECT "notifications".* FROM "notifications" WHERE (read = 'f' AND persona_id = 4) ORDER BY id DESC[0m
+  Rendered collection (0.0ms)
+  Rendered notifications/nuevas_notificaciones.js.erb (3.7ms)
+Completed 200 OK in 8ms (Views: 3.4ms | ActiveRecord: 2.3ms)
+Started GET "/nuevas_notificaciones" for 127.0.0.1 at 2014-06-22 19:05:06 -0300
+Processing by NotificationsController#nuevas_notificaciones as */*
+  [1m[35mPersona Load (1.0ms)[0m  SELECT "personas".* FROM "personas" WHERE "personas"."id" = 4 LIMIT 1
+  [1m[36m (0.8ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE (read = 'f' AND persona_id = 4)[0m
+  [1m[35mNotification Load (0.4ms)[0m  SELECT "notifications".* FROM "notifications" WHERE (read = 'f' AND persona_id = 4) ORDER BY id DESC
+  Rendered collection (0.0ms)
+  Rendered notifications/nuevas_notificaciones.js.erb (2.8ms)
+Completed 200 OK in 7ms (Views: 2.5ms | ActiveRecord: 2.2ms)
+Started GET "/nuevas_notificaciones" for 127.0.0.1 at 2014-06-22 19:05:36 -0300
+Processing by NotificationsController#nuevas_notificaciones as */*
+  [1m[36mPersona Load (1.0ms)[0m  [1mSELECT "personas".* FROM "personas" WHERE "personas"."id" = 4 LIMIT 1[0m
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE (read = 'f' AND persona_id = 4)
+  [1m[36mNotification Load (0.7ms)[0m  [1mSELECT "notifications".* FROM "notifications" WHERE (read = 'f' AND persona_id = 4) ORDER BY id DESC[0m
+  Rendered collection (0.0ms)
+  Rendered notifications/nuevas_notificaciones.js.erb (3.8ms)
+Completed 200 OK in 8ms (Views: 3.3ms | ActiveRecord: 2.4ms)
+Started GET "/nuevas_notificaciones" for 127.0.0.1 at 2014-06-22 19:06:06 -0300
+Processing by NotificationsController#nuevas_notificaciones as */*
+  [1m[35mPersona Load (1.0ms)[0m  SELECT "personas".* FROM "personas" WHERE "personas"."id" = 4 LIMIT 1
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE (read = 'f' AND persona_id = 4)[0m
+  [1m[35mNotification Load (0.7ms)[0m  SELECT "notifications".* FROM "notifications" WHERE (read = 'f' AND persona_id = 4) ORDER BY id DESC
+  Rendered collection (0.0ms)
+  Rendered notifications/nuevas_notificaciones.js.erb (3.8ms)
+Completed 200 OK in 8ms (Views: 3.4ms | ActiveRecord: 2.3ms)
+Started GET "/nuevas_notificaciones" for 127.0.0.1 at 2014-06-22 19:06:36 -0300
+Processing by NotificationsController#nuevas_notificaciones as */*
+  [1m[36mPersona Load (0.6ms)[0m  [1mSELECT "personas".* FROM "personas" WHERE "personas"."id" = 4 LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE (read = 'f' AND persona_id = 4)
+  [1m[36mNotification Load (0.4ms)[0m  [1mSELECT "notifications".* FROM "notifications" WHERE (read = 'f' AND persona_id = 4) ORDER BY id DESC[0m
+  Rendered collection (0.0ms)
+  Rendered notifications/nuevas_notificaciones.js.erb (2.1ms)
+Completed 200 OK in 5ms (Views: 1.7ms | ActiveRecord: 1.5ms)
+Started GET "/nuevas_notificaciones" for 127.0.0.1 at 2014-06-22 19:07:06 -0300
+Processing by NotificationsController#nuevas_notificaciones as */*
+  [1m[35mPersona Load (0.9ms)[0m  SELECT "personas".* FROM "personas" WHERE "personas"."id" = 4 LIMIT 1
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE (read = 'f' AND persona_id = 4)[0m
+  [1m[35mNotification Load (0.7ms)[0m  SELECT "notifications".* FROM "notifications" WHERE (read = 'f' AND persona_id = 4) ORDER BY id DESC
+  Rendered collection (0.0ms)
+  Rendered notifications/nuevas_notificaciones.js.erb (3.7ms)
+Completed 200 OK in 8ms (Views: 3.2ms | ActiveRecord: 2.4ms)
+Started GET "/nuevas_notificaciones" for 127.0.0.1 at 2014-06-22 19:07:36 -0300
+Processing by NotificationsController#nuevas_notificaciones as */*
+  [1m[36mPersona Load (0.6ms)[0m  [1mSELECT "personas".* FROM "personas" WHERE "personas"."id" = 4 LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE (read = 'f' AND persona_id = 4)
+  [1m[36mNotification Load (0.3ms)[0m  [1mSELECT "notifications".* FROM "notifications" WHERE (read = 'f' AND persona_id = 4) ORDER BY id DESC[0m
+  Rendered collection (0.0ms)
+  Rendered notifications/nuevas_notificaciones.js.erb (1.9ms)
+Completed 200 OK in 5ms (Views: 1.6ms | ActiveRecord: 1.4ms)
+Started GET "/nuevas_notificaciones" for 127.0.0.1 at 2014-06-22 19:08:06 -0300
+Processing by NotificationsController#nuevas_notificaciones as */*
+  [1m[35mPersona Load (1.0ms)[0m  SELECT "personas".* FROM "personas" WHERE "personas"."id" = 4 LIMIT 1
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE (read = 'f' AND persona_id = 4)[0m
+  [1m[35mNotification Load (0.7ms)[0m  SELECT "notifications".* FROM "notifications" WHERE (read = 'f' AND persona_id = 4) ORDER BY id DESC
+  Rendered collection (0.0ms)
+  Rendered notifications/nuevas_notificaciones.js.erb (3.8ms)
+Completed 200 OK in 8ms (Views: 3.4ms | ActiveRecord: 2.4ms)
+Started GET "/nuevas_notificaciones" for 127.0.0.1 at 2014-06-22 19:08:36 -0300
+Processing by NotificationsController#nuevas_notificaciones as */*
+  [1m[36mPersona Load (1.0ms)[0m  [1mSELECT "personas".* FROM "personas" WHERE "personas"."id" = 4 LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE (read = 'f' AND persona_id = 4)
+  [1m[36mNotification Load (0.3ms)[0m  [1mSELECT "notifications".* FROM "notifications" WHERE (read = 'f' AND persona_id = 4) ORDER BY id DESC[0m
+  Rendered collection (0.0ms)
+  Rendered notifications/nuevas_notificaciones.js.erb (1.9ms)
+Completed 200 OK in 6ms (Views: 1.7ms | ActiveRecord: 1.7ms)
+Started GET "/nuevas_notificaciones" for 127.0.0.1 at 2014-06-22 19:09:06 -0300
+Processing by NotificationsController#nuevas_notificaciones as */*
+  [1m[35mPersona Load (0.5ms)[0m  SELECT "personas".* FROM "personas" WHERE "personas"."id" = 4 LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE (read = 'f' AND persona_id = 4)[0m
+  [1m[35mNotification Load (0.4ms)[0m  SELECT "notifications".* FROM "notifications" WHERE (read = 'f' AND persona_id = 4) ORDER BY id DESC
+  Rendered collection (0.0ms)
+  Rendered notifications/nuevas_notificaciones.js.erb (2.6ms)
+Completed 200 OK in 5ms (Views: 2.3ms | ActiveRecord: 1.3ms)
+Started GET "/nuevas_notificaciones" for 127.0.0.1 at 2014-06-22 19:09:36 -0300
+Processing by NotificationsController#nuevas_notificaciones as */*
+  [1m[36mPersona Load (1.1ms)[0m  [1mSELECT "personas".* FROM "personas" WHERE "personas"."id" = 4 LIMIT 1[0m
+  [1m[35m (0.9ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE (read = 'f' AND persona_id = 4)
+  [1m[36mNotification Load (0.8ms)[0m  [1mSELECT "notifications".* FROM "notifications" WHERE (read = 'f' AND persona_id = 4) ORDER BY id DESC[0m
+  Rendered collection (0.0ms)
+  Rendered notifications/nuevas_notificaciones.js.erb (4.9ms)
+Completed 200 OK in 10ms (Views: 4.3ms | ActiveRecord: 2.8ms)
+Started GET "/nuevas_notificaciones" for 127.0.0.1 at 2014-06-22 19:10:06 -0300
+Processing by NotificationsController#nuevas_notificaciones as */*
+  [1m[35mPersona Load (1.0ms)[0m  SELECT "personas".* FROM "personas" WHERE "personas"."id" = 4 LIMIT 1
+  [1m[36m (0.8ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE (read = 'f' AND persona_id = 4)[0m
+  [1m[35mNotification Load (0.7ms)[0m  SELECT "notifications".* FROM "notifications" WHERE (read = 'f' AND persona_id = 4) ORDER BY id DESC
+  Rendered collection (0.0ms)
+  Rendered notifications/nuevas_notificaciones.js.erb (3.9ms)
+Completed 200 OK in 9ms (Views: 3.4ms | ActiveRecord: 2.6ms)
+Started GET "/nuevas_notificaciones" for 127.0.0.1 at 2014-06-22 19:10:36 -0300
+Processing by NotificationsController#nuevas_notificaciones as */*
+  [1m[36mPersona Load (1.0ms)[0m  [1mSELECT "personas".* FROM "personas" WHERE "personas"."id" = 4 LIMIT 1[0m
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE (read = 'f' AND persona_id = 4)
+  [1m[36mNotification Load (1.3ms)[0m  [1mSELECT "notifications".* FROM "notifications" WHERE (read = 'f' AND persona_id = 4) ORDER BY id DESC[0m
+  Rendered collection (0.0ms)
+  Rendered notifications/nuevas_notificaciones.js.erb (4.4ms)
+Completed 200 OK in 9ms (Views: 3.2ms | ActiveRecord: 3.1ms)
+Started GET "/mi_pajaro/4" for 127.0.0.1 at 2014-06-22 19:10:59 -0300
+Processing by PersonasController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mPersona Load (0.5ms)[0m  SELECT "personas".* FROM "personas" WHERE "personas"."id" = $1 LIMIT 1  [["id", "4"]]
+  [1m[36mPersona Load (0.4ms)[0m  [1mSELECT "personas".* FROM "personas" WHERE "personas"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  Rendered personas/show.erb (16.7ms)
+Completed 200 OK in 38ms (Views: 35.5ms | ActiveRecord: 0.9ms)
+Started PUT "/persona/4/change_atributo" for 127.0.0.1 at 2014-06-22 19:11:04 -0300
+Processing by PersonasController#change_atributo as */*
+  Parameters: {"atributo"=>"fechaNacimiento", "valor"=>"2014-6-17", "id"=>"4"}
+  [1m[35mPersona Load (0.4ms)[0m  SELECT "personas".* FROM "personas" WHERE "personas"."id" = $1 LIMIT 1  [["id", "4"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (20.2ms)[0m  UPDATE "personas" SET "fechaNacimiento" = '2014-06-17', "updated_at" = '2014-06-22 22:11:04.263207' WHERE "personas"."id" = 4
+  [1m[36m (12.9ms)[0m  [1mCOMMIT[0m
+  Rendered personas/change_atributo.js.erb (0.5ms)
+Completed 200 OK in 62ms (Views: 6.2ms | ActiveRecord: 33.6ms)
+Started GET "/start" for 127.0.0.1 at 2014-06-22 19:11:07 -0300
+Processing by InicioController#start as HTML
+  [1m[35mPersona Load (0.6ms)[0m  SELECT "personas".* FROM "personas" WHERE "personas"."id" = 4 LIMIT 1
+  [1m[36mPersona Load (0.4ms)[0m  [1mSELECT "personas".* FROM "personas" WHERE "personas"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mVideo Load (0.3ms)[0m  SELECT "videos".* FROM "videos" 
+  [1m[36mImagen Load (0.3ms)[0m  [1mSELECT "imagens".* FROM "imagens" [0m
+  [1m[35mNoticium Load (0.4ms)[0m  SELECT "noticia".* FROM "noticia" ORDER BY id ASC
+  [1m[36mAREL (0.8ms)[0m  [1mSELECT novelties.id, novelties.message, novelties.created_at FROM "novelties" INNER JOIN "usr_novelties" ON "usr_novelties"."novelty_id" = "novelties"."id" WHERE usr_novelties.viewed = false AND usr_novelties.persona_id = 4[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE (read = 'f' AND persona_id = 4)
+  [1m[36mNotification Load (0.4ms)[0m  [1mSELECT "notifications".* FROM "notifications" WHERE (read = 'f' AND persona_id = 4)[0m
+  Rendered collection (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "personas".* FROM "personas" WHERE "personas"."id" = $1 LIMIT 1  [["id", 4]]
+  Rendered inicio/_nada_noticia.html.erb (0.1ms)
+  Rendered inicio/_nada_imagen.html.erb (0.0ms)
+  Rendered inicio/_nada_video.html.erb (0.0ms)
+  Rendered inicio/start.html.erb (4.3ms)
+Completed 200 OK in 18ms (Views: 4.3ms | ActiveRecord: 3.7ms)
+Started GET "/nuevas_notificaciones" for 127.0.0.1 at 2014-06-22 19:11:38 -0300
+Processing by NotificationsController#nuevas_notificaciones as */*
+  [1m[36mPersona Load (1.0ms)[0m  [1mSELECT "personas".* FROM "personas" WHERE "personas"."id" = 4 LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE (read = 'f' AND persona_id = 4)
+  [1m[36mNotification Load (0.7ms)[0m  [1mSELECT "notifications".* FROM "notifications" WHERE (read = 'f' AND persona_id = 4) ORDER BY id DESC[0m
+  Rendered collection (0.0ms)
+  Rendered notifications/nuevas_notificaciones.js.erb (4.6ms)
+Completed 200 OK in 10ms (Views: 4.3ms | ActiveRecord: 2.7ms)
+Started GET "/nuevas_notificaciones" for 127.0.0.1 at 2014-06-22 19:12:08 -0300
+Processing by NotificationsController#nuevas_notificaciones as */*
+  [1m[35mPersona Load (1.4ms)[0m  SELECT "personas".* FROM "personas" WHERE "personas"."id" = 4 LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE (read = 'f' AND persona_id = 4)[0m
+  [1m[35mNotification Load (0.4ms)[0m  SELECT "notifications".* FROM "notifications" WHERE (read = 'f' AND persona_id = 4) ORDER BY id DESC
+  Rendered collection (0.0ms)
+  Rendered notifications/nuevas_notificaciones.js.erb (2.0ms)
+Completed 200 OK in 6ms (Views: 1.7ms | ActiveRecord: 2.3ms)
+Started GET "/noticias" for 127.0.0.1 at 2014-06-22 19:12:11 -0300
+Processing by NoticiaController#index as HTML
+  [1m[36mPersona Load (0.6ms)[0m  [1mSELECT "personas".* FROM "personas" WHERE "personas"."id" = 4 LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE (read = 'f' AND persona_id = 4)
+  [1m[36mNotification Load (0.4ms)[0m  [1mSELECT "notifications".* FROM "notifications" WHERE (read = 'f' AND persona_id = 4)[0m
+  Rendered collection (0.0ms)
+  [1m[35mPersona Load (0.5ms)[0m  SELECT "personas".* FROM "personas" WHERE "personas"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "noticia" [0m
+  [1m[35mNoticium Load (0.4ms)[0m  SELECT "noticia".* FROM "noticia" ORDER BY id DESC LIMIT 8 OFFSET 0
+  Rendered noticia/_listado.html.erb (2.6ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "personas".* FROM "personas" WHERE "personas"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  Rendered noticia/index.html.erb (10.1ms)
+Completed 200 OK in 15ms (Views: 9.4ms | ActiveRecord: 3.0ms)
+Started GET "/noticias/1" for 127.0.0.1 at 2014-06-22 19:12:40 -0300
+Processing by NoticiaController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPersona Load (0.6ms)[0m  SELECT "personas".* FROM "personas" WHERE "personas"."id" = 4 LIMIT 1
+  [1m[36mNoticium Load (0.4ms)[0m  [1mSELECT "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mNotification Load (0.4ms)[0m  SELECT "notifications".* FROM "notifications" WHERE (read = 'f' AND persona_id = 4 AND noticia_id = '1')
+  [1m[36mCalificacion Load (0.3ms)[0m  [1mSELECT "calificacions".* FROM "calificacions" WHERE (noticia_id = '1')[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE (read = 'f' AND persona_id = 4)
+  [1m[36mNotification Load (0.5ms)[0m  [1mSELECT "notifications".* FROM "notifications" WHERE (read = 'f' AND persona_id = 4)[0m
+  Rendered collection (0.0ms)
+  [1m[35mPersona Load (0.5ms)[0m  SELECT "personas".* FROM "personas" WHERE "personas"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "personas".* FROM "personas" WHERE "personas"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "personas".* FROM "personas" WHERE "personas"."id" = 4 LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."noticia_id" = 1[0m
+  Rendered noticia/show.html.erb (9.4ms)
+Completed 200 OK in 17ms (Views: 8.2ms | ActiveRecord: 3.7ms)
+Started GET "/nuevas_notificaciones" for 127.0.0.1 at 2014-06-22 19:13:10 -0300
+Processing by NotificationsController#nuevas_notificaciones as */*
+  [1m[35mPersona Load (0.7ms)[0m  SELECT "personas".* FROM "personas" WHERE "personas"."id" = 4 LIMIT 1
+  [1m[36m (1.1ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE (read = 'f' AND persona_id = 4)[0m
+  [1m[35mNotification Load (0.5ms)[0m  SELECT "notifications".* FROM "notifications" WHERE (read = 'f' AND persona_id = 4) ORDER BY id DESC
+  Rendered collection (0.0ms)
+  Rendered notifications/nuevas_notificaciones.js.erb (3.9ms)
+Completed 200 OK in 8ms (Views: 3.8ms | ActiveRecord: 2.3ms)
+Started GET "/nuevas_notificaciones" for 127.0.0.1 at 2014-06-22 19:13:40 -0300
+Processing by NotificationsController#nuevas_notificaciones as */*
+  [1m[36mPersona Load (1.0ms)[0m  [1mSELECT "personas".* FROM "personas" WHERE "personas"."id" = 4 LIMIT 1[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE (read = 'f' AND persona_id = 4)
+  [1m[36mNotification Load (0.7ms)[0m  [1mSELECT "notifications".* FROM "notifications" WHERE (read = 'f' AND persona_id = 4) ORDER BY id DESC[0m
+  Rendered collection (0.0ms)
+  Rendered notifications/nuevas_notificaciones.js.erb (4.6ms)
+Completed 200 OK in 9ms (Views: 4.2ms | ActiveRecord: 2.4ms)
+Started GET "/nuevas_notificaciones" for 127.0.0.1 at 2014-06-22 19:14:10 -0300
+Processing by NotificationsController#nuevas_notificaciones as */*
+  [1m[35mPersona Load (0.5ms)[0m  SELECT "personas".* FROM "personas" WHERE "personas"."id" = 4 LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE (read = 'f' AND persona_id = 4)[0m
+  [1m[35mNotification Load (0.4ms)[0m  SELECT "notifications".* FROM "notifications" WHERE (read = 'f' AND persona_id = 4) ORDER BY id DESC
+  Rendered collection (0.0ms)
+  Rendered notifications/nuevas_notificaciones.js.erb (2.1ms)
+Completed 200 OK in 5ms (Views: 1.9ms | ActiveRecord: 1.3ms)
+Started POST "/comments?noticia=1&usuario=4" for 127.0.0.1 at 2014-06-22 19:14:36 -0300
+Processing by CommentsController#create as */*
+  Parameters: {"text_area_comment"=>"Comentario de prueba", "noticia"=>"1", "usuario"=>"4"}
+  [1m[36mPersona Load (0.7ms)[0m  [1mSELECT "personas".* FROM "personas" WHERE "personas"."id" = 4 LIMIT 1[0m
+  [1m[35mNoticium Load (0.5ms)[0m  SELECT "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mPersona Load (0.3ms)[0m  [1mSELECT "personas".* FROM "personas" WHERE "personas"."id" = $1 LIMIT 1[0m  [["id", "4"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (11.5ms)[0m  [1mINSERT INTO "comments" ("created_at", "cuerpo", "noticia_id", "persona_id", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Sun, 22 Jun 2014 22:14:36 UTC +00:00], ["cuerpo", "Comentario de prueba"], ["noticia_id", 1], ["persona_id", 4], ["updated_at", Sun, 22 Jun 2014 22:14:36 UTC +00:00]]
+  [1m[35m (9.5ms)[0m  COMMIT
+  [1m[36mPersona Load (2.1ms)[0m  [1mSELECT DISTINCT "personas".* FROM "personas" INNER JOIN "comments" ON "comments"."persona_id" = "personas"."id" WHERE "personas"."activo" = 't' AND "comments"."noticia_id" = 1 AND (personas.id <> '4')[0m
+  [1m[35mPersona Load (0.6ms)[0m  SELECT "personas".* FROM "personas" WHERE "personas"."id" = 4 LIMIT 1
+  [1m[36mPersona Load (0.9ms)[0m  [1mSELECT "personas".* FROM "personas" INNER JOIN "comments" ON "comments"."persona_id" = "personas"."id" WHERE "personas"."activo" = 't' AND "comments"."noticia_id" = 1 AND (personas.id <> '4')[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "personas".* FROM "personas" WHERE "personas"."id" = 4 LIMIT 1
+  Rendered comments/_comment.html.erb (6.6ms)
+  Rendered comments/create.js.erb (19.8ms)
+Completed 200 OK in 144ms (Views: 38.4ms | ActiveRecord: 26.2ms)
+Started GET "/nuevas_notificaciones" for 127.0.0.1 at 2014-06-22 19:14:40 -0300
+Processing by NotificationsController#nuevas_notificaciones as */*
+  [1m[36mPersona Load (2.0ms)[0m  [1mSELECT "personas".* FROM "personas" WHERE "personas"."id" = 4 LIMIT 1[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE (read = 'f' AND persona_id = 4)
+  [1m[36mNotification Load (0.7ms)[0m  [1mSELECT "notifications".* FROM "notifications" WHERE (read = 'f' AND persona_id = 4) ORDER BY id DESC[0m
+  Rendered collection (0.0ms)
+  Rendered notifications/nuevas_notificaciones.js.erb (4.2ms)
+Completed 200 OK in 11ms (Views: 4.3ms | ActiveRecord: 3.4ms)
+Started GET "/nuevas_notificaciones" for 127.0.0.1 at 2014-06-22 19:15:10 -0300
+Processing by NotificationsController#nuevas_notificaciones as */*
+  [1m[35mPersona Load (1.5ms)[0m  SELECT "personas".* FROM "personas" WHERE "personas"."id" = 4 LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE (read = 'f' AND persona_id = 4)[0m
+  [1m[35mNotification Load (0.5ms)[0m  SELECT "notifications".* FROM "notifications" WHERE (read = 'f' AND persona_id = 4) ORDER BY id DESC
+  Rendered collection (0.0ms)
+  Rendered notifications/nuevas_notificaciones.js.erb (4.5ms)
+Completed 200 OK in 9ms (Views: 4.2ms | ActiveRecord: 2.4ms)
+Started GET "/noticia/1/delete" for 127.0.0.1 at 2014-06-22 19:15:33 -0300
+Processing by NoticiaController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPersona Load (0.6ms)[0m  [1mSELECT "personas".* FROM "personas" WHERE "personas"."id" = 4 LIMIT 1[0m
+  [1m[35mNoticium Load (0.4ms)[0m  SELECT "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mPersona Load (0.3ms)[0m  [1mSELECT "personas".* FROM "personas" WHERE "personas"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mDELETE FROM "noticia" WHERE "noticia"."id" = $1[0m  [["id", 1]]
+  [1m[35m (8.2ms)[0m  COMMIT
+Redirected to http://0.0.0.0:3000/mis_noticias
+Completed 302 Found in 18ms (ActiveRecord: 10.4ms)
+Started GET "/mis_noticias" for 127.0.0.1 at 2014-06-22 19:15:33 -0300
+Processing by NoticiaController#mis_noticias as HTML
+  [1m[36mPersona Load (0.6ms)[0m  [1mSELECT "personas".* FROM "personas" WHERE "personas"."id" = 4 LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE (read = 'f' AND persona_id = 4)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE (read = 'f' AND persona_id = 4)[0m
+  [1m[35mNotification Load (0.4ms)[0m  SELECT "notifications".* FROM "notifications" WHERE (read = 'f' AND persona_id = 4)
+  Rendered collection (0.0ms)
+  [1m[36mNoticium Load (0.4ms)[0m  [1mSELECT "noticia".* FROM "noticia" WHERE "noticia"."persona_id" = 4 ORDER BY id DESC LIMIT 8 OFFSET 0[0m
+  [1m[35mPersona Load (0.4ms)[0m  SELECT "personas".* FROM "personas" WHERE "personas"."id" = $1 LIMIT 1  [["id", 4]]
+  Rendered noticia/_nada.html.erb (0.6ms)
+  Rendered noticia/mis_noticias.html.erb (17.1ms)
+Completed 200 OK in 36ms (Views: 30.2ms | ActiveRecord: 2.2ms)
+Started GET "/nuevas_notificaciones" for 127.0.0.1 at 2014-06-22 19:16:04 -0300
+Processing by NotificationsController#nuevas_notificaciones as */*
+  [1m[36mPersona Load (0.5ms)[0m  [1mSELECT "personas".* FROM "personas" WHERE "personas"."id" = 4 LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE (read = 'f' AND persona_id = 4)
+  [1m[36mNotification Load (0.5ms)[0m  [1mSELECT "notifications".* FROM "notifications" WHERE (read = 'f' AND persona_id = 4) ORDER BY id DESC[0m
+  Rendered collection (0.0ms)
+  Rendered notifications/nuevas_notificaciones.js.erb (2.5ms)
+Completed 200 OK in 6ms (Views: 2.3ms | ActiveRecord: 1.4ms)
+Started GET "/nuevas_notificaciones" for 127.0.0.1 at 2014-06-22 19:16:34 -0300
+Processing by NotificationsController#nuevas_notificaciones as */*
+  [1m[35mPersona Load (0.5ms)[0m  SELECT "personas".* FROM "personas" WHERE "personas"."id" = 4 LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE (read = 'f' AND persona_id = 4)[0m
+  [1m[35mNotification Load (0.4ms)[0m  SELECT "notifications".* FROM "notifications" WHERE (read = 'f' AND persona_id = 4) ORDER BY id DESC
+  Rendered collection (0.0ms)
+  Rendered notifications/nuevas_notificaciones.js.erb (2.4ms)
+Completed 200 OK in 6ms (Views: 2.9ms | ActiveRecord: 1.4ms)
+Started GET "/start" for 127.0.0.1 at 2014-06-22 19:16:58 -0300
+Processing by InicioController#start as HTML
+  [1m[36mPersona Load (0.6ms)[0m  [1mSELECT "personas".* FROM "personas" WHERE "personas"."id" = 4 LIMIT 1[0m
+  [1m[35mPersona Load (0.4ms)[0m  SELECT "personas".* FROM "personas" WHERE "personas"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mVideo Load (0.3ms)[0m  [1mSELECT "videos".* FROM "videos" [0m
+  [1m[35mImagen Load (0.3ms)[0m  SELECT "imagens".* FROM "imagens" 
+  [1m[36mNoticium Load (0.4ms)[0m  [1mSELECT "noticia".* FROM "noticia" ORDER BY id ASC[0m
+  [1m[35mAREL (0.6ms)[0m  SELECT novelties.id, novelties.message, novelties.created_at FROM "novelties" INNER JOIN "usr_novelties" ON "usr_novelties"."novelty_id" = "novelties"."id" WHERE usr_novelties.viewed = false AND usr_novelties.persona_id = 4
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE (read = 'f' AND persona_id = 4)[0m
+  [1m[35mNotification Load (0.4ms)[0m  SELECT "notifications".* FROM "notifications" WHERE (read = 'f' AND persona_id = 4)
+  Rendered collection (0.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "personas".* FROM "personas" WHERE "personas"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  Rendered inicio/_nada_noticia.html.erb (0.1ms)
+  Rendered inicio/_nada_imagen.html.erb (0.0ms)
+  Rendered inicio/_nada_video.html.erb (0.0ms)
+  Rendered inicio/start.html.erb (5.1ms)
+Completed 200 OK in 14ms (Views: 4.7ms | ActiveRecord: 3.9ms)
+Started GET "/nuevas_notificaciones" for 127.0.0.1 at 2014-06-22 19:17:28 -0300
+Processing by NotificationsController#nuevas_notificaciones as */*
+  [1m[35mPersona Load (0.8ms)[0m  SELECT "personas".* FROM "personas" WHERE "personas"."id" = 4 LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE (read = 'f' AND persona_id = 4)[0m
+  [1m[35mNotification Load (0.5ms)[0m  SELECT "notifications".* FROM "notifications" WHERE (read = 'f' AND persona_id = 4) ORDER BY id DESC
+  Rendered collection (0.0ms)
+  Rendered notifications/nuevas_notificaciones.js.erb (3.2ms)
+Completed 200 OK in 6ms (Views: 2.8ms | ActiveRecord: 1.8ms)
+Started GET "/nuevas_notificaciones" for 127.0.0.1 at 2014-06-22 19:17:58 -0300
+Processing by NotificationsController#nuevas_notificaciones as */*
+  [1m[36mPersona Load (0.6ms)[0m  [1mSELECT "personas".* FROM "personas" WHERE "personas"."id" = 4 LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE (read = 'f' AND persona_id = 4)
+  [1m[36mNotification Load (0.3ms)[0m  [1mSELECT "notifications".* FROM "notifications" WHERE (read = 'f' AND persona_id = 4) ORDER BY id DESC[0m
+  Rendered collection (0.0ms)
+  Rendered notifications/nuevas_notificaciones.js.erb (1.9ms)
+Completed 200 OK in 4ms (Views: 1.7ms | ActiveRecord: 1.3ms)
+Started GET "/nuevas_notificaciones" for 127.0.0.1 at 2014-06-22 19:18:28 -0300
+Processing by NotificationsController#nuevas_notificaciones as */*
+  [1m[35mPersona Load (1.0ms)[0m  SELECT "personas".* FROM "personas" WHERE "personas"."id" = 4 LIMIT 1
+  [1m[36m (0.8ms)[0m  [1mSELECT COUNT(*) FROM "notifications" WHERE (read = 'f' AND persona_id = 4)[0m
+  [1m[35mNotification Load (0.7ms)[0m  SELECT "notifications".* FROM "notifications" WHERE (read = 'f' AND persona_id = 4) ORDER BY id DESC
+  Rendered collection (0.0ms)
+  Rendered notifications/nuevas_notificaciones.js.erb (4.0ms)
+Completed 200 OK in 9ms (Views: 3.5ms | ActiveRecord: 2.5ms)
+Started GET "/nuevas_notificaciones" for 127.0.0.1 at 2014-06-22 19:18:58 -0300
+Processing by NotificationsController#nuevas_notificaciones as */*
+  [1m[36mPersona Load (0.5ms)[0m  [1mSELECT "personas".* FROM "personas" WHERE "personas"."id" = 4 LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "notifications" WHERE (read = 'f' AND persona_id = 4)
+  [1m[36mNotification Load (0.3ms)[0m  [1mSELECT "notifications".* FROM "notifications" WHERE (read = 'f' AND persona_id = 4) ORDER BY id DESC[0m
+  Rendered collection (0.0ms)
+  Rendered notifications/nuevas_notificaciones.js.erb (2.0ms)
+Completed 200 OK in 4ms (Views: 1.7ms | ActiveRecord: 1.3ms)
