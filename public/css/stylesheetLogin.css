@@ -39,7 +39,6 @@ a{
 		cursor: pointer;
 }
 #fondo{
-	border-radius:20px;
 	overflow: hidden;
 	position: relative;
 	height: 300px;
@@ -50,9 +49,7 @@ a{
 #contenido{
 	position: absolute;
 	z-index: 0;
-	height: 300px;
-	width: 600px;	
-	border-radius: 20px;
+	border-radius: 15px;
 	display: none;
     background-color:#6dd4bc;
     border-color: yellow;
@@ -61,9 +58,6 @@ a{
     height: 292px;
     width: 592px;   
     box-shadow:inset 0px 0px 20px rgba(50,50,50,0.8);
-}
-#contenido:hover{
-	display: block;
 }
 
 
@@ -175,7 +169,6 @@ position:relative;
     overflow: hidden;
     text-align: center;
     padding: 0;
-
 }
 #contenedor:hover #btn_footer1{
     -webkit-transform: rotate(360deg);
@@ -189,6 +182,8 @@ position:relative;
 }
 #list_opc{
     position: relative;540px
+
+
     z-index: 5;
     bottom: 100px;
     width: 70px;
@@ -220,7 +215,7 @@ position:relative;
     height: 30px;
     padding:10px;
     background: none;		 
-    border-radius:10px;
+    border-radius:5px;
     color: white;
     font-family: "AngryBirds"; 
     text-align:center;
@@ -329,6 +324,13 @@ input:-moz-placeholder {
 	border-color: #693600;	
 	border-style: solid;
 	padding: 1px;
+    box-shadow: 0 0 10px black;
+}
+.botonera1:hover{
+    box-shadow: 0 0 6px black;
+}
+.botonera1:active{
+    box-shadow: none;
 }
 .botonera2{
 	height: 64px;
@@ -450,28 +452,26 @@ a:hover {
   font-size: 12px;
 }
 
-#noticia{
-	color: red;
-	font-weight: bold;
-	font-size: 21px;
-	vertical-align: middle;
-	display: inline-block;
-}
 #cont_noticia{
-	border-radius: 5px;
-	border-width: 1px;
-	position: relative;
-	top: -108px;
-	margin: 0 auto;
+    position: relative;
+    top: -60px;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 5px;
+	border: 2px solid black;
+
 	z-index: 20;
-	padding-top: 3px;
-	padding-right: 5px;
-	padding-left: 5px;
-	width: 600px; 
-	border-color: red;
-	border-style: solid;
+	padding: 3px;
 	box-shadow: 0 0 10px rgba(0,0,0,0.8);
-	background-color: rgba(255,0,0,0.5);
+	background-color: rgba(0,0,0,0.5);
+}
+#cont_noticia p{
+    font-family: AngryBirds;
+    font-size: 90px;
+    color: #ffffff;
+    text-shadow: 0 0 2px black;
+    font-weight: bold;
+    vertical-align: middle;
 }
 
 
@@ -503,16 +503,16 @@ a:hover {
   box-sizing: border-box;
 }
 .close {
-	 position: relative;
-	 right: 20px;
-  float: right;
-  font-size: 20px;
-  font-weight: bold;
-  line-height: 21px;
-  color: #000000;
-  text-shadow: 0 1px 0 #ffffff;
-  opacity: 0.2;
-  filter: alpha(opacity=20);
+    position: absolute;
+    top: 1px;
+    right: 6px;
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 21px;
+    color: #000000;
+    text-shadow: 0 1px 1px #ffffff;
+    opacity: 0.6;
+  filter: alpha(opacity=60);
 }
 .close:hover,
 .close:focus {
@@ -550,4 +550,129 @@ button.close {
 }
 #g-follow{
     float: left;
+}
+
+#registrate{
+    position: absolute;
+    top: 50px;
+    left: 150px;
+    -webkit-animation: mueve 2s linear infinite;
+    -moz-animation: mueve 2s linear infinite;
+    -ms-animation: mueve 2s linear infinite;
+}
+#registrate p{
+    position: relative;
+    margin-top: 15px;
+    float: right;
+    font-family: angrybirds;
+    font-size: 40px;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    background: rgba(50,50,50,0.6);
+}
+#registrate .triangulo{
+    position: relative;
+    float: left;
+    width: 0;
+    height: 0;
+    border-top: 40px solid transparent;
+    border-right: 80px solid rgba(50,50,50,0.6);;
+    border-bottom: 40px solid transparent;
+}
+@-webkit-keyframes mueve {
+    0% { left: 150px; }
+    50% { left: 175px; }
+    100% { left: 150px; }
+}
+
+@-moz-keyframes mueve {
+    0% { left: 150px; }
+    50% { left: 175px; }
+    100% { left: 150px; }
+}
+
+@-ms-keyframes mueve {
+    0% { left: 150px; }
+    50% { left: 175px; }
+    100% { left: 150px; }
+}
+
+@keyframes mueve {
+    0% { left: 150px; }
+    50% { left: 175px; }
+    100% { left: 150px; }
+}
+
+#twelve-point-star {
+    position: absolute;
+    top: 130px;
+    left: 13px;
+
+    height: 50px;
+    width: 50px;
+    background: yellow;
+    opacity: 0.8;
+
+    -webkit-animation: rota 1s linear infinite;
+    -moz-animation: rota 1s linear infinite;
+    -ms-animation: rota 1s linear infinite;
+    animation: rota 1s linear infinite;
+    transition-property: all;
+    transition-duration: 1s;
+}
+#twelve-point-star:before {
+    height: 50px;
+    width: 50px;
+    background: yellow;
+    opacity: 0.7;
+    content:"";
+    left: 0px;
+    position: absolute;
+    /* Rotate */
+    -moz-transform: rotate(30deg);
+    -webkit-transform: rotate(30deg);
+    -ms-transform: rotate(30deg);
+    -o-transform: rotate(30deg);
+    transform: rotate(30deg);
+    transition-property: all;
+    transition-duration: 1s;
+}
+
+#twelve-point-star:after {
+    height: 50px;
+    width: 50px;
+    left: 0px;
+    background: yellow;
+    opacity: 0.5;
+    content:"";
+    position: absolute;
+    /* Rotate */
+    -moz-transform: rotate(-30deg);
+    -webkit-transform: rotate(-30deg);
+    -ms-transform: rotate(-30deg);
+    -o-transform: rotate(-30deg);
+    transform: rotate(-30deg);
+    transition-property: all;
+    transition-duration: 1s;
+}
+
+#list_opc a:hover ~ #twelve-point-star{
+    left: 3px;
+    height: 70px;
+    width: 70px;
+    transition-property: all;
+    transition-duration: 1s;
+}
+#list_opc a:hover ~ #twelve-point-star:before{
+    height: 70px;
+    width: 70px;
+    transition-property: all;
+    transition-duration: 1s;
+}
+#list_opc a:hover ~ #twelve-point-star:after{
+    height: 70px;
+    width: 70px;
+    transition-property: all;
+    transition-duration: 1s;
 }

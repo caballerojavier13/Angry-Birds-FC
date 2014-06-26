@@ -75,7 +75,7 @@
        </ul>
        <div id="body">
     
-    	  	<embed src="/music/tema.mp3" loop="1" width="0" height="0">
+    	  	<embed src="/2music/tema.mp3" loop="1" width="0" height="0">
     		</embed>
       		<div id="header">
       			<div id="imagen">
@@ -90,7 +90,7 @@
     			<img class="nube" id="nube4" src="/picture/nube4.png" >
     		<% if flash[:alert] %>
          		<div id="cont_noticia"> 
-         		    <p id="noticia"><%= flash[:alert] %></p><button type="button" class="close" data-dismiss="alert" onclick="hide('cont_noticia')">&times;</button>
+         		    <p ><%= simple_format flash[:alert] %></p><button type="button" class="close" data-dismiss="alert" onclick="hide('cont_noticia')">&times;</button>
      		    </div>
 	        <% end %>
       		<div id="main">
@@ -133,6 +133,7 @@
        	</div>
        	
        </div>
+
        <div id="footer">
 
          <a href="https://plus.google.com/118187301946574138543" rel="publisher" style="color:transparent; cursor: default">Google+</a>
@@ -141,14 +142,17 @@
                     <a href="/registro"  >
                             <img src="/picture/new user.png" width="50"  id="link_img1" onmouseover="tooltip('tooltip1')" onmouseout="hide('tooltip1')">
                     </a>
-                    
+                  <div id="twelve-point-star"></div>
                     <img src="/picture/key.png" width="50" id="link_img2" onmouseover="show('tooltip2')" onmouseout="hide('tooltip2')"  onclick="show('fondoMensaje')">
                     
                 </div>
                 <img src="/picture/menu.png" width="100" id="btn_footer1">
-                </div>
-                
-    		    <img src="/picture/help.png" width="100" id="btn_footer2" style="display: none;">
+            </div>
+            <div id="registrate">
+              <span class="triangulo"></span>
+              <p>Si no tenes cuenta: Registrate!!!</p>
+            </div>
+            <img src="/picture/help.png" width="100" id="btn_footer2" style="display: none;">
        </div>
        <div id="tooltip1">Nuevo Usuario</div>
        <div id="tooltip2">Olvidé mi Contraseña</div>

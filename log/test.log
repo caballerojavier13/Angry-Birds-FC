@@ -2121,3 +2121,56 @@ Processing by NotificationsController#nuevas_notificaciones as */*
   Rendered collection (0.0ms)
   Rendered notifications/nuevas_notificaciones.js.erb (2.0ms)
 Completed 200 OK in 4ms (Views: 1.7ms | ActiveRecord: 1.3ms)
+Connecting to database specified by database.yml
+Unable to load funcionalidad, underlying cause No such file to load -- funcionalidad 
+
+ /home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activesupport-3.2.13/lib/active_support/dependencies.rb:317:in `rescue in depend_on'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activesupport-3.2.13/lib/active_support/dependencies.rb:312:in `depend_on'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activesupport-3.2.13/lib/active_support/dependencies.rb:225:in `require_dependency'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activerecord-3.2.13/lib/active_record/fixtures.rb:767:in `try_to_load_dependency'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activerecord-3.2.13/lib/active_record/fixtures.rb:782:in `block in require_fixture_classes'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activerecord-3.2.13/lib/active_record/fixtures.rb:779:in `each'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activerecord-3.2.13/lib/active_record/fixtures.rb:779:in `require_fixture_classes'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activerecord-3.2.13/lib/active_record/fixtures.rb:762:in `fixtures'
+/home/javier/Proyectos/Angry Birds/test/test_helper.rb:10:in `<class:TestCase>'
+/home/javier/Proyectos/Angry Birds/test/test_helper.rb:5:in `<top (required)>'
+/home/javier/Proyectos/Angry Birds/test/integration/test_integration.rb:1:in `require'
+/home/javier/Proyectos/Angry Birds/test/integration/test_integration.rb:1:in `<top (required)>'
+-e:1:in `load'
+-e:1:in `<main>'
+Unable to load function, underlying cause No such file to load -- function 
+
+ /home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activesupport-3.2.13/lib/active_support/dependencies.rb:317:in `rescue in depend_on'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activesupport-3.2.13/lib/active_support/dependencies.rb:312:in `depend_on'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activesupport-3.2.13/lib/active_support/dependencies.rb:225:in `require_dependency'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activerecord-3.2.13/lib/active_record/fixtures.rb:767:in `try_to_load_dependency'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activerecord-3.2.13/lib/active_record/fixtures.rb:782:in `block in require_fixture_classes'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activerecord-3.2.13/lib/active_record/fixtures.rb:779:in `each'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activerecord-3.2.13/lib/active_record/fixtures.rb:779:in `require_fixture_classes'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activerecord-3.2.13/lib/active_record/fixtures.rb:762:in `fixtures'
+/home/javier/Proyectos/Angry Birds/test/test_helper.rb:10:in `<class:TestCase>'
+/home/javier/Proyectos/Angry Birds/test/test_helper.rb:5:in `<top (required)>'
+/home/javier/Proyectos/Angry Birds/test/integration/test_integration.rb:1:in `require'
+/home/javier/Proyectos/Angry Birds/test/integration/test_integration.rb:1:in `<top (required)>'
+-e:1:in `load'
+-e:1:in `<main>'
+Unable to load permission, underlying cause No such file to load -- permission 
+
+ /home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activesupport-3.2.13/lib/active_support/dependencies.rb:317:in `rescue in depend_on'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activesupport-3.2.13/lib/active_support/dependencies.rb:312:in `depend_on'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activesupport-3.2.13/lib/active_support/dependencies.rb:225:in `require_dependency'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activerecord-3.2.13/lib/active_record/fixtures.rb:767:in `try_to_load_dependency'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activerecord-3.2.13/lib/active_record/fixtures.rb:782:in `block in require_fixture_classes'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activerecord-3.2.13/lib/active_record/fixtures.rb:779:in `each'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activerecord-3.2.13/lib/active_record/fixtures.rb:779:in `require_fixture_classes'
+/home/javier/.rbenv/versions/2.0.0-p247/lib/ruby/gems/2.0.0/gems/activerecord-3.2.13/lib/active_record/fixtures.rb:762:in `fixtures'
+/home/javier/Proyectos/Angry Birds/test/test_helper.rb:10:in `<class:TestCase>'
+/home/javier/Proyectos/Angry Birds/test/test_helper.rb:5:in `<top (required)>'
+/home/javier/Proyectos/Angry Birds/test/integration/test_integration.rb:1:in `require'
+/home/javier/Proyectos/Angry Birds/test/integration/test_integration.rb:1:in `<top (required)>'
+-e:1:in `load'
+-e:1:in `<main>'
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mPersona Load (24.2ms)[0m  SELECT "personas".* FROM "personas" WHERE "personas"."username" = 'usuario-test-comun'
+  [1m[36mPersona Load (0.5ms)[0m  [1mSELECT "personas".* FROM "personas" WHERE "personas"."email" = 'usuario-test-comun@angrybirdsfanclub.com'[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK

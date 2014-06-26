@@ -1183,10 +1183,18 @@ button.close {
     right: 10px;
     cursor: pointer;
 }
-#comentarios div .delete_comment img{
+#comentarios div .edit_comment{
+    border: none;
+    position: absolute;
+    width: 20px;
+    top: 10px;
+    right: 40px;
+    cursor: pointer;
+}
+#comentarios div img{
     opacity: 0.4;
 }
-#comentarios div .delete_comment img:hover{
+#comentarios div img:hover{
     opacity: 1;
 }
 #comment_loading{

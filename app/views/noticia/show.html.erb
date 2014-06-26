@@ -89,7 +89,7 @@
                                 
                     </nav>
                   <% @persona = Persona.find(session[:usuario_id]) %>
-                  <a href="mi_pajaro/<%= @persona.id %>"><img src=<%= @persona.genero ? '/picture/hombre.png' : '/picture/mujer.png' %> src="" id="fotoPerfil" ></a>
+                  <a href="/mi_pajaro/<%= @persona.id %>"><img src=<%= @persona.genero ? '/picture/hombre.png' : '/picture/mujer.png' %> src="" id="fotoPerfil" ></a>
                 </div>
                 <div id="titulo" class="borde">
                     Leer Noticia

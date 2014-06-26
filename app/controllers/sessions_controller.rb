@@ -13,7 +13,8 @@ class SessionsController < ApplicationController
           unless @persona.bloqueado
 
             session[:usuario_id] = @persona.id
-
+            session[:genero] = @persona.genero
+            cookies[:genero]= { :value => @persona.genero, :expires => 1.week.from_now }
             cookies[:usuario_id]= { :value => @persona.id, :expires => 1.week.from_now }
 
             if(params[:redirect_to].nil?)
@@ -43,6 +44,6 @@ class SessionsController < ApplicationController
   def destroy
     session[:usuario_id] = nil
     cookies.delete :usuario_id
-    redirect_to "/login"
+    redirect_to "/login", :alert => "Adios! <br/> Pero regresa pronto."
   end
 end
