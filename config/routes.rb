@@ -33,10 +33,13 @@ FanClub::Application.routes.draw do
   
   match 'nuevas_notificaciones' => 'notifications#nuevas_notificaciones',:via => :get
   
-  resources :comments
-  
-  match 'comments/:id/delete/:noticia' => 'comments#destroy', :via => :get
-  
+
+  match 'comments' => 'comments#create', :via => :post
+
+  match 'comments/:id' => 'comments#update', :via => :put
+
+  match 'comments/:id' => 'comments#destroy', :via => :delete
+
 
   match 'videos' => 'videos#index', :as => :videos, :via => :get
   

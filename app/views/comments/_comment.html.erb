@@ -1,17 +1,23 @@
-<%= div_for comment do %>
+<%= div_for(comment, class: "comentario") do %>
     <h3> <%=comment.persona.nombre + ' ' + comment.persona.apellido%></h3><h4>(<%=comment.persona.username%>)</h4>
-    <p>
-        <%=simple_format comment.cuerpo%>
-    </p>
+    <div class="text_comment"><%=simple_format(comment.cuerpo)%></div>
     <p class="fecha">
         <%=time_ago_in_words(comment.updated_at).capitalize + "."%>
     </p>
+    <% if comment.edited %>
+        <p class="comment_edited">
+          Comentario Editado
+        </p>
+    <% end %>
+
+
     <%if comment.persona.id == session[:usuario_id].to_i || Persona.find(session[:usuario_id]).admin %>
-        <a href="#" class="delete_comment" onclick='$.get("/comments/<%=comment.id%>/delete/<%=comment.noticia_id%>", null,
-                    function(data){
-                        $("#comment_<%=comment.id%>").hide("scale",{duration: 3000});
-                    });
-                return false;'>
+        <a data-toggle="tooltip" data-placement="top" title="Editar Comentario" class="icon_edit_comment" onclick='editComment(<%= comment.id.to_s + ', ' + session[:usuario_id].to_s  %>)'>
+
+          <img src="/picture/edit.png" width="20" />
+        </a>
+        <a data-toggle="tooltip" data-placement="top" title="Eliminar Comentario"  class="delete_comment" onclick='deleteComment(<%= comment.id.to_s + ', ' + session[:usuario_id].to_s %>);'>
+
             <img src="/picture/icon/delete.png" width="20" />
         </a>
     <%end%>

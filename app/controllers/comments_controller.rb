@@ -14,10 +14,10 @@ class CommentsController < SecurityController
 
   # POST /comments
   # POST /comments.json
-  
+
   def create
-    url = "/noticias/" + params[:noticia].to_s  
-    if params[:text_area_comment].size > 0    
+    url = "/noticias/" + params[:noticia].to_s
+    if params[:text_area_comment].size > 0
       @comment = Comment.new
       usuario_id = params[:usuario]
       @comment.persona_id = usuario_id
@@ -25,7 +25,7 @@ class CommentsController < SecurityController
       @comment.cuerpo = params[:text_area_comment]
       noticia = Noticium.find params[:noticia]
       comentarista = Persona.find(usuario_id)
-        
+
       if @comment.save
         #Crear Notificaciones
         @personas = Persona.activo.where(['personas.id <> ?', params[:usuario]]).joins(:comments).where(comments: {noticia_id: params[:noticia]})
@@ -44,7 +44,7 @@ class CommentsController < SecurityController
                 notificacion.save
     	        end
           end
-        
+
         unless @personas.include?(noticia.persona)
         	if noticia.persona.id != comentarista.id
                 @notification = Notification.where("noticia_id = ? AND read = ? AND persona_id = ?",params[:noticia], false, params[:usuario])
@@ -62,36 +62,52 @@ class CommentsController < SecurityController
         	end
         end
       #fin crear notificaciones
-  
-        
+
+
       end
     end
-  if request.xhr?
-    respond_to do |format|
-      format.js   
-    end 
-  else
-    respond_to do |format|
-      format.html { redirect_to url }
-      format.json { head :no_content }
+    if request.xhr?
+      respond_to do |format|
+        format.js
+      end
+    else
+      respond_to do |format|
+        format.html { redirect_to url }
+        format.json { head :no_content }
+      end
     end
   end
+  # PUT /comments/1
+  # PUT /comments/1.json
+  def update
+    @comment = Comment.find(params[:id])
+    @comment.update_attributes(:cuerpo => params[:cuerpo])
+    @comment.update_attributes(:edited => true)
+    if request.xhr?
+      respond_to do |format|
+        format.js
+      end
+    else
+      respond_to do |format|
+        format.html
+        format.json { head :no_content }
+      end
+    end
   end
   # DELETE /comments/1
   # DELETE /comments/1.json
   def destroy
     @comment = Comment.find(params[:id])
     @comment.destroy
-    url = "/noticias/" + params[:noticia].to_s
     if request.xhr?
-        respond_to do |format|
-          format.js  
-        end 
-      else
-        respond_to do |format|
-          format.html { redirect_to url }
-          format.json { head :no_content }
-        end
+      respond_to do |format|
+        format.js
       end
+    else
+      respond_to do |format|
+        format.html
+        format.json { head :no_content }
+      end
+    end
   end
-  end
+end

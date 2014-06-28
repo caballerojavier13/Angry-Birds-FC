@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140606031156) do
+ActiveRecord::Schema.define(:version => 20140628175729) do
 
   create_table "calificacions", :force => true do |t|
     t.integer  "valor"
@@ -25,8 +25,9 @@ ActiveRecord::Schema.define(:version => 20140606031156) do
     t.integer  "persona_id"
     t.integer  "noticia_id"
     t.text     "cuerpo"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
+    t.boolean  "edited",     :default => false
   end
 
   create_table "functions", :force => true do |t|
