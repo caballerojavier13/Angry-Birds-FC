@@ -23,6 +23,7 @@ class CommentsController < SecurityController
       @comment.persona_id = usuario_id
       @comment.noticia_id = params[:noticia]
       @comment.cuerpo = params[:text_area_comment]
+      @comment.edited = false
       noticia = Noticium.find params[:noticia]
       comentarista = Persona.find(usuario_id)
 
@@ -71,10 +72,7 @@ class CommentsController < SecurityController
         format.js
       end
     else
-      respond_to do |format|
-        format.html { redirect_to url }
-        format.json { head :no_content }
-      end
+
     end
   end
   # PUT /comments/1
