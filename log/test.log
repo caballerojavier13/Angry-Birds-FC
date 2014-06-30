@@ -2208,3 +2208,33 @@ Migrating to AddColumnEditedComment (20140628175729)
   [1m[35m (25.8ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20140628175729')
   [1m[36m (16.2ms)[0m  [1mCOMMIT[0m
   [1m[35m (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
+  [1m[36m (19.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreatePersonas (20130512114831)
+Migrating to CreateVideos (20130512115117)
+Migrating to CreateImagens (20130512115209)
+Migrating to CreateNoticia (20130512115327)
+Migrating to CreateCalificacions (20130512115426)
+Migrating to CreateFuncionalidads (20130512115621)
+Migrating to CreateTipoUsuarios (20130512115645)
+Migrating to CreateTipoUsuarioFuncionalidads (20130512115817)
+Migrating to AddRelacionPersonaTipoUsuario (20130512122112)
+Migrating to AddColumnsPersona (20130519204247)
+Migrating to AddColumnIdPicasaPicture (20130709114906)
+Migrating to CreateComments (20130802035314)
+Migrating to CreateNotifications (20130802035440)
+Migrating to AddColumnUsuariosToNotifications (20130805051728)
+Migrating to CambiarNombreColumnasUsuario (20130805084959)
+Migrating to EliminarTablasInnecesarias (20130813145800)
+Migrating to AddColumnBloqueado (20130818024452)
+Migrating to AddColumnAdmin (20131209020043)
+Migrating to CreateUsrNovelties (20140124200310)
+Migrating to CreateNovelties (20140124200815)
+Migrating to Roles (20140602023401)
+Migrating to Function (20140602023505)
+Migrating to Permission (20140602023658)
+Migrating to PersonaConRol (20140606031156)
+Migrating to AddColumnEditedComment (20140628175729)
+  [1m[35m (0.4ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 

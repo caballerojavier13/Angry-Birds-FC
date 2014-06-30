@@ -117,7 +117,7 @@ FanClub::Application.routes.draw do
 
   match 'invalid_code' => 'personas#invalid_code', :as => :invalid_code, :via => :get
 
-  match 'change_password' => 'personas#change_password', :as => :change_password, :via => :get
+  match 'change_password' => 'personas#change_password', :as => :change_password, :via => :post
 
   match 'mi_pajaro/:id' => 'personas#show', :as => :show, :via => :get
 

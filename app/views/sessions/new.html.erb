@@ -75,7 +75,7 @@
        </ul>
        <div id="body">
     
-    	  	<embed src="/2music/tema.mp3" loop="1" width="0" height="0">
+    	  	<embed src="/music/tema.mp3" loop="1" width="0" height="0">
     		</embed>
       		<div id="header">
       			<div id="imagen">
@@ -158,13 +158,13 @@
        <div id="tooltip2">Olvidé mi Contraseña</div>
        <div id="fondoMensaje" >
 	   <div id="mensaje" >
-                <%= form_tag do %>
+                <%= form_tag(controller: "personas", action: "change_password") do%>
                     <label id="labelRecPass">Recuperar Contraseña</label>
                     <div style="margin-top: 0px; margin-bottom: 10px;">
-                    <%= text_field_tag :mail, session[:mail] , :placeholder=> 'E-mail/usuario',:class => 'txtInput', :id => 'inputMail'%>
+                        <input name="change_pass" placeholder="E-mail/usuario" class="txtInput" id="change_pass">
                     </div>
                     <div style="display: inline;">
-                    <%= submit_tag "", :class => 'boton1' %>
+                        <%= submit_tag "", :class => 'boton1' %>
                         <img src="/picture/btn_cancel1.png" width="80" class="btn-mail" id="btn_email2" onclick="hide('fondoMensaje')">
                     </div>
                 <% end %>

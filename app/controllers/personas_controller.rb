@@ -78,22 +78,18 @@ class PersonasController < ApplicationController
   end
 
   def change_password
-    mail_username = session[:mail]
-    persona_mail = Persona.where(email: mail_username).first 
-    persona_username = Persona.where(username: mail_username).first
+    mail_username = params[:change_pass]
+    persona_mail = Persona.where(email: mail_username).first
     if persona_mail.nil?
-      @persona = persona_username
+      @persona =  Persona.where(username: mail_username).first
     else
       @persona = persona_mail
     end         
     unless @persona.nil?
      	@persona.update_attribute(:codigo, Persona.generate_activation_code)
-     	session[:mail] = nil
 	    UserMailer.forgot_password(@persona).deliver
-	    session[:id]= @persona.id.to_s
-      redirect_to "/thanks/?id=" + @persona.id.to_s
     else
-      redirect_to "/login", :alert => 'No se encuentró ningún usuario.'
+      redirect_to '/login', :alert => 'No se encuentró ningún usuario.'
     end
   end
 
