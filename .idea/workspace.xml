@@ -2,528 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7a837322-c6a4-4023-9153-58d412bae53d" name="Default" comment="Pequeñas mejoras">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/notifications/_partial_notification.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/admin_user.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/ayuda.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/ayuda.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/calificacion_noticia.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/scriptLoadViewNoticia.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/mailers/.gitkeep" afterPath="$PROJECT_DIR$/app/mailers/.gitkeep" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/.gitkeep" afterPath="$PROJECT_DIR$/app/models/.gitkeep" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/assets/.gitkeep" afterPath="$PROJECT_DIR$/lib/assets/.gitkeep" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/tasks/.gitkeep" afterPath="$PROJECT_DIR$/lib/tasks/.gitkeep" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/.gitkeep" afterPath="$PROJECT_DIR$/log/.gitkeep" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fixtures/.gitkeep" afterPath="$PROJECT_DIR$/test/fixtures/.gitkeep" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/functional/.gitkeep" afterPath="$PROJECT_DIR$/test/functional/.gitkeep" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/integration/.gitkeep" afterPath="$PROJECT_DIR$/test/integration/.gitkeep" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/.gitkeep" afterPath="$PROJECT_DIR$/test/unit/.gitkeep" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/assets/javascripts/.gitkeep" afterPath="$PROJECT_DIR$/vendor/assets/javascripts/.gitkeep" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/assets/stylesheets/.gitkeep" afterPath="$PROJECT_DIR$/vendor/assets/stylesheets/.gitkeep" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/plugins/.gitkeep" afterPath="$PROJECT_DIR$/vendor/plugins/.gitkeep" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/picture/gif_loading/1.gif" afterPath="$PROJECT_DIR$/public/picture/gif_loading/1.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/picture/gif_loading/2.gif" afterPath="$PROJECT_DIR$/public/picture/gif_loading/2.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/picture/gif_loading/20.gif" afterPath="$PROJECT_DIR$/public/picture/gif_loading/20.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/picture/gif_loading/3.gif" afterPath="$PROJECT_DIR$/public/picture/gif_loading/3.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/picture/gif_loading/4.gif" afterPath="$PROJECT_DIR$/public/picture/gif_loading/4.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/picture/gif_loading/5.gif" afterPath="$PROJECT_DIR$/public/picture/gif_loading/5.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/picture/gif_loading/6.png" afterPath="$PROJECT_DIR$/public/picture/gif_loading/6.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/fonts/BebasNeue-webfont.eot" afterPath="$PROJECT_DIR$/public/css/fonts/BebasNeue-webfont.eot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/fonts/BebasNeue-webfont.ttf" afterPath="$PROJECT_DIR$/public/css/fonts/BebasNeue-webfont.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/fonts/BebasNeue-webfont.woff" afterPath="$PROJECT_DIR$/public/css/fonts/BebasNeue-webfont.woff" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/picture/Flecha.png" afterPath="$PROJECT_DIR$/public/picture/Flecha.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/picture/Flecha180.png" afterPath="$PROJECT_DIR$/public/picture/Flecha180.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/picture/Happy-Birdday.jpg" afterPath="$PROJECT_DIR$/public/picture/Happy-Birdday.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/picture/Rebeldes_L.png" afterPath="$PROJECT_DIR$/public/picture/Rebeldes_L.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/picture/Rebeldes_R.png" afterPath="$PROJECT_DIR$/public/picture/Rebeldes_R.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/picture/icon/Search.png" afterPath="$PROJECT_DIR$/public/picture/icon/Search.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/picture/The_Empire_Side_L.png" afterPath="$PROJECT_DIR$/public/picture/The_Empire_Side_L.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/picture/The_Empire_Side_R.png" afterPath="$PROJECT_DIR$/public/picture/The_Empire_Side_R.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/font/angrybirds-regular-webfont.woff" afterPath="$PROJECT_DIR$/public/font/angrybirds-regular-webfont.woff" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-0329c5143028672380673d0a681fa67a.js.gz" afterPath="$PROJECT_DIR$/public/assets/application-0329c5143028672380673d0a681fa67a.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-1b13569e9620782f423d4cd3ce931750.css.gz" afterPath="$PROJECT_DIR$/public/assets/application-1b13569e9620782f423d4cd3ce931750.css.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-437f5218c61228c6d90cd42f0ec75ffe.js.gz" afterPath="$PROJECT_DIR$/public/assets/application-437f5218c61228c6d90cd42f0ec75ffe.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-4e1c83aee4efc6dfda6f86e06a0bab7e.css.gz" afterPath="$PROJECT_DIR$/public/assets/application-4e1c83aee4efc6dfda6f86e06a0bab7e.css.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-7ea5fd5cee4f05f620d2523dc8c415b3.js.gz" afterPath="$PROJECT_DIR$/public/assets/application-7ea5fd5cee4f05f620d2523dc8c415b3.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-99127fd253b4019cb1c95fbdfe562fd2.js.gz" afterPath="$PROJECT_DIR$/public/assets/application-99127fd253b4019cb1c95fbdfe562fd2.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-c5185d808cdeb4068f482654e8fa1461.js.gz" afterPath="$PROJECT_DIR$/public/assets/application-c5185d808cdeb4068f482654e8fa1461.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application.css.gz" afterPath="$PROJECT_DIR$/public/assets/application.css.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application.js.gz" afterPath="$PROJECT_DIR$/public/assets/application.js.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/picture/areyou.jpg" afterPath="$PROJECT_DIR$/public/picture/areyou.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/picture/icon/back.png" afterPath="$PROJECT_DIR$/public/picture/icon/back.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/background.png" afterPath="$PROJECT_DIR$/public/images/background.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/picture/bienvenida1.png" afterPath="$PROJECT_DIR$/public/picture/bienvenida1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/picture/bienvenida2.png" afterPath="$PROJECT_DIR$/public/picture/bienvenida2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/picture/classic/bomb.png" afterPath="$PROJECT_DIR$/public/picture/classic/bomb.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/picture/space/bomb.png" afterPath="$PROJECT_DIR$/public/picture/space/bomb.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/picture/toons/bomb.png" afterPath="$PROJECT_DIR$/public/picture/toons/bomb.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/picture/icon/boton-cerrar.png" afterPath="$PROJECT_DIR$/public/picture/icon/boton-cerrar.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/picture/btn_cancel.png" afterPath="$PROJECT_DIR$/public/picture/btn_cancel.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/picture/btn_cancel1.png" afterPath="$PROJECT_DIR$/public/picture/btn_cancel1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/picture/btn_ok.png" afterPath="$PROJECT_DIR$/public/picture/btn_ok.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/picture/icon/close-icon.png" afterPath="$PROJECT_DIR$/public/picture/icon/close-icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/picture/delete.png" afterPath="$PROJECT_DIR$/public/picture/delete.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/picture/icon/delete.png" afterPath="$PROJECT_DIR$/public/picture/icon/delete.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/picture/icon/eagle1.png" afterPath="$PROJECT_DIR$/public/picture/icon/eagle1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/picture/icon/eagle2.png" afterPath="$PROJECT_DIR$/public/picture/icon/eagle2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/picture/edit.png" afterPath="$PROJECT_DIR$/public/picture/edit.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/picture/error.png" afterPath="$PROJECT_DIR$/public/picture/error.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/picture/error404.jpg" afterPath="$PROJECT_DIR$/public/picture/error404.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/picture/error500.png" afterPath="$PROJECT_DIR$/public/picture/error500.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/picture/exit1.png" afterPath="$PROJECT_DIR$/public/picture/exit1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/picture/exit2.png" afterPath="$PROJECT_DIR$/public/picture/exit2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/favicon-de90115679b39aad34331457cd232a78.ico" afterPath="$PROJECT_DIR$/public/assets/favicon-de90115679b39aad34331457cd232a78.ico" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/favicon.ico" afterPath="$PROJECT_DIR$/app/assets/images/favicon.ico" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/favicon.ico" afterPath="$PROJECT_DIR$/public/assets/favicon.ico" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/favicon1-de90115679b39aad34331457cd232a78.ico" afterPath="$PROJECT_DIR$/public/assets/favicon1-de90115679b39aad34331457cd232a78.ico" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/favicon1.ico" afterPath="$PROJECT_DIR$/app/assets/images/favicon1.ico" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/favicon1.ico" afterPath="$PROJECT_DIR$/public/favicon1.ico" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/favicon1.ico" afterPath="$PROJECT_DIR$/public/assets/favicon1.ico" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/favicon2.ico" afterPath="$PROJECT_DIR$/public/favicon2.ico" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/picture/footer.png" afterPath="$PROJECT_DIR$/public/picture/footer.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/foreground.png" afterPath="$PROJECT_DIR$/public/images/foreground.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/glyphicons-halflings-white.png" afterPath="$PROJECT_DIR$/public/img/glyphicons-halflings-white.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/img/glyphicons-halflings.png" afterPath="$PROJECT_DIR$/public/img/glyphicons-halflings.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/picture/space/green.png" afterPath="$PROJECT_DIR$/public/picture/space/green.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/picture/help.png" afterPath="$PROJECT_DIR$/public/picture/help.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/picture/hombre.png" afterPath="$PROJECT_DIR$/public/picture/hombre.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/picture/space/ice.png" afterPath="$PROJECT_DIR$/public/picture/space/ice.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/picture/icon-close.png" afterPath="$PROJECT_DIR$/public/picture/icon-close.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/picture/imagen_icono.png" afterPath="$PROJECT_DIR$/public/picture/imagen_icono.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/picture/key.png" afterPath="$PROJECT_DIR$/public/picture/key.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/picture/space/laser.png" afterPath="$PROJECT_DIR$/public/picture/space/laser.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/picture/login.png" afterPath="$PROJECT_DIR$/public/picture/login.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/picture/logo2.png" afterPath="$PROJECT_DIR$/public/picture/logo2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/picture/icon/mark_as_read.png" afterPath="$PROJECT_DIR$/public/picture/icon/mark_as_read.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/picture/menu.png" afterPath="$PROJECT_DIR$/public/picture/menu.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/midground.png" afterPath="$PROJECT_DIR$/public/images/midground.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/picture/mini_ok.png" afterPath="$PROJECT_DIR$/public/picture/mini_ok.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/picture/mujer.png" afterPath="$PROJECT_DIR$/public/picture/mujer.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/nav.png" afterPath="$PROJECT_DIR$/public/images/nav.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/picture/new user.png" afterPath="$PROJECT_DIR$/public/picture/new user.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/picture/newspaper.jpg" afterPath="$PROJECT_DIR$/public/picture/newspaper.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/picture/noticia_icono.png" afterPath="$PROJECT_DIR$/public/picture/noticia_icono.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/picture/icon/notificacion.png" afterPath="$PROJECT_DIR$/public/picture/icon/notificacion.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/picture/nube1.png" afterPath="$PROJECT_DIR$/public/picture/nube1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/picture/nube2.png" afterPath="$PROJECT_DIR$/public/picture/nube2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/picture/nube3.png" afterPath="$PROJECT_DIR$/public/picture/nube3.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/picture/nube4.png" afterPath="$PROJECT_DIR$/public/picture/nube4.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/picture/piedra1.png" afterPath="$PROJECT_DIR$/public/picture/piedra1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/picture/pig_moustache.png" afterPath="$PROJECT_DIR$/public/picture/pig_moustache.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/picture/play.png" afterPath="$PROJECT_DIR$/public/picture/play.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/picture/playYouTuBe.png" afterPath="$PROJECT_DIR$/public/picture/playYouTuBe.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ruby-2.0.0-p353.tar.gz" afterPath="$PROJECT_DIR$/ruby-2.0.0-p353.tar.gz" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/images/shadow.png" afterPath="$PROJECT_DIR$/public/images/shadow.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/picture/icon/star.png" afterPath="$PROJECT_DIR$/public/picture/icon/star.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/picture/icon/star2.png" afterPath="$PROJECT_DIR$/public/picture/icon/star2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/picture/icon/status_fail.png" afterPath="$PROJECT_DIR$/public/picture/icon/status_fail.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/picture/icon/status_ok.png" afterPath="$PROJECT_DIR$/public/picture/icon/status_ok.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/music/tema.mp3" afterPath="$PROJECT_DIR$/public/music/tema.mp3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/picture/icon/to_admin.png" afterPath="$PROJECT_DIR$/public/picture/icon/to_admin.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/picture/icon/to_normal.png" afterPath="$PROJECT_DIR$/public/picture/icon/to_normal.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/picture/icon/upload.gif" afterPath="$PROJECT_DIR$/public/picture/icon/upload.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/picture/video_icono.png" afterPath="$PROJECT_DIR$/public/picture/video_icono.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/picture/wood.png" afterPath="$PROJECT_DIR$/public/picture/wood.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.generators" afterPath="$PROJECT_DIR$/.idea/.generators" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.project" afterPath="$PROJECT_DIR$/.project" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.rakeTasks" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20130512114831_create_personas.rb" afterPath="$PROJECT_DIR$/db/migrate/20130512114831_create_personas.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20130512115117_create_videos.rb" afterPath="$PROJECT_DIR$/db/migrate/20130512115117_create_videos.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20130512115209_create_imagens.rb" afterPath="$PROJECT_DIR$/db/migrate/20130512115209_create_imagens.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20130512115327_create_noticia.rb" afterPath="$PROJECT_DIR$/db/migrate/20130512115327_create_noticia.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20130512115426_create_calificacions.rb" afterPath="$PROJECT_DIR$/db/migrate/20130512115426_create_calificacions.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20130512115621_create_funcionalidads.rb" afterPath="$PROJECT_DIR$/db/migrate/20130512115621_create_funcionalidads.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20130512115645_create_tipo_usuarios.rb" afterPath="$PROJECT_DIR$/db/migrate/20130512115645_create_tipo_usuarios.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20130512115817_create_tipo_usuario_funcionalidads.rb" afterPath="$PROJECT_DIR$/db/migrate/20130512115817_create_tipo_usuario_funcionalidads.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20130512122112_add_relacion_persona_tipo_usuario.rb" afterPath="$PROJECT_DIR$/db/migrate/20130512122112_add_relacion_persona_tipo_usuario.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20130519204247_add_columns_persona.rb" afterPath="$PROJECT_DIR$/db/migrate/20130519204247_add_columns_persona.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20130709114906_add_column_id_picasa_picture.rb" afterPath="$PROJECT_DIR$/db/migrate/20130709114906_add_column_id_picasa_picture.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20130802035314_create_comments.rb" afterPath="$PROJECT_DIR$/db/migrate/20130802035314_create_comments.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20130802035440_create_notifications.rb" afterPath="$PROJECT_DIR$/db/migrate/20130802035440_create_notifications.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20130805051728_add_column_usuarios_to_notifications.rb" afterPath="$PROJECT_DIR$/db/migrate/20130805051728_add_column_usuarios_to_notifications.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20130805084959_cambiar_nombre_columnas_usuario.rb" afterPath="$PROJECT_DIR$/db/migrate/20130805084959_cambiar_nombre_columnas_usuario.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20130813145800_eliminar_tablas_innecesarias.rb" afterPath="$PROJECT_DIR$/db/migrate/20130813145800_eliminar_tablas_innecesarias.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20130818024452_add_column_bloqueado.rb" afterPath="$PROJECT_DIR$/db/migrate/20130818024452_add_column_bloqueado.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20131209020043_add_column_admin.rb" afterPath="$PROJECT_DIR$/db/migrate/20131209020043_add_column_admin.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20140124200310_create_usr_novelties.rb" afterPath="$PROJECT_DIR$/db/migrate/20140124200310_create_usr_novelties.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20140124200815_create_novelties.rb" afterPath="$PROJECT_DIR$/db/migrate/20140124200815_create_novelties.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20140602023401_roles.rb" afterPath="$PROJECT_DIR$/db/migrate/20140602023401_roles.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20140602023505_function.rb" afterPath="$PROJECT_DIR$/db/migrate/20140602023505_function.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20140602023658_permission.rb" afterPath="$PROJECT_DIR$/db/migrate/20140602023658_permission.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20140606031156_persona_con_rol.rb" afterPath="$PROJECT_DIR$/db/migrate/20140606031156_persona_con_rol.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20140628175729_add_column_edited_comment.rb" afterPath="$PROJECT_DIR$/db/migrate/20140628175729_add_column_edited_comment.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/404.html" afterPath="$PROJECT_DIR$/public/404.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/422.html" afterPath="$PROJECT_DIR$/public/422.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/500.html" afterPath="$PROJECT_DIR$/public/500.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Angry Birds.iml" afterPath="$PROJECT_DIR$/.idea/Angry Birds.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/fonts/BebasNeue-webfont.svg" afterPath="$PROJECT_DIR$/public/css/fonts/BebasNeue-webfont.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/fonts/Dharma Type Font License.txt" afterPath="$PROJECT_DIR$/public/css/fonts/Dharma Type Font License.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/README_FOR_APP" afterPath="$PROJECT_DIR$/doc/README_FOR_APP" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Rakefile" afterPath="$PROJECT_DIR$/Rakefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/comments/_comment.html.erb" afterPath="$PROJECT_DIR$/app/views/comments/_comment.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/calificacions/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/calificacions/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tipo_usuario_funcionalidads/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/tipo_usuario_funcionalidads/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tipo_usuarios/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/tipo_usuarios/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/inicio/_imagenes.html.erb" afterPath="$PROJECT_DIR$/app/views/inicio/_imagenes.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/functions/_listado.html.erb" afterPath="$PROJECT_DIR$/app/views/functions/_listado.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/imagens/_listado.html.erb" afterPath="$PROJECT_DIR$/app/views/imagens/_listado.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/noticia/_listado.html.erb" afterPath="$PROJECT_DIR$/app/views/noticia/_listado.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/novelties/_listado.html.erb" afterPath="$PROJECT_DIR$/app/views/novelties/_listado.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/roles/_listado.html.erb" afterPath="$PROJECT_DIR$/app/views/roles/_listado.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/videos/_listado.html.erb" afterPath="$PROJECT_DIR$/app/views/videos/_listado.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/imagens/_mi_listado.html.erb" afterPath="$PROJECT_DIR$/app/views/imagens/_mi_listado.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/noticia/_mi_listado.html.erb" afterPath="$PROJECT_DIR$/app/views/noticia/_mi_listado.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/videos/_mi_listado.html.erb" afterPath="$PROJECT_DIR$/app/views/videos/_mi_listado.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/notifications/_mis_notifications.html.erb" afterPath="$PROJECT_DIR$/app/views/notifications/_mis_notifications.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/imagens/_nada.html.erb" afterPath="$PROJECT_DIR$/app/views/imagens/_nada.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/noticia/_nada.html.erb" afterPath="$PROJECT_DIR$/app/views/noticia/_nada.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/videos/_nada.html.erb" afterPath="$PROJECT_DIR$/app/views/videos/_nada.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/inicio/_nada_imagen.html.erb" afterPath="$PROJECT_DIR$/app/views/inicio/_nada_imagen.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/inicio/_nada_noticia.html.erb" afterPath="$PROJECT_DIR$/app/views/inicio/_nada_noticia.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/inicio/_nada_video.html.erb" afterPath="$PROJECT_DIR$/app/views/inicio/_nada_video.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/permissions/_no_funciones.html.erb" afterPath="$PROJECT_DIR$/app/views/permissions/_no_funciones.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/inicio/_noticias.html.erb" afterPath="$PROJECT_DIR$/app/views/inicio/_noticias.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/notifications/_notification.html.erb" afterPath="$PROJECT_DIR$/app/views/notifications/_notification.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/permissions/_roles.html.erb" afterPath="$PROJECT_DIR$/app/views/permissions/_roles.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/permissions/_si_funciones.html.erb" afterPath="$PROJECT_DIR$/app/views/permissions/_si_funciones.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/inicio/_videos.html.erb" afterPath="$PROJECT_DIR$/app/views/inicio/_videos.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/personas/activate.html.erb" afterPath="$PROJECT_DIR$/app/views/personas/activate.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/permissions/add_all_function.js.erb" afterPath="$PROJECT_DIR$/app/views/permissions/add_all_function.js.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/permissions/add_one_function.js.erb" afterPath="$PROJECT_DIR$/app/views/permissions/add_one_function.js.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/admin_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/admin_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/animate.css" afterPath="$PROJECT_DIR$/public/css/animate.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/animation-min.js" afterPath="$PROJECT_DIR$/public/js/animation-min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-0329c5143028672380673d0a681fa67a.js" afterPath="$PROJECT_DIR$/public/assets/application-0329c5143028672380673d0a681fa67a.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-1b13569e9620782f423d4cd3ce931750.css" afterPath="$PROJECT_DIR$/public/assets/application-1b13569e9620782f423d4cd3ce931750.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-437f5218c61228c6d90cd42f0ec75ffe.js" afterPath="$PROJECT_DIR$/public/assets/application-437f5218c61228c6d90cd42f0ec75ffe.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-4e1c83aee4efc6dfda6f86e06a0bab7e.css" afterPath="$PROJECT_DIR$/public/assets/application-4e1c83aee4efc6dfda6f86e06a0bab7e.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-7ea5fd5cee4f05f620d2523dc8c415b3.js" afterPath="$PROJECT_DIR$/public/assets/application-7ea5fd5cee4f05f620d2523dc8c415b3.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-99127fd253b4019cb1c95fbdfe562fd2.js" afterPath="$PROJECT_DIR$/public/assets/application-99127fd253b4019cb1c95fbdfe562fd2.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application-c5185d808cdeb4068f482654e8fa1461.js" afterPath="$PROJECT_DIR$/public/assets/application-c5185d808cdeb4068f482654e8fa1461.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application.css" afterPath="$PROJECT_DIR$/public/assets/application.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/application.js" afterPath="$PROJECT_DIR$/public/assets/application.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/application.rb" afterPath="$PROJECT_DIR$/config/application.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/application_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/application_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/backtrace_silencers.rb" afterPath="$PROJECT_DIR$/config/initializers/backtrace_silencers.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/boot.rb" afterPath="$PROJECT_DIR$/config/boot.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/bootstrap.js" afterPath="$PROJECT_DIR$/public/js/bootstrap.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/performance/browsing_test.rb" afterPath="$PROJECT_DIR$/test/performance/browsing_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/calificacion.rb" afterPath="$PROJECT_DIR$/app/models/calificacion.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/calificacion_test.rb" afterPath="$PROJECT_DIR$/test/unit/calificacion_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/calificacions.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/calificacions.js.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fixtures/calificacions.yml" afterPath="$PROJECT_DIR$/test/fixtures/calificacions.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/calificacions_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/calificacions_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/functional/calificacions_controller_test.rb" afterPath="$PROJECT_DIR$/test/functional/calificacions_controller_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/calificacions_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/calificacions_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/helpers/calificacions_helper_test.rb" afterPath="$PROJECT_DIR$/test/unit/helpers/calificacions_helper_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/admin/change_atributo.js.erb" afterPath="$PROJECT_DIR$/app/views/admin/change_atributo.js.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/personas/change_atributo.js.erb" afterPath="$PROJECT_DIR$/app/views/personas/change_atributo.js.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/personas/change_password.html.erb" afterPath="$PROJECT_DIR$/app/views/personas/change_password.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/permissions/change_rol.js.erb" afterPath="$PROJECT_DIR$/app/views/permissions/change_rol.js.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/user_mailer/change_username.erb" afterPath="$PROJECT_DIR$/app/views/user_mailer/change_username.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/personas/change_username.js.erb" afterPath="$PROJECT_DIR$/app/views/personas/change_username.js.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/comment.js" afterPath="$PROJECT_DIR$/public/js/comment.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/comment.rb" afterPath="$PROJECT_DIR$/app/models/comment.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/comment_test.rb" afterPath="$PROJECT_DIR$/test/unit/comment_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/comments.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/comments.js.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fixtures/comments.yml" afterPath="$PROJECT_DIR$/test/fixtures/comments.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/comments_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/comments_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/functional/comments_controller_test.rb" afterPath="$PROJECT_DIR$/test/functional/comments_controller_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/comments_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/comments_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/helpers/comments_helper_test.rb" afterPath="$PROJECT_DIR$/test/unit/helpers/comments_helper_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.ru" afterPath="$PROJECT_DIR$/config.ru" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/calificacions/create.js.erb" afterPath="$PROJECT_DIR$/app/views/calificacions/create.js.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/comments/create.js.erb" afterPath="$PROJECT_DIR$/app/views/comments/create.js.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/functions/create.js.erb" afterPath="$PROJECT_DIR$/app/views/functions/create.js.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/novelties/create.js.erb" afterPath="$PROJECT_DIR$/app/views/novelties/create.js.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/roles/create.js.erb" afterPath="$PROJECT_DIR$/app/views/roles/create.js.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/database.yml" afterPath="$PROJECT_DIR$/config/database.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/comments/destroy.js.erb" afterPath="$PROJECT_DIR$/app/views/comments/destroy.js.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/functions/destroy.js.erb" afterPath="$PROJECT_DIR$/app/views/functions/destroy.js.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/novelties/destroy.js.erb" afterPath="$PROJECT_DIR$/app/views/novelties/destroy.js.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/personas/destroy.js.erb" afterPath="$PROJECT_DIR$/app/views/personas/destroy.js.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/roles/destroy.js.erb" afterPath="$PROJECT_DIR$/app/views/roles/destroy.js.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/development.rb" afterPath="$PROJECT_DIR$/config/environments/development.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/development_mail_interceptor.rb" afterPath="$PROJECT_DIR$/lib/development_mail_interceptor.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/calificacions/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/calificacions/edit.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/noticia/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/noticia/edit.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/password/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/password/edit.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tipo_usuario_funcionalidads/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/tipo_usuario_funcionalidads/edit.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tipo_usuarios/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/tipo_usuarios/edit.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/videos/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/videos/edit.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/locales/en.yml" afterPath="$PROJECT_DIR$/config/locales/en.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environment.rb" afterPath="$PROJECT_DIR$/config/environment.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/personas/error_activation.html.erb" afterPath="$PROJECT_DIR$/app/views/personas/error_activation.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/locales/es.yml" afterPath="$PROJECT_DIR$/config/locales/es.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/flickrphoto.rb" afterPath="$PROJECT_DIR$/app/models/flickrphoto.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/user_mailer/forgot_password.html.erb" afterPath="$PROJECT_DIR$/app/views/user_mailer/forgot_password.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/funcionalidad_test.rb" afterPath="$PROJECT_DIR$/test/unit/funcionalidad_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/funcionalidads.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/funcionalidads.js.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fixtures/funcionalidads.yml" afterPath="$PROJECT_DIR$/test/fixtures/funcionalidads.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/functional/funcionalidads_controller_test.rb" afterPath="$PROJECT_DIR$/test/functional/funcionalidads_controller_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/funcionalidads_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/funcionalidads_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/helpers/funcionalidads_helper_test.rb" afterPath="$PROJECT_DIR$/test/unit/helpers/funcionalidads_helper_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/functions.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/functions.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/functions.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/functions.js.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/functions.rb" afterPath="$PROJECT_DIR$/app/models/functions.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fixtures/functions.yml" afterPath="$PROJECT_DIR$/test/fixtures/functions.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/functions_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/functions_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/functional/functions_controller_test.rb" afterPath="$PROJECT_DIR$/test/functional/functions_controller_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/functions_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/functions_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/helpers/functions_helper_test.rb" afterPath="$PROJECT_DIR$/test/unit/helpers/functions_helper_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/functions_test.rb" afterPath="$PROJECT_DIR$/test/unit/functions_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/funtions.rb" afterPath="$PROJECT_DIR$/app/models/funtions.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/funtions_test.rb" afterPath="$PROJECT_DIR$/test/unit/funtions_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/highcharts.js" afterPath="$PROJECT_DIR$/public/js/highcharts.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/imagen.rb" afterPath="$PROJECT_DIR$/app/models/imagen.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/imagen_noticia_pan_comp.js" afterPath="$PROJECT_DIR$/public/js/imagen_noticia_pan_comp.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/imagen_test.rb" afterPath="$PROJECT_DIR$/test/unit/imagen_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/imagens.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/imagens.js.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fixtures/imagens.yml" afterPath="$PROJECT_DIR$/test/fixtures/imagens.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/imagens_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/imagens_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/functional/imagens_controller_test.rb" afterPath="$PROJECT_DIR$/test/functional/imagens_controller_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/imagens_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/imagens_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/helpers/imagens_helper_test.rb" afterPath="$PROJECT_DIR$/test/unit/helpers/imagens_helper_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/admin/index.html.erb" afterPath="$PROJECT_DIR$/app/views/admin/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/calificacions/index.html.erb" afterPath="$PROJECT_DIR$/app/views/calificacions/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/comments/index.html.erb" afterPath="$PROJECT_DIR$/app/views/comments/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/functions/index.html.erb" afterPath="$PROJECT_DIR$/app/views/functions/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/imagens/index.html.erb" afterPath="$PROJECT_DIR$/app/views/imagens/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/noticia/index.html.erb" afterPath="$PROJECT_DIR$/app/views/noticia/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/notifications/index.html.erb" afterPath="$PROJECT_DIR$/app/views/notifications/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/novelties/index.html.erb" afterPath="$PROJECT_DIR$/app/views/novelties/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/permissions/index.html.erb" afterPath="$PROJECT_DIR$/app/views/permissions/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/personas/index.html.erb" afterPath="$PROJECT_DIR$/app/views/personas/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/roles/index.html.erb" afterPath="$PROJECT_DIR$/app/views/roles/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tipo_usuario_funcionalidads/index.html.erb" afterPath="$PROJECT_DIR$/app/views/tipo_usuario_funcionalidads/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tipo_usuarios/index.html.erb" afterPath="$PROJECT_DIR$/app/views/tipo_usuarios/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/videos/index.html.erb" afterPath="$PROJECT_DIR$/app/views/videos/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/inflections.rb" afterPath="$PROJECT_DIR$/config/initializers/inflections.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/inicio.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/inicio.js.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/inicio_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/inicio_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/functional/inicio_controller_test.rb" afterPath="$PROJECT_DIR$/test/functional/inicio_controller_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/inicio_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/inicio_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/helpers/inicio_helper_test.rb" afterPath="$PROJECT_DIR$/test/unit/helpers/inicio_helper_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/personas/invalid_code.html.erb" afterPath="$PROJECT_DIR$/app/views/personas/invalid_code.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/jquery-1.7.1.min.js" afterPath="$PROJECT_DIR$/public/js/jquery-1.7.1.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/jquery-ui-1.10.3.custom.min.js" afterPath="$PROJECT_DIR$/public/js/jquery-ui-1.10.3.custom.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/jquery.backgroundPosition.js" afterPath="$PROJECT_DIR$/public/js/jquery.backgroundPosition.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/jquery.cslider.js" afterPath="$PROJECT_DIR$/public/js/jquery.cslider.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/jquery.easing.1.3.js" afterPath="$PROJECT_DIR$/public/js/jquery.easing.1.3.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/jquery.lettering.js" afterPath="$PROJECT_DIR$/public/js/jquery.lettering.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/jquery.min-388372ef65cc311f6a3df4a6ceac8d22.map" afterPath="$PROJECT_DIR$/public/assets/jquery.min-388372ef65cc311f6a3df4a6ceac8d22.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/jquery.min-6c267bfd2b3f36e6edccb2e584934c1c.map" afterPath="$PROJECT_DIR$/public/assets/jquery.min-6c267bfd2b3f36e6edccb2e584934c1c.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/jquery.min.js" afterPath="$PROJECT_DIR$/public/js/jquery.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/jquery.min.map" afterPath="$PROJECT_DIR$/public/assets/jquery.min.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/jquery.pinterestgallery.min.js" afterPath="$PROJECT_DIR$/public/js/jquery.pinterestgallery.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/jquery.slicebox.js" afterPath="$PROJECT_DIR$/public/js/jquery.slicebox.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/jquery.slickwrap.js" afterPath="$PROJECT_DIR$/public/js/jquery.slickwrap.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/jquery.textillate.js" afterPath="$PROJECT_DIR$/public/js/jquery.textillate.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/jquery.timer.js" afterPath="$PROJECT_DIR$/public/js/jquery.timer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/jquery.ui.effect.js" afterPath="$PROJECT_DIR$/public/js/jquery.ui.effect.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/js-image-slider.js" afterPath="$PROJECT_DIR$/public/js/js-image-slider.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/jsapi.js" afterPath="$PROJECT_DIR$/public/js/jsapi.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libpeerconnection.log" afterPath="$PROJECT_DIR$/libpeerconnection.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/manifest.yml" afterPath="$PROJECT_DIR$/public/assets/manifest.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/novelties/mark_read.js.erb" afterPath="$PROJECT_DIR$/app/views/novelties/mark_read.js.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/master_security_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/master_security_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/mime_types.rb" afterPath="$PROJECT_DIR$/config/initializers/mime_types.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/imagens/mis_imagenes.html.erb" afterPath="$PROJECT_DIR$/app/views/imagens/mis_imagenes.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/noticia/mis_noticias.html.erb" afterPath="$PROJECT_DIR$/app/views/noticia/mis_noticias.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/videos/mis_videos.html.erb" afterPath="$PROJECT_DIR$/app/views/videos/mis_videos.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/modernizr.custom.28468.js" afterPath="$PROJECT_DIR$/public/js/modernizr.custom.28468.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/modernizr.custom.67524.js" afterPath="$PROJECT_DIR$/public/js/modernizr.custom.67524.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/morris.min.js" afterPath="$PROJECT_DIR$/public/js/morris.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/calificacions/new.html.erb" afterPath="$PROJECT_DIR$/app/views/calificacions/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/noticia/new.html.erb" afterPath="$PROJECT_DIR$/app/views/noticia/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/personas/new.html.erb" afterPath="$PROJECT_DIR$/app/views/personas/new.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/sessions/new.html.erb" afterPath="$PROJECT_DIR$/app/views/sessions/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tipo_usuario_funcionalidads/new.html.erb" afterPath="$PROJECT_DIR$/app/views/tipo_usuario_funcionalidads/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tipo_usuarios/new.html.erb" afterPath="$PROJECT_DIR$/app/views/tipo_usuarios/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/videos/new.html.erb" afterPath="$PROJECT_DIR$/app/views/videos/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/nojs.css" afterPath="$PROJECT_DIR$/public/css/nojs.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/admin/notice.html.erb" afterPath="$PROJECT_DIR$/app/views/admin/notice.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/admin/notice_user.html.erb" afterPath="$PROJECT_DIR$/app/views/admin/notice_user.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/noticia.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/noticia.js.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fixtures/noticia.yml" afterPath="$PROJECT_DIR$/test/fixtures/noticia.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/noticia_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/noticia_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/functional/noticia_controller_test.rb" afterPath="$PROJECT_DIR$/test/functional/noticia_controller_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/noticia_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/noticia_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/helpers/noticia_helper_test.rb" afterPath="$PROJECT_DIR$/test/unit/helpers/noticia_helper_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/noticium.rb" afterPath="$PROJECT_DIR$/app/models/noticium.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/noticium_test.rb" afterPath="$PROJECT_DIR$/test/unit/noticium_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/notificaciones.js" afterPath="$PROJECT_DIR$/public/js/notificaciones.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/notification.rb" afterPath="$PROJECT_DIR$/app/models/notification.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/notification_test.rb" afterPath="$PROJECT_DIR$/test/unit/notification_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/notifications.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/notifications.js.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fixtures/notifications.yml" afterPath="$PROJECT_DIR$/test/fixtures/notifications.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/notifications_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/notifications_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/functional/notifications_controller_test.rb" afterPath="$PROJECT_DIR$/test/functional/notifications_controller_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/notifications_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/notifications_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/helpers/notifications_helper_test.rb" afterPath="$PROJECT_DIR$/test/unit/helpers/notifications_helper_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/novelties.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/novelties.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/novelties.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/novelties.js.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fixtures/novelties.yml" afterPath="$PROJECT_DIR$/test/fixtures/novelties.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/novelties_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/novelties_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/functional/novelties_controller_test.rb" afterPath="$PROJECT_DIR$/test/functional/novelties_controller_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/novelties_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/novelties_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/helpers/novelties_helper_test.rb" afterPath="$PROJECT_DIR$/test/unit/helpers/novelties_helper_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/novelty.rb" afterPath="$PROJECT_DIR$/app/models/novelty.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/novelty_test.rb" afterPath="$PROJECT_DIR$/test/unit/novelty_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/notifications/nuevas_notificaciones.js.erb" afterPath="$PROJECT_DIR$/app/views/notifications/nuevas_notificaciones.js.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/pagination.js" afterPath="$PROJECT_DIR$/public/js/pagination.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/password.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/password.js.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/password_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/password_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/functional/password_controller_test.rb" afterPath="$PROJECT_DIR$/test/functional/password_controller_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/password_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/password_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/helpers/password_helper_test.rb" afterPath="$PROJECT_DIR$/test/unit/helpers/password_helper_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/permissions.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/permissions.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/permissions.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/permissions.js.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/permissions.rb" afterPath="$PROJECT_DIR$/app/models/permissions.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fixtures/permissions.yml" afterPath="$PROJECT_DIR$/test/fixtures/permissions.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/permissions_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/permissions_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/functional/permissions_controller_test.rb" afterPath="$PROJECT_DIR$/test/functional/permissions_controller_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/permissions_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/permissions_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/helpers/permissions_helper_test.rb" afterPath="$PROJECT_DIR$/test/unit/helpers/permissions_helper_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/permissions_test.rb" afterPath="$PROJECT_DIR$/test/unit/permissions_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/persona.rb" afterPath="$PROJECT_DIR$/app/models/persona.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/persona_test.rb" afterPath="$PROJECT_DIR$/test/unit/persona_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/personas.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/personas.js.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fixtures/personas.yml" afterPath="$PROJECT_DIR$/test/fixtures/personas.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/personas_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/personas_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/functional/personas_controller_test.rb" afterPath="$PROJECT_DIR$/test/functional/personas_controller_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/personas_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/personas_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/helpers/personas_helper_test.rb" afterPath="$PROJECT_DIR$/test/unit/helpers/personas_helper_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/picasaphoto.rb" afterPath="$PROJECT_DIR$/app/models/picasaphoto.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/admin/picture.html.erb" afterPath="$PROJECT_DIR$/app/views/admin/picture.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/admin/picture_user.html.erb" afterPath="$PROJECT_DIR$/app/views/admin/picture_user.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/production.log" afterPath="$PROJECT_DIR$/log/production.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/production.rb" afterPath="$PROJECT_DIR$/config/environments/production.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/script/rails" afterPath="$PROJECT_DIR$/script/rails" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/raphael-min.js" afterPath="$PROJECT_DIR$/public/js/raphael-min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/user_mailer/registration_confirmation.html.erb" afterPath="$PROJECT_DIR$/app/views/user_mailer/registration_confirmation.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/permissions/remove_all_function.js.erb" afterPath="$PROJECT_DIR$/app/views/permissions/remove_all_function.js.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/permissions/remove_one_function.js.erb" afterPath="$PROJECT_DIR$/app/views/permissions/remove_one_function.js.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/reset_password.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/reset_password.js.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/functional/reset_password_controller_test.rb" afterPath="$PROJECT_DIR$/test/functional/reset_password_controller_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/reset_password_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/reset_password_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/helpers/reset_password_helper_test.rb" afterPath="$PROJECT_DIR$/test/unit/helpers/reset_password_helper_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/robots.txt" afterPath="$PROJECT_DIR$/public/robots.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/role.rb" afterPath="$PROJECT_DIR$/app/models/role.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/role_test.rb" afterPath="$PROJECT_DIR$/test/unit/role_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/roles.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/roles.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/roles.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/roles.js.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fixtures/roles.yml" afterPath="$PROJECT_DIR$/test/fixtures/roles.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/roles_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/roles_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/functional/roles_controller_test.rb" afterPath="$PROJECT_DIR$/test/functional/roles_controller_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/roles_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/roles_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/helpers/roles_helper_test.rb" afterPath="$PROJECT_DIR$/test/unit/helpers/roles_helper_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/scaffolds.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/scaffolds.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/script1.js" afterPath="$PROJECT_DIR$/public/js/script1.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/script2.js" afterPath="$PROJECT_DIR$/public/js/script2.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/script3.js" afterPath="$PROJECT_DIR$/public/js/script3.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/script4.js" afterPath="$PROJECT_DIR$/public/js/script4.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/scriptLoad.js" afterPath="$PROJECT_DIR$/public/js/scriptLoad.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/secret_token.rb" afterPath="$PROJECT_DIR$/config/initializers/secret_token.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/security_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/security_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/seeds.rb" afterPath="$PROJECT_DIR$/db/seeds.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/session_store.rb" afterPath="$PROJECT_DIR$/config/initializers/session_store.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/sessions_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/sessions_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/setup_mail.rb" afterPath="$PROJECT_DIR$/config/initializers/setup_mail.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/personas/show.erb" afterPath="$PROJECT_DIR$/app/views/personas/show.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/calificacions/show.html.erb" afterPath="$PROJECT_DIR$/app/views/calificacions/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/noticia/show.html.erb" afterPath="$PROJECT_DIR$/app/views/noticia/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tipo_usuario_funcionalidads/show.html.erb" afterPath="$PROJECT_DIR$/app/views/tipo_usuario_funcionalidads/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tipo_usuarios/show.html.erb" afterPath="$PROJECT_DIR$/app/views/tipo_usuarios/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/slicebox.css" afterPath="$PROJECT_DIR$/public/css/slicebox.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/sliderPersonalizado.js" afterPath="$PROJECT_DIR$/public/js/sliderPersonalizado.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/sliderPersonalizado2.js" afterPath="$PROJECT_DIR$/public/js/sliderPersonalizado2.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/inicio/start.html.erb" afterPath="$PROJECT_DIR$/app/views/inicio/start.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/startstop-slider.js" afterPath="$PROJECT_DIR$/public/js/startstop-slider.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/style2.css" afterPath="$PROJECT_DIR$/public/css/style2.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/stylesheet.css" afterPath="$PROJECT_DIR$/public/stylesheet.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/stylesheet404.css" afterPath="$PROJECT_DIR$/public/css/stylesheet404.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/stylesheet500.css" afterPath="$PROJECT_DIR$/public/css/stylesheet500.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/stylesheetAll.css" afterPath="$PROJECT_DIR$/public/css/stylesheetAll.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/stylesheetImagen.css" afterPath="$PROJECT_DIR$/public/css/stylesheetImagen.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/stylesheetImagenSlider.css" afterPath="$PROJECT_DIR$/public/css/stylesheetImagenSlider.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/stylesheetInicio.css" afterPath="$PROJECT_DIR$/public/css/stylesheetInicio.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/stylesheetLoad.css" afterPath="$PROJECT_DIR$/public/css/stylesheetLoad.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/stylesheetLogin.css" afterPath="$PROJECT_DIR$/public/css/stylesheetLogin.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/stylesheetNoScript.css" afterPath="$PROJECT_DIR$/public/css/stylesheetNoScript.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/stylesheetNoticia.css" afterPath="$PROJECT_DIR$/public/css/stylesheetNoticia.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/stylesheetNoticiaSlider.css" afterPath="$PROJECT_DIR$/public/css/stylesheetNoticiaSlider.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/stylesheetNotificacion.css" afterPath="$PROJECT_DIR$/public/css/stylesheetNotificacion.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/stylesheetPersona.css" afterPath="$PROJECT_DIR$/public/css/stylesheetPersona.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/stylesheetUsuario.css" afterPath="$PROJECT_DIR$/public/css/stylesheetUsuario.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/stylesheetVideo.css" afterPath="$PROJECT_DIR$/public/css/stylesheetVideo.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/stylesheetadmin.css" afterPath="$PROJECT_DIR$/public/css/stylesheetadmin.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/test.log" afterPath="$PROJECT_DIR$/log/test.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environments/test.rb" afterPath="$PROJECT_DIR$/config/environments/test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/test_helper.rb" afterPath="$PROJECT_DIR$/test/test_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/integration/test_integration.rb" afterPath="$PROJECT_DIR$/test/integration/test_integration.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/personas/thanks.html.erb" afterPath="$PROJECT_DIR$/app/views/personas/thanks.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/tipo_usuario.rb" afterPath="$PROJECT_DIR$/app/models/tipo_usuario.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/tipo_usuario_funcionalidad.rb" afterPath="$PROJECT_DIR$/app/models/tipo_usuario_funcionalidad.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/tipo_usuario_funcionalidad_test.rb" afterPath="$PROJECT_DIR$/test/unit/tipo_usuario_funcionalidad_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/tipo_usuario_funcionalidads.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/tipo_usuario_funcionalidads.js.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fixtures/tipo_usuario_funcionalidads.yml" afterPath="$PROJECT_DIR$/test/fixtures/tipo_usuario_funcionalidads.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/tipo_usuario_funcionalidads_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/tipo_usuario_funcionalidads_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/functional/tipo_usuario_funcionalidads_controller_test.rb" afterPath="$PROJECT_DIR$/test/functional/tipo_usuario_funcionalidads_controller_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/tipo_usuario_funcionalidads_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/tipo_usuario_funcionalidads_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/helpers/tipo_usuario_funcionalidads_helper_test.rb" afterPath="$PROJECT_DIR$/test/unit/helpers/tipo_usuario_funcionalidads_helper_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/tipo_usuario_test.rb" afterPath="$PROJECT_DIR$/test/unit/tipo_usuario_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/tipo_usuarios.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/tipo_usuarios.js.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fixtures/tipo_usuarios.yml" afterPath="$PROJECT_DIR$/test/fixtures/tipo_usuarios.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/tipo_usuarios_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/tipo_usuarios_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/functional/tipo_usuarios_controller_test.rb" afterPath="$PROJECT_DIR$/test/functional/tipo_usuarios_controller_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/tipo_usuarios_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/tipo_usuarios_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/helpers/tipo_usuarios_helper_test.rb" afterPath="$PROJECT_DIR$/test/unit/helpers/tipo_usuarios_helper_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/tooltip.css" afterPath="$PROJECT_DIR$/public/css/tooltip.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/password/update.html.erb" afterPath="$PROJECT_DIR$/app/views/password/update.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/comments/update.js.erb" afterPath="$PROJECT_DIR$/app/views/comments/update.js.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/functions/update.js.erb" afterPath="$PROJECT_DIR$/app/views/functions/update.js.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/novelties/update.js.erb" afterPath="$PROJECT_DIR$/app/views/novelties/update.js.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/roles/update.js.erb" afterPath="$PROJECT_DIR$/app/views/roles/update.js.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/admin/user.html.erb" afterPath="$PROJECT_DIR$/app/views/admin/user.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/admin/user_edit.html.erb" afterPath="$PROJECT_DIR$/app/views/admin/user_edit.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/mailers/user_mailer.rb" afterPath="$PROJECT_DIR$/app/mailers/user_mailer.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/functional/user_mailer_test.rb" afterPath="$PROJECT_DIR$/test/functional/user_mailer_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/usr_novelties.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/usr_novelties.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/usr_novelties.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/usr_novelties.js.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fixtures/usr_novelties.yml" afterPath="$PROJECT_DIR$/test/fixtures/usr_novelties.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/functional/usr_novelties_controller_test.rb" afterPath="$PROJECT_DIR$/test/functional/usr_novelties_controller_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/usr_novelties_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/usr_novelties_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/helpers/usr_novelties_helper_test.rb" afterPath="$PROJECT_DIR$/test/unit/helpers/usr_novelties_helper_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/usr_novelty.rb" afterPath="$PROJECT_DIR$/app/models/usr_novelty.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/usr_novelty_test.rb" afterPath="$PROJECT_DIR$/test/unit/usr_novelty_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/admin/video.html.erb" afterPath="$PROJECT_DIR$/app/views/admin/video.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/video.rb" afterPath="$PROJECT_DIR$/app/models/video.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/video_test.rb" afterPath="$PROJECT_DIR$/test/unit/video_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/admin/video_user.html.erb" afterPath="$PROJECT_DIR$/app/views/admin/video_user.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/videos.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/videos.js.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/fixtures/videos.yml" afterPath="$PROJECT_DIR$/test/fixtures/videos.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/videos_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/videos_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/functional/videos_controller_test.rb" afterPath="$PROJECT_DIR$/test/functional/videos_controller_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/videos_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/videos_helper.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/unit/helpers/videos_helper_test.rb" afterPath="$PROJECT_DIR$/test/unit/helpers/videos_helper_test.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/initializers/wrap_parameters.rb" afterPath="$PROJECT_DIR$/config/initializers/wrap_parameters.rb" />
     </list>
     <ignored path="Angry Birds.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -563,7 +44,7 @@
     <file path="/video.html.erb" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1387334250269" ignored="false" />
     <file path="/video_user.html.erb" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1387334131903" ignored="false" />
     <file path="/a.dummy" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1408576291400" ignored="false" />
-    <file path="/new.html.erb" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1408664097767" ignored="false" />
+    <file path="/new.html.erb" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1408901049445" ignored="false" />
     <file path="/_comment.html.erb" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1403980506024" ignored="false" />
     <file path="/picture_user.html.erb" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1387334171130" ignored="false" />
     <file path="/stylesheetLogin.css" changelist="7a837322-c6a4-4023-9153-58d412bae53d" time="1403733476628" ignored="false" />
@@ -653,10 +134,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="personas_controller.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="personas_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/personas_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="60" selection-start="112" selection-end="112" vertical-scroll-proportion="0.10538641">
+            <state line="3" column="60" selection-start="112" selection-end="112" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="new.html.erb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/sessions/new.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="111" column="167" selection-start="4905" selection-end="4905" vertical-scroll-proportion="0.53846157">
               <folding />
             </state>
           </provider>
@@ -703,7 +193,6 @@
         <option value="$PROJECT_DIR$/app/views/notifications/_notification.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/noticia_controller.rb" />
         <option value="$PROJECT_DIR$/public/css/ayuda.css" />
-        <option value="$PROJECT_DIR$/app/views/sessions/new.html.erb" />
         <option value="$PROJECT_DIR$/public/js/ayuda.js" />
         <option value="$PROJECT_DIR$/public/js/scriptLoad.js" />
         <option value="$PROJECT_DIR$/app/views/noticia/show.html.erb" />
@@ -712,6 +201,7 @@
         <option value="$PROJECT_DIR$/public/js/admin_user.js" />
         <option value="$PROJECT_DIR$/app/views/admin/user_edit.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/personas_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/sessions/new.html.erb" />
       </list>
     </option>
   </component>
@@ -817,6 +307,46 @@
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Angry Birds" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Angry Birds" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sessions" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Angry Birds" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Angry Birds" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -869,7 +399,7 @@
       <recent name="$PROJECT_DIR$/app/views/permissions" />
     </key>
   </component>
-  <component name="RunManager" selected="Rails.Test: Angry Birds">
+  <component name="RunManager" selected="Rails.Development: Angry Birds">
     <configuration default="false" name="Rails console: Angry Birds" type="IrbRunConfigurationType" factoryName="IRB console" temporary="true">
       <module name="Angry Birds" />
       <IRB_RUN_CONFIG NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
@@ -1627,13 +1157,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/sessions/new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="213" column="26" selection-start="9896" selection-end="9896" vertical-scroll-proportion="-0.625">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/permissions_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -1735,7 +1258,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/personas_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="60" selection-start="112" selection-end="112" vertical-scroll-proportion="0.10538641">
+        <state line="3" column="60" selection-start="112" selection-end="112" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/sessions/new.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="111" column="167" selection-start="4905" selection-end="4905" vertical-scroll-proportion="0.53846157">
           <folding />
         </state>
       </provider>

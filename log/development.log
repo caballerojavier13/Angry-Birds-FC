@@ -2887,3 +2887,12 @@ Processing by AdminController#user as HTML
   [1m[36mRole Load (0.4ms)[0m  [1mSELECT "roles".* FROM "roles" WHERE "roles"."id" = 8 LIMIT 1[0m
   Rendered admin/user.html.erb (116.2ms)
 Completed 200 OK in 122ms (Views: 116.7ms | ActiveRecord: 3.1ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/login?redirect_to=http://0.0.0.0:3000/" for 127.0.0.1 at 2014-08-24 14:24:56 -0300
+Processing by SessionsController#new as HTML
+  Parameters: {"redirect_to"=>"http://0.0.0.0:3000/"}
+  [1m[36mNoticium Load (6.5ms)[0m  [1mSELECT "noticia".* FROM "noticia" WHERE "noticia"."id" = $1 LIMIT 1[0m  [["id", 3000]]
+  Rendered sessions/new.html.erb (182.0ms)
+Completed 200 OK in 205ms (Views: 187.8ms | ActiveRecord: 16.4ms)
