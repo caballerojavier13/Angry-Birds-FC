@@ -39,31 +39,7 @@
         </div>
     </div>
     <div id="page">
-        <div id="notificacion">
-            <div class="circulo">
-              <img src="/picture/icon/notificacion.png" width="50" height="50" />  
-            </div>
-            <div class="triangulo"></div>
-            <div id="notif_min" class="notifica">
-                <%if @notificaciones.nil?%>
-                    <%=0%>
-                <%else%>
-                    <%=@notificaciones.size%>
-                <%end%>
-            </div>
-            <div id="notif_max" class="notifica">
-                <div id="notificaciones">
-                    <%unless @notificaciones.nil?%>    
-                        <%= render :partial => @notificaciones%>
-                    <%end%>
-                </div>
-                <div id="all_notificaciones" >
-                    <a href="/notificaciones">
-                        Todas las las notificaciones
-                    </a>
-                </div>
-            </div>
-        </div>
+        <%= render :partial => 'notifications/partial_notification'%>
         <div id="fondo_eliminar">
             <div>
                 ¿Desea Eliminar esta noticia?
@@ -130,16 +106,16 @@
 	<div id="ranking">
       <img src="/picture/icon/star.png" width="0" style="position: absolute"/>
 	    <%unless @califico%>
-          <div id="star">
-            <a><img id="star1" src="/picture/icon/star2.png" width="50"/></a>
-            <a><img id="star2" src="/picture/icon/star2.png" width="50"/></a>
-            <a><img id="star3" src="/picture/icon/star2.png" width="50"/></a>
-          </div>
-    	    <div id="calificacion">
-    		    <a><img id="star1c" src="/picture/icon/star2.png" width="50"/></a>
-    		    <a><img id="star2c" src="/picture/icon/star2.png" width="50"/></a>
-    		    <a><img id="star3c" src="/picture/icon/star2.png" width="50"/></a>
-    	    </div>
+            <div id="star">
+                <a><img id="star1" src="/picture/icon/star2.png" width="50"/></a>
+                <a><img id="star2" src="/picture/icon/star2.png" width="50"/></a>
+                <a><img id="star3" src="/picture/icon/star2.png" width="50"/></a>
+            </div>
+            <div id="calificacion">
+                <a><img id="star1c" src="/picture/icon/star2.png" width="50"/></a>
+                <a><img id="star2c" src="/picture/icon/star2.png" width="50"/></a>
+                <a><img id="star3c" src="/picture/icon/star2.png" width="50"/></a>
+            </div>
 	    <%else%>
             <div id="star">
               <% if @promedio < 1.5%>
@@ -181,7 +157,7 @@
          <%end%>
 	   </div>
 
-        <div id = "new_comment">
+        <div id = "new_comment" data-spy="affix">
             <%= form_tag({controller: "comments", action: "create", noticia:  @noticium.id.to_s, usuario: @usuario_id.to_s} , 'data-type' => 'json', :id=> "form_comment", :remote => "true")  do |f|  %>
                 <div id="text_comment">
                     <%= text_area_tag(:text_area_comment) %>
@@ -200,7 +176,7 @@
             </a>
         </div>
 
-    <script src= '/js/scriptLoad.js' > </script>
+    <script src= '/js/scriptLoadViewNoticia.js' > </script>
     
     <script language="javascript">
             window.onload = inicio;
@@ -253,87 +229,10 @@
 
 
     <%unless @califico%>
-        <script>
-          $("#star1").hover(
-                  function () {
-                      $("#star1").attr("src", "/picture/icon/star.png");
-                  },
-                  function () {
-                      $("#star1").attr("src", "/picture/icon/star2.png");
-                  }
-          );
-          $("#star2").hover(
-                  function () {
-                      $("#star1").attr("src", "/picture/icon/star.png");
-                      $("#star2").attr("src", "/picture/icon/star.png");
-                  },
-                  function () {
-                      $("#star1").attr("src", "/picture/icon/star2.png");
-                      $("#star2").attr("src", "/picture/icon/star2.png");
-                  }
-          );
-          $("#star3").hover(
-                  function () {
-                      $("#star1").attr("src", "/picture/icon/star.png");
-                      $("#star2").attr("src", "/picture/icon/star.png");
-                      $("#star3").attr("src", "/picture/icon/star.png");
-                  },
-                  function () {
-                      $("#star1").attr("src", "/picture/icon/star2.png");
-                      $("#star2").attr("src", "/picture/icon/star2.png");
-                      $("#star3").attr("src", "/picture/icon/star2.png");
-                  }
-          );
-        </script>
-        <script>
-          $("#star1").click(function(){
-            $("#star").hide();
-            $("#msj_califi").html("Calificando...")
-            $("#msj_califi").show();
-            $.post("/calificacion/<%=@noticium.id.to_s%>/nueva", {valor:1},
-                   function(data){
-                        $("#msj_califi").html("Gracias por su calificación.");
-                        $.timer(5000, function(){
-                            $("#star1c").attr("src", "/picture/icon/star.png");
-                            $("#calificacion").show();
-                            $("#msj_califi").hide();
-                        });
-                   });
-          });
-          $("#star2").click(function(){
-            $("#star").hide();
-            $("#msj_califi").html("Calificando...")
-            $("#msj_califi").show();
-            $.post("/calificacion/<%=@noticium.id.to_s%>/nueva", {valor:2},
-                   function(data){
-                        $("#msj_califi").html("Gracias por su calificación.");
-                        $.timer(5000, function(){
-                            $("#star1c").attr("src", "/picture/icon/star.png");
-                            $("#star2c").attr("src", "/picture/icon/star.png");
-                            $("#calificacion").show();
-                            $("#msj_califi").hide();
-                        });
-                   });
-          });
-          $("#star3").click(function(){
-            $("#star").hide();
-            $("#msj_califi").html("Calificando...")
-            $("#msj_califi").show();
-            $.post("/calificacion/<%=@noticium.id.to_s%>/nueva", {valor:3},
-                   function(data){
-                        $("#msj_califi").html("Gracias por su calificación.");
-                        $.timer(5000, function(){
-                            $("#star1c").attr("src", "/picture/icon/star.png");
-                            $("#star2c").attr("src", "/picture/icon/star.png");
-                            $("#star3c").attr("src", "/picture/icon/star.png");
-                            $("#calificacion").show();
-                            $("#msj_califi").hide();
-                        });
-                   });
-          });
-        </script>
-
+        <script src="/js/calificacion_noticia.js" type="text/javascript"></script>
 	<%end%>
+
+
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
     <div id="fb-root"></div>

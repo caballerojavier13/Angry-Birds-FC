@@ -100,12 +100,13 @@
               <label for="bloqueado-check" style="width: 100%"></label>
             </div>
           </li>
-          <li>
-            <label>Administrador:</label>
-            <div class="squaredThree">
-              <input type="checkbox" id="admin-check" name="check" checked/>
-              <label for="admin-check" style="width: 100%"></label>
-            </div>
+          <li style="top: -25px;">
+            <label>Rol:</label>
+            <select style="margin-top: 15px;" id="persona_role">
+              <% @roles.each do |rol| %>
+                  <option value="<%= rol.id%>"><%= rol.name%></option>
+              <%end%>
+            </select>
           </li>
         </ul>
         <div class="limitador3" style="margin-top: -30px"></div>
@@ -212,69 +213,7 @@
         }
     });
 </script>
-<script>
-    (function($) {
-        $.get = function(key)   {
-            key = key.replace(/[\[]/, '\\[');
-            key = key.replace(/[\]]/, '\\]');
-            var pattern = "[\\?&]" + key + "=([^&#]*)";
-            var regex = new RegExp(pattern);
-            var url = unescape(window.location.href);
-            var results = regex.exec(url);
-            if (results === null) {
-                return null;
-            } else {
-                return results[1];
-            }
-        }
-    })(jQuery);
+<script src="/js/admin_user.js" type="text/javascript"></script>
 
-    function to_bolean(string){
-        if(string == "true"){
-            return true;
-        }else{
-            return false;
-        }
-
-    }
-</script>
-<script>
-  $(function(){
-      $("#persona_nombre").val($.get("nom"));
-      $("#persona_apellido").val($.get("ape"));
-      $("#persona_username").val($.get("user"));
-      $("#persona_mail").val($.get("mail"));
-      $("#activo-check").prop('checked', to_bolean($.get("act")));
-      $("#bloqueado-check").prop('checked', to_bolean($.get("bloq")));
-      $("#admin-check").prop('checked',to_bolean($.get("admin")));
-  });
-</script>
-<script>
-  $("#filtro_busq_boton").click(function(){
-      $("#filtro_busq").toggle("blind");
-      $("#filtro_busq_boton").toggleClass("filtro_busq_boton_hide");
-      $("#filtro_busq_boton").toggleClass("filtro_busq_boton_show");
-      var texto = $("#filtro_busq_boton").html();
-      if(texto == "Mostrar Filtros"){
-          $("#filtro_busq_boton").html("Ocultar Filtros");
-      }else{
-          $("#filtro_busq_boton").html("Mostrar Filtros");
-      }
-  });
-  $("#boton_buscar").click(function(){
-      var nom = $("#persona_nombre").val();
-      var ape = $("#persona_apellido").val();
-      var user = $("#persona_username").val();
-      var mail = $("#persona_mail").val();
-      var act = $("#activo-check").prop('checked');
-      var bloq = $("#bloqueado-check").prop('checked');
-      var admin = $("#admin-check").prop('checked');
-      var url = "/admin/usuarios?nom="+nom+"&ape="+ape+"&user="+user+"&mail="+mail+"&act="+act+"&bloq="+bloq+"&admin="+admin ;
-      $(location).attr('href',url)
-  });
-  $("#boton_all").click(function(){
-      $(location).attr('href',"/admin/usuarios")
-  });
-</script>
 </body>
 </html>

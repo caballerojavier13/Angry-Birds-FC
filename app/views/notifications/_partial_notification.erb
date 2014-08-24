@@ -1,0 +1,25 @@
+<div id="notificacion">
+  <div class="circulo">
+    <img src="/picture/icon/notificacion.png" width="50" height="50" />
+  </div>
+  <div class="triangulo"></div>
+  <div id="notif_min" class="notifica">
+    <%if @notificaciones.nil?%>
+        <%=0%>
+    <%else%>
+        <%=@notificaciones.size%>
+    <%end%>
+  </div>
+  <div id="notif_max" class="notifica">
+    <div id="notificaciones">
+      <%unless @notificaciones.nil?%>
+          <%= render :partial => @notificaciones%>
+      <%end%>
+    </div>
+    <div id="all_notificaciones" >
+      <a href="/notificaciones">
+        Todas las las notificaciones
+      </a>
+    </div>
+  </div>
+</div>

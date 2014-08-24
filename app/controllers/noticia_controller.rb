@@ -78,7 +78,7 @@ class NoticiaController < SecurityController
     @notificaciones = Notification.where("read = ? AND persona_id = ?", false, session[:usuario_id])
     @noticium = Noticium.find(params[:id])
     @persona = Persona.find(session[:usuario_id])
-    if @persona.admin || @noticium.persona.id == @persona.id
+    if Permissions.permiso(@persona.id,'Editar Noticias') || @noticium.persona_id.to_s == session[:usuario_id].to_s
       params[:titulo] = @noticium.titulo
     else
       redirect_to "/noticias", :alert => 'Solo el dueño de la noticia puede editarla.'
@@ -123,27 +123,34 @@ class NoticiaController < SecurityController
   # PUT /noticia/1.json
   def update
     @noticium = Noticium.find(params[:id])
-    unless params[:picture].nil?
-      @persona = Persona.find(session[:usuario_id])
-      @imagen = Imagen.new()
-      @imagen.persona=@persona
-      flickr_id = Flickrphoto.new.subir_imagen params[:picture] 
-       if flickr_id.nil?
-         @noticium.imagen = nil 
-       else
-         @imagen.url = Flickrphoto.new.get_url_flickr flickr_id
-         @imagen.picasa_id = flickr_id
-         @imagen.save
-         @noticium.imagen = @imagen
-       end
-    end
-    respond_to do |format|
-      if @noticium.update_attributes(params[:noticium])
-        format.html { redirect_to @noticium, :alert =>'Los cambios han sido guardados.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: "edit" }
-        format.json { render json: @noticium.errors, status: :unprocessable_entity }
+    @persona = Persona.find(session[:usuario_id])
+    if Permissions.permiso(@persona.id,'Editar Noticias') || @noticium.persona_id.to_s == session[:usuario_id].to_s
+      unless params[:picture].nil?
+
+        @imagen = Imagen.new()
+        @imagen.persona=@persona
+        flickr_id = Flickrphoto.new.subir_imagen params[:picture]
+         if flickr_id.nil?
+           @noticium.imagen = nil
+         else
+           @imagen.url = Flickrphoto.new.get_url_flickr flickr_id
+           @imagen.picasa_id = flickr_id
+           @imagen.save
+           @noticium.imagen = @imagen
+         end
+      end
+      respond_to do |format|
+        if @noticium.update_attributes(params[:noticium])
+          format.html { redirect_to @noticium, :alert =>'Los cambios han sido guardados.' }
+          format.json { head :no_content }
+        else
+          format.html { render action: "edit" }
+          format.json { render json: @noticium.errors, status: :unprocessable_entity }
+        end
+      end
+    else
+      respond_to do |format|
+          format.html { redirect_to @noticium, :alert =>'No posee los privilegios necesarios.' }
       end
     end
   end
@@ -153,7 +160,8 @@ class NoticiaController < SecurityController
   def destroy
     @noticium = Noticium.find(params[:id])
     @persona = Persona.find(session[:usuario_id])
-    if @persona.admin || @noticium.persona_id.to_s == session[:usuario_id].to_s
+
+    if Permissions.permiso(@persona.id,'Eliminar Noticias') || @noticium.persona_id.to_s == session[:usuario_id].to_s
       imagen = @noticium.imagen
       unless imagen.nil?
         @noticium.imagen = nil

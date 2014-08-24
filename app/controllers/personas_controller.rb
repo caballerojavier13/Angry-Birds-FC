@@ -4,7 +4,7 @@ class PersonasController < ApplicationController
   before_filter :authorize, :only => [:destroy]
   def authorize
     unless session[:usuario_id].nil?
-      unless Persona.find_by_id(session[:usuario_id]).admin
+      unless Persona.find_by_id(session[:usuario_id]).role_id = Role.find_by_name('Admnistrador')
         redirect_to '/'
       end
     else
@@ -40,7 +40,7 @@ class PersonasController < ApplicationController
     respond_to do |format|
       if @persona.save
 	      UserMailer.registration_confirmation(@persona).deliver
-        format.html { redirect_to "/thanks/?id=" + @persona.id.to_s , notice: 'Persona was successfully created.' }
+        format.html { redirect_to "/thanks/?id=" + @persona.id.to_s }
         format.json { render json: @persona, status: :created, location: @persona }
       else
         format.html { render action: "new" }
@@ -50,7 +50,7 @@ class PersonasController < ApplicationController
   end
 
 
-
+  #Activa la cuenta del usuario, una vez verificado el correo
   def activate
     @persona = Persona.unscoped.find(params[:id])
   	if @persona != nil

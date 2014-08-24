@@ -212,7 +212,7 @@
                       </div>
                     </li>
                     <li style="top: -7px;position: relative;left: 50%;margin-left: -100px;">
-                      <select style="font-size: 24px;padding-left: 10px;position: relative;margin: 0 auto;">
+                      <select style="font-size: 24px;padding-left: 10px;position: relative;margin: 0 auto;" id="role-select">
                          <% @roles.each do |r|%>
                             <option value="<%= r.id %>" <%=(r.id == @usuario.role_id)? "selected": ""  %> ><%= r.name %></option>
                          <% end %>
@@ -327,13 +327,13 @@
             $("#espera").hide();
         });
     });
-    $("#admin-checkbox").change(function(){
+    $("#role-select").change(function(){
         $("#espera").show();
-        var valor = $(this).prop('checked');
+        var valor = $(this).val();
         var request = $.ajax({
             type: "PUT",
             url: "/admin/usuarios/<%= @usuario.id %>/change_atributo",
-            data: { atributo: "admin", valor: valor}
+            data: { atributo: "role_id", valor: valor}
         });
 
         request.done(function(  ) {

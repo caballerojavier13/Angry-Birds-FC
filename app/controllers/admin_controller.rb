@@ -151,6 +151,7 @@ class AdminController < MasterSecurityController
 
   def user
 
+    @roles = Role.order('name ASC')
 
       if params[:act].to_s == "true"
         act = TRUE
@@ -164,19 +165,14 @@ class AdminController < MasterSecurityController
         bloq = FALSE
       end
 
-      if params[:admin].to_s == "true"
-        admin = TRUE
-      else
-        admin = FALSE
-      end
 
 
       if params[:act].nil?
           @usuarios = Persona.order('id ASC').paginate(:page => params[:page], :per_page => 10)
       else
         @usuarios = Persona.where(
-            'lower("nombre") LIKE :nom AND lower("apellido") LIKE :ape AND lower("username") LIKE :user AND lower("email") LIKE :mail AND activo = :act AND bloqueado = :bloq AND admin = :admin',
-            nom: '%'+params[:nom].to_s.downcase+'%', ape: '%'+params[:ape].to_s.downcase+'%', user: '%'+params[:user].to_s.downcase+'%', mail: '%'+params[:mail].to_s.downcase+'%', act: act, bloq: bloq, admin: admin
+            'lower("nombre") LIKE :nom AND lower("apellido") LIKE :ape AND lower("username") LIKE :user AND lower("email") LIKE :mail AND activo = :act AND bloqueado = :bloq AND role_id = :role',
+            nom: '%'+params[:nom].to_s.downcase+'%', ape: '%'+params[:ape].to_s.downcase+'%', user: '%'+params[:user].to_s.downcase+'%', mail: '%'+params[:mail].to_s.downcase+'%', act: act, bloq: bloq, role: params[:role]
         ).order('id ASC').paginate(:page => params[:page], :per_page => 10)
       end
 
