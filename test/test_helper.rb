@@ -1,4 +1,4 @@
-ENV["RAILS_ENV"] = "test"
+ENV["RAILS_ENV"] = "test"                           Copy here the number given when you complete the process.
 require File.expand_path('../../config/environment', __FILE__)
 require 'rails/test_help'
 

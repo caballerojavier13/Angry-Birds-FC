@@ -11,7 +11,7 @@ gem 'arel'
 
 gem 'picasa', '~> 0.6.7'
 
-gem 'flickraw'
+gem 'flickraw', '~> 0.9.8'
 
 gem 'upflickr'
 

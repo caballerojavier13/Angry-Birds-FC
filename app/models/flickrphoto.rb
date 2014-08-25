@@ -15,13 +15,14 @@ class Flickrphoto
   end
 
   def conectar
-    FlickRaw.api_key = "eae68215d59780be03b633438a293bf3"
+    FlickRaw.api_key="72e33da5261da953174cda791fd2d5f1"
+    FlickRaw.shared_secret="439da9196651a5c8"
 
-    FlickRaw.shared_secret= "257b632e7e63243d"
+    flickr.access_token = "72157646410063679-426c6b389b96430f"
 
-    flickr.access_token = "72157634581998494-c302f018aec4cb5e"
 
-    flickr.access_secret = "57bb0c9b979cc7d5"
+    flickr.access_secret = "1fe5934fd34b7e8e"
+
     return flickr
   end
 

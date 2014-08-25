@@ -6,6 +6,7 @@ class ImagensController < SecurityController
     @notificaciones = Notification.where("read = ? AND persona_id = ?", false, session[:usuario_id])
     @imagens = Imagen.order('id DESC').paginate(:page => params[:page], :per_page => 21)
     params[:picture]=nil
+
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @imagens }
