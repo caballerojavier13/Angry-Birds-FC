@@ -28,59 +28,66 @@ GEM
     activesupport (3.2.13)
       i18n (= 0.6.1)
       multi_json (~> 1.0)
-    addressable (2.3.6)
+    addressable (2.4.0)
+    ansi (1.5.0)
     arel (3.0.3)
-    better_errors (2.0.0)
+    ast (2.2.0)
+    better_errors (2.1.1)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
       rack (>= 0.9.0)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     builder (3.0.4)
-    client_side_validations (3.2.6)
-    coderay (1.1.0)
+    client_side_validations (3.2.7)
+    coderay (1.1.1)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
       railties (~> 3.2.0)
-    coffee-script (2.3.0)
+    coffee-script (2.4.1)
       coffee-script-source
       execjs
-    coffee-script-source (1.7.1)
+    coffee-script-source (1.10.0)
     debug_inspector (0.0.2)
     erubis (2.7.0)
-    execjs (2.2.1)
+    execjs (2.6.0)
     flickraw (0.9.8)
     hike (1.2.3)
-    htmlentities (4.3.2)
-    httparty (0.13.1)
+    htmlentities (4.3.4)
+    httparty (0.13.7)
       json (~> 1.8)
       multi_xml (>= 0.5.2)
     i18n (0.6.1)
+    iso8601 (0.9.0)
     journey (1.0.4)
-    jquery-rails (3.1.1)
+    jquery-rails (3.1.4)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
     jquery_datepicker (0.4)
-    json (1.8.1)
-    launchy (2.4.2)
+    json (1.8.3)
+    launchy (2.4.3)
       addressable (~> 2.3)
-    libv8 (3.16.14.3)
+    libv8 (3.16.14.13)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.25.1)
-    multi_json (1.10.1)
+    multi_json (1.11.2)
     multi_xml (0.5.5)
-    pg (0.17.1)
+    mysql2 (0.3.20)
+    oga (2.2)
+      ast
+      ruby-ll (~> 2.1)
+    open_uri_redirections (0.2.1)
     picasa (0.6.7)
       httparty
     polyglot (0.3.5)
-    rack (1.4.5)
-    rack-cache (1.2)
+    rack (1.4.7)
+    rack-cache (1.6.1)
       rack (>= 0.4)
     rack-ssl (1.3.4)
       rack
-    rack-test (0.6.2)
+    rack-test (0.6.3)
       rack (>= 1.0)
     rails (3.2.13)
       actionmailer (= 3.2.13)
@@ -97,24 +104,28 @@ GEM
       rake (>= 0.8.7)
       rdoc (~> 3.4)
       thor (>= 0.14.6, < 2.0)
-    rake (10.1.1)
+    rake (10.5.0)
     rdoc (3.12.2)
       json (~> 1.4)
-    ref (1.0.5)
-    sass (3.4.1)
+    ref (2.0.0)
+    ruby-ll (2.1.2)
+      ansi
+      ast
+    sass (3.4.21)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
       sass (>= 3.1.10)
       tilt (~> 1.3)
-    simple_form (2.1.1)
+    simple_form (2.1.3)
       actionpack (~> 3.0)
       activemodel (~> 3.0)
-    sprockets (2.2.2)
+    sprockets (2.2.3)
       hike (~> 1.2)
       multi_json (~> 1.0)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
-    therubyracer (0.12.1)
+    sqlite3 (1.3.11)
+    therubyracer (0.12.2)
       libv8 (~> 3.16.14.0)
       ref
     thor (0.19.1)
@@ -122,17 +133,20 @@ GEM
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
-    tzinfo (0.3.41)
-    uglifier (2.5.3)
+    tzinfo (0.3.46)
+    uglifier (2.7.2)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
     upflickr (0.1.8)
       mime-types
-    video_info (2.3.1)
+    video_info (2.5.0)
       addressable
       htmlentities
-      multi_json
-    will_paginate (3.0.7)
+      iso8601
+      multi_json (~> 1.11)
+      oga
+      open_uri_redirections
+    will_paginate (3.1.0)
     will_paginate-bootstrap (1.0.1)
       will_paginate (>= 3.0.3)
 
@@ -151,15 +165,19 @@ DEPENDENCIES
   json
   launchy
   mail
-  pg
+  mysql2 (~> 0.3.18)
   picasa (~> 0.6.7)
   rails (= 3.2.13)
-  rake (~> 10.1.1)
+  rake (= 10.5.0)
   sass-rails (~> 3.2.3)
   simple_form
+  sqlite3
   therubyracer
   uglifier (>= 1.0.3)
   upflickr
   video_info
   will_paginate
   will_paginate-bootstrap
+
+BUNDLED WITH
+   1.11.0.pre.1

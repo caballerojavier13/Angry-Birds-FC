@@ -1,11 +1,11 @@
 source 'https://rubygems.org'
 
 
-ruby '2.0.0'
+ruby '2.1.5'
 
 gem 'rails', '3.2.13'
 
-gem 'rake','~>10.1.1'
+gem 'rake', '10.5.0'
 
 gem 'arel'
 
@@ -37,7 +37,10 @@ gem 'simple_form'
 
 gem 'video_info'
 
-gem 'pg'
+#gem 'pg'
+gem 'mysql2', '~> 0.3.18'
+
+gem 'sqlite3'
 
 gem 'json'
 

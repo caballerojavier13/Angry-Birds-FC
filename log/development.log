@@ -4531,3 +4531,463 @@ Processing by ImagensController#mis_imagenes as HTML
   Rendered imagens/_nada.html.erb (0.0ms)
   Rendered imagens/mis_imagenes.html.erb (19.4ms)
 Completed 200 OK in 25ms (Views: 18.5ms | ActiveRecord: 4.5ms)
+Connecting to database specified by database.yml
+  [1m[36m (349.7ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (410.8ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)
+  [1m[36m (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreatePersonas (20130512114831)
+  [1m[35m (247.8ms)[0m  CREATE TABLE `personas` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nombre` varchar(255), `apellido` varchar(255), `username` varchar(255), `salt` varchar(255), `hashed_password` varchar(255), `email` varchar(255), `genero` tinyint(1), `fechaNacimiento` date, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (33.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20130512114831')[0m
+Migrating to CreateVideos (20130512115117)
+  [1m[35m (234.8ms)[0m  CREATE TABLE `videos` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `titulo` varchar(255), `url` varchar(255), `updated_at` datetime NOT NULL, `persona_id` int(11), `created_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (33.1ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20130512115117')[0m
+Migrating to CreateImagens (20130512115209)
+  [1m[35m (245.2ms)[0m  CREATE TABLE `imagens` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `url` varchar(255), `updated_at` datetime NOT NULL, `persona_id` int(11), `created_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (33.1ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20130512115209')[0m
+Migrating to CreateNoticia (20130512115327)
+  [1m[35m (233.4ms)[0m  CREATE TABLE `noticia` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `titulo` varchar(255), `cuerpo` text, `updated_at` datetime NOT NULL, `persona_id` int(11), `imagen_id` int(11), `created_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (33.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20130512115327')[0m
+Migrating to CreateCalificacions (20130512115426)
+  [1m[35m (233.5ms)[0m  CREATE TABLE `calificacions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `valor` int(11), `persona_id` int(11), `noticia_id` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (33.1ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20130512115426')[0m
+Migrating to CreateFuncionalidads (20130512115621)
+  [1m[35m (233.5ms)[0m  CREATE TABLE `funcionalidads` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nombre` varchar(255), `descripcion` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (33.1ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20130512115621')[0m
+Migrating to CreateTipoUsuarios (20130512115645)
+  [1m[35m (233.5ms)[0m  CREATE TABLE `tipo_usuarios` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nombre` varchar(255), `descripcion` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (33.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20130512115645')[0m
+Migrating to CreateTipoUsuarioFuncionalidads (20130512115817)
+  [1m[35m (233.6ms)[0m  CREATE TABLE `tipo_usuario_funcionalidads` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `tipoUsuario_id` int(11), `funcionalidad` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (33.1ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20130512115817')[0m
+Migrating to AddRelacionPersonaTipoUsuario (20130512122112)
+  [1m[35m (386.7ms)[0m  ALTER TABLE `personas` ADD `tipo_usuario_id` int(11)
+  [1m[36m (49.9ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20130512122112')[0m
+Migrating to AddColumnsPersona (20130519204247)
+  [1m[35m (419.1ms)[0m  ALTER TABLE `personas` ADD `activo` tinyint(1)
+  [1m[36m (360.6ms)[0m  [1mALTER TABLE `personas` ADD `codigo` varchar(255)[0m
+  [1m[35m (33.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20130519204247')
+Migrating to AddColumnIdPicasaPicture (20130709114906)
+  [1m[36m (395.3ms)[0m  [1mALTER TABLE `imagens` ADD `picasa_id` varchar(255)[0m
+  [1m[35m (33.1ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20130709114906')
+Migrating to CreateComments (20130802035314)
+  [1m[36m (267.0ms)[0m  [1mCREATE TABLE `comments` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `usuario_id` int(11), `noticia_id` int(11), `cuerpo` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (33.1ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20130802035314')
+Migrating to CreateNotifications (20130802035440)
+  [1m[36m (208.6ms)[0m  [1mCREATE TABLE `notifications` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `usuario_id` int(11), `noticia_id` int(11), `read` tinyint(1), `mensaje` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (33.1ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20130802035440')
+Migrating to AddColumnUsuariosToNotifications (20130805051728)
+  [1m[36m (360.5ms)[0m  [1mALTER TABLE `notifications` ADD `usuarios` varchar(255)[0m
+  [1m[35m (33.1ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20130805051728')
+Migrating to CambiarNombreColumnasUsuario (20130805084959)
+  [1m[36m (0.3ms)[0m  [1mSHOW COLUMNS FROM `comments` LIKE 'usuario_id'[0m
+  [1m[35m (56.6ms)[0m  ALTER TABLE `comments` CHANGE `usuario_id` `persona_id` int(11) DEFAULT NULL
+  [1m[36m (0.3ms)[0m  [1mSHOW COLUMNS FROM `notifications` LIKE 'usuario_id'[0m
+  [1m[35m (65.9ms)[0m  ALTER TABLE `notifications` CHANGE `usuario_id` `persona_id` int(11) DEFAULT NULL
+  [1m[36m (33.2ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20130805084959')[0m
+Migrating to EliminarTablasInnecesarias (20130813145800)
+  [1m[35m (100.0ms)[0m  DROP TABLE `tipo_usuario_funcionalidads`
+  [1m[36m (100.5ms)[0m  [1mDROP TABLE `tipo_usuarios`[0m
+  [1m[35m (100.6ms)[0m  DROP TABLE `funcionalidads`
+  [1m[36m (377.4ms)[0m  [1mALTER TABLE `personas` DROP `tipo_usuario_id`[0m
+  [1m[35m (33.1ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20130813145800')
+Migrating to AddColumnBloqueado (20130818024452)
+  [1m[36m (394.8ms)[0m  [1mALTER TABLE `personas` ADD `bloqueado` tinyint(1)[0m
+  [1m[35m (33.1ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20130818024452')
+Migrating to AddColumnAdmin (20131209020043)
+  [1m[36m (578.1ms)[0m  [1mALTER TABLE `personas` ADD `admin` tinyint(1)[0m
+  [1m[35m (33.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20131209020043')
+Migrating to CreateUsrNovelties (20140124200310)
+  [1m[36m (266.6ms)[0m  [1mCREATE TABLE `usr_novelties` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `viewed` tinyint(1), `persona_id` int(11), `novelty_id` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (33.1ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20140124200310')
+Migrating to CreateNovelties (20140124200815)
+  [1m[36m (208.6ms)[0m  [1mCREATE TABLE `novelties` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `message` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (33.5ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20140124200815')
+Migrating to Roles (20140602023401)
+  [1m[36m (208.1ms)[0m  [1mCREATE TABLE `roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255)) ENGINE=InnoDB[0m
+  [1m[35m (33.1ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20140602023401')
+Migrating to Function (20140602023505)
+  [1m[36m (234.8ms)[0m  [1mCREATE TABLE `functions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255)) ENGINE=InnoDB[0m
+  [1m[35m (33.1ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20140602023505')
+Migrating to Permission (20140602023658)
+  [1m[36m (258.6ms)[0m  [1mCREATE TABLE `permissions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `role_id` int(11), `function_id` int(11)) ENGINE=InnoDB[0m
+  [1m[35m (41.4ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20140602023658')
+Migrating to PersonaConRol (20140606031156)
+  [1m[36m (385.6ms)[0m  [1mALTER TABLE `personas` ADD `role_id` int(11)[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `roles` WHERE (name = 'Usuario Comun')
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE `personas` SET `role_id` = NULL[0m
+  [1m[35m (30.5ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20140606031156')
+Migrating to AddColumnEditedComment (20140628175729)
+  [1m[36m (385.4ms)[0m  [1mALTER TABLE `comments` ADD `edited` tinyint(1) DEFAULT 0[0m
+  [1m[35m (33.1ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20140628175729')
+  [1m[36m (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `functions` (`name`) VALUES ('Admin Resumen')[0m
+  [1m[35m (30.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `functions` (`name`) VALUES ('Admin Personas')
+  [1m[36m (65.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `functions` (`name`) VALUES ('Admin Persona Edit')[0m
+  [1m[35m (65.9ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `functions` (`name`) VALUES ('Admin Noticias')
+  [1m[36m (32.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `functions` (`name`) VALUES ('Admin Imagenes')[0m
+  [1m[35m (32.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `functions` (`name`) VALUES ('Admin Videos')
+  [1m[36m (32.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `functions` (`name`) VALUES ('Admin Funciones')[0m
+  [1m[35m (32.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `functions` (`name`) VALUES ('Admin Roles')
+  [1m[36m (32.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `functions` (`name`) VALUES ('Admin Permisos')[0m
+  [1m[35m (32.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `functions` (`name`) VALUES ('Admin Novedades')
+  [1m[36m (32.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `functions` (`name`) VALUES ('Eliminar Noticias')[0m
+  [1m[35m (32.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `functions` (`name`) VALUES ('Editar Noticias')
+  [1m[36m (32.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `functions` (`name`) VALUES ('Agregar Noticias')[0m
+  [1m[35m (32.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `functions` (`name`) VALUES ('Agregar Comentario')
+  [1m[36m (32.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `functions` (`name`) VALUES ('Editar Comentario')[0m
+  [1m[35m (32.2ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `functions` (`name`) VALUES ('Eliminar Comentario')
+  [1m[36m (32.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `functions` (`name`) VALUES ('Agregar Imagenes')[0m
+  [1m[35m (32.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `functions` (`name`) VALUES ('Eliminar Imagenes')
+  [1m[36m (32.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `functions` (`name`) VALUES ('Agregar Videos')[0m
+  [1m[35m (32.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `functions` (`name`) VALUES ('Editar Videos')
+  [1m[36m (32.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `functions` (`name`) VALUES ('Eliminar Videos')[0m
+  [1m[35m (32.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `functions` (`name`) VALUES ('Eliminar Usuarios')
+  [1m[36m (32.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `functions` (`name`) VALUES ('Bloquear Usuarios')[0m
+  [1m[35m (32.5ms)[0m  COMMIT
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 192.168.10.100 at 2016-02-23 21:28:38 -0300
+Processing by InicioController#start as HTML
+Redirected to http://192.168.10.100:3000/login?redirect_to=http://192.168.10.100:3000/
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login?redirect_to=http://192.168.10.100:3000/" for 192.168.10.100 at 2016-02-23 21:28:50 -0300
+Processing by SessionsController#new as HTML
+  Parameters: {"redirect_to"=>"http://192.168.10.100:3000/"}
+  [1m[36mNoticium Load (0.1ms)[0m  [1mSELECT `noticia`.* FROM `noticia` WHERE `noticia`.`id` = 192168101003000 LIMIT 1[0m
+  Rendered sessions/new.html.erb (21.2ms)
+Completed 200 OK in 26ms (Views: 24.2ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/login" for 192.168.10.100 at 2016-02-23 21:29:29 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AX70RHwfEATW1O9jpo+SYAnBOzZaBIylSaiIT+3bl30=", "redirect_to"=>"192168101003000", "username"=>"caballerojavier13", "password"=>"[FILTERED]", "commit"=>"Iniciar Sesion"}
+  [1m[35mPersona Load (0.2ms)[0m  SELECT `personas`.* FROM `personas` WHERE `personas`.`username` = 'caballerojavier13'
+Redirected to http://192.168.10.100:3000/login
+Completed 302 Found in 20ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/login" for 192.168.10.100 at 2016-02-23 21:29:30 -0300
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb (0.8ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 192.168.10.100 at 2016-02-23 21:29:51 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AX70RHwfEATW1O9jpo+SYAnBOzZaBIylSaiIT+3bl30=", "redirect_to"=>"", "username"=>"admin", "password"=>"[FILTERED]", "commit"=>"Iniciar Sesion"}
+  [1m[36mPersona Load (0.2ms)[0m  [1mSELECT `personas`.* FROM `personas` WHERE `personas`.`username` = 'admin'[0m
+Redirected to http://192.168.10.100:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/login" for 192.168.10.100 at 2016-02-23 21:29:52 -0300
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb (1.2ms)
+Completed 200 OK in 2ms (Views: 2.1ms | ActiveRecord: 0.0ms)
+Connecting to database specified by database.yml
+  [1m[36m (229.9ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (393.8ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)
+  [1m[36m (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreatePersonas (20130512114831)
+  [1m[35m (231.8ms)[0m  CREATE TABLE `personas` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nombre` varchar(255), `apellido` varchar(255), `username` varchar(255), `salt` varchar(255), `hashed_password` varchar(255), `email` varchar(255), `genero` tinyint(1), `fechaNacimiento` date, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (33.1ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20130512114831')[0m
+Migrating to CreateVideos (20130512115117)
+  [1m[35m (233.3ms)[0m  CREATE TABLE `videos` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `titulo` varchar(255), `url` varchar(255), `updated_at` datetime NOT NULL, `persona_id` int(11), `created_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (33.2ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20130512115117')[0m
+Migrating to CreateImagens (20130512115209)
+  [1m[35m (267.1ms)[0m  CREATE TABLE `imagens` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `url` varchar(255), `updated_at` datetime NOT NULL, `persona_id` int(11), `created_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (33.1ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20130512115209')[0m
+Migrating to CreateNoticia (20130512115327)
+  [1m[35m (225.3ms)[0m  CREATE TABLE `noticia` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `titulo` varchar(255), `cuerpo` text, `updated_at` datetime NOT NULL, `persona_id` int(11), `imagen_id` int(11), `created_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (32.9ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20130512115327')[0m
+Migrating to CreateCalificacions (20130512115426)
+  [1m[35m (233.3ms)[0m  CREATE TABLE `calificacions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `valor` int(11), `persona_id` int(11), `noticia_id` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (33.1ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20130512115426')[0m
+Migrating to CreateFuncionalidads (20130512115621)
+  [1m[35m (291.9ms)[0m  CREATE TABLE `funcionalidads` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nombre` varchar(255), `descripcion` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (33.1ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20130512115621')[0m
+Migrating to CreateTipoUsuarios (20130512115645)
+  [1m[35m (234.9ms)[0m  CREATE TABLE `tipo_usuarios` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nombre` varchar(255), `descripcion` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (33.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20130512115645')[0m
+Migrating to CreateTipoUsuarioFuncionalidads (20130512115817)
+  [1m[35m (233.4ms)[0m  CREATE TABLE `tipo_usuario_funcionalidads` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `tipoUsuario_id` int(11), `funcionalidad` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (33.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20130512115817')[0m
+Migrating to AddRelacionPersonaTipoUsuario (20130512122112)
+  [1m[35m (376.9ms)[0m  ALTER TABLE `personas` ADD `tipo_usuario_id` int(11)
+  [1m[36m (33.3ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20130512122112')[0m
+Migrating to AddColumnsPersona (20130519204247)
+  [1m[35m (410.3ms)[0m  ALTER TABLE `personas` ADD `activo` tinyint(1)
+  [1m[36m (386.8ms)[0m  [1mALTER TABLE `personas` ADD `codigo` varchar(255)[0m
+  [1m[35m (33.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20130519204247')
+Migrating to AddColumnIdPicasaPicture (20130709114906)
+  [1m[36m (385.2ms)[0m  [1mALTER TABLE `imagens` ADD `picasa_id` varchar(255)[0m
+  [1m[35m (33.3ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20130709114906')
+Migrating to CreateComments (20130802035314)
+  [1m[36m (200.3ms)[0m  [1mCREATE TABLE `comments` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `usuario_id` int(11), `noticia_id` int(11), `cuerpo` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (33.1ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20130802035314')
+Migrating to CreateNotifications (20130802035440)
+  [1m[36m (225.2ms)[0m  [1mCREATE TABLE `notifications` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `usuario_id` int(11), `noticia_id` int(11), `read` tinyint(1), `mensaje` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (33.1ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20130802035440')
+Migrating to AddColumnUsuariosToNotifications (20130805051728)
+  [1m[36m (378.1ms)[0m  [1mALTER TABLE `notifications` ADD `usuarios` varchar(255)[0m
+  [1m[35m (33.1ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20130805051728')
+Migrating to CambiarNombreColumnasUsuario (20130805084959)
+  [1m[36m (0.4ms)[0m  [1mSHOW COLUMNS FROM `comments` LIKE 'usuario_id'[0m
+  [1m[35m (54.5ms)[0m  ALTER TABLE `comments` CHANGE `usuario_id` `persona_id` int(11) DEFAULT NULL
+  [1m[36m (0.2ms)[0m  [1mSHOW COLUMNS FROM `notifications` LIKE 'usuario_id'[0m
+  [1m[35m (83.0ms)[0m  ALTER TABLE `notifications` CHANGE `usuario_id` `persona_id` int(11) DEFAULT NULL
+  [1m[36m (33.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20130805084959')[0m
+Migrating to EliminarTablasInnecesarias (20130813145800)
+  [1m[35m (99.6ms)[0m  DROP TABLE `tipo_usuario_funcionalidads`
+  [1m[36m (100.5ms)[0m  [1mDROP TABLE `tipo_usuarios`[0m
+  [1m[35m (100.5ms)[0m  DROP TABLE `funcionalidads`
+  [1m[36m (385.7ms)[0m  [1mALTER TABLE `personas` DROP `tipo_usuario_id`[0m
+  [1m[35m (33.1ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20130813145800')
+Migrating to AddColumnBloqueado (20130818024452)
+  [1m[36m (411.4ms)[0m  [1mALTER TABLE `personas` ADD `bloqueado` tinyint(1)[0m
+  [1m[35m (33.2ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20130818024452')
+Migrating to AddColumnAdmin (20131209020043)
+  [1m[36m (377.4ms)[0m  [1mALTER TABLE `personas` ADD `admin` tinyint(1)[0m
+  [1m[35m (32.4ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20131209020043')
+Migrating to CreateUsrNovelties (20140124200310)
+  [1m[36m (241.9ms)[0m  [1mCREATE TABLE `usr_novelties` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `viewed` tinyint(1), `persona_id` int(11), `novelty_id` int(11), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (33.1ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20140124200310')
+Migrating to CreateNovelties (20140124200815)
+  [1m[36m (292.0ms)[0m  [1mCREATE TABLE `novelties` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `message` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (33.0ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20140124200815')
+Migrating to Roles (20140602023401)
+  [1m[36m (229.3ms)[0m  [1mCREATE TABLE `roles` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255)) ENGINE=InnoDB[0m
+  [1m[35m (30.4ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20140602023401')
+Migrating to Function (20140602023505)
+  [1m[36m (234.9ms)[0m  [1mCREATE TABLE `functions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255)) ENGINE=InnoDB[0m
+  [1m[35m (31.8ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20140602023505')
+Migrating to Permission (20140602023658)
+  [1m[36m (266.8ms)[0m  [1mCREATE TABLE `permissions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `role_id` int(11), `function_id` int(11)) ENGINE=InnoDB[0m
+  [1m[35m (33.1ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20140602023658')
+Migrating to PersonaConRol (20140606031156)
+  [1m[36m (382.4ms)[0m  [1mALTER TABLE `personas` ADD `role_id` int(11)[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM `roles` WHERE (name = 'Usuario Comun')
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE `personas` SET `role_id` = NULL[0m
+  [1m[35m (35.4ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20140606031156')
+Migrating to AddColumnEditedComment (20140628175729)
+  [1m[36m (377.7ms)[0m  [1mALTER TABLE `comments` ADD `edited` tinyint(1) DEFAULT 0[0m
+  [1m[35m (33.3ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20140628175729')
+  [1m[36m (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mPersona Load (0.2ms)[0m  [1mSELECT `personas`.* FROM `personas` WHERE `personas`.`username` = 'admin'[0m
+  [1m[35mPersona Load (0.1ms)[0m  SELECT `personas`.* FROM `personas` WHERE `personas`.`email` = 'admin@angrybirdsfanclub.com'
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `personas` (`activo`, `admin`, `apellido`, `bloqueado`, `codigo`, `created_at`, `email`, `fechaNacimiento`, `genero`, `hashed_password`, `nombre`, `role_id`, `salt`, `updated_at`, `username`) VALUES (1, 1, 'Del Sistema', 0, '', '2016-02-24 00:31:10', 'admin@angrybirdsfanclub.com', '2016-02-23', 1, '4acf7de2fb6c39abc8c63d7fd9a8268c08369f034ca8804a9cf962dc233e897b', 'Administrador', 1, '530684600.27172708412054813', '2016-02-24 00:31:10', 'admin')[0m
+  [1m[35m (34.2ms)[0m  COMMIT
+  [1m[36m (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `roles` (`name`) VALUES ('Administrador')
+  [1m[36m (35.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `roles` (`name`) VALUES ('Usuario Comun')[0m
+  [1m[35m (65.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO `functions` (`name`) VALUES ('Admin Resumen')
+  [1m[36m (30.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `functions` (`name`) VALUES ('Admin Personas')[0m
+  [1m[35m (65.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `functions` (`name`) VALUES ('Admin Persona Edit')
+  [1m[36m (65.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `functions` (`name`) VALUES ('Admin Noticias')[0m
+  [1m[35m (32.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `functions` (`name`) VALUES ('Admin Imagenes')
+  [1m[36m (32.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `functions` (`name`) VALUES ('Admin Videos')[0m
+  [1m[35m (32.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `functions` (`name`) VALUES ('Admin Funciones')
+  [1m[36m (32.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `functions` (`name`) VALUES ('Admin Roles')[0m
+  [1m[35m (31.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `functions` (`name`) VALUES ('Admin Permisos')
+  [1m[36m (32.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `functions` (`name`) VALUES ('Admin Novedades')[0m
+  [1m[35m (32.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `functions` (`name`) VALUES ('Eliminar Noticias')
+  [1m[36m (32.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `functions` (`name`) VALUES ('Editar Noticias')[0m
+  [1m[35m (32.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `functions` (`name`) VALUES ('Agregar Noticias')
+  [1m[36m (32.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `functions` (`name`) VALUES ('Agregar Comentario')[0m
+  [1m[35m (32.7ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO `functions` (`name`) VALUES ('Editar Comentario')
+  [1m[36m (31.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO `functions` (`name`) VALUES ('Eliminar Comentario')[0m
+  [1m[35m (32.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `functions` (`name`) VALUES ('Agregar Imagenes')
+  [1m[36m (32.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `functions` (`name`) VALUES ('Eliminar Imagenes')[0m
+  [1m[35m (28.8ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `functions` (`name`) VALUES ('Agregar Videos')
+  [1m[36m (32.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `functions` (`name`) VALUES ('Editar Videos')[0m
+  [1m[35m (32.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO `functions` (`name`) VALUES ('Eliminar Videos')
+  [1m[36m (32.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (3.1ms)[0m  [1mINSERT INTO `functions` (`name`) VALUES ('Eliminar Usuarios')[0m
+  [1m[35m (37.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO `functions` (`name`) VALUES ('Bloquear Usuarios')
+  [1m[36m (32.5ms)[0m  [1mCOMMIT[0m
+Connecting to database specified by database.yml
+
+
+Started POST "/login" for 192.168.10.100 at 2016-02-23 21:31:31 -0300
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AX70RHwfEATW1O9jpo+SYAnBOzZaBIylSaiIT+3bl30=", "redirect_to"=>"", "username"=>"admin", "password"=>"[FILTERED]", "commit"=>"Iniciar Sesion"}
+  [1m[36mPersona Load (0.1ms)[0m  [1mSELECT `personas`.* FROM `personas` WHERE `personas`.`username` = 'admin'[0m
+Redirected to http://192.168.10.100:3000
+Completed 302 Found in 25ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 192.168.10.100 at 2016-02-23 21:31:34 -0300
+Processing by InicioController#start as HTML
+  [1m[35mPersona Load (0.2ms)[0m  SELECT `personas`.* FROM `personas` WHERE `personas`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `personas`.* FROM `personas` WHERE `personas`.`id` = 1 LIMIT 1[0m
+  [1m[35mVideo Load (0.1ms)[0m  SELECT `videos`.* FROM `videos` 
+  [1m[36mImagen Load (0.1ms)[0m  [1mSELECT `imagens`.* FROM `imagens` [0m
+  [1m[35mNoticium Load (0.1ms)[0m  SELECT `noticia`.* FROM `noticia` ORDER BY id ASC
+  [1m[36mAREL (15.1ms)[0m  [1mSELECT novelties.id, novelties.message, novelties.created_at FROM `novelties` INNER JOIN `usr_novelties` ON `usr_novelties`.`novelty_id` = `novelties`.`id` WHERE usr_novelties.viewed = false AND usr_novelties.persona_id = 1[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM `notifications` WHERE (read = 0 AND persona_id = 1)
+Mysql2::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'read = 0 AND persona_id = 1)' at line 1: SELECT COUNT(*) FROM `notifications`  WHERE (read = 0 AND persona_id = 1)
+  Rendered inicio/start.html.erb (5.5ms)
+Completed 500 Internal Server Error in 58ms
+
+ActionView::Template::Error (Mysql2::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'read = 0 AND persona_id = 1)' at line 1: SELECT COUNT(*) FROM `notifications`  WHERE (read = 0 AND persona_id = 1)):
+    96:       <% if @notificaciones.nil? %>
+    97:           <%= 0 %>
+    98:       <% else %>
+    99:           <%= @notificaciones.size %>
+    100:       <% end %>
+    101:     </div>
+    102:     <div id="notif_max" class="notifica">
+  app/views/inicio/start.html.erb:99:in `_app_views_inicio_start_html_erb___781822663482213864_27386860'
+
+
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (4.4ms)
+
+
+Started GET "/favicon.ico" for 192.168.10.100 at 2016-02-23 21:31:42 -0300
+
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.7) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.7) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.7) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.7) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.7) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.4ms)
+
+
+Started GET "/" for 192.168.10.100 at 2016-02-23 21:35:01 -0300
+Processing by InicioController#start as HTML
+  [1m[36mPersona Load (0.2ms)[0m  [1mSELECT `personas`.* FROM `personas` WHERE `personas`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `personas`.* FROM `personas` WHERE `personas`.`id` = 1 LIMIT 1
+  [1m[36mVideo Load (0.1ms)[0m  [1mSELECT `videos`.* FROM `videos` [0m
+  [1m[35mImagen Load (0.1ms)[0m  SELECT `imagens`.* FROM `imagens` 
+  [1m[36mNoticium Load (0.1ms)[0m  [1mSELECT `noticia`.* FROM `noticia` ORDER BY id ASC[0m
+  [1m[35mAREL (0.2ms)[0m  SELECT novelties.id, novelties.message, novelties.created_at FROM `novelties` INNER JOIN `usr_novelties` ON `usr_novelties`.`novelty_id` = `novelties`.`id` WHERE usr_novelties.viewed = false AND usr_novelties.persona_id = 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `notifications` WHERE (`read` = 0 AND persona_id = 1)[0m
+  [1m[35mNotification Load (0.2ms)[0m  SELECT `notifications`.* FROM `notifications` WHERE (`read` = 0 AND persona_id = 1)
+  Rendered collection (0.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `personas`.* FROM `personas` WHERE `personas`.`id` = 1 LIMIT 1[0m
+  Rendered inicio/_nada_noticia.html.erb (0.3ms)
+  Rendered inicio/_nada_imagen.html.erb (0.2ms)
+  Rendered inicio/_nada_video.html.erb (0.2ms)
+  Rendered inicio/start.html.erb (5.6ms)
+Completed 200 OK in 56ms (Views: 6.6ms | ActiveRecord: 5.4ms)

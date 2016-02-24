@@ -1,26 +1,26 @@
-#Persona.create!(
-#    nombre: "Administrador",
-#    apellido: "Del Sistema",
-#    fechaNacimiento:Date.today,
-#    email: "admin@angrybirdsfanclub.com",
-#    genero: TRUE,
-#    username: "admin",
-#    password: "admin",
-#    password_confirmation: "admin",
-#    codigo: "",
-#    bloqueado: false,
-#    activo: true,
-#    admin: true,
-#    role_id: 1
-#)
-#
-#Role.create!(
-#    name: 'Administrador'
-#)
-#
-#Role.create!(
-#    name: 'Usuario Comun'
-#)
+Persona.create!(
+    nombre: "Administrador",
+    apellido: "Del Sistema",
+    fechaNacimiento:Date.today,
+    email: "admin@angrybirdsfanclub.com",
+    genero: TRUE,
+    username: "admin",
+    password: "admin",
+    password_confirmation: "admin",
+    codigo: "",
+    bloqueado: false,
+    activo: true,
+    admin: true,
+    role_id: 1
+)
+
+Role.create!(
+    name: 'Administrador'
+)
+
+Role.create!(
+    name: 'Usuario Comun'
+)
 
 Functions.create!(
     name:  'Admin Resumen'

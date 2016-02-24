@@ -1,20 +1,20 @@
 
 development:
-  adapter: postgresql
-  encoding: unicode
-  database: angrybirds_development
+  adapter: mysql2
   pool: 5
-  username: javier
-  password: javier
-
+  host: localhost
+  username: root
+  password: root
+  database: angrybirds_dev
 
 test:
-  adapter: postgresql
-  encoding: unicode
-  database: angrybirds_test
+  adapter: mysql2
   pool: 5
-  username: javier
-  password: javier
+  host: localhost
+  username: root
+  password: root
+  database: angrybirds_test
+
 
 production:
   adapter: postgresql
