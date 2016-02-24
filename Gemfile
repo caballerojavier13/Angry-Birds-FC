@@ -37,8 +37,8 @@ gem 'simple_form'
 
 gem 'video_info'
 
-#gem 'pg'
-gem 'mysql2', '~> 0.3.18'
+gem 'pg'
+#gem 'mysql2', '~> 0.3.18'
 
 #gem 'sqlite3'
 
