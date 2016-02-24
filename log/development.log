@@ -7013,3 +7013,224 @@ Processing by NotificationsController#nuevas_notificaciones as */*
   Rendered collection (0.0ms)
   Rendered notifications/nuevas_notificaciones.js.erb (0.9ms)
 Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.5ms)
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreatePersonas (20130512114831)
+Migrating to CreateVideos (20130512115117)
+Migrating to CreateImagens (20130512115209)
+Migrating to CreateNoticia (20130512115327)
+Migrating to CreateCalificacions (20130512115426)
+Migrating to CreateFuncionalidads (20130512115621)
+Migrating to CreateTipoUsuarios (20130512115645)
+Migrating to CreateTipoUsuarioFuncionalidads (20130512115817)
+Migrating to AddRelacionPersonaTipoUsuario (20130512122112)
+Migrating to AddColumnsPersona (20130519204247)
+Migrating to AddColumnIdPicasaPicture (20130709114906)
+Migrating to CreateComments (20130802035314)
+Migrating to CreateNotifications (20130802035440)
+Migrating to AddColumnUsuariosToNotifications (20130805051728)
+Migrating to CambiarNombreColumnasUsuario (20130805084959)
+Migrating to EliminarTablasInnecesarias (20130813145800)
+Migrating to AddColumnBloqueado (20130818024452)
+Migrating to AddColumnAdmin (20131209020043)
+Migrating to CreateUsrNovelties (20140124200310)
+Migrating to CreateNovelties (20140124200815)
+Migrating to Roles (20140602023401)
+Migrating to Function (20140602023505)
+Migrating to Permission (20140602023658)
+Migrating to PersonaConRol (20140606031156)
+Migrating to AddColumnEditedComment (20140628175729)
+  [1m[35m (0.1ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 192.168.10.100 at 2016-02-23 22:50:32 -0300
+Processing by InicioController#start as HTML
+  [1m[36mPersona Load (0.2ms)[0m  [1mSELECT `personas`.* FROM `personas` WHERE `personas`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `personas`.* FROM `personas` WHERE `personas`.`id` = 1 LIMIT 1
+  [1m[36mVideo Load (0.1ms)[0m  [1mSELECT `videos`.* FROM `videos` [0m
+  [1m[35mImagen Load (0.1ms)[0m  SELECT `imagens`.* FROM `imagens` 
+  [1m[36mNoticium Load (0.2ms)[0m  [1mSELECT `noticia`.* FROM `noticia` ORDER BY id ASC[0m
+  [1m[35mAREL (0.2ms)[0m  SELECT novelties.id, novelties.message, novelties.created_at FROM `novelties` INNER JOIN `usr_novelties` ON `usr_novelties`.`novelty_id` = `novelties`.`id` WHERE usr_novelties.viewed = false AND usr_novelties.persona_id = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `notifications` WHERE (`read` = 0 AND persona_id = 1)[0m
+  [1m[35mNotification Load (0.1ms)[0m  SELECT `notifications`.* FROM `notifications` WHERE (`read` = 0 AND persona_id = 1)
+  Rendered collection (0.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `personas`.* FROM `personas` WHERE `personas`.`id` = 1 LIMIT 1[0m
+  Rendered inicio/_nada_noticia.html.erb (0.2ms)
+  Rendered inicio/_nada_imagen.html.erb (0.2ms)
+  Rendered inicio/_nada_video.html.erb (0.2ms)
+  Rendered inicio/start.html.erb (7.7ms)
+Completed 200 OK in 74ms (Views: 11.5ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/videos" for 192.168.10.100 at 2016-02-23 22:50:58 -0300
+Processing by VideosController#index as HTML
+  [1m[35mPersona Load (0.2ms)[0m  SELECT `personas`.* FROM `personas` WHERE `personas`.`id` = 1 LIMIT 1
+  [1m[36mVideo Load (0.2ms)[0m  [1mSELECT `videos`.* FROM `videos` ORDER BY id DESC LIMIT 5 OFFSET 0[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `notifications` WHERE (`read` = 0 AND persona_id = 1)
+  [1m[36mNotification Load (0.1ms)[0m  [1mSELECT `notifications`.* FROM `notifications` WHERE (`read` = 0 AND persona_id = 1)[0m
+  Rendered collection (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `personas`.* FROM `personas` WHERE `personas`.`id` = 1 LIMIT 1
+  Rendered videos/_nada.html.erb (0.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `personas`.* FROM `personas` WHERE `personas`.`id` = 1 LIMIT 1[0m
+  Rendered videos/index.html.erb (4.2ms)
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/nuevas_notificaciones" for 192.168.10.100 at 2016-02-23 22:51:28 -0300
+Processing by NotificationsController#nuevas_notificaciones as */*
+  [1m[35mPersona Load (0.3ms)[0m  SELECT `personas`.* FROM `personas` WHERE `personas`.`id` = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `notifications` WHERE (`read` = 0 AND persona_id = 1)[0m
+  [1m[35mNotification Load (0.1ms)[0m  SELECT `notifications`.* FROM `notifications` WHERE (`read` = 0 AND persona_id = 1) ORDER BY id DESC
+  Rendered collection (0.0ms)
+  Rendered notifications/nuevas_notificaciones.js.erb (1.3ms)
+Completed 200 OK in 5ms (Views: 2.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/videos/new" for 192.168.10.100 at 2016-02-23 22:51:32 -0300
+Processing by VideosController#new as HTML
+  [1m[36mPersona Load (0.2ms)[0m  [1mSELECT `personas`.* FROM `personas` WHERE `personas`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `personas`.* FROM `personas` WHERE `personas`.`id` = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `notifications` WHERE (`read` = 0 AND persona_id = 1)[0m
+  [1m[35mNotification Load (0.2ms)[0m  SELECT `notifications`.* FROM `notifications` WHERE (`read` = 0 AND persona_id = 1)
+  Rendered collection (0.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `personas`.* FROM `personas` WHERE `personas`.`id` = 1 LIMIT 1[0m
+  Rendered videos/new.html.erb (8.4ms)
+Completed 200 OK in 17ms (Views: 9.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/videos" for 192.168.10.100 at 2016-02-23 22:52:19 -0300
+Processing by VideosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AX70RHwfEATW1O9jpo+SYAnBOzZaBIylSaiIT+3bl30=", "video"=>{"titulo"=>"asd", "url"=>"https://www.youtube.com/watch?v=EDlC7oG_2W4"}, "commit"=>"Guardar"}
+  [1m[35mPersona Load (0.2ms)[0m  SELECT `personas`.* FROM `personas` WHERE `personas`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `personas`.* FROM `personas` WHERE `personas`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mVideo Load (0.2ms)[0m  [1mSELECT `videos`.* FROM `videos` WHERE `videos`.`titulo` = 'Asd'[0m
+  [1m[35mVideo Load (0.1ms)[0m  SELECT `videos`.* FROM `videos` WHERE `videos`.`url` = '//www.youtube.com/embed/EDlC7oG_2W4'
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO `videos` (`created_at`, `persona_id`, `titulo`, `updated_at`, `url`) VALUES ('2016-02-24 01:52:19', 1, 'Asd', '2016-02-24 01:52:19', '//www.youtube.com/embed/EDlC7oG_2W4')[0m
+  [1m[35m (27.5ms)[0m  COMMIT
+Redirected to http://192.168.10.100:3000/videos
+Completed 302 Found in 34ms (ActiveRecord: 28.3ms)
+
+
+Started GET "/nuevas_notificaciones" for 192.168.10.100 at 2016-02-23 22:52:32 -0300
+Processing by NotificationsController#nuevas_notificaciones as */*
+  [1m[36mPersona Load (0.2ms)[0m  [1mSELECT `personas`.* FROM `personas` WHERE `personas`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `notifications` WHERE (`read` = 0 AND persona_id = 1)
+  [1m[36mNotification Load (0.2ms)[0m  [1mSELECT `notifications`.* FROM `notifications` WHERE (`read` = 0 AND persona_id = 1) ORDER BY id DESC[0m
+  Rendered collection (0.0ms)
+  Rendered notifications/nuevas_notificaciones.js.erb (1.0ms)
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/videos" for 192.168.10.100 at 2016-02-23 22:52:39 -0300
+Processing by VideosController#index as HTML
+  [1m[35mPersona Load (0.3ms)[0m  SELECT `personas`.* FROM `personas` WHERE `personas`.`id` = 1 LIMIT 1
+  [1m[36mVideo Load (0.2ms)[0m  [1mSELECT `videos`.* FROM `videos` ORDER BY id DESC LIMIT 5 OFFSET 0[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM `notifications` WHERE (`read` = 0 AND persona_id = 1)
+  [1m[36mNotification Load (0.2ms)[0m  [1mSELECT `notifications`.* FROM `notifications` WHERE (`read` = 0 AND persona_id = 1)[0m
+  Rendered collection (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT `personas`.* FROM `personas` WHERE `personas`.`id` = 1 LIMIT 1
+  Rendered videos/_listado.html.erb (1.6ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `personas`.* FROM `personas` WHERE `personas`.`id` = 1 LIMIT 1[0m
+  Rendered videos/index.html.erb (4.9ms)
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/nuevas_notificaciones" for 192.168.10.100 at 2016-02-23 22:52:42 -0300
+Processing by NotificationsController#nuevas_notificaciones as */*
+  [1m[35mPersona Load (0.2ms)[0m  SELECT `personas`.* FROM `personas` WHERE `personas`.`id` = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM `notifications` WHERE (`read` = 0 AND persona_id = 1)[0m
+  [1m[35mNotification Load (0.1ms)[0m  SELECT `notifications`.* FROM `notifications` WHERE (`read` = 0 AND persona_id = 1) ORDER BY id DESC
+  Rendered collection (0.0ms)
+  Rendered notifications/nuevas_notificaciones.js.erb (1.0ms)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/nuevas_notificaciones" for 192.168.10.100 at 2016-02-23 22:53:12 -0300
+Processing by NotificationsController#nuevas_notificaciones as */*
+  [1m[36mPersona Load (0.2ms)[0m  [1mSELECT `personas`.* FROM `personas` WHERE `personas`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM `notifications` WHERE (`read` = 0 AND persona_id = 1)
+  [1m[36mNotification Load (0.1ms)[0m  [1mSELECT `notifications`.* FROM `notifications` WHERE (`read` = 0 AND persona_id = 1) ORDER BY id DESC[0m
+  Rendered collection (0.0ms)
+  Rendered notifications/nuevas_notificaciones.js.erb (0.9ms)
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/nuevas_notificaciones" for 192.168.10.100 at 2016-02-23 22:53:40 -0300
+Processing by NotificationsController#nuevas_notificaciones as */*
+  [1m[35mPersona Load (0.3ms)[0m  SELECT `personas`.* FROM `personas` WHERE `personas`.`id` = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `notifications` WHERE (`read` = 0 AND persona_id = 1)[0m
+  [1m[35mNotification Load (0.2ms)[0m  SELECT `notifications`.* FROM `notifications` WHERE (`read` = 0 AND persona_id = 1) ORDER BY id DESC
+  Rendered collection (0.0ms)
+  Rendered notifications/nuevas_notificaciones.js.erb (1.0ms)
+Completed 200 OK in 4ms (Views: 1.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/start" for 192.168.10.100 at 2016-02-23 22:53:46 -0300
+Processing by InicioController#start as HTML
+  [1m[36mPersona Load (0.3ms)[0m  [1mSELECT `personas`.* FROM `personas` WHERE `personas`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `personas`.* FROM `personas` WHERE `personas`.`id` = 1 LIMIT 1
+  [1m[36mVideo Load (0.2ms)[0m  [1mSELECT `videos`.* FROM `videos` [0m
+  [1m[35mImagen Load (0.1ms)[0m  SELECT `imagens`.* FROM `imagens` 
+  [1m[36mNoticium Load (0.1ms)[0m  [1mSELECT `noticia`.* FROM `noticia` ORDER BY id ASC[0m
+  [1m[35mAREL (0.2ms)[0m  SELECT novelties.id, novelties.message, novelties.created_at FROM `novelties` INNER JOIN `usr_novelties` ON `usr_novelties`.`novelty_id` = `novelties`.`id` WHERE usr_novelties.viewed = false AND usr_novelties.persona_id = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `notifications` WHERE (`read` = 0 AND persona_id = 1)[0m
+  [1m[35mNotification Load (0.1ms)[0m  SELECT `notifications`.* FROM `notifications` WHERE (`read` = 0 AND persona_id = 1)
+  Rendered collection (0.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `personas`.* FROM `personas` WHERE `personas`.`id` = 1 LIMIT 1[0m
+  Rendered inicio/_nada_noticia.html.erb (0.0ms)
+  Rendered inicio/_nada_imagen.html.erb (0.0ms)
+  Rendered inicio/_videos.html.erb (4.8ms)
+  Rendered inicio/start.html.erb (6.8ms)
+Completed 200 OK in 11ms (Views: 7.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/nuevas_notificaciones" for 192.168.10.100 at 2016-02-23 22:54:19 -0300
+Processing by NotificationsController#nuevas_notificaciones as */*
+  [1m[35mPersona Load (0.3ms)[0m  SELECT `personas`.* FROM `personas` WHERE `personas`.`id` = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `notifications` WHERE (`read` = 0 AND persona_id = 1)[0m
+  [1m[35mNotification Load (0.2ms)[0m  SELECT `notifications`.* FROM `notifications` WHERE (`read` = 0 AND persona_id = 1) ORDER BY id DESC
+  Rendered collection (0.0ms)
+  Rendered notifications/nuevas_notificaciones.js.erb (1.0ms)
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/nuevas_notificaciones" for 192.168.10.100 at 2016-02-23 22:54:49 -0300
+Processing by NotificationsController#nuevas_notificaciones as */*
+  [1m[36mPersona Load (0.3ms)[0m  [1mSELECT `personas`.* FROM `personas` WHERE `personas`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `notifications` WHERE (`read` = 0 AND persona_id = 1)
+  [1m[36mNotification Load (0.2ms)[0m  [1mSELECT `notifications`.* FROM `notifications` WHERE (`read` = 0 AND persona_id = 1) ORDER BY id DESC[0m
+  Rendered collection (0.0ms)
+  Rendered notifications/nuevas_notificaciones.js.erb (1.4ms)
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/nuevas_notificaciones" for 192.168.10.100 at 2016-02-23 22:55:17 -0300
+Processing by NotificationsController#nuevas_notificaciones as */*
+  [1m[35mPersona Load (0.2ms)[0m  SELECT `personas`.* FROM `personas` WHERE `personas`.`id` = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `notifications` WHERE (`read` = 0 AND persona_id = 1)[0m
+  [1m[35mNotification Load (0.1ms)[0m  SELECT `notifications`.* FROM `notifications` WHERE (`read` = 0 AND persona_id = 1) ORDER BY id DESC
+  Rendered collection (0.0ms)
+  Rendered notifications/nuevas_notificaciones.js.erb (0.8ms)
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/nuevas_notificaciones" for 192.168.10.100 at 2016-02-23 22:55:47 -0300
+Processing by NotificationsController#nuevas_notificaciones as */*
+  [1m[36mPersona Load (0.2ms)[0m  [1mSELECT `personas`.* FROM `personas` WHERE `personas`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `notifications` WHERE (`read` = 0 AND persona_id = 1)
+  [1m[36mNotification Load (0.2ms)[0m  [1mSELECT `notifications`.* FROM `notifications` WHERE (`read` = 0 AND persona_id = 1) ORDER BY id DESC[0m
+  Rendered collection (0.0ms)
+  Rendered notifications/nuevas_notificaciones.js.erb (1.0ms)
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/nuevas_notificaciones" for 192.168.10.100 at 2016-02-23 22:56:17 -0300
+Processing by NotificationsController#nuevas_notificaciones as */*
+  [1m[35mPersona Load (0.3ms)[0m  SELECT `personas`.* FROM `personas` WHERE `personas`.`id` = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `notifications` WHERE (`read` = 0 AND persona_id = 1)[0m
+  [1m[35mNotification Load (0.2ms)[0m  SELECT `notifications`.* FROM `notifications` WHERE (`read` = 0 AND persona_id = 1) ORDER BY id DESC
+  Rendered collection (0.0ms)
+  Rendered notifications/nuevas_notificaciones.js.erb (1.3ms)
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 0.7ms)
