@@ -85,7 +85,7 @@ class AdminController < MasterSecurityController
     .join(noticia)
     .on(calificacions[:noticia_id]
         .eq(noticia[:id]))
-    .project(Arel.sql('cast(cast((sum(public.calificacions.valor)) as float)/count(*)as float) promedio, noticia_id id'))
+    .project(Arel.sql('sum(`calificacions`.valor)/count(*) as promedio, noticia_id as id '))
     .group(calificacions[:noticia_id])
     @estrella1 = calificacions.from(Arel.sql("(#{resultado.to_sql}) as consulta")).where(Arel.sql('consulta.promedio < 1.5')).project(Arel.sql('consulta.id'))
     @estrella2 = calificacions.from(Arel.sql("(#{resultado.to_sql}) as consulta")).where(Arel.sql('consulta.promedio >= 1.5 and consulta.promedio < 2.5')).project(Arel.sql('consulta.id'))

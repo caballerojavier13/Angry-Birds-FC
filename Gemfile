@@ -40,7 +40,7 @@ gem 'video_info'
 #gem 'pg'
 gem 'mysql2', '~> 0.3.18'
 
-gem 'sqlite3'
+#gem 'sqlite3'
 
 gem 'json'
 
