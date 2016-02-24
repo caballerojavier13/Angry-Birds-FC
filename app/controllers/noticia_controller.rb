@@ -13,10 +13,10 @@ class NoticiaController < SecurityController
       end
       @noticia = Noticium.search(params[:search]).order('id DESC').paginate(:page => params[:page], :per_page => 8)  
     end
-    @notificaciones = Notification.where("`read` = ? AND persona_id = ?", false, session[:usuario_id])
+    @notificaciones = Notification.where("read = ? AND persona_id = ?", false, session[:usuario_id])
   end
   def mis_noticias
-    @notificaciones = Notification.where("`read` = ? AND persona_id = ?", false, session[:usuario_id])
+    @notificaciones = Notification.where("read = ? AND persona_id = ?", false, session[:usuario_id])
     if params[:search].nil?
       @noticia = Noticium.where(persona_id: session[:usuario_id]).order('id DESC').paginate(:page => params[:page], :per_page => 8)
     else
@@ -39,13 +39,13 @@ class NoticiaController < SecurityController
     @usuario_id = session[:usuario_id]
     @noticium = Noticium.find(params[:id])
     @comentarios = Comment.where(noticia_id: @noticium.id).order('id ASC')
-    @notificaciones = Notification.where("`read` = ? AND persona_id = ? AND noticia_id = ?", false, session[:usuario_id],params[:id])
+    @notificaciones = Notification.where("read = ? AND persona_id = ? AND noticia_id = ?", false, session[:usuario_id],params[:id])
     @notificaciones.each do |n|
       n.mark_as_read
     end
     @total = 0
     @califico = true
-    @notificaciones = Notification.where("`read` = ? AND persona_id = ?", false, session[:usuario_id])
+    @notificaciones = Notification.where("read = ? AND persona_id = ?", false, session[:usuario_id])
 
     if @noticium.persona_id != @usuario_id
       @califico = (Calificacion.where("noticia_id = ? AND persona_id = ?",params[:id], session[:usuario_id]).size > 0)
@@ -63,7 +63,7 @@ class NoticiaController < SecurityController
   # GET /noticia/new
   # GET /noticia/new.json
   def new
-    @notificaciones = Notification.where("`read` = ? AND persona_id = ?", false, session[:usuario_id])
+    @notificaciones = Notification.where("read = ? AND persona_id = ?", false, session[:usuario_id])
     @persona = Persona.find(session[:usuario_id])
     @noticium = Noticium.new
     
@@ -75,7 +75,7 @@ class NoticiaController < SecurityController
 
   # GET /noticia/1/edit
   def edit
-    @notificaciones = Notification.where("`read` = ? AND persona_id = ?", false, session[:usuario_id])
+    @notificaciones = Notification.where("read = ? AND persona_id = ?", false, session[:usuario_id])
     @noticium = Noticium.find(params[:id])
     @persona = Persona.find(session[:usuario_id])
     if Permissions.permiso(@persona.id,'Editar Noticias') || @noticium.persona_id.to_s == session[:usuario_id].to_s

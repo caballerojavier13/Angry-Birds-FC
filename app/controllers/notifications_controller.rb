@@ -84,7 +84,7 @@ class NotificationsController < SecurityController
   end
   
   def nuevas_notificaciones
-    @notificaciones = Notification.where("`read` = ? AND persona_id = ?", false, session[:usuario_id]).order('id DESC')
+    @notificaciones = Notification.where("read = ? AND persona_id = ?", false, session[:usuario_id]).order('id DESC')
     if request.xhr?
       respond_to do |format|
         format.js   { render :notificaciones => @notificaciones }

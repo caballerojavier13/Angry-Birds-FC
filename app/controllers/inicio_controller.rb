@@ -5,7 +5,7 @@ class InicioController < SecurityController
     @videos = Video.all.last(6)
     @imagenes = Imagen.all.last(5)
     @noticias = Noticium.order('id ASC').last(4)
-    @notificaciones = Notification.where("`read` = ? AND persona_id = ?", false, session[:usuario_id])
+    @notificaciones = Notification.where("read = ? AND persona_id = ?", false, session[:usuario_id])
 
 
     novelty = Arel::Table.new(:novelties)
